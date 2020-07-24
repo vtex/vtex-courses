@@ -15,7 +15,7 @@ interface CountdownProps {
 }
 ```
 
-Now, we need to use it on the component, substituting the text used used previously, `Countdown Test`, for another, using *Site Editor*.
+Now, we need to use it on the component, substituting the text used previously, `Countdown Test`, for another, using *Site Editor*.
 
 >Keep in mind that `targetDate` will be used to define the countdown ending date. However, for now, it will work as a dummy field.
 
@@ -57,4 +57,3 @@ All set! Now you can change the text content through *Site Editor*. Go ahead to 
 Now, in the field below the title, type the date in the format `AAAA-MM-DD` and see the change, that will then show the text you've typed! 
 
 ![image](https://user-images.githubusercontent.com/19495917/80523458-85a2df00-8964-11ea-9e74-f6d2c9cf5ab2.png)
-
