@@ -12,7 +12,7 @@ Don't worry, you won't need to add translations of all texts for the various lan
 
 The concept of _messages_ makes it easy to add new languages ​​to the theme. The _Messages_ centralize all translation services on the platform. Given a text to be translated, _Messages_ will first check the user-defined context, then check the translations of the _apps_ and, finally, go through the automatic translation system.
 
-In the directory structure, you can see that there is a folder called `messages`, which has three main files: `pt.json`, `en.json` and`es.json`, each responsible for the translations: Portuguese, English and Spanish, respectively. In addition, in order to provide better automatic translations, the `context.json` file is used, which is responsible for avoiding ambiguities.
+In the directory structure, you can see that there is a folder called `messages`, which has three main files: `pt.json`, `en.json`, and`es.json`, each responsible for the translations: Portuguese, English, and Spanish, respectively. In addition, in order to provide better automatic translations, the `context.json` file is used, which is responsible for avoiding ambiguities.
 
 To use such definitions, the translation files mentioned above are JSON, whose keys are messages and values ​​are translations.
 
@@ -151,4 +151,3 @@ You must have learned how to use our **builder _messages_**, and it will be thro
 Done! Now, to try out your store in another languages, you just need to add the _query string_ `/?cultureInfo=pt-br` or `/?cultureInfo=es-ar` on the URL, for example. By using the first URL, the expected result is this one:
 
 ![image](https://user-images.githubusercontent.com/19495917/80527977-99057880-896b-11ea-9305-8921d580a1f1.png)
-
