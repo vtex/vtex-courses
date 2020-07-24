@@ -72,7 +72,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
     > `linkText` will be the same as `'red-front-loading-washer'`, for example, when your component is rendered in this product's page.
 
-    Besides, it is important to deal with the cases in which there is no data fetched when using useQuery and before returning the main component: *loading* and *error* In those cases, it is possible to return a span in the countdown component, such as the example below:
+    Besides, it is important to deal with the cases in which there is no data fetched when using `useQuery` and before returning the main component: *loading* and *error* In those cases, it is possible to return a span in the countdown component, such as the example below:
     ```tsx
     if (loading) {
       return (
