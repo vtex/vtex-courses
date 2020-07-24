@@ -1,10 +1,16 @@
 # Getting to know an app on VTEX IO
 
-## Introduction
+In order to build a complete custom application with VTEX IO, it's necessary to understand some concepts that are going to be presented now and it all starts with an important file of an app: the `manifest.json`.
 
-Before we start, it's necessary to remind some important concepts of the logical for a better understanding of the logical workflow when developing an app.
+### Manifest file
 
-## manifest.json
+This file define some basic configurations and abstractions that are needed for the build of your application to work. In this step, some fields of this file are going to be explained, which are:
+- vendor
+- name
+- version
+- dependencies
+
+Let's begin!
 
 ### *vendor*
 
@@ -63,5 +69,17 @@ In the example of the `manifest.json` structure below, it's possible to see char
 }
 ```
 
+## About this tutorial
+Now that you know more about the manifest, this tutorial will guide you through learning how to develop a custom app with VTEX IO. In the end of it, you will have a fully function app, which is a countdown block for your store.
 
+There are some prerequisities for you to have an amazing experience when doing this tutorial, which are:
+
+- Knowledge on React and how to use hooks
+- Basic concepts on GraphQL
+- Understand how to develop using Typescript
+
+If you are not familiar with any of those tools, we encourage you to take a look in some documentation:
+- [**React.js**](https://reactjs.org/)
+- [**React Hook API**](https:/**/reactjs.org/docs/hooks-intro.html)
+- [**Typescript documentation**](https://www.typescriptlang.org/)
 

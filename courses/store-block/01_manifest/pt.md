@@ -1,50 +1,44 @@
-# Conhecendo uma *app* VTEX IO
+# Conhecendo uma app no VTEX IO
+De forma a implementar uma aplicação totalmente customizada no VTEX IO, é necessário entender alguns conceitos que serão apresentados e tudo começa com um arquivo muito importante de uma _app_: o `manifest.json`.
 
-## Introdução
-Antes de começar, é necessário relembrar alguns conceitos importantes para uma maior compreensão do fluxo lógico ao desenvolver uma *app*.
 
-## manifest.json
+# O arquivo `manifest.json`
+Este arquivo define algumas configurações básicas e abstrações que são necessárias para que o _build_ da sua aplicação funcione. Nesta etapa, alguns campos deste arquivo serão explicados, que são:
+- vendor
+- name
+- version
+- dependencies
 
-### *vendor*
-  Define o nome da conta VTEX que está desenvolvendo a *app*. Essa conta é responsável pela manutenção e distribuição da *app* (pode ser instalada em outras contas ou somente na própria) 
-  
-  >O *vendor* `vtex` é utilizado em casos de *apps* nativas.
+Vamos começar!
 
-### *name*
+### _vendor_
 
-Identifica o nome da aplicação. Não deve ter caracteres especiais - exceto `-` - ou caracteres maiúsculos. 
+Define o nome da conta VTEX que está desenvolvendo a _app_. Esta conta é responsável por sua manutenção e distribuição (a aplicação pode ser instalada em outras contas ou apenas na própria).
 
-### *version*
+>O vendor `vtex` é utilizado para _apps_ nativas.
 
-Identifica a versão atual da *app*. Para versionamento, utilizamos a especificação [Semantic Versioning 2.0.0](https://semver.org/). O formato do versionamento é bem definido, com o uso de *patches*, *minors* e *majors*. 
+### _name_
 
-Abaixo um resumo da especificação:
+Identifica o nome da aplicação. Não deve conter nenhum caractere especial (exceto por `-`, que é permitido) ou caracteres maiúsculos.
 
-- *Patches*: você deve criar um *patch* quando está consertando um bug de forma retrocompatível
-- *Minors*: você deve criar uma versão *minor* quando adicionar funcionalidade de forma retrocompatível.
-- *Majors*: você deve criar uma versão *major* quando você realiza mudanças incompatíveis de API (o que costumamos chamar de ***breaking changes***)
+### _version_
+Identifica a versão atual da _app_. Utilizamos a especificação de [Versionamento Semântico 2.0.0](https://semver.org/). O formato é bem definido, dividido em _releases_ de _patch_, _minor_ ou _major_.
 
-Exemplo: Se uma API que está na versão `2.3.2` e uma nova funcionalidade não tiver *breaking changes*, você pode atualizar a versão para `2.4.0`.
+Você pode encontrar abaixo um resumo da especificação:
+- *Patches*: É utilizado para _bug fixes_ que são retrocompatíveis;
+- *Minors*: Deve ser utilizado para _features_ retrocompatíveis;
+- *Majors*: Utilizado quando mudanças imcompatíveis de API são feitas (_breaking changes_).
 
-No momento que o *deploy* é feito, há um *worker* chamado *housekeeper* responsável por atualizar a versão automaticamente para todas as contas.  No caso de *minors* e *patches*, o *housekeeper* atualiza a app automaticamente em todas as contas, já que as mudanças são retrocompatíveis. Atualizações de *majors*, no entanto, possuem *breaking changes*, por isso o *housekeeper* não atualiza a *app* em todas as contas; sendo assim, a atualização deve ser feita manualmente.
+Por exemplo: se uma API está na versão `2.3.2` e uma _feature_ que não é _breaking change_ é adicionada, então a versão pode ser atualizada para `2.4.0`.
 
-### *builders*
+No momento em que o _deployment_ é feito, há um _worker_ que chamamos de _housekeeper_, cuja responsabilidade é atualizar automaticamente as aplicações para a nova versão em cada conta VTEX. Dessa forma, irá sempre instalar todas as atualizações que são _minor_ ou _patch_, dada a retrocompatibilidade. Porém, não irá atualizar automaticamente versões _major_, dado que podem vir também com mudanças de dependências.
 
-O desenvolvimento de apps no VTEX IO utiliza o conceito de [*Code as Configuration (CaC)*](https://www.locallyoptimistic.com/post/code-as-configuration/). Este paradigma é abstraído através do campo de `builders` que facilita o desenvolvimento, abstraindo a configuração de serviços. 
+### _dependencies_
 
-Exemplo: para criar uma extensão no painel administrativo criam-se apps que utilizam o builder de `admin`. 
-
-![image](https://user-images.githubusercontent.com/18701182/76098199-c9eab200-5fa7-11ea-949d-6ac16ebb837a.png)
-
-Ao linkar a app, portanto, uma pasta de nome correspondente é enviada ao seu *builder*, que, por sua vez, transforma cada arquivo em configuração para o serviço competente.
-
-### *dependencies*
-
-Uma *app* pode depender de outras aplicações. Esse campo lista todas as dependências necessárias para o correto funcionamento da *app*.
+Uma _app_ pode depender de outras aplicações. Este campo listas todas as dependências necessárias para o correto funcionamento da aplicação.
 
 ## Exemplo
-
-No exemplo da estrutura do `manifest.json` abaixo, é possível observar características mencionadas acima. Em particular, a versão é `0.0.1`, onde os números são, respectivamente, *major*, *minor* e *patch*.
+Neste exemplo de um arquivo `manifest.json`, é possível observar algumas das características mencionadas anteriormente. Em particular, a versão da _app_ é `0.0.1` e estes números correspondem, respectivamente, a _major_, _minor_ e _patch_.
 
 ```json
 {
@@ -70,3 +64,17 @@ No exemplo da estrutura do `manifest.json` abaixo, é possível observar caracte
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-a pi/master/gen/manifest.schema"
 }
 ```
+
+## Sobre esse tutorial
+Agora que você sabe um pouco mais sobre o _manifest_, este tutorial irá guiá-lo no aprendizado de desenvolvimento de aplicações customizadas no VTEX IO. No fim, você terá uma _app_ completamente funcional, que é um bloco contador para sua loja.
+
+Há alguns pré-requisitos para que você tenha uma experiência gratificante ao fazer esse tutorial, que são:
+- Conhecimento em React e como utilizar _hooks_
+- Conceitos básicos de GraphQL
+- Entender como desenvolver utilizando Typescript
+
+Se você não está familiarizado com alguma destas ferramentas, nós o encorajamos a dar uma olhada nas seguintes documentações:
+- [**React.js**](https://reactjs.org/)
+- [**React Hook API**](https:/**/reactjs.org/docs/hooks-intro.html)
+- [**Documentação de Typescript**](https://www.typescriptlang.org/)
+
