@@ -4,7 +4,7 @@
 
 Now we will learn how to retrieve data from the _backend_ and display it in the interface. VTEX IO uses [GraphQL](https://graphql.org/) as a language/technology for data transfer, which makes programming our components quite simple. We will modify our Countdown component to search for the _targetDate_ of the **`releaseDate` field of a VTEX product**. To perform GraphQL queries in React, the **Apollo Client** is used, a state management lib that facilitates the integration of a GraphQL API with the _front-end_ application.
 
-The **Apollo Client** lib offers native integration with React, through _hooks_. Thus, making a _query_ means using a _hook_ that will not only perform the _queries_ and _fetch_ the data, but will also provide caching and updating the UI state. This integration, called `react-apollo` is already declared in `package.json`.
+The **Apollo Client** lib offers native integration with React, through _hooks_. Thus, making a _query_ means using a _hook_ that will not only perform the _queries_ and _fetch_ the data but will also provide caching and updating the UI state. This integration, called `react-apollo` is already declared in `package.json`.
 
 ## Preparation
 
