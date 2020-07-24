@@ -180,7 +180,7 @@ By now, there are two components in the _app_: the title and the countdown. Howe
 
 ### Adding internationalization
 
-It is also needed to add to the _Messages_ the translations whose keys are the _strings_ of the _schema_ that we included in the `Title.tsx` file above. As seen in the _Messages_ step, go to the `/messages` folder and add the necessary translations to each file (`pt.json`, `es.json` and `en.json`). Below is an example for the case of the `en.json` file:
+It is also needed to add to the _Messages_ the translations whose keys are the _strings_ of the _schema_ that we included in the `Title.tsx` file above. As seen in the _Messages_ step, go to the `/messages` folder, and add the necessary translations to each file (`pt.json`, `es.json` and `en.json`). Below is an example for the case of the `en.json` file:
 
 ```diff
  {
