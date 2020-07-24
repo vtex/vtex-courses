@@ -47,6 +47,8 @@ Algumas coisas para prestar atenção:
     }
     ```
 
+    > Para que o seu bloco possa **aceitar configurações do usuário**, é preciso exportar um `schema` no componente React responsável por aquele bloco utilizando [JSON *schema*](https://json-schema.org/). Isso irá, automaticamente, gerar um formulário para o Site Editor relativo ao bloco que você está desenvolvendo. 
+
 Agora, vamos adicionar uma _tag_ `h1` dentro do componente:
 
 ```diff

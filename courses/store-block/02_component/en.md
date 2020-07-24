@@ -46,6 +46,8 @@ Some things to pay attention:
     }
     ```
 
+    > In order for your block to **accept user customizations**, you need to export a `schema` in the React component responsible for the block using [JSON *schema*](https://json-schema.org/). This will, automatically, generate a form in Site Editor linked to the block that you're developing.
+
 Now, let's add a `h1` tag inside the component.
 ```diff
 const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
