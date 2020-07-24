@@ -70,7 +70,7 @@ In the example of the `manifest.json` structure below, it's possible to see char
 ```
 
 ## About this tutorial
-Now that you know more about the manifest, this tutorial will guide you through learning how to develop a custom app with VTEX IO. In the end of it, you will have a fully function app, which is a countdown block for your store.
+Now that you know more about the manifest, this tutorial will guide you through learning how to develop a custom app with VTEX IO. At the end of it, you will have a fully functional app, which is a countdown block for your store.
 
 There are some prerequisities for you to have an amazing experience when doing this tutorial, which are:
 
