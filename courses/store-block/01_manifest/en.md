@@ -34,7 +34,7 @@ You can find bellow a summary of the specification:
 
 For example: If an API is at version `2.3.2` and it adds a new non breaking change feature, it can then be updated to version `2.4.0`.
 
-At the moment the deployment is made, there is a worker called *housekeeper* which is responsible for updating automatically the new version for every account. It will, therefore, update all new *minor* and *patch* releases because of its backwards compatibility. It will not, however, automatically update *major* versions since it might come with dependency changes. 
+At the moment the deployment is made, there is a worker called *housekeeper* which is responsible for updating automatically the new version for every account. It will, therefore, update new *minor* and *patch* releases because of its backward compatibility. It will not, however, automatically update *major* versions since it might come with dependency changes. 
 
 ### *dependencies*
 
