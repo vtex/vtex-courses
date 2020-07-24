@@ -1,9 +1,11 @@
 # Linkando uma _app_ e a utilizando em um tema de loja
 
 ## Introdução
+
 Dado que você já está familiarizado com o Store Framework, você deve saber que utilizamos blocos, como a `shelf` e o `sku-selector`, para criar uma loja no VTEX IO. Neste passo, você irá criar um bloco a ser utilizado na _home_ do tema da sua loja.
 
 ## Adicionando um texto fixo ao nosso componente
+
 No _template_ local que foi clonado, abra o arquivo `Countdown.tsx`. Você verá que contém uma implementação base de um componente React, que é uma `div` vazia, como mostrado abaixo:
 
 ```tsx

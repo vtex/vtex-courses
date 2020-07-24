@@ -1,6 +1,7 @@
 # Linking an app and using it on a store's theme
 
 ## Introduction
+
 Since you're already familiar to Store Framework, you know that we use blocks, like `shelf` and `sku-selector`, to create a VTEX IO store. In this step you're going to create a block that is going to be used in your store's home page theme.
 
 ## Adding a dummy text to our component
