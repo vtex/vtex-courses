@@ -37,7 +37,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
     > Note that the query will need the _slug_ of the product we are looking for. To do so, **retrieve this information of the VTEX Product context**.
 
-2.  To use this query, it is necessary **to add the `vtex.search-graphql` app as a dependency on your app**. We will also need to use the `useProduct` hook, exported by the `vtex.product-context` app, to retrieve the product slug that is loaded on the page. To do this, in your app's `manifest.json`, add in dependencies:
+2.  To use this query, it is necessary **to add the `vtex.search-graphql` app as a dependency on your app**. We will also need to use the `useProduct` hook, exported by the `vtex.product-context` the app, to retrieve the product slug that is loaded on the page. To do this, in your app's `manifest.json`, add in dependencies:
 
     ```
     "vtex.search-graphql": "0.x",
