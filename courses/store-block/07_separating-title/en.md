@@ -165,7 +165,7 @@ In this activity, the title will be separated and added to the store below the c
 
 ### Changing the `interfaces.json` file
 
-By now, there are two components in the _app_: the title and the countdown. However, it is necessary to change the `interfaces.json` file, which is in `store` folder. It is needed to declare each one separately. At first, our interface only contained the `Countdown`. It is needed to add the other component:
+By now, there are two components in the _app_: the title and the countdown. However, it is necessary to change the `interfaces.json` file, which is in the `store` folder. It is needed to declare each one separately. At first, our interface only contained the `Countdown`. It is needed to add the other component:
 
 ```diff
 {
