@@ -4,7 +4,7 @@ In order to build a complete custom application with VTEX IO, it's necessary to 
 
 ### Manifest file
 
-This file define some basic configurations and abstractions that are needed for the build of your application to work. In this step, some fields of this file are going to be explained, which are:
+This file defines some basic configurations and abstractions that are needed for the build of your application to work. In this step, some fields of this file are going to be explained, which are:
 - vendor
 - name
 - version
@@ -82,4 +82,3 @@ If you are not familiar with any of those tools, we encourage you to take a look
 - [**React.js**](https://reactjs.org/)
 - [**React Hook API**](https:/**/reactjs.org/docs/hooks-intro.html)
 - [**Typescript documentation**](https://www.typescriptlang.org/)
-
