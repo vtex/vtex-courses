@@ -106,7 +106,7 @@ const [timeRemaining, setTime] = useState<TimeSplit>({
     ```
     > The countdown *string* formatting is in a `HH:MM:SS` format, made through an `hours`, `minutes` and `seconds` splitting. 
 
-Therefore, with these changes, we'll see a real time update of the countdown! The result in the homepage is this: 
+Therefore, with these changes, we'll see a real-time update of the countdown! The result on the homepage is this: 
 
 ![image](https://user-images.githubusercontent.com/19495917/75474406-b3c06e80-5975-11ea-82ec-89ab27504873.png)
 
