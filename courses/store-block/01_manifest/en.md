@@ -16,7 +16,7 @@ Let's begin!
 
 It defines the name of the VTEX account that is developing the app. This account is responsible for its maintenance and distribution (the app can be installed in other accounts or only in its own)
 
->The `vtex` vendor is used for native apps
+>The `vtex` vendor is used for native apps.
 
 ### *name* 
 
