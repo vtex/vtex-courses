@@ -148,6 +148,6 @@ You must have learned how to use our **builder _messages_**, and it will be thro
    }
    ```
 
-Done! Now, to try out your store in another languages, you just need to add the _query string_ `/?cultureInfo=pt-br` or `/?cultureInfo=es-ar` on the URL, for example. By using the first URL, the expected result is this one:
+Done! Now, to try out your store in other languages, you just need to add the _query string_ `/?cultureInfo=pt-br` or `/?cultureInfo=es-ar` on the URL, for example. By using the first URL, the expected result is this one:
 
 ![image](https://user-images.githubusercontent.com/19495917/80527977-99057880-896b-11ea-9305-8921d580a1f1.png)
