@@ -11,80 +11,14 @@
         }
     },
     {
-        "folder": "02_component",
+        "folder": "02_site-editor",
         "title": {
-            "pt": "Linkando uma app e utilizando-a no tema da loja",
-            "en": "Linking an app and using it on a store's theme"
+            "pt": "Apresentando o Site Editor e alterando um banner de uma loja",
+            "en": "Changing the store front through Site Editor"
         },
         "description": {
-            "pt": "Após modificar algo no código da app, iremos linká-la e verificar o resultado na loja, após haver adicionado a app no tema",
-            "en": "After modifying something in the app's code, we'll link it and check results on store"
-        }
-    },
-    {
-        "folder": "03_props-implementation",
-        "title": {
-            "pt": "Tornando o bloco countdown customizável",
-            "en": "Making the countdown block customizable"
-        },
-        "description": {
-            "pt": "Através da API de props do React, você aprendenrá como tornar seus blocos configuráveis com o Store Framework",
-            "en": "Through React's props API, you'll learn how to make blocks configurable with Store Framework"
-        }
-    },
-    {
-        "folder": "04_countdown-implementation",
-        "title": {
-            "pt": "Criando a funcionalidade do bloco countdown",
-            "en": "Creating the countdown block feature"
-        },
-        "description": {
-            "pt": "Utilizando os hooks do React.js, iremos finalizar a implementação do bloco countdown",
-            "en": "Using React's hooks, we'll finish the countdown block implementation"
-        }
-    },
-    {
-        "folder": "05_css-handles",
-        "title": {
-            "pt": "Modificando o bloco countdown para ter um estilo configurável",
-            "en": "Modifying the countdown block to have configurable styles"
-        },
-        "description": {
-            "pt": "O VTEX IO oferece uma maneira para seus blocos poderem ter um estilo CSS customizável: CSS Handles. Também veremos sobre a biblioteca de CSS funcional Tachyons",
-            "en": "VTEX IO offers a way to make CSS styling customizable: CSS handles. We'll also see how to work with VTEX Tachyons"
-        }
-    },
-    {
-        "folder": "06_messages",
-        "title": {
-            "pt": "Práticas de internacionalização no VTEX IO",
-            "en": "Internationalization practices in VTEX IO"
-        },
-        "description": {
-            "pt": "Para que os nossos blocos sejam usados por todo mundo, deveremos nos atentar às boas práticas de internacionalização suportadas pelo VTEX IO",
-            "en": "To make our blocks reusable by anyone, we'll make sure to follow good practices of internationalization supported by VTEX IO"
-        }
-    },
-    {
-        "folder": "07_separating-title",
-        "title": {
-            "pt": "Componentizando o bloco countdown",
-            "en": "Componentizing the countdown block"
-        },
-        "description": {
-            "pt": "Para que os blocos que criamos sejam flexíveis, devemos atentar a granularidade dos componentes visuais de cada bloco.",
-            "en": "To make custom blocks flexible, we must pay attention to the granularity of the visual components of each block"
-        }
-    },
-    {
-        "folder": "08_react-apollo",
-        "title": {
-            "pt": "Conectando backend e frontend",
-            "en": "Connecting _backend_ and _frontend_"
-        },
-        "description": {
-            "pt": "Utilizando dados do catálogo da VTEX em seu componente",
-            "en": "Using VTEX catalog data within your component"
+            "pt": "Após aprender um pouco mais sobre os workspaces, vamos apresentar o Site Editor e fazer uma pequena alteração na frente de loja",
+            "en": "After learning a little bit more about workspaces, we'll present the Site Editor and make a small change on a store front"
         }
     }
 ]
