@@ -22,7 +22,7 @@ vtex use {{WorkspaceName}} --production
 
 >`WorkspaceName` is the name that you want to use to identify your workspace. 
 
-Once you run the command, if the provided name does not exist, one will be ask if want to create it, as you can see in the following image:
+Once you run the command, if the provided name does not exist, one will be asked if want to create it, as you can see in the following image:
 
 ![image](https://user-images.githubusercontent.com/19495917/88816710-0efbc480-d193-11ea-8918-1d595c7595f5.png)
 
