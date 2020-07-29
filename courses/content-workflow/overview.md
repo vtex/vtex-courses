@@ -1,1 +1,1 @@
-This course aims to introduce developers on how to use Site Editor and VTEX Toolbelt. Learn how to manage your different types of workspace and customize your store front.
+This course aims to introduce developers on how to use Site Editor and VTEX Toolbelt. Learn how to manage your different types of workspace, publishing and installing apps and customize your store front.
