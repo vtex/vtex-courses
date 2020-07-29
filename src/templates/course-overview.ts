@@ -1,13 +1,20 @@
-const getStep = (index: number, description: string, link: string) => `
-  <a class="course-link" href="${link}">
+import { getCourseSlug } from '../utils/slugs'
+import { Step } from '../../typings/course'
+
+const getStep = (
+  index: number,
+  description: string,
+  link: string,
+  course: string
+) => `
+  <a class="course-link" href="${getCourseSlug(link, course)}">
     <div class="row-item">
         <h2 class="counter">${index}</h1>
         <span class="step">${description}</span>  
     </div>
-  </a>
-`
+  </a>`
 
-export default (steps: Step[]) => `
+const getSummary = (steps: Step[], course: string) => `
   <style>
     section#hub-content header h1, section#hub-content header h2 {
       color: #f71963
@@ -57,13 +64,28 @@ export default (steps: Step[]) => `
     }
   </style>
   <div class="container">
-    ${steps.map(({ description, link }, index) =>
-      getStep(index + 1, description, link)
-    )}
-  </div>
-`
+    ${steps
+      .map(({ description, link }, index) =>
+        getStep(index + 1, description, link, course)
+      )
+      .join('')}
+  </div>`
 
-interface Step {
-  link: string
-  description: string
-}
+export default (
+  steps: Step[],
+  image: string,
+  overview: string,
+  course: string
+) => `
+  [block:html]
+  ${JSON.stringify({
+    html: `<img src="${image}" width=120/>`,
+  })}
+  [/block]
+  ${overview}
+  [block:html]
+  ${JSON.stringify({
+    html: getSummary(steps, course),
+  })}
+  [/block]
+`
