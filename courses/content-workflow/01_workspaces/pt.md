@@ -25,4 +25,12 @@ vtex use {{WorkspaceName}} --production
 
 > `WorkspaceName` é o nome que você quer utilizar para identificar seu _workspace_.
 
-[WIP]
+Uma vez que você executa o comando, se o nome escolhido não existe, haverá uma pergunta se você deseja criar o _workspace_, como você pode ver na seguinte imagem:
+
+![image](https://user-images.githubusercontent.com/19495917/88816710-0efbc480-d193-11ea-8918-1d595c7595f5.png)
+
+Neste caso, você precisa apenas digitar `y`:
+
+![image](https://user-images.githubusercontent.com/19495917/88816914-4cf8e880-d193-11ea-9676-3647626a3236.png)
+
+Pronto! Seu _workspace_ de produção foi criado!
