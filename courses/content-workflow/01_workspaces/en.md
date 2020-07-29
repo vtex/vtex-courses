@@ -22,4 +22,12 @@ vtex use {{WorkspaceName}} --production
 
 >`WorkspaceName` is the name that you want to use to identify your workspace. 
 
-[WIP]
+Once you run the command, if the provided name does not exist, one will be ask if want to create it, as you can see in the following image:
+
+![image](https://user-images.githubusercontent.com/19495917/88816710-0efbc480-d193-11ea-8918-1d595c7595f5.png)
+
+In that case, you just need to type `y`:
+
+![image](https://user-images.githubusercontent.com/19495917/88816914-4cf8e880-d193-11ea-9676-3647626a3236.png)
+
+You're done! Your production workspace has been created!
