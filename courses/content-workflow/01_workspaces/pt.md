@@ -33,4 +33,8 @@ Neste caso, você precisa apenas digitar `y`:
 
 ![image](https://user-images.githubusercontent.com/19495917/88816914-4cf8e880-d193-11ea-9676-3647626a3236.png)
 
-Pronto! Seu _workspace_ de produção foi criado!
+Pronto! Seu _workspace_ de produção foi criado! De forma a verificar em que _workspace_ e conta você está, use o seguinte comando:
+
+```
+vtex whoami
+```
