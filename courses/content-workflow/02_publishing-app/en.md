@@ -39,7 +39,7 @@ By the end of this step, we're are going to effectively publish the app. Inside 
 
 ![image](https://user-images.githubusercontent.com/19495917/88819289-2d16f400-d196-11ea-8cb6-f86a902c4887.png)
 
-After confirming it, the app building will start and, after finishing it, you should see a message saying that the publishing process was successful.
+After confirming it, the app's building will start and, after finishing it, you should see a message saying that the publishing process was successful.
 
 ![image](https://user-images.githubusercontent.com/19495917/88824809-3061ae00-d19d-11ea-86c1-4118bf609ec3.png)
 
