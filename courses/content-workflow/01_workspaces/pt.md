@@ -16,4 +16,13 @@ Há três diferentes tipos de _workspaces_:
 - _Workspace Master_: um _workspace_ de produção **único** em que o conteúdo dele reflete no que é apresentado ao usuário final da loja.
 
 ## Criando um _workspace_ de produção
+
+Neste passo, vamos criar um _workspace_ de produção e é tão simples quanto rodar o seguinte comando da nossa CLI:
+
+```
+vtex use {{WorkspaceName}} --production
+```
+
+> `WorkspaceName` é o nome que você quer utilizar para identificar seu _workspace_.
+
 [WIP]
