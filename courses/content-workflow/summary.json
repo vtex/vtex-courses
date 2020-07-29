@@ -11,7 +11,29 @@
         }
     },
     {
-        "folder": "02_site-editor",
+        "folder": "02_publishing-app",
+        "title": {
+            "pt": "Publicando uma aplicação no VTEX IO",
+            "en": "Publishing an app on VTEX IO"
+        },
+        "description": {
+            "pt": "Após conhecer um pouco mais sobre os workspaces, você aprenderá como publicar uma app",
+            "en": "After getting to know more about workspaces, you'll learn how to publish an app"
+        }
+    },
+    {
+        "folder": "03_installing-app",
+        "title": {
+            "pt": "Instalando uma app em uma conta VTEX",
+            "en": "Installing an app on a VTEX account"
+        },
+        "description": {
+            "pt": "Depois de publicar uma aplicação, é importante saber como instalá-la",
+            "en": "After publishing an app, it's important to know how to install an app"
+        }
+    }
+    {
+        "folder": "04_site-editor",
         "title": {
             "pt": "Apresentando o Site Editor e alterando um banner de uma loja",
             "en": "Changing the store front through Site Editor"
