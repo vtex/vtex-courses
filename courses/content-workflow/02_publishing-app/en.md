@@ -16,7 +16,7 @@ At the end of the Store Framework course, you implemented a functional store and
 
 > What if I did not take the Store Framework course?
 
-Do not worry, for this step, you can use any theme that you already have and publish it. In case of not having one, you can go back in our courses and create one!
+Do not worry, for this step, you can use any theme that you already have and publish it. In case of not having one, you can go back to our courses and create one!
 
 With an application of a theme, go to `manifest.json` file and change the app name to the following format:
 
