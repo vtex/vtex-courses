@@ -9,4 +9,4 @@ Promise.all([
   handleLanding(courses),
   handleCourses(courses),
   handleSteps(courses),
-]).then()
+])
