@@ -54,7 +54,7 @@ Seu arquivo `service.json` pode ser encontrado dentro da pasta `/node` e será s
 
 Neste diretório, você encontrará apenas pastas vazias e o arquivo vazio `/graphql/schema.graphql`. Este também será preenchido ao longo do curso.
 
-## Dependencies
+## Dependências
 
 A _app_ tem uma dependência, que é a _app_ `events-example`. Esta aplicação, quando linkada em uma conta e _workspace_ específicos, é responsável por prover exemplos de eventos. Durante o curso, conforme nos aproximarmos do assunto de eventos, haverá uma visão mais completa a respeito da _app_ `events-example`.
 

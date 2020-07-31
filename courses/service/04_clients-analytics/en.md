@@ -16,11 +16,9 @@ It's possible to read more about clients concepts [on this document](https://www
 
 In this course, it will be necessary to create a client that will be used to get information regarding product's number of views. The client that will be created will make a REST request in which it'll retrieve information about product views. This client needs to have a function that will be used on a handler for a specific route and this is how it can be tested.
 
-## Activity
+## Implementing the analytics client and testing it
 
-In this step, we will implement the Anaylitcs client. So,
-
-1. First, in the `/node/clients/` directory, you will find a file called `analytics.ts`, which already has a sketch, just like the code block below. This is where you'll implement your client.
+In this step, we will implement the Anaylitcs client. First, in the `/node/clients/` directory, you will find a file called `analytics.ts`, which already has a sketch, just like the code block below. This is where you'll implement your client.
 
    ```ts
    import { AppClient } from '@vtex/api'
@@ -30,7 +28,7 @@ In this step, we will implement the Anaylitcs client. So,
 
    > You can noticed in this code block that Analytics is a client that extends from `AppClient` because this offers pre-configurations that assure that your client has a secure communication with other parts of your app.
 
-2. The client needs to have a constructor and just a single method, called `getLiveUsers`. This method returns a promise of an array that its elements are of the type `LiveUsersProduct`. Using the code below, add the necessary code lines to the client:
+1. The client needs to have a constructor and just a single method, called `getLiveUsers`. This method returns a promise of an array that its elements are of the type `LiveUsersProduct`. Using the code below, add the necessary code lines to the client:
 
    ```diff
    //node/clients/analytics.ts
@@ -52,7 +50,7 @@ In this step, we will implement the Anaylitcs client. So,
 
    > The interface that is defined is going to be used as a typing on the method that we'll implement.
 
-3. Now it's necessary to implement the `getLiveUsers` method. It **returns** an HTTP GET request to a well-defined endpoint that is responsible for getting the data that is needed in this application. So add the following line to the method `getLiveUsers`:
+2. Now it's necessary to implement the `getLiveUsers` method. It **returns** an HTTP GET request to a well-defined endpoint that is responsible for getting the data that is needed in this application. So add the following line to the method `getLiveUsers`:
 
    ```ts
    return this.http.get('_v/live-products')
@@ -60,7 +58,7 @@ In this step, we will implement the Anaylitcs client. So,
 
    > The method that you've just created will get the necessary data for this application: an array of objects that have two fields: `slug`, a string that represents the product ID and `liveUsers`, a number that is the quantity of users visualizing this product - which are the fields in the interface.
 
-4. With your analytics client already implemented, it's necessary to declare it as one of the clients in the `Clients` class, so it will be accessible using the `Context` that we've talked about at the beginning of this step.
+3. With your analytics client already implemented, it's necessary to declare it as one of the clients in the `Clients` class, so it will be accessible using the `Context` that we've talked about at the beginning of this step.
 
    So, in the `node/clients/` directory, go to the file called `index.ts` and add a get method to the class that refers to the analytics client. It's also necessary to import the client that you created.
 
@@ -75,24 +73,24 @@ In this step, we will implement the Anaylitcs client. So,
    }
    ```
 
-5. So as to see it working, it's possible to use `getLiveUsers` method inside the handler for the analytics client. Using a route that it's already defined in the project, it is possible to send a request to it and the handler responsible for this route will call the method that we created.
+4. So as to see it working, it's possible to use `getLiveUsers` method inside the handler for the analytics client. Using a route that it's already defined in the project, it is possible to send a request to it and the handler responsible for this route will call the method that we created.
 
    Inside the node directory, there is a folder called `handlers`. There is already a file named `analytics.ts`, in which its necessary to do two things for your test to work: get the analytics client from `ctx` and replace the content of `ctx.body` with the method mentioned before, as you can see in the code block below:
 
-  ```diff
-    export async function analytics(ctx: Context, next: () => Promise<any>) {
-  +    const {
-  +      clients: { analytics },
-  +    } = ctx
-  +    ctx.status = 200
-  -    ctx.body = 'OK'
-  +    ctx.body = await analytics.getLiveUsers()
-  +    ctx.set('cache-control', 'no-cache')
-      await next()
-    }
-  ```
+   ```diff
+      export async function analytics(ctx: Context, next: () => Promise<any>) {
+   +    const {
+   +      clients: { analytics },
+   +    } = ctx
+   +    ctx.status = 200
+   -    ctx.body = 'OK'
+   +    ctx.body = await analytics.getLiveUsers()
+   +    ctx.set('cache-control', 'no-cache')
+         await next()
+      }
+   ```
 
-6. Now let's test it! It's possible to use Postman to send a `GET` request to the following route:
+Now let's test it! It's possible to use Postman to send a `GET` request to the following route:
 
    `{your workspace}--appliancetheme.myvtex.com/_v/app/analytics/realTime`
 
