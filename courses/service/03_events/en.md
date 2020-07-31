@@ -1,4 +1,4 @@
-# Events: Handling and receiving events
+# Events: handling and receiving events
 
 ## Introduction
 

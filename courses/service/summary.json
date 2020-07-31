@@ -24,11 +24,12 @@
     {
         "folder": "03_events",
         "title": {
-            "en": "Events: Handling and receiving events",
+            "en": "Events: handling and receiving events",
             "pt": "Eventos: recebendo e lidando com eventos"
         },
         "description": {
-            "en": "On this step we approach using events in VTEX IO and learn how to configure an app to listen to events"
+            "en": "On this step we approach using events in VTEX IO and learn how to configure an app to listen to events",
+            "pt": "Neste passo, vamos utilizar os eventos no VTEX IO e aprender como configurar uma apicação para ouvir eventos"
         }
     },
     {
