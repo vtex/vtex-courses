@@ -1,4 +1,4 @@
-# Events: Using Events as Triggers
+# Using events as triggers
 
 ## Introduction
 
@@ -8,7 +8,7 @@ With the _Analytics_ client implemented, we want to use the _Events_ as trigger 
 
 In VTEX IO, events are often used as triggers to other actions, such as sending e-mails to the final client. To implement this, we need to configure our app's client and event handler.
 
-## Activity
+## Using an event as trigger to perform a request
 
 1. As the _Analytics client_ is implemented, we just need to use it in the event handler. First, in the `node/event/liveUsersUpdate.ts` file, import the client we implemented in the previous step:
 

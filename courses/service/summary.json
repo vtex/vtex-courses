@@ -45,10 +45,12 @@
     {
         "folder": "05_events-triggers",
         "title": {
-            "en": "Events: Using Events as Triggers"
+            "en": "Using events as triggers",
+            "pt": "Utilizando eventos como gatilhos"
         },
         "description": {
-            "en": "Learn how to use an event as triggers to actions"
+            "en": "Learn how to use an event as triggers to actions",
+            "pt": "Aprenda como usar um evento como gatilho para ações"
         }
     },
     {
