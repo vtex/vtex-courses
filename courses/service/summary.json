@@ -34,10 +34,12 @@
     {
         "folder": "04_clients-analytics",
         "title": {
-            "en": "Getting to know more about clients"
+            "en": "Getting to know more about clients",
+            "pt": "Conhecendo um pouco mais sobre clientes"
         },
         "description": {
-            "en": "Here we have an introduction of clients in VTEX IO and implementation of a external app client"
+            "en": "Here we have an introduction of clients in VTEX IO and implementation of a external app client",
+            "pt": "Aqui teremos uma introdução sobre clientes no VTEX IO e implementaremos um cliente externo"
         }
     },
     {
