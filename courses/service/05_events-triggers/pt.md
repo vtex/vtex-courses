@@ -10,7 +10,7 @@ No VTEX IO, eventos são usualmente utilizados como gatilhos para outras ações
 
 ## Usando eventos como gatilhos para fazer um _request_
 
-1. Com o lciente de _analytics_ implementado, precisamos apenas utilizá-lo no _handler_ de eventos. Primeiro, no arquivo `node/event/liveusersUpdate.ts`, importe o cliente que implementados no passo anterior:
+1. Com o cliente de _analytics_ implementado, precisamos apenas utilizá-lo no _handler_ de eventos. Primeiro, no arquivo `node/event/liveusersUpdate.ts`, importe o cliente que implementados no passo anterior:
 
    ```ts
    import { Clients } from '../clients/index'
