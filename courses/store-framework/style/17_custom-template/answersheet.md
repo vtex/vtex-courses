@@ -1,0 +1,50 @@
+```store/blocks/about-us.jsonc
+{
+    "store.custom#about-us": {
+      "blocks": [
+        "flex-layout.row#about-us"
+      ]
+    },
+    "flex-layout.row#about-us": {
+      "children": [
+        "image#about-us",
+        "flex-layout.col#text-about-us"
+      ]
+    },
+    "flex-layout.col#text-about-us": {
+      "children": [
+        "rich-text#about-title",
+        "rich-text#about-content"
+      ],
+          "props": {
+        "preventVerticalStretch": true
+      }
+    },
+   "rich-text#about-title": {
+      "props": {
+        "text":
+        "# Sobre a FlatFlat"
+      }
+    },
+    "rich-text#about-content": {
+      "props": {
+        "text":
+        " FlatFlat é uma loja de eletro eletrônicos com muita tradição na fabricação de itens modernos e vintage. Nosso objetivo é criar eletrodomésticos que tornem as casas dos nossos clientes interessantes, independente do estilo. Com apenas 2 meses de história, já somos a loja com os produtos mais bonitos de toda a VTEX. Estamos construindo o nosso site nesse momento com o intuito de dar ao nosso cliente uma experiência memorável com a nossa marca!"
+      }
+    },
+    "image#about-us": {
+      "props": {
+        "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
+        "maxHeight": "600px"
+      }
+    }
+   }
+```
+
+```store/routes.json
+{
+  "store.custom#about-us": {
+    "path": "/about-us"
+  }
+}
+```

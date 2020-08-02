@@ -1,0 +1,15 @@
+```store/blocks/home.jsonc
+{
+  "store.home": { 
+    "blocks": [
+      "rich-text"
+    ]
+  },
+  "rich-text": {
+    "props": {
+      "text": "**Hello, World!**",
+      "textPosition": "RIGHT"
+    }
+  }
+}
+```

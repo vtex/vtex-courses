@@ -1,0 +1,354 @@
+{
+  "steps":
+  [
+    {
+      "folder": "setup",
+      "title": {
+        "en": "Basic configurations",
+        "es": "Configuraciones básicas",
+        "pt": "Configurações básicas"
+      },
+      "description": {
+        "en": "Store Framework development prerequisites",
+        "es": "Requisitos previos para desarrollar con Store Framework",
+        "pt": "Pré-requisitos para desenvolver com o Store Framework"
+      },
+      "challenge": "none"
+    },
+    {
+      "folder": "storeframework",
+      "title": {
+        "en": "Store Framework 101",
+        "es": "Store Framework 101",
+        "pt": "Store Framework 101"
+      },
+      "description": {
+        "en": "Store Framework quick and introductory definitions",
+        "es": "Definiciones rápidas e introductorias sobre Store Framework",
+        "pt": "Definições rápidas e introdutórias sobre o Store Framework."
+      },
+      "challenge": "none"
+    },
+    {
+      "folder": "course",
+      "title": {
+        "en": "Course functioning",
+        "es": "Funcionamiento del curso",
+        "pt": "Funcionamento do curso"
+      },
+      "description": {
+        "en": "How to interact with the course",
+        "es": "Explicando cómo interactuar con el curso",
+        "pt": "Explicando como interagir com o curso."
+      },
+      "challenge": "none"
+    },
+    {
+      "folder": "helloworld",
+      "title": {
+        "en": "Hello, World!",
+        "es": "Hello, World!",
+        "pt": "Hello, World!"
+      },
+      "description": {
+        "en": "Compose and reference your first block in Store Framework",
+        "es": "Componga y haga referencia a su primer bloque en Store Framework",
+        "pt": "Componha e referencie seu primeiro bloco no Store Framework"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "infocard",
+      "title": {
+        "en": "Info Card: Store Framework's call to action",
+        "es": "Info Card: el call to action de Store Framework",
+        "pt": "Info Card: o call to action do Store Framework"
+      },
+      "description": {
+        "en": "Defining a block's call to action on our homepage",
+        "es": "Definiremos un bloque call to action en nuestro home",
+        "pt": "Definiremos um bloco call to action na nossa home"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "csshandles",
+      "title": {
+        "en": "CSS Handles and the power of customizing blocks",
+        "es": "CSS Handles y el poder de la personalización de bloques",
+        "pt": "CSS handles e o poder da customização de blocos"
+      },
+      "description": {
+        "en": "Customize the styles of your blocks",
+        "es": "Personalice el estilo de sus bloques",
+        "pt": "Personalize o estilo dos seus blocos"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "flexlayout",
+      "title": {
+        "en": "Flex Layout: create layouts using the power of Flexbox",
+        "es": "Flex Layout: cree layouts utilizando el poder de Flexbox",
+        "pt": "Flex Layout: crie layouts utilizando o poder do Flexbox"
+      },
+      "description": {
+        "en": "Let's create complex layouts in a simple way",
+        "es": "Creemos layouts complejos de forma sencilla",
+        "pt": "Vamos criar layouts complexos de forma simples"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "shelf",
+      "title": {
+        "en": "Product shelf",
+        "es": "Estante de productos",
+        "pt": "Prateleira de produtos"
+      },
+      "description": {
+        "en": "How to intuitively display a product window display",
+        "es": "Cómo mostrar una vitrina de productos de forma intuitiva",
+        "pt": "Como exibir uma vitrine de produtos de forma intuitiva"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "slider",
+      "title": {
+        "en": "Blocks carousel",
+        "es": "Carrusel de bloques",
+        "pt": "Carrossel de blocos"
+      },
+      "description": {
+        "en": "Insert content into a carousel layout",
+        "es": "Ingrese contenido en un layout de carrusel",
+        "pt": "Insira conteúdo num layout de carrossel"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "responsive",
+      "title": {
+        "en": "Making your content responsive",
+        "es": "Haciendo que su contenido sea responsivo",
+        "pt": "Tornando seu conteúdo responsivo"
+      },
+      "description": {
+        "en": "Use responsive layout to adapt your content to different devices",
+        "es": "Use responsive layout para adaptar su contenido a diferentes dispositivos",
+        "pt": "Use o responsive layout para adaptar seu conteúdo para diferentes dispositivos"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "pdp",
+      "title": {
+        "en": "Product page",
+        "es": "Página de producto",
+        "pt": "Página de produto"
+      },
+      "description": {
+        "en": "First steps to creating a product details page",
+        "es": "Primeros pasos para crear una página de detalles de producto",
+        "pt": "Primeiros passsos para montar uma página de detalhes de produto"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "pdp2",
+      "title": {
+        "en": "Evolving your product page (pdp)",
+        "es": "Evolucionando su página de producto (pdp)",
+        "pt": "Evoluindo sua página de produto (pdp)"
+      },
+      "description": {
+        "en": "Adding new blocks and making the page more interactive",
+        "es": "Agregando nuevos bloques y haciendo que la página sea más interactiva",
+        "pt": "Adicionando novos blocos e deixando a página mais interativa"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "pdp3",
+      "title": {
+        "en": "Finishing your pdp",
+        "es": "Finalizando su pdp",
+        "pt": "Finalizando sua pdp"
+      },
+      "description": {
+        "en": "Using related products and editing properties",
+        "es": "Usando productos relacionados y alterando propiedades",
+        "pt": "Usando produtos relacionados e alterando propriedades"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "search",
+      "title": {
+        "en": "Search page",
+        "es": "Página de búsqueda",
+        "pt": "Página de busca"
+      },
+      "description": {
+        "en": "Getting to know a search page's blocks",
+        "es": "Conociendo los bloques de una página de búsqueda",
+        "pt": "Conhecendo os blocos de uma página de busca"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "search2",
+      "title": {
+        "en": "Adjusting the search page's layout",
+        "es": "Ajustando layout de página de búsqueda",
+        "pt": "Ajustando layout da página de busca"
+      },
+      "description": {
+        "en": "Adding lines and columns to improve the search layout",
+        "es": "Agregando líneas y columnas para mejorar el layout de búsqueda",
+        "pt": "Adicionando linhas e colunas para melhorar o layout da busca"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "styles",
+      "title": {
+        "en": "Global styles",
+        "es": "Estilos globales",
+        "pt": "Estilos globais"
+      },
+      "description": {
+        "en": "Editing semantic classes to change your store's style",
+        "es": "Altere clases semánticas para cambiar el estilo de su tienda",
+        "pt": "Altere classes semânticas para mudar o estilo da sua loja"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "custom-template",
+      "title": {
+        "en": "Creating custom templates",
+        "es": "Creando templates personalizados",
+        "pt": "Criando templates customizados"
+      },
+      "description": {
+        "en": "Create a path and link a customized template",
+        "es": "Cree una ruta y asocie un template personalizado",
+        "pt": "Crie uma rota e associe um template customizado"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "tab-layout",
+      "title": {
+        "en": "Tab layout",
+        "es": "Layout de pestañas",
+        "pt": "Layout de abas"
+      },
+      "description": {
+        "en": "Using tabs layout on the about us page",
+        "es": "Usando layout de pestañas en la página institucional",
+        "pt": "Usando layout de abas na página institucional"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "richtextmarkdown",
+      "title": {
+        "en": "Exploring the power behind rich text",
+        "es": "Explorando el poder de rich text",
+        "pt": "Explorando o poder do rich text"
+      },
+      "description": {
+        "en": "Advanced Markdown usage",
+        "es": "Usando el lenguaje de Markdown de forma avanzada",
+        "pt": "Usando a linguagem do Markdown de forma avançada"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "iframe",
+      "title": {
+        "en": "Inserting an Iframe on our about us page",
+        "es": "Insertando un Iframe en nuestra página institucional",
+        "pt": "Inserindo um Iframe na nossa página institucional"
+      },
+      "description": {
+        "en": "Displaying an Instagram post in your store",
+        "es": "Mostrando una publicación de Instagram en su tienda",
+        "pt": "Exibindo um post do Instagram na sua loja"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "landing",
+      "title": {
+        "en": "Building a custom search landing page",
+        "es": "Construyendo un landing personalizado de búsqueda",
+        "pt": "Construindo uma landing customizada de busca"
+      },
+      "description": {
+        "en": "Defining pages for events that have customized products",
+        "es": "Definiendo páginas de eventos con productos personalizados",
+        "pt": "Definindo páginas de eventos com produtos customizados"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "header",
+      "title": {
+        "en": "Header",
+        "es": "Cabecera de la tienda",
+        "pt": "Cabeçalho da loja"
+      },
+      "description": {
+        "en": "Defining header blocks and editing the iconography",
+        "es": "Definiendo bloques de cabecera y alterando iconografía",
+        "pt": "Definindo blocos de cabeçalho e alterando iconografia"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "menu",
+      "title": {
+        "en": "Menu",
+        "es": "Menú",
+        "pt": "Menu"
+      },
+      "description": {
+        "en": "Creating your store's browsing",
+        "es": "Creando la navegación de su tienda",
+        "pt": "Criando a navegação da sua loja"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "menu-flex",
+      "title": {
+        "en": "Advanced menu with Flex Layout",
+        "es": "Menú avanzado con Flex Layout",
+        "pt": "Menu avançado com flex layout"
+      },
+      "description": {
+        "en": "Enriching the menu with additional blocks",
+        "es": "Enriqueciendo el menú con otros bloques",
+        "pt": "Enriquecendo o menu com outros blocos"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "footer",
+      "title": {
+        "en": "Footer",
+        "es": "Pie de Página",
+        "pt": "Rodapé"
+      },
+      "description": {
+        "en": "Defining footer blocks",
+        "es": "Definiendo bloques de pie de página",
+        "pt": "Definindo blocos de rodapé"
+      }
+    }
+  ]
+}
