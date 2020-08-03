@@ -69,7 +69,7 @@
         "folder": "07_graphql-implementation",
         "title": {
             "en": "GraphQL: Retrieving data from Masterdata",
-            "pt": "GraphQL: Consultando e consumindo dados do Master Data"
+            "pt": "GraphQL: Consultando dados do Master Data"
         },
         "description": {
             "en": "Here we see how to use GraphQL to retrieve data from Mater Data",
