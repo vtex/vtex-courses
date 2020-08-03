@@ -1,0 +1,70 @@
+{
+  "steps":
+  [
+    {
+      "folder": "01_csshandles",
+      "title": {
+        "en": "CSS Handles and the power of customizing blocks",
+        "es": "CSS Handles y el poder de la personalización de bloques",
+        "pt": "CSS handles e o poder da customização de blocos"
+      },
+      "description": {
+        "en": "Customize the styles of your blocks",
+        "es": "Personalice el estilo de sus bloques",
+        "pt": "Personalize o estilo dos seus blocos"
+      }
+    },
+    {
+      "folder": "02_styles",
+      "title": {
+        "en": "Global styles",
+        "es": "Estilos globales",
+        "pt": "Estilos globais"
+      },
+      "description": {
+        "en": "Editing semantic classes to change your store's style",
+        "es": "Altere clases semánticas para cambiar el estilo de su tienda",
+        "pt": "Altere classes semânticas para mudar o estilo da sua loja"
+      }
+    },
+    {
+      "folder": "03_richtextmarkdown",
+      "title": {
+        "en": "Exploring the power behind rich text",
+        "es": "Explorando el poder de rich text",
+        "pt": "Explorando o poder do rich text"
+      },
+      "description": {
+        "en": "Advanced Markdown usage",
+        "es": "Usando el lenguaje de Markdown de forma avanzada",
+        "pt": "Usando a linguagem do Markdown de forma avançada"
+      }
+    },
+    {
+      "folder": "04_custom-template",
+      "title": {
+        "en": "Creating custom templates",
+        "es": "Creando templates personalizados",
+        "pt": "Criando templates customizados"
+      },
+      "description": {
+        "en": "Create a path and link a customized template",
+        "es": "Cree una ruta y asocie un template personalizado",
+        "pt": "Crie uma rota e associe um template customizado"
+      }
+    },
+    {
+      "folder": "05_landing",
+      "title": {
+        "en": "Building a custom search landing page",
+        "es": "Construyendo un landing personalizado de búsqueda",
+        "pt": "Construindo uma landing customizada de busca"
+      },
+      "description": {
+        "en": "Defining pages for events that have customized products",
+        "es": "Definiendo páginas de eventos con productos personalizados",
+        "pt": "Definindo páginas de eventos com produtos customizados"
+      }
+    }
+  ]
+}
