@@ -33,7 +33,7 @@ The `text` prop accepts markdown format. However, if you want to write your text
 
 Other properties of the `rich-text` component can be found in the [Store Framework official documentation](https://vtex.io/docs/components/all/vtex.rich-text/)
 
-Shall we start?
+## Activity
 
 1. In `about-us.jsonc`, change the text in `tab-list.item#home1` so that an "About" appears in the first tab:
 
