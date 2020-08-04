@@ -20,7 +20,9 @@ To use such definitions, the translation files mentioned above are JSON, whose k
 
 ## Internationalizing your block
 
-You must have learned how to use our **builder _messages_**, and it will be through it that internationalized _strings_ will be added to the components. To do so, **in the directory `/messages`**, add now a message for the **title of the component**:
+You must have learned how to use our **builder _messages_**, and it will be through it that internationalized _strings_ will be added to the components. 
+
+1. To do so, **in the directory `/messages`**, add now a message for the **title of the component**:
 
    `messages/pt.json`
 
@@ -58,91 +60,92 @@ You must have learned how to use our **builder _messages_**, and it will be thro
    }
    ```
 
-After that, to **render the title** the component `FormattedMessage` of the lib [react-intl](https://github.com/formatjs/react-intl) must be used.
+2. After that, to **render the title** the component `FormattedMessage` of the lib [react-intl](https://github.com/formatjs/react-intl) must be used.
 
    > The lib _react-intl_ supports many ways of configuration and internationalization, it is worth checking it out.
 
-Now, add the lib using `yarn add react-intl` in the _react_ directory. After doing that, in your component's code, `Countdown.tsx`, **import the FormattedMessage**:
+3. Now, add the lib using `yarn add react-intl` in the _react_ directory. After doing that, in your component's code, `Countdown.tsx`, **import the FormattedMessage**:
 
-```tsx
-//react/Countdown.tsx
-import { FormattedMessage } from 'react-intl'
-```
+    ```tsx
+    //react/Countdown.tsx
+    import { FormattedMessage } from 'react-intl'
+    ```
 
-And add a new prop to the interface `CountdownProps`:
-```diff
-interface CountdownProps {
-+ title: string
-  targetDate: string
-}
-```
+4. And add a new prop to the interface `CountdownProps`:
 
-You'll also need to add a const that will be your title:
+    ```diff
+    interface CountdownProps {
+    + title: string
+      targetDate: string
+    }
+    ```
 
-```tsx
-//react/Countdown.tsx
-const titleText = title || <FormattedMessage id="countdown.title" />
-```
+5. You'll also need to add a const that will be your title:
 
-Now, join the title to the countdown to render. To do so, define a container outside. Besides, the text for the title will be passes using the _prop_ `title`:
+    ```tsx
+    //react/Countdown.tsx
+    const titleText = title || <FormattedMessage id="countdown.title" />
+    ```
 
-```tsx
-//react/Countdown.tsx
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
-  title,
-  targetDate,
-}) => {
-  const [timeRemaining, setTime] = useState<TimeSplit>({
-    hours: '00',
-    minutes: '00',
-    seconds: '00',
-  })
+6. Now, join the title to the countdown to render. To do so, define a container outside. Besides, the text for the title will be passes using the _prop_ `title`:
 
-  const titleText = title || <FormattedMessage id="countdown.title" />
-  const handles = useCssHandles(CSS_HANDLES)
+    ```tsx
+    //react/Countdown.tsx
+    const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
+      title,
+      targetDate,
+    }) => {
+      const [timeRemaining, setTime] = useState<TimeSplit>({
+        hours: '00',
+        minutes: '00',
+        seconds: '00',
+      })
 
-  tick(targetDate, setTime)
+      const titleText = title || <FormattedMessage id="countdown.title" />
+      const handles = useCssHandles(CSS_HANDLES)
 
-  return (
-    <div className={`${handles.container} t-heading-2 fw3 w-100 c-muted-1`}>
-      <div className={`${handles.title} db tc`}>{titleText}</div>
-      <div className={`${handles.countdown} db tc`}>
-        {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
-      </div>
-    </div>
-  )
-}
-```
+      tick(targetDate, setTime)
 
-Note that three **new** _handles_ are used: _container_, _countdown_ and _title_. Therefore, remember to declare them in the const `CSS_HANDLES`, seen in the previous step:
+      return (
+        <div className={`${handles.container} t-heading-2 fw3 w-100 c-muted-1`}>
+          <div className={`${handles.title} db tc`}>{titleText}</div>
+          <div className={`${handles.countdown} db tc`}>
+            {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
+          </div>
+        </div>
+      )
+    }
+    ```
 
-```tsx
-const CSS_HANDLES = ["container", "countdown", "title"]
-```
+7. Note that three **new** _handles_ are used: _container_, _countdown_ and _title_. Therefore, remember to declare them in the const `CSS_HANDLES`, seen in the previous step:
 
-At last but not least, it is needed to add the `title` _prop_ in the _schema_:
+    ```tsx
+    const CSS_HANDLES = ["container", "countdown", "title"]
+    ```
 
-```diff
-//react/Countdown.tsx
-Countdown.schema = {
-  title: 'editor.countdown.title',
-  description: 'editor.countdown.description',
-  type: 'object',
-  properties: {
-+   title: {
-+     title: 'I am a title',
-+     type: 'string',
-+     default: null,
-+   },
-    targetDate: {
-      title: 'Final date',
-      description: 'Final date used in the countdown',
-      type: 'string',
-      default: null,
-    },
-  },
-}
-```
+8. At last but not least, it is needed to add the `title` _prop_ in the _schema_:
+
+    ```diff
+    //react/Countdown.tsx
+    Countdown.schema = {
+      title: 'editor.countdown.title',
+      description: 'editor.countdown.description',
+      type: 'object',
+      properties: {
+    +   title: {
+    +     title: 'I am a title',
+    +     type: 'string',
+    +     default: null,
+    +   },
+        targetDate: {
+          title: 'Final date',
+          description: 'Final date used in the countdown',
+          type: 'string',
+          default: null,
+        },
+      },
+    }
+    ```
 
 Done! Now, to try out your store in other languages, you just need to add the _query string_ `/?cultureInfo=pt-br` or `/?cultureInfo=es-ar` on the URL, for example. By using the first URL, the expected result is this one:
 

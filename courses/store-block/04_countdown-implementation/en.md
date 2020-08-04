@@ -7,82 +7,83 @@ Now we covered the component's basics, it's time to implement the countdown effe
 
 ## Making your countdown work!
 
-First, we need to import a few functions and types to continue. Inside the Countdown component, import the following:
+1. First, we need to import a few functions and types to continue. Inside the Countdown component, import the following:
 
-```ts
-//react/Countdown.tsx
-import React, { useState } from 'react'
-import { TimeSplit } from './typings/global'
-import { tick } from './utils/time'
-```
+    ```ts
+    //react/Countdown.tsx
+    import React, { useState } from 'react'
+    import { TimeSplit } from './typings/global'
+    import { tick } from './utils/time'
+    ```
 
-Next step is to add the state update *hook* (`useState`):
+2. Next step is to add the state update *hook* (`useState`):
 
-```diff
-//react/Countdown.tsx
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate }) => {
-+   const [timeRemaining, setTime] = useState<TimeSplit>({
-+     hours: '00',
-+     minutes: '00',
-+     seconds: '00'
-+   })
+    ```diff
+    //react/Countdown.tsx
+    const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate }) => {
+    +   const [timeRemaining, setTime] = useState<TimeSplit>({
+    +     hours: '00',
+    +     minutes: '00',
+    +     seconds: '00'
+    +   })
 
-    return (
-      <div>
-        { targetDate }
-      </div>
-    ) 
-}
-```
+        return (
+          <div>
+            { targetDate }
+          </div>
+        ) 
+    }
+    ```
 
-After doing that, we'll add a default constant `targetDate` for the edge case where the prop is not defined:
+3. After doing that, we'll add a default constant `targetDate` for the edge case where the prop is not defined:
     
-```typescript
-//react/Countdown.tsx
-const DEFAULT_TARGET_DATE = (new Date('2020-06-25')).toISOString()
-```
+    ```typescript
+    //react/Countdown.tsx
+    const DEFAULT_TARGET_DATE = (new Date('2020-06-25')).toISOString()
+    ```
 
-Now, we need to add the `tick` function and the `DEFAULT_TARGET_DATE` constant to make the countdown work:
+4. Now, we need to add the `tick` function and the `DEFAULT_TARGET_DATE` constant to make the countdown work:
 
-```diff
-//react/Countdown.tsx
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
-  const [timeRemaining, setTime] = useState<TimeSplit>({
-    hours: '00',
-    minutes: '00',
-    seconds: '00'
-})
+    ```diff
+    //react/Countdown.tsx
+    const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
+      const [timeRemaining, setTime] = useState<TimeSplit>({
+        hours: '00',
+        minutes: '00',
+        seconds: '00'
+    })
 
-+ tick(targetDate, setTime)
+    + tick(targetDate, setTime)
 
-  return (
-    <div>
-      { targetDate }
-    </div>
-  ) 
-}
-```
+      return (
+        <div>
+          { targetDate }
+        </div>
+      ) 
+    }
+    ```
 
-At last but not least, change the `h1` so that it shows the countdown that we've created. For that, we need to use the `timeRemaining` current state:
-```diff
-//react/Countdown.tsx
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
-  const [timeRemaining, setTime] = useState<TimeSplit>({
-    hours: '00',
-    minutes: '00',
-    seconds: '00'
-  })
+5. At last but not least, change the `h1` so that it shows the countdown that we've created. For that, we need to use the `timeRemaining` current state:
 
-  tick(targetDate, setTime)
+    ```diff
+    //react/Countdown.tsx
+    const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
+      const [timeRemaining, setTime] = useState<TimeSplit>({
+        hours: '00',
+        minutes: '00',
+        seconds: '00'
+      })
 
-  return (
-    <div>   
--     <h1>{ targetDate }</h1>
-+     <h1>{ `${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}` }</h1>
-    </div>
-  ) 
-}
-```
+      tick(targetDate, setTime)
+
+      return (
+        <div>   
+    -     <h1>{ targetDate }</h1>
+    +     <h1>{ `${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}` }</h1>
+        </div>
+      ) 
+    }
+    ```
 
 > The countdown *string* formatting is in a `HH:MM:SS` format, made through an `hours`, `minutes` and `seconds` splitting. 
 

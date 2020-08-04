@@ -65,7 +65,7 @@ Neste exemplo de um arquivo `manifest.json`, é possível observar algumas das c
 }
 ```
 
-## Sobre esse tutorial
+## Sobre esse curso
 Agora que você sabe um pouco mais sobre o _manifest_, este tutorial irá guiá-lo no aprendizado de desenvolvimento de aplicações customizadas no VTEX IO. No fim, você terá uma _app_ completamente funcional, que é um bloco contador para sua loja.
 
 Há alguns pré-requisitos para que você tenha uma experiência gratificante ao fazer esse tutorial, que são:
