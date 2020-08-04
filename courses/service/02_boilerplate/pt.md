@@ -58,7 +58,7 @@ Neste diretório, você encontrará apenas pastas vazias e o arquivo vazio `/gra
 
 A _app_ tem uma dependência, que é a _app_ `events-example`. Esta aplicação, quando linkada em uma conta e _workspace_ específicos, é responsável por prover exemplos de eventos. Durante o curso, conforme nos aproximarmos do assunto de eventos, haverá uma visão mais completa a respeito da _app_ `events-example`.
 
-Vamos começar?
+## Dando início ao curso
 
 Por enquanto, clone (`git clone`) a _app_ `events-example` [deste repositório](https://github.com/vtex-apps/events-example) e rode `vtex link` na pasta onde o repositório foi clonado.
 

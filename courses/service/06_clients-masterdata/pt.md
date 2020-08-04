@@ -22,6 +22,8 @@ Neste passo, este cliente será utilizado para pegar informações dos N produto
 
 Vamos começar?
 
+## Utilizando o cliente do Master Data para armazenar informação
+
 1. Em primeiro lugar, precisamos definir as _policies_ da aplicação, para autorizar o uso do **Master Data**. Para fazer isso, altere o arquivo `manifest.json`, como feito abaixo:
 
    ```diff
