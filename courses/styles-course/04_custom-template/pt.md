@@ -102,6 +102,8 @@ Devemos criar um arquivo `routes.json` dentro da pasta `store` do seu tema. Apó
 
 onde `{URL}` é o nome do caminho desejado
 
+## Atividade
+
 Vamos criar uma página com informações sobre a sua loja conforme o exemplo abaixo:
 
 ![](https://appliancetheme.vteximg.com.br/arquivos/about-us-activity.png)
