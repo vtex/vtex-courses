@@ -6,7 +6,7 @@ Making a brief overview of the _Boilerplate_, there are two directories (`/node`
 
 ## Manifest Overview
 
-In the `manifest.json` file, you will find the app's name, vendor, version, and other information to pay attention to: builders, policies and dependencies. In this initial state, we have the following configurations:
+In the `manifest.json` file, you will find the app's name, vendor, version, and other information to pay attention to: builders, policies, and dependencies. In this initial stage, we have the following configurations:
 
 - builders: what builders your app will need. In this case, we have, so far, only the `docs builder` and the `node builder`, with their respective versions;
 - policies: if the app being built needs to access some external services or get some specific data from other places, it needs to declare so, even for external APIs. At this point, we have no specific policies yet;
@@ -55,7 +55,7 @@ On this directory, you will find only the empty directories and the `/graphql/sc
 
 ## Dependencies
 
-For this course, this app has a dependency on the `events-example` app. The `events-example` app, when linked to your account and workspace, is responsable for providing events examples. Over the course, as we approach the events topic, there will be a more complete overview of the `events-example` app.
+For this course, this app has a dependency on the `events-example` app. The `events-example` app, when linked to your account and workspace, is responsible for providing events examples. Over the course, as we approach the events' topic, there will be a more complete overview of the `events-example` app.
 
 ## Activity
 

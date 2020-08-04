@@ -2,7 +2,7 @@
 
 ## Introduction
 
-With the _Analytics_ client implemented, we want to use the _Events_ as trigger to the requests. This means that, for every event listened, we want to perform a request to the _Analytics_ app. So, for every X seconds, we will have a new data on **Live Products**.
+With the _Analytics_ client implemented, we want to use the _Events_ as a trigger to the requests. This means that for every event listened, we want to perform a request to the _Analytics_ app. So, for every X seconds, we will have new data on **Live Products**.
 
 ## Events
 
@@ -28,7 +28,7 @@ In VTEX IO, events are often used as triggers to other actions, such as sending 
    }
    ```
 
-   > Note: you can also globally declare your event context in the `index.ts` file. If you do so, you doesn't need to import in every file you want to use it.
+   > Note: you can also globally declare your event context in the `index.ts` file. If you do so, you don't need to import in every file you want to use it.
 
 3. Now, to use the _Analytics client_, do the following:
 
@@ -41,6 +41,6 @@ In VTEX IO, events are often used as triggers to other actions, such as sending 
    }
    ```
 
-4. Finally, run `vtex link` and for every event fired, you should see the live users retrieved from the _Analytics_.
+4. Finally, run `vtex link`, and for every event fired, you should see the live users retrieved from the _Analytics_.
    The result should be like this:
    ![image](https://user-images.githubusercontent.com/43679629/85150833-69ffda80-b229-11ea-9260-b9255adf7d9c.png)

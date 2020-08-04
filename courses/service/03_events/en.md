@@ -16,7 +16,7 @@ Shall we start?
 
     ![image](https://user-images.githubusercontent.com/43679629/83802091-8c69f380-a680-11ea-82af-a438fb73f40b.png)
 
-    > This healthcheck route access creates a cache context needed for the VTEX IO to fire events. Without it, the `events-example` app won't be able to fire the events our app is going to listen to.
+    > This health check route access creates a cache context needed for the VTEX IO to fire events. Without it, the `events-example` app won't be able to fire the events our app is going to listen to.
 
 2. Now, we need to add the event handler on the `Service` declaration to refer to what the app is supposed to do when listening to the event. To do so, on the `/node/index.ts` file, complement `Service` declaration:
 

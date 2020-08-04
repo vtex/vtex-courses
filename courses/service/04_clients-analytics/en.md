@@ -2,13 +2,13 @@
 
 ## Introduction
 
-In this step, some clients concepts are going to be briefly explained and it's presented which are the clients that are necessary for this course: **analytics client** and **master data client**. The first one will be implemented on this step and you'll also learn how to use a client that has been already implemented in our API.
+In this step, some clients' concepts are going to be briefly explained and it's presented which are the clients that are necessary for this course: **analytics client** and **master data client**. The first one will be implemented on this step and you'll also learn how to use a client that has been already implemented in our API.
 
 ## About the clients
 
-Clients, on VTEX IO, are abstractions to other services. We tackle complexities when setting up an HTTP client, for example, so you can focus on the real value of your software. Whenever you need to setup a connection with an external API or another VTEX service, you should create a client! Some standard clients are already baked into VTEX IO, check them [here](https://github.com/vtex/node-vtex-api/blob/ccf4d8f8d3208007c4bfd558baf979df8d825af8/src/clients/IOClients.ts).
+Clients, on VTEX IO, are abstractions to other services. We tackle complexities when setting up an HTTP client, for example, so you can focus on the real value of your software. Whenever you need to set up a connection with an external API or another VTEX service, you should create a client! Some standard clients are already baked into VTEX IO, check them [here](https://github.com/vtex/node-vtex-api/blob/ccf4d8f8d3208007c4bfd558baf979df8d825af8/src/clients/IOClients.ts).
 
-If you already got to know more about IO services, you probably know that your implementation exports functions that receive a context object. These functions can be a resolver function to a GraphQL field, a middleware to an HTTP server or an event handler, and, in all of them, you receive a ctx (or however you wanna call it) object of type `Context`, and it is inside of `ctx.clients` where you’ll find each client.
+If you already got to know more about IO services, you probably know that your implementation exports functions that receive a context object. These functions can be a resolver function to a GraphQL field, a middleware to an HTTP server or an event handler, and, in all of them, you receive a `ctx` (or however you wanna call it) object of type `Context`, and it is inside of `ctx.clients` where you’ll find each client.
 
 It's possible to read more about clients concepts [on this document](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-3598e97a761645e0befdac84a32f339d).
 
@@ -26,7 +26,7 @@ In this step, we will implement the Anaylitcs client. First, in the `/node/clien
    export default class Analytics extends AppClient {}
    ```
 
-   > You can noticed in this code block that Analytics is a client that extends from `AppClient` because this offers pre-configurations that assure that your client has a secure communication with other parts of your app.
+   > You can notice in this code block that Analytics is a client that extends from `AppClient` because this offers pre-configurations that assure that your client has secure communication with other parts of your app.
 
 1. The client needs to have a constructor and just a single method, called `getLiveUsers`. This method returns a promise of an array that its elements are of the type `LiveUsersProduct`. Using the code below, add the necessary code lines to the client:
 
@@ -56,7 +56,7 @@ In this step, we will implement the Anaylitcs client. First, in the `/node/clien
    return this.http.get('_v/live-products')
    ```
 
-   > The method that you've just created will get the necessary data for this application: an array of objects that have two fields: `slug`, a string that represents the product ID and `liveUsers`, a number that is the quantity of users visualizing this product - which are the fields in the interface.
+   > The method that you've just created will get the necessary data for this application: an array of objects that have two fields: `slug`, a string that represents the product ID, and `liveUsers`, a number that is the number of users visualizing this product - which are the fields in the interface.
 
 3. With your analytics client already implemented, it's necessary to declare it as one of the clients in the `Clients` class, so it will be accessible using the `Context` that we've talked about at the beginning of this step.
 
@@ -75,7 +75,7 @@ In this step, we will implement the Anaylitcs client. First, in the `/node/clien
 
 4. So as to see it working, it's possible to use `getLiveUsers` method inside the handler for the analytics client. Using a route that it's already defined in the project, it is possible to send a request to it and the handler responsible for this route will call the method that we created.
 
-   Inside the node directory, there is a folder called `handlers`. There is already a file named `analytics.ts`, in which its necessary to do two things for your test to work: get the analytics client from `ctx` and replace the content of `ctx.body` with the method mentioned before, as you can see in the code block below:
+   Inside the node directory, there is a folder called `handlers`. There is already a file named `analytics.ts`, in which it's necessary to do two things for your test to work: get the analytics client from `ctx` and replace the content of `ctx.body` with the method mentioned before, as you can see in the code block below:
 
    ```diff
       export async function analytics(ctx: Context, next: () => Promise<any>) {
