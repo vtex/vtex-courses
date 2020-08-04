@@ -20,7 +20,9 @@ In this step, it will be used to fetch data regarding the top-N most viewed prod
 
 > **NOTE:** It is important to highlight that the Master Data client will be available as long as the correct version of `@vtex/api` is installed in the node folder. It can be used by accessing `ctx.clients.masterdata`.
 
-## Activity
+Shall we start?
+
+## Using the Master Data client to store information
 
 1. First, we need to setup the policies in our app, to authorize it to use **Master Data**. To do so, complement the `manifest.json` file:
 

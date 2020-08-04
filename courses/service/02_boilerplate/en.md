@@ -57,7 +57,7 @@ On this directory, you will find only the empty directories and the `/graphql/sc
 
 For this course, this app has a dependency on the `events-example` app. The `events-example` app, when linked to your account and workspace, is responsible for providing events examples. Over the course, as we approach the events' topic, there will be a more complete overview of the `events-example` app.
 
-## Activity
+## Getting started
 
 1. For now, clone (`git clone`) the `events-example` app from [this repository](https://github.com/vtex-apps/events-example) and run `vtex link` in it's directory.
 

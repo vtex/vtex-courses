@@ -1,4 +1,4 @@
-# GraphQL: Retrieving data from Master Data
+# GraphQL
 
 ## Introduction
 
@@ -12,7 +12,9 @@ To get these product page views, we will use [GraphQL](https://graphql.org/), th
 
 Therefore, GraphQL uses types and a query schema to specify the data retrieved and resolvers to get the exact data needed.
 
-## Activity
+Let's go!
+
+## Retrieving data from Master Data
 
 1. On the directory `/graphql/types` create the `productView.graphql` file and declare the type of the product list we want to retrieve:
 

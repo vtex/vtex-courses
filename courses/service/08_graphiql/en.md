@@ -12,7 +12,7 @@ Exploring the IDE interface, there are three main areas: the coding area, the qu
 
 ![image](https://user-images.githubusercontent.com/43679629/83764107-e900ea80-a64f-11ea-969f-116ea896fe2d.png)
 
-## Activity
+## Testing your query
 
 1. Open the GraphiQL route and type the code below in the coding area:
 

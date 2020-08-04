@@ -1,4 +1,4 @@
-# GraphQL: Consultando dados do Master Data
+# GraphQL
 
 ## Introdução
 
@@ -13,6 +13,8 @@ Para pegar os dados de visitas por produto, vamos utilizar [GraphQL](https://gra
 Portanto, o GraphQL utiliza tipos e um _schema_ para as _queries_ para especificar os dados consultados, e _resolvers_ para pegar apenas os dados necessários.
 
 Vamos lá?
+
+## Recuperando dados do Master Data
 
 1. No diretório `/graphql/types`, crie o arquivo `productView.graphql` e declare o tipo de lista de produto que você quer consultar:
 
