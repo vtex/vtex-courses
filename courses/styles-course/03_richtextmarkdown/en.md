@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As we've seen, Markdown is a user friendly language that can be easily converted to HTML. In this lesson, we'll see how it's possible to use this language in our [**Rich Text**](https://vtex.io/docs/components/all/vtex.rich-text/) block to create interesting texts. 
+Markdown is a user friendly language that can be easily converted to HTML. In this lesson, we'll see how it's possible to use this language in our [**Rich Text**](https://vtex.io/docs/components/all/vtex.rich-text/) block to customize them and create interesting texts. 
 
 ## Rich Text with Markdown
 
@@ -33,7 +33,7 @@ The `text` prop accepts markdown format. However, if you want to write your text
 
 Other properties of the `rich-text` component can be found in the [Store Framework official documentation](https://vtex.io/docs/components/all/vtex.rich-text/)
 
-## Activity
+Shall we start?
 
 1. In `about-us.jsonc`, change the text in `tab-list.item#home1` so that an "About" appears in the first tab:
 

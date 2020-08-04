@@ -1,10 +1,8 @@
 # Explorando o poder do rich text
 
-## :sparkles: **Branch:** richtextmarkdown
-
 ## Introdução
 
-Conforme já vimos, Markdown é uma linguagem de marcação amigável que pode ser convertida de maneira simples para HTML. Nesta lição, veremos como é possível utilizar esta linguagem em nosso bloco [**Rich Text**](https://vtex.io/docs/components/all/vtex.rich-text/) para criar textos interessantes.
+Markdown é uma linguagem de marcação amigável que pode ser convertida de maneira simples para HTML. Nesta lição, veremos como é possível utilizar esta linguagem em nosso bloco [**Rich Text**](https://vtex.io/docs/components/all/vtex.rich-text/) para customizá-los e criar textos interessantes.
 
 ## Rich Text com Markdown
 
@@ -35,7 +33,7 @@ A prop `text` aceita o formato de markdown. Portanto, se você deseja escrever s
 
 Outras propriedades do componente `rich-text` podem ser encontrados na [documentação oficial do Store Framework](https://vtex.io/docs/components/all/vtex.rich-text/)
 
-## Atividade
+Vamos começar?
 
 1. Dentro do arquivo `about-us.jsonc`, troque o texto da `tab-list.item#home1` para que apareça um "Sobre" na primeira aba;
 
