@@ -14,7 +14,7 @@ It's possible to read more about clients concepts [on this document](https://www
 
 ## Analytics client
 
-In this course, it will be necessary to create a client that will be used to get information regarding product's number of views. The client that will be created will make a REST request in which it'll retrieve information about product views. This client needs to have a function that will be used on a handler for a specific route and this is how it can be tested.
+In this course, it will be necessary to create a client that will be used to get information regarding the product's number of views. The client that will be created will make a REST request in which it'll retrieve information about product views. This client needs to have a function that will be used on a handler for a specific route and this is how it can be tested.
 
 ## Implementing the analytics client and testing it
 
