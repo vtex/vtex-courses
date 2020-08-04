@@ -2,6 +2,10 @@
 
 ## Introdução
 
+Until now, you've learned how to use CSS, Tachyons, and Markdown in order to customize your blocks on Store Framework. However, it's also important to learn how to create custom templates, so your store can habe custom landing pages, for example, with a well-defined URL and specific content to display.
+
+Até agora, você aprendeu como utilizar CSS, _Tachyons_ e Markdown para customizar seus blocos no Store Framework. Porém, também é importante aprende como criar _templates_ customizados, de forma que a sua loja possa ter _landing pages_ customizadas, com uma URL bem definida e conteúdos específicos.
+
 Lojas são compostas por várias páginas diferentes, cada uma com layout e conteúdo específicos. Ao criar uma loja do zero no VTEX IO, algumas páginas padrão com URLs predefinidas já são disponibilizadas para você. Abaixo, vemos uma lista com algumas dessas páginas padrão:
 
 - `store.home` (Home page)
@@ -11,7 +15,7 @@ Lojas são compostas por várias páginas diferentes, cada uma com layout e cont
 - `store.login` (Login page)
 - `store.orderplaced` (Order Placed page)
 
-Mas é possível que você queira criar uma landing page customizada. Nesse caso, você deve criar uma nova URL e um conteúdo específico para exibir aos usuários que acessarem essa rota.
+Neste passo, você aprenderá como criar _templates_ customizados do zero.
 
 ## Criando uma Landing Page
 
@@ -97,8 +101,6 @@ Devemos criar um arquivo `routes.json` dentro da pasta `store` do seu tema. Apó
 ```
 
 onde `{URL}` é o nome do caminho desejado
-
-## Atividade
 
 Vamos criar uma página com informações sobre a sua loja conforme o exemplo abaixo:
 
