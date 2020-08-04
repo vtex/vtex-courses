@@ -41,7 +41,7 @@ Em um cabeçalho nível 1, por exemplo, ao inspecionar descobrimos que seu taman
 ![image](https://user-images.githubusercontent.com/18701182/69850262-ab18a900-125d-11ea-8ba8-e6a64874ca04.png)
 ![image](https://user-images.githubusercontent.com/18701182/69850281-b1a72080-125d-11ea-8c46-302b6a4f9749.png)
 
-## Atividade
+## Alterando globalmente a cor e a tipografia 
 
 1. No arquivo `style.json`, substitua todas as ocorrências das cores que encontramos, trocando:
   - **#072c75** por **#45a6a3**

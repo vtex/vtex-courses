@@ -12,7 +12,7 @@ We saw that the search deduces what is needed from the given context. On a custo
 
 The query schema is one of the [custom query search result props](https://vtex.io/docs/app/vtex.search-result#layout-api) that allows you to control the search that the *landing page* should run. To know more the query schema's possibilities, read through its [documentation](https://vtex.io/docs/app/vtex.search-result#queryschema).
 
-## Activity
+## Creating a new landing page
 
 ![image](https://user-images.githubusercontent.com/18701182/69890324-d1792b80-12d3-11ea-911d-194d2cb778c8.png)
 

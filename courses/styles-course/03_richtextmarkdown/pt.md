@@ -33,7 +33,7 @@ A prop `text` aceita o formato de markdown. Portanto, se você deseja escrever s
 
 Outras propriedades do componente `rich-text` podem ser encontrados na [documentação oficial do Store Framework](https://vtex.io/docs/components/all/vtex.rich-text/)
 
-## Atividade
+## Alterando o estilo e o conteúdo do _rich text_ através de Markdown
 
 1. Dentro do arquivo `about-us.jsonc`, troque o texto da `tab-list.item#home1` para que apareça um "Sobre" na primeira aba;
 

@@ -100,7 +100,7 @@ We must create a `routes.json` file in your theme's `store` folder. Afterwards, 
 
 where `{URL}` is the name of the desired path.
 
-## Activity
+## Creating a custom template
 
 Let's create a page containing information about your store, as in the example below: 
 
