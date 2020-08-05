@@ -22,30 +22,29 @@ When defining an _app_ in the interface, the `component` property is responsible
 }
 ```
 
-## Activity
-
-In this activity, the title will be separated and added to the store below the countdown.
+Now, you are going to separate the title from the countdown block and add it to the store below the countdown.
 
 ### Altering the `Countdown` component
 
-1. Remove the _imports_, the `title` from the interface and change the CSS _handles_ const, `CSS_HANDLES`:
-   ```diff
-   //react/Countdown.tsx
-   import React, { useState } from 'react'
-   import { TimeSplit } from './typings/global'
-   import { tick } from './utils/time'
-   import { useCssHandles } from 'vtex.css-handles'
-   -import { FormattedMessage } from 'react-intl'
+1. First, remove the _imports_, the `title` from the interface and change the CSS _handles_ const, `CSS_HANDLES`:
 
-   interface CountdownProps {
-     targetDate: string,
-   -  title: string
-   }
+    ```diff
+    //react/Countdown.tsx
+    import React, { useState } from 'react'
+    import { TimeSplit } from './typings/global'
+    import { tick } from './utils/time'
+    import { useCssHandles } from 'vtex.css-handles'
+    -import { FormattedMessage } from 'react-intl'
 
-   const DEFAULT_TARGET_DATE = (new Date('2020-03-02')).toISOString()
-   -const CSS_HANDLES = ['container', 'countdown', 'title']
-   +const CSS_HANDLES = ['countdown']
-   ```
+    interface CountdownProps {
+      targetDate: string,
+    -  title: string
+    }
+
+    const DEFAULT_TARGET_DATE = (new Date('2020-03-02')).toISOString()
+    -const CSS_HANDLES = ['container', 'countdown', 'title']
+    +const CSS_HANDLES = ['countdown']
+    ```
 
 2. Now, in the component itself, remove the `title` as a _prop_ given and also the title text constant, which changes what is being rendered:
 
@@ -79,89 +78,87 @@ In this activity, the title will be separated and added to the store below the c
           </div>
     -   </div>
       )
-   }
-   ```
+    }
+    ```
 
 3. At last, remove the title from the _schema_:
 
-   ```diff
-   //react/Countdown.tsx
-   Countdown.schema = {
-     title: 'editor.countdown.title',
-     description: 'editor.countdown.description',
-     type: 'object',
-     properties: {
-   -   title: {
-   -     title: 'I am a title',
-   -     type: 'string',
-   -     default: null,
-   -   },
-       targetDate: {
-         title: 'Final date',
-         description: 'Final date used in the countdown',
-         type: 'string',
-         default: null,
-       },
-     },
-   }
-   ```
+    ```diff
+    //react/Countdown.tsx
+    Countdown.schema = {
+      title: 'editor.countdown.title',
+      description: 'editor.countdown.description',
+      type: 'object',
+      properties: {
+    -   title: {
+    -     title: 'I am a title',
+    -     type: 'string',
+    -     default: null,
+    -   },
+        targetDate: {
+          title: 'Final date',
+          description: 'Final date used in the countdown',
+          type: 'string',
+          default: null,
+        },
+      },
+    }
+    ```
 
 ### Creating a new component
 
-1. Create a new file in the `/react` directory, named `Title.tsx`, it will be the new title component. In it, some _imports_ are needed. The basic structure of the code is very similar to the `Countdown` component's.
+1. Create a new file in the `/react` directory, named `Title.tsx`, it will be the new title component. In it, some _imports_ are needed. The basic structure of the code is very similar to the `Countdown` component's. Afer doing that, add the _imports_ needed and the CSS _handles_ constant:
 
-2. Add the _imports_ needed and the CSS _handles_ constant:
+    ```tsx
+    //react/Title.tsx
+    import React from "react"
+    import { FormattedMessage } from "react-intl"
+    import { useCssHandles } from "vtex.css-handles"
 
-   ```tsx
-   //react/Title.tsx
-   import React from "react"
-   import { FormattedMessage } from "react-intl"
-   import { useCssHandles } from "vtex.css-handles"
+    const CSS_HANDLES = ["title"] as const
+    ```
 
-   const CSS_HANDLES = ["title"] as const
-   ```
+2. Now, it's necessary to change the component's function:
 
-3. Change the component's function:
+    ```tsx
+    //react/Title.tsx
+    const Title: StorefrontFunctionComponent<TitleProps> = ({ title }) => {
+      const handles = useCssHandles(CSS_HANDLES)
+      const titleText = title || <FormattedMessage id="countdown.title" />
 
-   ```tsx
-   //react/Title.tsx
-   const Title: StorefrontFunctionComponent<TitleProps> = ({ title }) => {
-     const handles = useCssHandles(CSS_HANDLES)
-     const titleText = title || <FormattedMessage id="countdown.title" />
+      return (
+        <div
+          className={`${handles.title} t-heading-2 fw3 w-100 c-muted-1 db tc`}
+        >
+          {titleText}
+        </div>
+      )
+    }
+    ```
 
-     return (
-       <div
-         className={`${handles.title} t-heading-2 fw3 w-100 c-muted-1 db tc`}
-       >
-         {titleText}
-       </div>
-     )
-   }
-   ```
+3. At last, add the interface, the _schema_ and the _export_:
 
-4. Add the interface, the _schema_ and the _export_:
+    ```tsx
+    //react/Title.tsx
+    interface TitleProps {
+      title: string
+    }
 
-   ```tsx
-   //react/Title.tsx
-   interface TitleProps {
-     title: string
-   }
+    Title.schema = {
+      title: "editor.countdown-title.title",
+      description: "editor.countdown-title.description",
+      type: "object",
+      properties: {
+        title: {
+          title: "I am a title",
+          type: "string",
+          default: null,
+        },
+      },
+    }
 
-   Title.schema = {
-     title: "editor.countdown-title.title",
-     description: "editor.countdown-title.description",
-     type: "object",
-     properties: {
-       title: {
-         title: "I am a title",
-         type: "string",
-         default: null,
-       },
-     },
-   }
-
-   export default Title
-   ```
+    export default Title
+    ```
 
 ### Changing the `interfaces.json` file
 
