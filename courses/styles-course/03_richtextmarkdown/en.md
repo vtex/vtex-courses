@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Markdown is a user friendly language that can be easily converted to HTML. In this lesson, we'll see how it's possible to use this language in our [**Rich Text**](https://vtex.io/docs/components/all/vtex.rich-text/) block to customize them and create interesting texts. 
+Markdown is a user friendly language that can be easily converted to HTML. In this lesson, we'll see how it's possible to use this language in our [**Rich Text**](https://developers.vtex.com/docs/vtex-rich-text) block to customize them and create interesting texts.
 
 ## Rich Text with Markdown
 
@@ -20,7 +20,6 @@ To include texts in the `rich-text` block, you need to use the `text` prop:
 The `text` prop accepts markdown format. However, if you want to write your text using this language, your code must be similar to the following: 
 
 ```json
-```json
   "rich-text#home1": {
     "props": {
       "text": "# My title h1 \n Insert a paragraph here \n ## My title h2 \n Insert the second paragraph here \n Include a list here \n - Item 1 \n - Item 2 \n - Item3",
@@ -29,9 +28,9 @@ The `text` prop accepts markdown format. However, if you want to write your text
     }
 ```
 
-**TIP**: Always use the `\n` command to skip lines when using markdown in the `text` prop
+> **Tip**: Always use the `\n` command to skip lines when using markdown in the `text` prop.
 
-Other properties of the `rich-text` component can be found in the [Store Framework official documentation](https://vtex.io/docs/components/all/vtex.rich-text/)
+Other properties of the `rich-text` component can be found in the [Store Framework official documentation](https://developers.vtex.com/docs/vtex-rich-text)
 
 ## Changing the rich text style and content through Markdown
 
@@ -66,7 +65,8 @@ Other properties of the `rich-text` component can be found in the [Store Framewo
     ```
 
 Expected result:
+
 ![](https://user-images.githubusercontent.com/18701182/73487350-918efd00-4385-11ea-8d9d-ccc1c3952717.png)
 
-:information_source: Remember to access the Rich Text [documentation](https://vtex.io/docs/components/all/vtex.rich-text/) if you have any questions during the activity.
+:information_source: Remember to access the Rich Text [documentation](https://developers.vtex.com/docs/vtex-rich-text) if you have any questions during the activity.
 

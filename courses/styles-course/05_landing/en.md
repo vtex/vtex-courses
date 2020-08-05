@@ -10,7 +10,7 @@ We saw that the search deduces what is needed from the given context. On a custo
 
 ## Query schema
 
-The query schema is one of the [custom query search result props](https://vtex.io/docs/app/vtex.search-result#layout-api) that allows you to control the search that the *landing page* should run. To know more the query schema's possibilities, read through its [documentation](https://vtex.io/docs/app/vtex.search-result#queryschema).
+The query schema is one of the [custom query search result props](https://developers.vtex.com/docs/vtex-search-result) that allows you to control the search that the *landing page* should run. To know more the query schema's possibilities, read through its [documentation](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched).
 
 ## Creating a new landing page
 
@@ -27,7 +27,7 @@ The query schema is one of the [custom query search result props](https://vtex.i
 
 2. Create a new file called `search-landing.jsonc` in the blocks folder;
 3. Create a new custom template entitled `store.custom#landing`;
-4. Define the [`image`](https://vtex.io/docs/components/all/vtex.store-components/image) block as one of this template's blocks. This block must have `minWidth` props of 100% and an image of your choosing:
+4. Define the [`image`](https://developers.vtex.com/docs/vtex-store-components-image) block as one of this template's blocks. This block must have `minWidth` props of 100% and an image of your choosing:
 
     ```json
         "store.custom#landing": {
@@ -56,7 +56,7 @@ The query schema is one of the [custom query search result props](https://vtex.i
     }
     ```
 
-6. Define the `search-result-layout.customQuery` block as the [*querySchema* prop](https://vtex.io/docs/app/vtex.search-result#queryschema) that:
+6. Define the `search-result-layout.customQuery` block as the [*querySchema* prop](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched) that:
   - Sorts by latest release date;
   - Hides unavailable items;
   - Displays a max of 8 items per page;
