@@ -45,7 +45,7 @@
 }
 
 .infoCardContainer--vintage {
-    background-color: #EDCFD1
+    background-color: #edcfd1
 }
 
 .infoCardContainer--metal {
