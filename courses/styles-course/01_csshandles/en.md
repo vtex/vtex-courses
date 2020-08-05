@@ -4,7 +4,7 @@
 
 Taking a quick look at your online store, you'll notice that components have similar styles, even without applying any customization. 
 
-All of them, including the recently configured [Info Card](https://vtex.io/docs/components/all/vtex.store-components/info-card), share **pre-established values** for font, background color, main color, button format, etc.
+All of them, including the recently configured [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard), share **pre-established values** for font, background color, main color, button format, etc.
 
 This is due to the `style.json`, the file responsible for declaring generic customization values for every Store Framework store. 
 
@@ -104,7 +104,7 @@ According to the description of CSS Handles and to the store customization recip
 
 4. Now let's finish by adding some more style to our Info Card. On the same CSS file that was used before, define a maximum width (`max-width`) of `1260px` for all info cards, a margin of `0 auto` and a padding of `0`. 
 
-    > You can do it based on the [Info Card]([Info Card](https://vtex.io/docs/components/all/vtex.store-components/info-card) Handles) Handles.
+    > You can do it based on the [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard#customization) Handles.
 
     ```css
     /* /styles/css/vtex.store-components.css */

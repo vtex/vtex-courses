@@ -104,7 +104,7 @@ De acordo com a descrição dos CSS Handles e com a recipe customizações de lo
 
 4. Agora, vamos finalizar adicionando mais estilos customizados para o nosso Info Card. No mesmo arquivo CSS que foi utilizado anterioemente, defina a largura máxima (`max-width`) de de todos os infocards para `1260px`, a margin para `0 auto` e o padding para `0`.
 
-    > Você pode se basear nos _Handles_ do [Info Card](https://vtex.io/docs/components/all/vtex.store-components/info-card).
+    > Você pode se basear nos _Handles_ do [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard#customization).
 
     ```css
     /* /styles/css/vtex.store-components.css */

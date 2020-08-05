@@ -10,7 +10,7 @@ Vimos que a busca infere o que precisa pelo contexto que está inclusa. Numa pá
 
 ## Query schema
 
-A query schema é uma das [props do search result custom query](https://vtex.io/docs/app/vtex.search-result#layout-api) com ela é possível controlar a busca que a nossa *landing page* deverá fazer. Para saber todas as possibilidades da query schema, veja sua [documentação aqui](https://vtex.io/docs/app/vtex.search-result#queryschema).
+A query schema é uma das [props do search result custom query](https://developers.vtex.com/docs/vtex-search-result) com ela é possível controlar a busca que a nossa *landing page* deverá fazer. Para saber todas as possibilidades da query schema, veja sua [documentação aqui](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched).
 
 ## Criando uma nova _landing page_
 
@@ -27,7 +27,7 @@ A query schema é uma das [props do search result custom query](https://vtex.io/
 
 2. Crie um novo arquivo na pasta de blocos chamado `search-landing.jsonc`;
 3. Crie um novo template custom `store.custom#landing`;
-4. Defina o bloco [`image`](https://vtex.io/docs/components/all/vtex.store-components/image) como um dos blocos desse template. Este bloco deve possuir props `minWidth` de 100% e uma imagem a sua escolha.
+4. Defina o bloco [`image`](https://developers.vtex.com/docs/vtex-store-components-image) como um dos blocos desse template. Este bloco deve possuir props `minWidth` de 100% e uma imagem a sua escolha.
 5. Faça o mesmo com o `search-result-layout.customQuery`:
 
     ```json
@@ -41,7 +41,7 @@ A query schema é uma das [props do search result custom query](https://vtex.io/
     }
     ```
 
-6. Defina o bloco `search-result-layout.customQuery` com [prop de *querySchema*](https://vtex.io/docs/app/vtex.search-result#queryschema) que:
+6. Defina o bloco `search-result-layout.customQuery` com [prop de *querySchema*](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched) que:
   - Ordena por data de lançamento de forma descrescente;
   - Esconda itens indisponíveis;
   - Mostre um máximo de 8 itens por página;
