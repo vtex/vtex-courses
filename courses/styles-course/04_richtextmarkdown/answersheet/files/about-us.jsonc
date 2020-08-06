@@ -1,4 +1,5 @@
-```store/blocks/about-us.jsonc
+// store/blocks/about-us.jsonc
+{
     "tab-list.item#home1": {
         "props": {
             "tabId": "majorAppliances",
@@ -7,7 +8,7 @@
         }
     },
     ...
-    },
+    
     "rich-text#home1": {
         "props": {
           "text": "# **Our history** \n ### **We were born from an internal VTEX hackathon!** \n That's right. VTEX's first Hackatheme (store theme hackathon) had 3 finalists. One of them was FlatFlat, the store that you're accessing now. FlatFlat was created by the engineers Afonso Praça and Sávio Muniz, together with designers Lucas Falcão and Augusto Barbosa, and new business director Maurício Baum. As the store was created by profissionals having the most diverse backgrounds, the result was an obvious one: they became the finalists with coolest layout among participants.",
@@ -15,4 +16,5 @@
           "font": "t-heading-3"
         }
         ...
-```
+    }
+}

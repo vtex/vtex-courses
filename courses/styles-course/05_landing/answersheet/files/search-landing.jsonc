@@ -1,4 +1,4 @@
-```store/blocks/search-landing.jsonc
+// store/blocks/search-landing.jsonc
 {
     "store.custom#landing": {
         "blocks": [
@@ -24,15 +24,3 @@
         }
     }
 }
-```
-
-```store/routes.json
-{
-  "store.custom#about-us": {
-    "path": "/about-us"
-  },
-  "store.custom#landing": {
-    "path": "/landing"
-  }
-}
-```
