@@ -1,3 +1,4 @@
+// store-block/messages/context.json
 {
     "editor.countdown.title": "Countdown",
     "editor.countdown.description": "Countdown component",
