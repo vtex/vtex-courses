@@ -37,7 +37,7 @@ Agora, vá até a pasta correta, que é a do projeto da _app_, e rode o seguinte
 vtex install
 ```
 
-Aós executá-lo, é esperado que você veja uma mensagem que constata que a _app_ foi instalada com sucesso, como a imagem abaixo:
+Após executá-lo, é esperado que você veja uma mensagem que constata que a _app_ foi instalada com sucesso, como a imagem abaixo:
 
 ![image](https://user-images.githubusercontent.com/19495917/88828538-c0095b80-d1a1-11ea-86cf-bac9cfdf554e.png)
 
