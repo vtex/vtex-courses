@@ -4,7 +4,7 @@
 
 Taking a quick look at your online store, you'll notice that components have similar styles, even without applying any customization. 
 
-All of them, including the recently configured [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard), share **pre-established values** for font, background color, main color, button format, etc.
+All of them share **pre-established values** for font, background color, main color, button format, etc. For instance, the [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard).
 
 This is due to the `style.json`, the file responsible for declaring generic customization values for every Store Framework store. 
 

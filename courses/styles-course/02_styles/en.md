@@ -45,7 +45,7 @@ The process to discovering text semantics with editable fields is the same as th
         "heading-1": {
             "fontFamily": "Fabriga, -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif",
             "fontWeight": "700",
-    +        "fontSize": "2.5rem",
+    +       "fontSize": "2.5rem",
             "textTransform": "initial",
             "letterSpacing": "0"
         },
