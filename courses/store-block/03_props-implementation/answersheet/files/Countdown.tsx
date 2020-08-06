@@ -1,4 +1,3 @@
-```Countdown.tsx
 import React from 'react'
 
 interface CountdownProps {
@@ -30,4 +29,3 @@ Countdown.schema = {
 }
 
 export default Countdown
-```

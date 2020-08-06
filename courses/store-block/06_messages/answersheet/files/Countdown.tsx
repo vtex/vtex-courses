@@ -1,4 +1,3 @@
-```Countdown.tsx
 import React, { useState } from 'react'
 import { TimeSplit } from './typings/global'
 import { tick } from './utils/time'
@@ -60,37 +59,3 @@ Countdown.schema = {
 }
 
 export default Countdown
-```
-
-```messages/context.json
-{
-  "editor.countdown.title": "Countdown",
-  "editor.countdown.description": "Countdown component",
-  "countdown.title": "Countdown"
-}
-```
-
-```messages/en.json
-{
-  "editor.countdown.title": "Countdown",
-  "editor.countdown.description": "Countdown component",
-  "countdown.title": "Countdown"
-}
-```
-
-```messages/es.json
-{
-  "editor.countdown.title": "Cuenta regresiva",
-  "editor.countdown.description": "Cuenta regresiva component",
-  "countdown.title": "Cuenta Regresiva"
-}
-```
-
-```messages/pt.json
-{
-  "editor.countdown.title": "Contagem regressiva",
-  "editor.countdown.description": "Componente de contagem regressiva",
-  "countdown.title": "Contagem Regressiva"
-}
-```
-
