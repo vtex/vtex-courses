@@ -66,13 +66,13 @@ Dado que você já está familiarizado com o Store Framework, você deve saber q
 
     > Qual tema eu posso utilizar?
 
-    Nesse curso, você irá utilizar o `vtex.store-theme`, que pode ser clonado ao rodar o seguinte comando no seu terminal:
+    No caso de já ter um tema dos cursos feitos anteriormente, você pode utilizá-lo. Porém, se você ainda não tiver um, pode utilizar o `vtex.store-theme`, que pode ser clonado ao rodar o seguinte comando no seu terminal:
 
     ```
     git clone https://github.com/vtex-apps/store-theme.git
     ```
 
-    Observação: Pode ser clonado em uma pasta de sua preferência, mas não dentro do diretório da aplicação que você está desenvolvendo.
+    >Observação: Pode ser clonado em uma pasta de sua preferência, mas não dentro do diretório da aplicação que você está desenvolvendo.
 
     Agora, para evitar conflitos, vá ao terminal e unlinke qualquer tema ou aplicação que você tenha linkado no seu _workspace_:
 

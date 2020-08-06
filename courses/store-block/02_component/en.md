@@ -65,13 +65,13 @@ Since you're already familiar with Store Framework, you know that we use blocks,
 
     > Which theme should I use?
 
-    In this tutorial, one is going to use `vtex.store-theme`, which can be cloned by running this command in your terminal. 
+    In case of already having a theme from the previous courses, you can use it. However, if you do not have one, you can use `vtex.store-theme`, which can be cloned by running this command in your terminal. 
 
     ```
     git clone https://github.com/vtex-apps/store-theme.git
     ```
 
-    It can be cloned in a folder of your preference, but not inside the app's directory that you're developing.
+    > Note: It can be cloned in a folder of your preference, but not inside the app's directory that you're developing.
 
     Now, to avoid conflicts, go to your terminal and unlink any theme or apps you have linked
     ```
