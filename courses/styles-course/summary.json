@@ -2,6 +2,19 @@
   "steps":
   [
     {
+      "folder": "00_introduction",
+      "title": {
+        "en": "Introduction",
+        "es": "Introducción",
+        "pt": "Introdução"
+      },
+      "description": {
+        "en": "Introduction to this course",
+        "es": "Introducción a este curso",
+        "pt": "Introdução a este curso"
+      }
+    },
+    {
       "folder": "01_csshandles",
       "title": {
         "en": "CSS Handles and the power of customizing blocks",
@@ -28,20 +41,7 @@
       }
     },
     {
-      "folder": "03_richtextmarkdown",
-      "title": {
-        "en": "Exploring the power behind rich text",
-        "es": "Explorando el poder de rich text",
-        "pt": "Explorando o poder do rich text"
-      },
-      "description": {
-        "en": "Advanced Markdown usage",
-        "es": "Usando el lenguaje de Markdown de forma avanzada",
-        "pt": "Usando a linguagem do Markdown de forma avançada"
-      }
-    },
-    {
-      "folder": "04_custom-template",
+      "folder": "03_custom-template",
       "title": {
         "en": "Creating custom templates",
         "es": "Creando templates personalizados",
@@ -51,6 +51,19 @@
         "en": "Create a path and link a customized template",
         "es": "Cree una ruta y asocie un template personalizado",
         "pt": "Crie uma rota e associe um template customizado"
+      }
+    },
+    {
+      "folder": "04_richtextmarkdown",
+      "title": {
+        "en": "Exploring the power behind rich text",
+        "es": "Explorando el poder de rich text",
+        "pt": "Explorando o poder do rich text"
+      },
+      "description": {
+        "en": "Advanced Markdown usage",
+        "es": "Usando el lenguaje de Markdown de forma avanzada",
+        "pt": "Usando a linguagem do Markdown de forma avançada"
       }
     },
     {
