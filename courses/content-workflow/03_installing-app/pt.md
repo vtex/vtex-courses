@@ -45,4 +45,4 @@ Dica: se você quer listar as _apps_ que estão atualmente instaladas em uma con
 
 ![image](https://user-images.githubusercontent.com/19495917/88828816-1e363e80-d1a2-11ea-88bb-b3f082b90877.png)
 
-> **Atenção**: Há mais informação ao rodar o comando mencionado acima, mas foi omitido da imagem por conta do tamanho.
+> **Atenção**: Há mais informação ao rodar o comando mencionado acima, mas foi omitida da imagem devido a sua extensão.
