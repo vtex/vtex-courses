@@ -1,4 +1,4 @@
-```store/blocks/about-us.jsonc
+// store/blocks/about-us.jsonc
 {
     "store.custom#about-us": {
       "blocks": [
@@ -38,13 +38,4 @@
         "maxHeight": "600px"
       }
     }
-   }
-```
-
-```store/routes.json
-{
-  "store.custom#about-us": {
-    "path": "/about-us"
-  }
 }
-```
