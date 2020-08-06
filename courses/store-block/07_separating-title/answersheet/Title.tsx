@@ -1,3 +1,4 @@
+// store-block/react/Title.tsx
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'

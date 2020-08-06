@@ -10,7 +10,7 @@ interface CountdownProps {
 const DEFAULT_TARGET_DATE = new Date('2020-06-25').toISOString()
 
 const CSS_HANDLES = ['countdown']
-
+// store-block/react/Countdown.tsx
 const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
   targetDate = DEFAULT_TARGET_DATE,
 }) => {
