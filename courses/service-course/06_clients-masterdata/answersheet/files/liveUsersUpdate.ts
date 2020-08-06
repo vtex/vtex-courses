@@ -1,40 +1,4 @@
-```manifest.json
-{
-  "name": "backend-course",
-  "vendor": "vtex",
-  "version": "0.0.1",
-  "title": "Backend Course Solution",
-  "description": "Reference app for the Backend Course Solution",
-  "builders": {
-    "graphql": "1.x",
-    "docs": "0.x",
-    "node": "6.x"
-  },
-  "scripts": {
-    "prereleasy": "bash lint.sh"
-  },
-  "credentialType": "absolute",
-  "policies": [
-    {
-      "name": "ADMIN_DS"
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "api.vtex.com",
-        "path": "/*"
-      }
-    }
-  ],
-  "dependencies": {
-    "vtex.mocked-analytics": "0.x",
-    "vtex.events-example": "0.x"
-  },
-  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
-}
-```
-
-```node/event/liveUsersUpdate.ts
+// node/event/liveUsersUpdate.ts
 import { Clients } from './../clients/index'
 import { EventContext } from '@vtex/api'
 import { COURSE_ENTITY } from '../utils/constants'
@@ -83,4 +47,3 @@ export async function updateLiveUsers(ctx: EventContext<Clients>) {
   )
   return true
 }
-```

@@ -1,4 +1,4 @@
-```node/event/liveUsersUpdate.ts
+// node/event/liveUsersUpdate.ts
 import { Clients } from '../clients/index'
 import { EventContext } from '@vtex/api'
 
@@ -7,5 +7,3 @@ export async function updateLiveUsers(ctx: EventContext<Clients>) {
     console.log('LIVE USERS: ', liveUsersProducts)
     return true
 }
-```
-

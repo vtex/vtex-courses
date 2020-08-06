@@ -1,4 +1,4 @@
-```node/index.ts
+// node/index.ts
 import {
   LRUCache,
   Service,
@@ -8,16 +8,17 @@ import {
   method,
 } from '@vtex/api'
 import { Clients } from './clients'
-import { analytics } from './handlers/analytics'
+import { productList } from './resolvers/products'
 import { updateLiveUsers } from './event/liveUsersUpdate'
+import { analytics } from './handlers/analytics'
+
+const TREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
 
 // Create a LRU memory cache for the Status client.
 // The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
 const memoryCache = new LRUCache<string, any>({ max: 5000 })
 metrics.trackCache('status', memoryCache)
-
-const TREE_SECONDS_MS = 3 * 1000
-const CONCURRENCY = 10
 
 declare global {
   type Context = ServiceContext<Clients, State>
@@ -42,7 +43,17 @@ export default new Service<Clients, State, ParamsContext>({
         retries: 1,
         timeout: TREE_SECONDS_MS,
         concurrency: CONCURRENCY,
-      }
+      },
+    },
+  },
+  events: {
+    liveUsersUpdate: updateLiveUsers,
+  },
+  graphql: {
+    resolvers: {
+      Query: {
+        productList,
+      },
     },
   },
   routes: {
@@ -50,31 +61,4 @@ export default new Service<Clients, State, ParamsContext>({
       GET: [analytics],
     }),
   },
-  events: {
-    liveUsersUpdate: updateLiveUsers,
-  }
 })
-```
-
-```service.json
-{
-  "memory": 128,
-  "ttl": 10,
-  "timeout": 10,
-  "minReplicas": 2,
-  "maxReplicas": 10,
-  "workers": 4,
-  "events": {
-    "liveUsersUpdate": {
-      "sender": "vtex.events-example",
-      "keys": ["send-event"]
-    }
-  },
-  "routes": {
-    "analytics": {
-      "path": "/_v/app/analytics/realTime",
-      "public": true
-    }
-  }  
-}
-```
