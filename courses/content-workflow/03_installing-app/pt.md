@@ -41,7 +41,7 @@ Aós executá-lo, é esperado que você veja uma mensagem que constata que a _ap
 
 ![image](https://user-images.githubusercontent.com/19495917/88828538-c0095b80-d1a1-11ea-86cf-bac9cfdf554e.png)
 
-Dica: se você quer listar as _apps_ que estão atualmente instaladas em uma conta, você pode utilizar o comando `vtex ls`. você verá uma lista semelhante a seguinte imagem:
+Dica: se você quer listar as _apps_ que estão atualmente instaladas em uma conta, você pode utilizar o comando `vtex ls`, você verá uma lista semelhante a seguinte imagem:
 
 ![image](https://user-images.githubusercontent.com/19495917/88828816-1e363e80-d1a2-11ea-88bb-b3f082b90877.png)
 
