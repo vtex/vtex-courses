@@ -1,4 +1,3 @@
-```Countdown.tsx
 import React, { useState } from 'react'
 import { TimeSplit } from './typings/global'
 import { tick } from './utils/time'
@@ -39,9 +38,14 @@ Countdown.schema = {
   description: 'editor.countdown.description',
   type: 'object',
   properties: {
+    title: {
+      title: 'I am a title',
+      type: 'string',
+      default: null,
+    },
     targetDate: {
-      title: 'Data final',
-      description: 'Data final utilizada no contador',
+      title: 'Final date',
+      description: 'Final date used in the countdown',
       type: 'string',
       default: null,
     },
@@ -49,4 +53,3 @@ Countdown.schema = {
 }
 
 export default Countdown
-```
