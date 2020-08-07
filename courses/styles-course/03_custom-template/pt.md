@@ -2,8 +2,6 @@
 
 ## Introdução
 
-Until now, you've learned how to use CSS, Tachyons, and Markdown in order to customize your blocks on Store Framework. However, it's also important to learn how to create custom templates, so your store can habe custom landing pages, for example, with a well-defined URL and specific content to display.
-
 Até agora, você aprendeu como utilizar CSS, _Tachyons_ e Markdown para customizar seus blocos no Store Framework. Porém, também é importante aprende como criar _templates_ customizados, de forma que a sua loja possa ter _landing pages_ customizadas, com uma URL bem definida e conteúdos específicos.
 
 Lojas são compostas por várias páginas diferentes, cada uma com layout e conteúdo específicos. Ao criar uma loja do zero no VTEX IO, algumas páginas padrão com URLs predefinidas já são disponibilizadas para você. Abaixo, vemos uma lista com algumas dessas páginas padrão:
@@ -26,7 +24,7 @@ São necessários poucos passos para se criar uma landing page customizada:
 
 ### Template
 
-Um template define o layout da página. Portanto, se você deseja criar uma página personalizada, também precisará criar um novo template no seu tema.
+Um _template_ define o layout da página. Portanto, se você deseja criar uma página personalizada, também precisará criar um novo template no seu tema.
 
 Vamos supor que você queira criar uma página simples com informações sobre a sua loja. Dentro da pasta `blocks`, você pode criar um arquivo que contenha o seguinte código, declarando um novo template para uma página customizada,
 
