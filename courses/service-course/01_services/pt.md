@@ -24,3 +24,7 @@ Este curso irá guiá-lo no aprendizado de desenvolvimento de aplicações de se
 Se você não está familiarizado com alguma destas ferramentas, nós o encorajamos a dar uma olhada nas seguintes documentações:
 - [**Documentação de Typescript**](https://www.typescriptlang.org/)
 - [**GraphQL documentation**](https://graphql.org/learn/)
+
+Para começar o curso, você deve utilizar o repositório _template_ que disponibilizamos com todos os arquivos iniciais que você precisa ter para começar. Você encontrará este repositório neste [link](https://github.com/vtex-trainings/service-course-template).
+
+> Se você ainda tem dúvidas em como utilizar um repositório _template_, você pode checar este [artigo](https://developers.vtex.com/page/como-utilizar-um-reposit%C3%B3rio-template).
