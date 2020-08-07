@@ -15,3 +15,15 @@ Services in VTEX IO support one-command rollbacks and continuous integration. Th
 On the `/node` folder of a service lives `service.json`, where it´s possible to **declare routes that the service must respond to** and other configurations like _timeout_ and _memory_.
 
 During this course, you will implement some services in VTEX IO and learn a bit more about the possibilities that they offer to your development.
+
+## About this course
+
+This course will guide you will guide you through learning how to develop a service app with VTEX IO. There are some prerequisities for you to have an amazing experience when doing this course, which are:
+
+- Basic concepts on GraphQL
+- Understand how to develop using Typescript
+
+If you are not familiar with any of those tools, we encourage you to take a look in some documentation:
+
+- [**Typescript documentation**](https://www.typescriptlang.org/)
+- [**GraphQL documentation**](https://graphql.org/learn/)
