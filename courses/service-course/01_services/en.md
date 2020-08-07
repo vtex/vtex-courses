@@ -27,3 +27,7 @@ If you are not familiar with any of those tools, we encourage you to take a look
 
 - [**Typescript documentation**](https://www.typescriptlang.org/)
 - [**GraphQL documentation**](https://graphql.org/learn/)
+
+In order for you to start the course, you can use the template repository that we provide will all the initial files that you need to have so you can get started. You will find the repository in this [link](https://github.com/vtex-trainings/service-course-template).
+
+> If you do not quite understand how to use a template repository, you can check this [article](https://developers.vtex.com/page/how-to-use-a-template-repository).
