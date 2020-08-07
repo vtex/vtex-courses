@@ -15,3 +15,12 @@ Os serviços no VTEX IO suportam _rollbacks_ feitos através de apenas um comand
 Dentro da pasta `/node` de um serviço, há um arquivo chamado `service.json`, onde é possível **declarar rotas que o serviço precisa responder** e outras configurações, como _timeout_ e _memory_.
 
 Durante este curso, você irá implementar alguns serviços no VTEX IO e aprenderá um pouco mais sobre as possibilidades que eles oferecem para desenvolvimento.
+
+## Sobre este curso
+Este curso irá guiá-lo no aprendizado de desenvolvimento de aplicações de serviço no VTEX IO. Há alguns pré-requisitos para que você tenha uma experiência gratificante ao fazer esse curso, que são:
+- Conceitos básicos de GraphQL
+- Entender como desenvolver utilizando Typescript
+
+Se você não está familiarizado com alguma destas ferramentas, nós o encorajamos a dar uma olhada nas seguintes documentações:
+- [**Documentação de Typescript**](https://www.typescriptlang.org/)
+- [**GraphQL documentation**](https://graphql.org/learn/)
