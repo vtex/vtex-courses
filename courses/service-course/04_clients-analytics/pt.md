@@ -18,7 +18,7 @@ Neste curso, será necessário criar um cliente que será utilizado para consult
 
 ## Implementando o cliente _analytics_ e fazendo testes
 
-Neste passo, vamos implementar o cliente de _Analytics_. Em primeiro lugar, no diretório `/node/clients`, você encontrará um arquivo chamado `analytics.ts`, que já contém uma simples declaração de classe, como o código mostrado abaixo. É aqui que você implementará seu cliente.
+Neste passo, vamos implementar o cliente de _Analytics_. Em primeiro lugar, no diretório `/node/clients`, você encontrará um arquivo chamado `analyticsClient.ts`, que já contém uma simples declaração de classe, como o código mostrado abaixo. É aqui que você implementará seu cliente.
 
    ```ts
    import { AppClient } from '@vtex/api'
@@ -31,7 +31,7 @@ Neste passo, vamos implementar o cliente de _Analytics_. Em primeiro lugar, no d
 1. O cliente precisa ter um construtor e apenas um método, que chamaremos de `getLiveUsers`. Este método retorna uma promessa de um _array_ em que seus elementos são do tipo `LiveUsersProduct`. Utilizando o código abaixo, adicione as linhas de código necessárias ao seu cliente:
 
    ```diff
-   //node/clients/analytics.ts
+   //node/clients/analyticsClient.ts
    import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
 
    export default class Analytics extends AppClient {
