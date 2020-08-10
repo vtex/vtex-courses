@@ -1,4 +1,5 @@
-"background": {
+{
+  "background": {
     "base": "#ffffff",
     "base--inverted": "#03044e",
     "action-primary": "#52BAB7",
@@ -53,3 +54,5 @@
       "letterSpacing": "0"
     },
   ...
+  }
+}
