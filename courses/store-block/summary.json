@@ -1,5 +1,16 @@
 [
     {
+        "folder": "00_introduction",
+        "title": {
+            "pt": "Introdução",
+            "en": "Introduction"
+        },
+        "description": {
+            "en": "Introduction to the course",
+            "pt": "Introdução a este curso"
+        }
+    },
+    {
         "folder": "01_manifest",
         "title": {
             "pt": "Conhecendo uma app VTEX IO",
