@@ -1,0 +1,22 @@
+// store/blocks/home.jsonc
+{
+    ...
+    "callToActionMode": "button",
+    "callToActionText": "Explore",
+    "callToActionUrl": "/sale/d",
+    "textAlignment": "center"
+    "textAlignment": "center",
+    "blockClass": "vintage"
+    }
+  },
+  "info-card#button-left": {
+    ...
+    "subhead": "Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2020.",
+    "callToActionMode": "link",
+    "callToActionText": "Go to collection",
+    "textAlignment": "center"
+    "textAlignment": "center",
+    "blockClass": "metal"
+    }
+  }
+}
