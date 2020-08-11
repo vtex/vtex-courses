@@ -28,17 +28,10 @@
       "product-quantity"
     ]
   },
-  ...,
-  "product-quantity": {
+  "product-price": {
     "props": {
-      "warningQuantityThreshold": 9999999
-    }
-  },
-
-  "shipping-simulator": {
-    "props": {
-      "skuID": "342"
+      "showSavings": true,
+      "showListPrice": true
     }
   }
-
 }
