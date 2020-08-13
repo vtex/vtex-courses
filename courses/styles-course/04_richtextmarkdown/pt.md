@@ -34,18 +34,10 @@ Outras propriedades do componente `rich-text` podem ser encontrados na [document
 
 ## Alterando o estilo e o conteúdo do _rich text_ através de Markdown
 
-1. Dentro do arquivo `about-us.jsonc`, troque o texto da `tab-list.item#home1` para que apareça um "Sobre" na primeira aba;
+1. Dentro do arquivo `about-us.jsonc`, troque o texto da `rich-text#about-content` para que `This is VTEX Minimum Theme` se torne um _header_ pequeno (`h3`). Assegure-se que você quebre uma linha depois desse trecho com `\n`;
 
-2. No conteúdo `rich-text` associado a essa aba, utilize o texto abaixo:
+2. Coloque o trecho `VTEX Minimum Theme` em itálico.
 
-    ```
-    # Nossa História \n ### Nascemos de uma hackathon interna da VTEX! \n Isso mesmo. A primeira Hackatheme (hackathon de temas de loja) da VTEX teve 3 finalistas. Um deles foi a FlatFlat, essa loja que vocês estão acessando agora. A FlatFlat foi criada pelos engenheiros Afonso Praça e Sávio Muniz, pelos designers Lucas Falcão e Augusto Barbosa, e pelo diretor de novos negócios Maurício Baum. Como a loja foi criada por profissionais com os mais diversos backgrounds, o resultado ficou óbvio: foram finalistas com o layout mais legal dentre os participantes.
-    ```
-
-3. Coloque o título e o subtítulo em negrito.
-
-Resultado esperado:
-
-![](https://appliancetheme.vteximg.com.br/arquivos/rich-text-solution.png)
+![image](https://user-images.githubusercontent.com/19495917/90180384-410d4900-dd85-11ea-88b9-3af68e8f3a08.png)
 
 :information_source: Lembre-se de acessar a [documentação](https://developers.vtex.com/docs/vtex-rich-text) do Rich Text caso tenha alguma dúvida durante a atividade.

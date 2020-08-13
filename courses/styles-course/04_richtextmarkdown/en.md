@@ -34,39 +34,13 @@ Other properties of the `rich-text` component can be found in the [Store Framewo
 
 ## Changing the rich text style and content through Markdown
 
-1. In `about-us.jsonc`, change the text in `tab-list.item#home1` so that an "About" appears in the first tab:
+1. In `about-us.jsonc`, change the text in `rich-text#about-content` so that `This is VTEX Minimum Theme` become a small header (`h3`). Make sure that you break the line after it with `\n`
 
-    ```json
-        "tab-list.item#home1": {
-            "props": {
-                "tabId": "majorAppliances",
-                "label": "About",
-                "defaultActiveTab": true
-            }
-        },
-    ```
-
-2. In the `rich-text` content linked to this tab, use the text below:
-
-    ```
-    # Our history \n ### We were born from an internal VTEX hackathon! \n That's right. VTEX's first Hackatheme (store theme hackathon) had 3 finalists. One of them was FlatFlat, the store that you're accessing now. FlatFlat was created by the engineers Afonso Praça and Sávio Muniz, together with designers Lucas Falcão and Augusto Barbosa, and new business director Maurício Baum. As the store was created by profissionals having the most diverse backgrounds, the result was an obvious one: they became the finalists with coolest layout among participants.
-    ```
-
-3. Insert the title and subtitle in bold:
-
-    ```json
-        "rich-text#home1": {
-            "props": {
-              "text": "# **Our history** \n ### **We were born from an internal VTEX hackathon!** \n That's right. VTEX's first Hackatheme (store theme hackathon) had 3 finalists. One of them was FlatFlat, the store that you're accessing now. FlatFlat was created by the engineers Afonso Praça and Sávio Muniz, together with designers Lucas Falcão and Augusto Barbosa, and new business director Maurício Baum. As the store was created by profissionals having the most diverse backgrounds, the result was an obvious one: they became the finalists with coolest layout among participants.",
-              "textPosition": "CENTER",
-              "font": "t-heading-3"
-            }
-            ...
-    ```
+2. Put `VTEX Minimum Theme`in italic.
 
 Expected result:
 
-![](https://user-images.githubusercontent.com/18701182/73487350-918efd00-4385-11ea-8d9d-ccc1c3952717.png)
+![image](https://user-images.githubusercontent.com/19495917/90180384-410d4900-dd85-11ea-88b9-3af68e8f3a08.png)
 
 :information_source: Remember to access the Rich Text [documentation](https://developers.vtex.com/docs/vtex-rich-text) if you have any questions during the activity.
 
