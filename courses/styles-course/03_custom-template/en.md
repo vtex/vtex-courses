@@ -30,59 +30,16 @@ Let's imagine that you want to create a simple page containing information about
 
 ```json
 {
- "store.custom#{templatename}": {
-     "blocks": [
-     ]
+  "store.custom#{templatename}": {
+    "blocks": [
+    ]
   }
 }
 ```
 
 where `{templateName}` must be replaced with the template's identifying name. 
 
-Then, you should fill in the code with the components needed to create the layout. Below we have an example of such implementation:
-
-```json
-{
- "store.custom#{templatename}": {
-   "blocks": [
-     "flex-layout.row#about-us"
-   ]
- },
- "flex-layout.row#about-us": {
-   "children": [
-     "image#about-us",
-     "flex-layout.col#text-about-us"
-   ]
- },
- "flex-layout.col#text-about-us": {
-   "children": [
-     "rich-text#about-title",
-     "rich-text#about-content"
-   ],
-       "props": {
-     "preventVerticalStretch": true
-   }
- },
-"rich-text#about-title": {
-   "props": {
-     "text":
-     "# About FlatFlat"
-   }
- },
- "rich-text#about-content": {
-   "props": {
-     "text":
-     " FlatFlat is an electronics store with a long standing tradition for creating modern and vintage items. Out objective is to create home appliances that make your house stand out, no matter your style. Merely 2 months old, we're already the store with the most beautiful products among all VTEX stores. We are currently building our site with the aim of giving our customers an unforgetable experience with our brand!"
-   }
- },
- "image#about-us": {
-   "props": {
-     "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
-     "maxHeight": "600px"
-   }
- }
-}
-```
+Then, you should fill in the code with the components needed to create the layout, this will be better shown in the activity.
 
 ### Path
 
@@ -104,7 +61,7 @@ where `{URL}` is the name of the desired path.
 
 Let's create a page containing information about your store, as in the example below: 
 
-![](https://appliancetheme.vteximg.com.br/arquivos/about-us-activity.png)
+![image](https://user-images.githubusercontent.com/19495917/90177742-5aac9180-dd81-11ea-9566-be74d563664f.png)
 
 1. In the `blocks` folder, create a file called `about-us.jsonc`;
 2. Declare a `store.custom#about-us` template in this file;
@@ -119,10 +76,49 @@ Let's create a page containing information about your store, as in the example b
         }
     }
     ```
+4. In the same file, add the code block below, right afer the declaration of `store.custom#about-us`. It's responsible for defining `flex-layout.row#about-us`.
 
-4. After declaring `flex-layout.row`, use the code in example given above to complete the page layout;
-5. In the `store` folder, create a file called `routes.json`;
-6. In this file, declare an `/about-us` path:
+    ```json
+      "flex-layout.row#about-us": {
+        "children": [
+          "image#about-us",
+          "flex-layout.col#text-about-us"
+        ]
+      },
+    ```
+
+5. Now, let's define its childen blocks in order to create the complete _layout_:
+
+    ```json
+    "flex-layout.col#text-about-us": {
+      "children": [
+        "rich-text#about-title",
+        "rich-text#about-content"
+      ],
+      "props": {
+        "preventVerticalStretch": true
+      }
+    },
+    "rich-text#about-title": {
+      "props": {
+          "text": "# About Minimum Theme"
+      }
+    },
+    "rich-text#about-content": {
+      "props": {
+        "text":
+          " This is the VTEX Minimum Theme, you can use it to test blocks usage and build your first store from scratch."
+      }
+    },
+    "image#about-us": {
+      "props": {
+        "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
+        "maxHeight": "600px"
+      }
+    }
+    ```
+6. In the `store` folder, create a file called `routes.json`;
+7. In this file, declare an `/about-us` path:
 
     ```json
     {
