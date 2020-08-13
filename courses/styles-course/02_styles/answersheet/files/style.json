@@ -35,10 +35,11 @@
     "emphasis": "#ffffff",
     ...
   },
-  "hover-on": {
+  "on": {
+    "base": "#e68e94",
+    "base--inverted": "#ffffff",
     "action-primary": "#ffffff",
-    "action-secondary": "#52BAB7",
-    "emphasis": "#ffffff",
+    "action-secondary": "#0F3E99",
     ...
   },
   "active-on": {
