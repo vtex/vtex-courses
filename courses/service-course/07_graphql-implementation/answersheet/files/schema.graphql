@@ -1,0 +1,4 @@
+# graphql/schema.graphql
+type Query {
+  productList(topN: Int): [ProductList]
+}
