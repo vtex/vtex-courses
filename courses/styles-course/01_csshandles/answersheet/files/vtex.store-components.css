@@ -24,10 +24,6 @@
     background-color: #edcfd1
 }
 
-.infoCardContainer--metal {
-    background-color: #e1e1e1;
-}
-
 .infoCardContainer {
     max-width: 1260px;
     margin: 0 auto;
