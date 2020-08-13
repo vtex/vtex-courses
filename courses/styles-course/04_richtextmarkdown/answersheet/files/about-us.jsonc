@@ -1,20 +1,41 @@
 // store/blocks/about-us.jsonc
 {
-    "tab-list.item#home1": {
+    "store.custom#about-us": {
+        "blocks": [
+            "flex-layout.row#about-us"
+        ]
+    },
+    "flex-layout.row#about-us": {
+        "children": [
+            "image#about-us",
+            "flex-layout.col#text-about-us"
+        ]
+    },
+    "flex-layout.col#text-about-us": {
+        "children": [
+            "rich-text#about-title",
+            "rich-text#about-content"
+        ],
         "props": {
-            "tabId": "majorAppliances",
-            "label": "About",
-            "defaultActiveTab": true
+            "preventVerticalStretch": true
         }
     },
-    ...
-    
-    "rich-text#home1": {
+    "rich-text#about-title": {
         "props": {
-          "text": "# **Our history** \n ### **We were born from an internal VTEX hackathon!** \n That's right. VTEX's first Hackatheme (store theme hackathon) had 3 finalists. One of them was FlatFlat, the store that you're accessing now. FlatFlat was created by the engineers Afonso Praça and Sávio Muniz, together with designers Lucas Falcão and Augusto Barbosa, and new business director Maurício Baum. As the store was created by profissionals having the most diverse backgrounds, the result was an obvious one: they became the finalists with coolest layout among participants.",
-          "textPosition": "CENTER",
-          "font": "t-heading-3"
+        "text":
+            "# About Minimum Theme"
         }
-        ...
+    },
+    "rich-text#about-content": {
+        "props": {
+            "text":
+                " ### This is the _VTEX Minimum Theme_ \n You can use it to test blocks usage and build your first store from scratch."
+        }
+    },
+    "image#about-us": {
+        "props": {
+        "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
+        "maxHeight": "600px"
+        }
     }
 }
