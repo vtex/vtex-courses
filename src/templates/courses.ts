@@ -18,3 +18,10 @@ export default (courses: Course[]) => `
 <div class="course-container">
   ${courses.map((course) => getCourse(course))}
 </div>`
+
+interface Course {
+  link: string
+  title: string
+  img: string
+  description: string
+}

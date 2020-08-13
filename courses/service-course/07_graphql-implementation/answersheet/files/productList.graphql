@@ -1,0 +1,5 @@
+# graphql/types/productList.graphql
+type ProductList {
+  slug: String
+  count: Int
+}
