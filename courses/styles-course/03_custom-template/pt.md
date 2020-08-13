@@ -30,59 +30,16 @@ Vamos supor que você queira criar uma página simples com informações sobre a
 
 ```json
 {
- "store.custom#{templatename}": {
-     "blocks": [
-     ]
+  "store.custom#{templatename}": {
+    "blocks": [
+    ]
   }
 }
 ```
 
 onde `{templateName}` deve ser substituído pelo nome identificador do template.
 
-A seguir, você deve preencher o código com os componentes necessários para montar o layout. Abaixo, vemos um exemplo dessa implementação:
-
-```json
-{
- "store.custom#{templatename}": {
-   "blocks": [
-     "flex-layout.row#about-us"
-   ]
- },
- "flex-layout.row#about-us": {
-   "children": [
-     "image#about-us",
-     "flex-layout.col#text-about-us"
-   ]
- },
- "flex-layout.col#text-about-us": {
-   "children": [
-     "rich-text#about-title",
-     "rich-text#about-content"
-   ],
-       "props": {
-     "preventVerticalStretch": true
-   }
- },
-"rich-text#about-title": {
-   "props": {
-     "text":
-     "# Sobre a FlatFlat"
-   }
- },
- "rich-text#about-content": {
-   "props": {
-     "text":
-     " FlatFlat é uma loja de eletro eletrônicos com muita tradição na fabricação de itens modernos e vintage. Nosso objetivo é criar eletrodomésticos que tornem as casas dos nossos clientes interessantes, independente do estilo. Com apenas 2 meses de história, já somos a loja com os produtos mais bonitos de toda a VTEX. Estamos construindo o nosso site nesse momento com o intuito de dar ao nosso cliente uma experiência memorável com a nossa marca!"
-   }
- },
- "image#about-us": {
-   "props": {
-     "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
-     "maxHeight": "600px"
-   }
- }
-}
-```
+A seguir, você deve preencher o código com os componentes necessários para montar o layout, que será mostrado em mais detalhes na atividade.
 
 ### Path
 
@@ -104,12 +61,75 @@ onde `{URL}` é o nome do caminho desejado
 
 Vamos criar uma página com informações sobre a sua loja conforme o exemplo abaixo:
 
-![](https://appliancetheme.vteximg.com.br/arquivos/about-us-activity.png)
+![image](https://user-images.githubusercontent.com/19495917/90177742-5aac9180-dd81-11ea-9566-be74d563664f.png)
 
 1. Na pasta `blocks`, crie um arquivo `about-us.jsonc`;
 2. Declare um template `store.custom#about-us` neste arquivo;
-3. Inclua um block "flex-layout.row#about-us" neste template;
-4. Após declarar o `flex-layout.row`, utilize o código do exemplo dado acima para completar o layout da página;
-5. Na pasta `store`, crie um arquivo `routes.json`;
-6. Neste arquivo, declare um path `/about-us`;
+3. Inclua um block "flex-layout.row#about-us" neste template:
+
+    ```json
+    {
+        "store.custom#about-us": {
+          "blocks": [
+            "flex-layout.row#about-us"
+          ]
+        }
+    }
+    ```
+4. No mesmo arquivo, adicione o código abaixo, logo depois da declaração de `store.custom#about-us`. Ele é responsável por definir `flex-layout.row#about-us`.
+
+    ```json
+      "flex-layout.row#about-us": {
+        "children": [
+          "image#about-us",
+          "flex-layout.col#text-about-us"
+        ]
+      },
+    ```
+
+
+
+5. Agora, vamos definir seus blocos filhos para montar o _layout_:
+
+    ```json
+      "flex-layout.col#text-about-us": {
+        "children": [
+          "rich-text#about-title",
+          "rich-text#about-content"
+        ],
+        "props": {
+          "preventVerticalStretch": true
+        }
+      },
+      "rich-text#about-title": {
+        "props": {
+            "text": "# About Minimum Theme"
+        }
+      },
+      "rich-text#about-content": {
+        "props": {
+          "text":
+            " This is the VTEX Minimum Theme, you can use it to test blocks usage and build your first store from scratch."
+        }
+      },
+      "image#about-us": {
+        "props": {
+          "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
+          "maxHeight": "600px"
+        }
+      }
+    ```
+
+6. Na pasta `store`, crie um arquivo chamado `routes.json`;
+
+6. Neste arquivo, declare um path `/about-us`:
+
+    ```json
+    {
+      "store.custom#about-us": {
+        "path": "/about-us"
+      }
+    }
+    ```
+
 7. Com o código linkado, acesse `{workspace}--appliancetheme.myvtex.com/about-us` para ver sua nova landing page.
