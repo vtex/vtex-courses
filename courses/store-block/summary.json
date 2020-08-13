@@ -91,7 +91,7 @@
         "folder": "08_react-apollo",
         "title": {
             "pt": "Conectando backend e frontend",
-            "en": "Connecting _backend_ and _frontend_"
+            "en": "Connecting backend and frontend"
         },
         "description": {
             "pt": "Utilizando dados do catálogo da VTEX em seu componente",

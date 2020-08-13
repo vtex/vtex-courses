@@ -1,5 +1,5 @@
-```Countdown.tsx
-import React from "react"
+// store-block/react/Countdown.tsx
+import React from 'react'
 
 interface CountdownProps {}
 
@@ -12,11 +12,10 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
 }
 
 Countdown.schema = {
-  title: "editor.countdown.title",
-  description: "editor.countdown.description",
-  type: "object",
+  title: 'editor.countdown.title',
+  description: 'editor.countdown.description',
+  type: 'object',
   properties: {},
 }
 
 export default Countdown
-```

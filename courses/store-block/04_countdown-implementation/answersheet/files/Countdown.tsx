@@ -1,4 +1,4 @@
-```Countdown.tsx
+// store-block/react/Countdown.tsx
 import React, { useState } from 'react'
 import { TimeSplit } from './typings/global'
 import { tick } from './utils/time'
@@ -42,4 +42,3 @@ Countdown.schema = {
 }
 
 export default Countdown
-```

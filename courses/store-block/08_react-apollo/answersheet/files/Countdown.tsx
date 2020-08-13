@@ -1,12 +1,4 @@
-```react/graphql/queries/productReleaseDate.graphql
-query productReleaseDate($slug: String){
-  product(slug: $slug) {
-    releaseDate
-  }
-}
-```
-
-```Countdown.tsx
+// store-block/react/Countdown.tsx
 import React, { useState } from 'react'
 import { TimeSplit } from './typings/global'
 import { tick } from './utils/time'
@@ -86,7 +78,3 @@ Countdown.schema = {
 }
 
 export default Countdown
-```
-
-```Title
-```
