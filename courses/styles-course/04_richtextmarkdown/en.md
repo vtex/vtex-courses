@@ -34,7 +34,7 @@ Other properties of the `rich-text` component can be found in the [Store Framewo
 
 ## Changing the rich text style and content through Markdown
 
-1. In `about-us.jsonc`, change the text in `rich-text#about-content` so that `This is VTEX Minimum Theme` become a small header (`h3`). Make sure that you break the line after it with `\n`
+1. In `about-us.jsonc`, change the text in `rich-text#about-content` so that `This is VTEX Minimum Theme` become a small header (`h3`). Make sure that you break the line after it with `\n`;
 
 2. Put `VTEX Minimum Theme`in italic.
 
