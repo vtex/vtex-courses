@@ -10,10 +10,11 @@ const ENCODED_CREDENTIALS = Buffer.from(
 ).toString('base64')
 
 const routes = {
-  getCategory: (category: string): string => `categories/${category}`,
-  createDoc: (): string => 'docs/',
-  updateDoc: (slug: string): string => `docs/${slug}`,
-  getDoc: (slug: string): string => `docs/${slug}`,
+  category: (category: string): string => `categories/${category}`,
+  customPages: () => `custompages`,
+  customPage: (slug: string) => `${routes.customPages()}/${slug}`,
+  docs: (): string => 'docs',
+  doc: (slug: string): string => `${routes.docs()}/${slug}`,
 }
 
 export default class Readmeio extends DefaultClient {
@@ -26,62 +27,188 @@ export default class Readmeio extends DefaultClient {
     })
   }
 
-  private async getAppsCategory() {
-    return this.get(routes.getCategory('apps'))
+  public getCategory(name: string) {
+    return this.get(routes.category(name))
   }
 
-  public async createDoc(
-    slug: string,
-    title: string,
-    markdown: string,
-    appId: string,
-    parentDoc?: string
-  ) {
-    const categoryId = (await this.getAppsCategory())._id
-
-    const body: any = {
-      hidden: true,
-      title,
+  public createCustomPage({
+    slug,
+    title,
+    body,
+    html,
+    htmlmode,
+    hidden = true,
+  }: CustomPageInput) {
+    return this.http.post(routes.customPages(), {
       slug,
-      type: 'basic',
-      excerpt: appId,
-      body: markdown,
-      category: categoryId,
-    }
-    if (parentDoc) {
-      body.parentDoc = parentDoc
-    }
-    return this.post(routes.createDoc(), body)
-  }
-
-  public async updateDoc(
-    slug: string,
-    title: string,
-    markdown: string,
-    appId: string
-  ) {
-    const body: any = {
       title,
-      body: markdown,
-      excerpt: appId,
+      body,
+      html,
+      htmlmode,
+      hidden,
+    })
+  }
+
+  public updateCustomPage({
+    slug,
+    title,
+    body,
+    html,
+    htmlmode,
+    hidden = true,
+  }: UpdateCustomPageInput) {
+    return this.http.put(routes.customPage(slug), {
+      slug,
+      title,
+      body,
+      html,
+      htmlmode,
+      hidden,
+    })
+  }
+
+  public async upsertCustomPage({
+    slug,
+    title,
+    body,
+    html,
+    htmlmode,
+    hidden = true,
+  }: UpdateCustomPageInput) {
+    const pageInput: UpdateCustomPageInput = {
+      slug,
+      title,
+      body,
+      html,
+      htmlmode,
+      hidden,
     }
 
-    return this.put(routes.updateDoc(slug), body)
+    if (await this.checkExists(slug, 'custompages')) {
+      return this.updateCustomPage(pageInput)
+    }
+
+    return this.createCustomPage(pageInput)
   }
 
-  public async getDoc(slug: string) {
-    return this.get(routes.getDoc(slug))
+  public createDoc({
+    slug,
+    title,
+    body,
+    category,
+    next,
+    hidden = true,
+    type = 'basic',
+    parentDoc,
+  }: DocumentInput) {
+    return this.post(routes.docs(), {
+      body,
+      slug,
+      title,
+      category,
+      next,
+      hidden,
+      type,
+      parentDoc,
+    })
   }
 
-  public async checkDocExists(slug: string) {
+  public getDoc(slug: string) {
+    return this.get(routes.doc(slug))
+  }
+
+  public getCustomPage(slug: string) {
+    return this.get(routes.customPage(slug))
+  }
+
+  public updateDoc({
+    slug,
+    title,
+    body,
+    next,
+    excerpt,
+    category,
+    hidden = true,
+    type = 'basic',
+    parentDoc,
+  }: DocumentInput) {
+    return this.put(routes.doc(slug), {
+      title,
+      body,
+      next,
+      excerpt,
+      category,
+      hidden,
+      type,
+      parentDoc,
+    })
+  }
+
+  public async upsertDoc({
+    slug,
+    title,
+    body,
+    excerpt,
+    category,
+    hidden = true,
+    type = 'basic',
+    parentDoc,
+  }: DocumentInput) {
+    const docInput: DocumentInput = {
+      slug,
+      title,
+      body,
+      excerpt,
+      category,
+      hidden,
+      type,
+      parentDoc,
+    }
+
+    if (await this.checkExists(slug, 'docs')) {
+      return this.updateDoc(docInput)
+    }
+
+    return this.createDoc(docInput)
+  }
+
+  public async checkExists(slug: string, type: 'docs' | 'custompages') {
     try {
-      await this.getDoc(slug)
-      return true
-    } catch (e) {
-      if (e?.response?.status === 404) {
-        return false
-      }
-      throw new Error(`Error while calling the getDoc with slug=${slug}`)
+      return !!(await this.http.head(`${type}/${slug}`))
+    } catch {
+      return false
     }
   }
+}
+
+interface UpdateCustomPageInput extends CustomPageInput {
+  slug: string
+}
+
+interface CustomPageInput {
+  title: string
+  body?: string
+  html?: string
+  slug?: string
+  hidden?: boolean
+  htmlmode: boolean
+}
+
+interface DocumentInput {
+  slug: string
+  title?: string
+  body?: string
+  category?: string
+  next?: {
+    description: string
+    pages: Array<{
+      type: string
+      name: string
+      slug: string
+    }>
+  }
+  excerpt?: string
+  hidden?: boolean
+  type?: string
+  parentDoc?: string
 }

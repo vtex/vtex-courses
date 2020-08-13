@@ -1,0 +1,6 @@
+// store-block/messages/pt.json
+{
+    "editor.countdown.title": "Contagem regressiva",
+    "editor.countdown.description": "Componente de contagem regressiva",
+    "countdown.title": "Contagem Regressiva"
+}

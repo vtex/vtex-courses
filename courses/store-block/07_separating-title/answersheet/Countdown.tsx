@@ -1,4 +1,3 @@
-```Countdown.tsx
 import React, { useState } from 'react'
 import { TimeSplit } from './typings/global'
 import { tick } from './utils/time'
@@ -11,7 +10,7 @@ interface CountdownProps {
 const DEFAULT_TARGET_DATE = new Date('2020-06-25').toISOString()
 
 const CSS_HANDLES = ['countdown']
-
+// store-block/react/Countdown.tsx
 const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
   targetDate = DEFAULT_TARGET_DATE,
 }) => {
@@ -39,9 +38,14 @@ Countdown.schema = {
   description: 'editor.countdown.description',
   type: 'object',
   properties: {
+    title: {
+      title: 'I am a title',
+      type: 'string',
+      default: null,
+    },
     targetDate: {
-      title: 'Data final',
-      description: 'Data final utilizada no contador',
+      title: 'Final date',
+      description: 'Final date used in the countdown',
       type: 'string',
       default: null,
     },
@@ -49,4 +53,3 @@ Countdown.schema = {
 }
 
 export default Countdown
-```
