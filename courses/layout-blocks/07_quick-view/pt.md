@@ -82,3 +82,4 @@ Seguiremos os conceitos aprendidos no passo anterior e vamos aprofundar um pouco
 O resultado então deve ser:
 
 ![modallayout](https://user-images.githubusercontent.com/18701182/90278764-585c3d00-de3e-11ea-8fa9-491a1cfd6001.gif)
+  
