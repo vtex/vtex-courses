@@ -14,14 +14,12 @@ The query schema is one of the [custom query search result props](https://develo
 
 ## Creating a new landing page
 
-![image](https://user-images.githubusercontent.com/18701182/69890324-d1792b80-12d3-11ea-911d-194d2cb778c8.png)
-
 1. Define a new path (`store.custom#landing`) in `routes.json`;
 
     ```json
+    // store/routes.json
     "store.custom#landing": {
-      ...
-      "path": "/landing"
+        "path": "/landing"
     }
     ```
 
@@ -43,14 +41,15 @@ The query schema is one of the [custom query search result props](https://develo
         },
     ```
 
-5. Repeat the same with `search-result-layout.customQuery`:
+5. Add the `search-result-layout.customQuery` block:
 
-    ```json
+    ```diff
+    // store/blocks/search-landing.jsonc
     {
       "store.custom#landing": { 
         "blocks": [
           "image#landingbanner", 
-          "search-result-layout.customQuery"
+    +     "search-result-layout.customQuery"
         ]
       }
     }
@@ -60,7 +59,7 @@ The query schema is one of the [custom query search result props](https://develo
   - Sorts by latest release date;
   - Hides unavailable items;
   - Displays a max of 8 items per page;
-  - Uses "Blue Top Retro Camera" as *query*.
+  - Uses "Camera" as *query*.
 
     ```json
         "search-result-layout.customQuery": {
@@ -75,4 +74,91 @@ The query schema is one of the [custom query search result props](https://develo
             }
         }
     ```
- 
+7. At this point, you're probably not seeing the block on the landing page. This is due to the facr that we have not add a block to the `search-result-layout.customQuery` yet. Here are two possibilities:
+
+    - In case of having already done the previous courses, you probably have already changed the `search.jsonc` file in this template that we're using, in order to use the flex layout concept. Having it already done, it's only necessary to add the following code lines to the `search-landing.jsonc` file:
+
+        ```diff
+      // store/blocks/search-landing.jsonc
+      {
+        ...
+        "search-result-layout.customQuery": {
+            "props": {
+                "querySchema": {
+                    "orderByField": "OrderByReleaseDateDESC",
+                    "hideUnavailableItems": true,
+                    "maxItemsPerPage": 8,
+                    "queryField": "Camera",
+                    "mapField": "ft",
+                    "skusFilter": "ALL_AVAILABLE"
+                }
+            },
+      +     "blocks": [
+      +       "search-result-layout.desktop"
+      +     ]
+        }
+      }
+      ```
+
+    - In case of not having enrolled for the previous courses and the `search.jsonc` is empty, it's necessary to add blocks to it. To do that, you can use the code block below. After doing that, you'll only need to add the `search-result-layout.desktop` block to the blocks array of `search-result-layout.customQuery`, just as mentioned before.
+    
+        ```json
+        // store/blocks/search.jsonc
+        {
+            "store.search": {
+            "blocks": [
+                "search-result-layout"
+            ]
+            },
+            "search-result-layout": {
+            "blocks": [
+                "search-result-layout.desktop",
+                "search-result-layout.mobile",
+                "search-not-found-layout"
+            ]
+            },
+            "search-result-layout.desktop": {
+            "children": [ 
+                "breadcrumb.search",
+                "search-title.v2",
+                "flex-layout.row#top",
+                "search-fetch-previous",
+                "flex-layout.row#results",
+                "search-fetch-more"
+            ],
+            "props":{
+                "pagination": "showMore"
+            }
+            },
+            "flex-layout.row#top": {
+            "children": [
+                "total-products.v2",
+                "order-by.v2"
+            ]
+            },
+            "flex-layout.row#results": {
+            "children": [
+                "flex-layout.col#filter",
+                "flex-layout.col#search"
+            ]
+            },
+            "flex-layout.col#filter": {
+            "props": {
+                "width": "20%"
+            },
+            "children": [
+                "filter-navigator.v3"
+            ]
+            },
+            "flex-layout.col#search": {
+            "children": [      
+                "search-content"
+            ]
+            }
+        }
+        ```
+        > Neste caso, aproveite para observar com calma o código adicionado, de forma que você se assegure de que entendeu as relações entre os blocos e a função de cada um.
+
+The expected result is:
+
+![image](https://user-images.githubusercontent.com/19495917/90278827-7033c100-de3e-11ea-9083-4d7279312d7f.png)
