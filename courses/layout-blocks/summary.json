@@ -1,0 +1,45 @@
+{
+  "steps":
+  [
+    {
+      "folder": "01_flexlayout",
+      "title": {
+        "pt": "Flex Layout: crie layouts utilizando o poder do Flexbox"
+      },
+      "description": {
+        "pt": "Vamos criar layouts complexos de forma simples"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "02_slider",
+      "title": {
+        "pt": "Carrossel de blocos"
+      },
+      "description": {
+        "pt": "Insira conteúdo num layout de carrossel"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "03_responsive",
+      "title": {
+        "pt": "Tornando seu conteúdo responsivo"
+      },
+      "description": {
+        "pt": "Use o responsive layout para adaptar seu conteúdo para diferentes dispositivos"
+      },
+      "challenge": "tests"
+    },
+    {
+      "folder": "04_tab-layout",
+      "title": {
+        "pt": "Layout de abas"
+      },
+      "description": {
+        "pt": "Usando layout de abas na página institucional"
+      },
+      "challenge": "tests"
+    }
+  ]
+}
