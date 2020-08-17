@@ -55,7 +55,7 @@ Vamos então construir o info card usando ambos elementos:
   ...
 + "image#cta": {
 +   "props": { 
-+     "blockClass": "cta",
++     "blockClass": "cover",
 +     "width": "100%",
 +     "height": 400,
 +     "src": "https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___1b7592b49667c6a89203a0997e06bc87.jpg"
@@ -96,7 +96,7 @@ Vamos então construir o info card usando ambos elementos:
 6. No arquivo `vtex.store-components.css` da pasta `/styles/css` adicione: 
 
 ```
-.imageElement--cta {
+.imageElement--cover {
   object-fit: cover;
 }
 ```
