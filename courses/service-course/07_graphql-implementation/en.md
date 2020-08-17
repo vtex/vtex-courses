@@ -63,9 +63,9 @@ Let's go!
 
 4. Import the resolver on the `index.ts` file:
 
-```ts
-import { productList } from './resolvers/products'
-```
+    ```ts
+    import { productList } from './resolvers/products'
+    ```
 
 5. At last, we need to update the `index.ts` file to set up the resolver and the query. Complete the `service` declaration as below:
 

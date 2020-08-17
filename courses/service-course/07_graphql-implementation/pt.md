@@ -63,9 +63,9 @@ Vamos lá?
 
 4. Importe o _resolver_ no arquivo `index.ts`:
 
-```ts
-import { productList } from './resolvers/products'
-```
+    ```ts
+    import { productList } from './resolvers/products'
+    ```
 
 5. Por fim, precisamos atualizar o arquivo `index.ts` para definir o _resolver_ e a _query_. Complete a declaração de `Service` como abaixo:
 
