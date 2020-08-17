@@ -1,0 +1,9 @@
+// store-block/store/interfaces.json
+{
+    "countdown": {
+      "component": "Countdown"
+    },
+    "countdown.title": {
+      "component": "Title"
+    }
+  }

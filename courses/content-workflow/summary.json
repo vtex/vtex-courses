@@ -1,0 +1,46 @@
+[
+    {
+        "folder": "01_workspaces",
+        "title": {
+            "pt": "Conhecendo mais sobre workspaces",
+            "en": "Getting to know about workspaces"
+        },
+        "description": {
+            "pt": "Neste passo, você aprenderá mais sobre o uso de workspaces no VTEX IO e seus diferentes tipos",
+            "en": "In this step, you'll learn more about workspaces on VTEX IO and its different types"
+        }
+    },
+    {
+        "folder": "02_publishing-app",
+        "title": {
+            "pt": "Publicando uma aplicação no VTEX IO",
+            "en": "Publishing an app on VTEX IO"
+        },
+        "description": {
+            "pt": "Após conhecer um pouco mais sobre os workspaces, você aprenderá como publicar uma app",
+            "en": "After getting to know more about workspaces, you'll learn how to publish an app"
+        }
+    },
+    {
+        "folder": "03_installing-app",
+        "title": {
+            "pt": "Instalando uma app em uma conta VTEX",
+            "en": "Installing an app on a VTEX account"
+        },
+        "description": {
+            "pt": "Depois de publicar uma aplicação, é importante saber como instalá-la",
+            "en": "After publishing an app, it's important to know how to install an app"
+        }
+    },
+    {
+        "folder": "04_site-editor",
+        "title": {
+            "pt": "Apresentando o Site Editor e alterando um banner de uma loja",
+            "en": "Changing the store front through Site Editor"
+        },
+        "description": {
+            "pt": "Após aprender um pouco mais sobre os workspaces, vamos apresentar o Site Editor e fazer uma pequena alteração na frente de loja",
+            "en": "After learning a little bit more about workspaces, we'll present the Site Editor and make a small change on a store front"
+        }
+    }
+]
