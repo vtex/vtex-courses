@@ -3,7 +3,6 @@
 ## Introdução
 De forma a torna a experiência de compra da loja única, é possível aplicar camadas de customização aos componentes já existentes, criar páginas customizadas, entre outras coisas.
 
-
 ## Sobre este curso
 Neste curso, serão abordados tópicos que envolvem a customização da loja a fim de torná-la única e que contemple a identidade visual da marca.
 
