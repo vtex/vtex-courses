@@ -56,7 +56,7 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
 
     > É importante notar que há a possibilidade da sua IDE mostrar um erro ao fazer o *import* do `product-context`.
 
-4. Feito isso, defina a query usando o `productReleaseDate` importado e o `useQuery`. Os dados de produto podem ser encontrados em `useProduct`. Ambos são (*hooks*)[https://reactjs.org/docs/hooks-intro.html], e portanto, devem ser adicionados dentro de um componente funcional React.
+4. Feito isso, defina a query usando o `productReleaseDate` importado e o `useQuery`. Os dados de produto podem ser encontrados em `useProduct`. Ambos são [hooks](https://reactjs.org/docs/hooks-intro.html), e portanto, devem ser adicionados dentro de um componente funcional React.
 
     ```diff
     + const { product: { linkText } } = useProduct()
@@ -70,7 +70,19 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
     
     > `linkText` será igual a `'red-analogic-coffee-and-tea-machine'`, por exemplo, quando o seu componente for renderizado na página deste produto.
 
-5. Além disso, é preciso tratar os casos de *loading* e *error* antes de retornar o componente principal do contador ao utilizar o *hook* `useQuery`. Para isso, é possível retornar um `span` em cada um dos casos, como no exemplo abaixo, dentro do componente `Countdown`:
+5. Agora que estamos utilizando nosso bloco em páginas que têm contexto de produto, é importante testar se este context existe. Para fazer isso, vamos adicionar o bloco de código abaixo:
+
+    ```tsx
+    if (!linkText) {
+      return (
+        <div>
+          <span>There is no product context.</span>
+        </div>
+      )
+    }
+    ```
+
+6. Além disso, é preciso tratar os casos de *loading* e *error* antes de retornar o componente principal do contador ao utilizar o *hook* `useQuery`. Para isso, é possível retornar um `span` em cada um dos casos, como no exemplo abaixo, dentro do componente `Countdown`:
 
     ```tsx
     if (loading) {
@@ -87,16 +99,9 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
         </div>
       )
     }
-    if (!product) {
-      return (
-        <div>
-          <span>Não há contexto de produto</span>
-        </div>
-      )
-    }
     ```
 
-6. Após enviar as modificações, acesse uma página de produto e verifique se a _query_ está funcionando através de um `console.log({data})` após a chamada do `useQuery`, que deve mostrar algo como isso:
+7. Após enviar as modificações, acesse uma página de produto e verifique se a _query_ está funcionando através de um `console.log({data})` após a chamada do `useQuery`, que deve mostrar algo como isso:
 
     ```ts
     {
@@ -109,7 +114,7 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
     }
     ```
 
-7. Por fim, para fazer com que o Countdown marque as horas para o `releaseDate` do produto, mude o parâmetro da função `tick`. Você também pode remover as `props` recebidas no componente, já que não serão mais usadas.
+8. Por fim, para fazer com que o Countdown marque as horas para o `releaseDate` do produto, mude o parâmetro da função `tick`. Você também pode remover as `props` recebidas no componente, já que não serão mais usadas.
     ```diff
     -tick(targetDate, setTime)
     +tick(data?.product?.releaseDate || DEFAULT_TARGET_DATE, setTime)
