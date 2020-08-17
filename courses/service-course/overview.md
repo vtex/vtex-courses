@@ -1,0 +1,1 @@
+In this course, you will learn about the main possibilities of backend applications in VTEX IO. Export routes, handle events and connect with external and internal apps, to make your VTEX IO app even better and make the best out of VTEX infrastructure.

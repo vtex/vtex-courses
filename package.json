@@ -25,7 +25,9 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "@types/node": "^14.0.26",
     "axios": "^0.19.2",
-    "axios-retry": "^3.1.8"
+    "axios-retry": "^3.1.8",
+    "slugify": "^1.4.5"
   }
 }
