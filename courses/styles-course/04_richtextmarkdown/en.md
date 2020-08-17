@@ -30,7 +30,7 @@ The `text` prop accepts markdown format. However, if you want to write your text
 
 > **Tip**: Always use the `\n` command to skip lines when using markdown in the `text` prop.
 
-Other properties of the `rich-text` component can be found in the [Store Framework official documentation](https://developers.vtex.com/docs/vtex-rich-text)
+Other properties of the `rich-text` component can be found in the [Store Framework official documentation](https://developers.vtex.com/docs/vtex-rich-text).
 
 ## Changing the rich text style and content through Markdown
 

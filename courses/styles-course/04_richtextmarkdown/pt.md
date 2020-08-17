@@ -30,13 +30,15 @@ A prop `text` aceita o formato de markdown. Portanto, se você deseja escrever s
 
 >**Dica**: Sempre utilize o comando `\n` para pular linhas ao utilizar markdown na prop `text`.
 
-Outras propriedades do componente `rich-text` podem ser encontrados na [documentação oficial do Store Framework](https://developers.vtex.com/docs/vtex-rich-text)
+Outras propriedades do componente `rich-text` podem ser encontrados na [documentação oficial do Store Framework](https://developers.vtex.com/docs/vtex-rich-text).
 
 ## Alterando o estilo e o conteúdo do _rich text_ através de Markdown
 
 1. Dentro do arquivo `about-us.jsonc`, troque o texto da `rich-text#about-content` para que `This is VTEX Minimum Theme` se torne um _header_ pequeno (`h3`). Assegure-se que você quebre uma linha depois desse trecho com `\n`;
 
 2. Coloque o trecho `VTEX Minimum Theme` em itálico.
+
+Este é o resultado esperado:
 
 ![image](https://user-images.githubusercontent.com/19495917/90180384-410d4900-dd85-11ea-88b9-3af68e8f3a08.png)
 

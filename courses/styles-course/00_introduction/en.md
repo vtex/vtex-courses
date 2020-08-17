@@ -3,7 +3,6 @@
 ## Introduction
 In order to make the action of buying a unique experience, it's possible to add customization layers to the pre-existing blocks, among other things.
 
-
 ## About this course
 In this course, you'll be presented to topics that are related to the store customization, in order to make it unique and aligned with your visual identity.
 

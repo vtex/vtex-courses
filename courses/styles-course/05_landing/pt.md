@@ -10,7 +10,7 @@ Vimos que a busca infere o que precisa pelo contexto que está inclusa. Numa pá
 
 ## Query schema
 
-A query schema é uma das [props do search result custom query](https://developers.vtex.com/docs/vtex-search-result) com ela é possível controlar a busca que a nossa *landing page* deverá fazer. Para saber todas as possibilidades da query schema, veja sua [documentação aqui](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched).
+A query schema é uma das [props do _search result custom query_](https://developers.vtex.com/docs/vtex-search-result) com ela é possível controlar a busca que a nossa *landing page* deverá fazer. Para saber todas as possibilidades da query schema, veja sua [documentação aqui](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched).
 
 ## Criando uma nova _landing page_
 
