@@ -145,6 +145,7 @@ Vamos começar?
    curl --location --request GET 'https://api.vtex.com/api/dataentities/backendproductusers/search?_fields=slug,count&_schema=v1&an=appliancetheme' \
    --header 'Content-Type: application/json'
    ```
+    > **Atenção**: Para rodar o comando _cURL_ no **Windows**, é necessário substituir as aspas simples (`'`) por aspas duplas (`"`).
 
    O resultado deve ser algo similar a imagem abaixo:
 

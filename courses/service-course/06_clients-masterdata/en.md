@@ -144,6 +144,8 @@ Shall we start?
    --header 'Content-Type: application/json'
    ```
 
+  > **Attention**: To run the _cURL_ command on **Windows**, it's necessary to replace the single quotation marks (`'`) with double marks (`"`).
+
    The result should be like this:
 
    ![image](https://user-images.githubusercontent.com/43679629/85172472-8579de00-b247-11ea-9758-f34a66df29c7.png)
