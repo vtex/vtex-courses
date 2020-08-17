@@ -61,7 +61,13 @@ Let's go!
 
    > Note: you can check the Master Data scroll documentation in this [link](https://help.vtex.com/tutorial/querying-the-master-data-via-scroll-path--tutorials_4631)
 
-4. At last, we need to update the `index.ts` file to set up the resolver and the query. Complete the `service` declaration as below:
+4. Import the resolver on the `index.ts` file:
+
+```ts
+import { productList } from './resolvers/products'
+```
+
+5. At last, we need to update the `index.ts` file to set up the resolver and the query. Complete the `service` declaration as below:
 
     ```ts
         },
