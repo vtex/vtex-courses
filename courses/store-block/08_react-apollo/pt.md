@@ -25,7 +25,7 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
 
 1. Crie uma pasta `react/queries` e nela adicione um arquivo `productReleaseDate.graphql` que irá conter a _query_ a ser feita. Em particular, essa _query_ irá receber um termo, que será **o slug do produto a ser recuperado a data de lançamento**. Ela chamará o _resolver_ `product`, já disponível pela app `vtex.search-graphql`, e recuperaremos apenas o campo que precisamos.
 
-    ```
+    ```graphql
     query productReleaseDate($slug: String){
         product(slug: $slug) {
             releaseDate
