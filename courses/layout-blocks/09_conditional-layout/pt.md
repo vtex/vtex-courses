@@ -178,4 +178,9 @@ Visite a página do produto testado para ver o layout funcionando, se tiver usan
 
 Para garantir que o layout condicional de fato funciona, visite qualquer outra página de produto, e verifique que o banner não é aplicado: 
 
-  ![image](https://user-images.githubusercontent.com/18701182/90412377-68b12980-e083-11ea-86a8-99495acfd997.png)
+![image](https://user-images.githubusercontent.com/18701182/90412377-68b12980-e083-11ea-86a8-99495acfd997.png)
+
+## Fim
+
+Chegamos ao último passo do curso e nele aprendemos como criar layouts complexos se alavancando de blocos mais simples, não exploramos todos os layouts possíveis, mas a ideia de todos eles é muito parecida, para conhecer mais visite a seção de [`VTEX STORE FRAMEWORK - LAYOUT APPS`](https://developers.vtex.com/docs/vtex-condition-layout) no Developer Portal. 
+
