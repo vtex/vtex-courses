@@ -32,6 +32,14 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
     ssr: false,
   })
 
+  if (!linkText) {
+    return (
+      <div>
+        <span>There is no product context.</span>
+      </div>
+    )
+  }
+
   if (loading) {
     return (
       <div>
