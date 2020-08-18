@@ -8,7 +8,7 @@ During the last step we learned how to create a simple product page with a minim
 
 ## Over 30 product blocks
 
-Our [documentation](https://vtex.io/docs/components/product-related) contains more than 30 product-related blocks. At the beginning of the course we looked at the Shelf and its related blocks, in addition to the 4 blocks we looked at during our last session. We'll explore 4 more in this step:
+Our [documentation](https://vtex.io/docs/components/product-related) contains more than 30 product-related blocks. We'll explore 4 more in this step:
 
 - [Breadcrumb](https://vtex.io/docs/app/vtex.breadcrumb)
 - [Product Identifier](https://vtex.io/docs/components/product/vtex.product-identifier)
