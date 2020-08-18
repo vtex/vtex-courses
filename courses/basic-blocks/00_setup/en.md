@@ -23,7 +23,7 @@ Install Git on your computer by clicking on the link below and selecting your op
 
 **Toolbelt** is a VTEX **command line** tool. It allows you to perform any activity on the platform, such as creating a new development workspace, logging into a VTEX account, developing new apps, or managing already existing ones, etc.
 
-Since it's Toolbelt that establishes the communication between the developer and the platform, you'll need it in order to perform all the activities put forward during the Store Framework course. 
+Since it's Toolbelt that establishes the communication between the developer and the platform, you'll need it in order to perform all the activities put forward during this and the other courses. 
 
 1. Install [**Node.js**](https://nodejs.org/). If you are using a MAC, also install [**Yarn**](https://yarnpkg.com/);
 2. Run `npm i -g vtex` in your terminal if you're using Windows or `yarn global add vtex` if you're using MAC;
@@ -34,7 +34,7 @@ Once successfully installed, your next step is to *log into* a VTEX account.
 
 ## Logging in
 
-1. Run `vtex login VTEXaccount` in your terminal, replacing `VTEXaccount` with the name of the account in which you want to work. For example, `vtex login appliancetheme`.
+1. Run `vtex login appliancetheme` in your terminal. During this training we will work on this account. 
 
 2. After *logging in*, run `vtex whoami` to confirm the account and workspace in which you find currently are.
 
@@ -44,7 +44,7 @@ The next step is to create a development workspace, which will allow you to play
 
 ## Creating a development workspace 
 
-1. Run `vtex use workspace-name`, replacing `workspace-name` with the desired name. For example, `vtex use devworkspace`.
+1. Run `vtex use workspace-name`, replacing `workspace-name` with the desired name. Use an unique name for your workspace.
 
 ### Accessing your workspace
 

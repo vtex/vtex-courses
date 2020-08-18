@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/18701182/69843114-d6db6500-1244-11ea-82a7-b10880e2ed55.png)
 
-We've just implemented our product page and are moving on to the search page. Both are similar in the sense that both have blocks that are unique in this context. We will explore this block in a disorderly fashion for now, just to get an idea of its behavior. Then, we'll look at improving the layout.   
+We've just implemented our product page and are moving on to the search page. Both are similar in the sense that both have blocks that are unique in this context. We will explore this block in a disorderly fashion for now, just to get an idea of its behavior.
 
 ## Starting out with Search Layout  
 
