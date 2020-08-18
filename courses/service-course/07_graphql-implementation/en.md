@@ -1,18 +1,16 @@
-# GraphQL
+# GraphQL: Retrieving data from Masterdata
 
 ## Introduction
 
-Now that we have updated the product count, we need to retrieve the _top n_ most viewed products. We can, then, use Master Data to retrieve the product page view data and sort by the _count_ field. We can also limit the length of retrieved products, creating a customized size rank of most-visited products.
+Now that we have updated the products count, we need to retrieve the _top n_ most viewed products. We can, then, use Masterdata to retrieve the product page view data and sort by the _count_ field. We can also limit the length of retrieved products, creating a customized size rank of most visited products.
 
 ## GraphQL
 
-To get these product page views, we will use [GraphQL](https://graphql.org/), the technology used by VTEX IO for data fetching, to implement a query to Master Data. GraphQL allows us to implement queries in a simple and easy way, specifying the data you want to retrieve. This makes your API reliable since GraphQL controls the data fetched instead of the server itself.
+To get these product page views, we will use [GraphQL](https://graphql.org/), the technology used by VTEX IO for data fetching, to implement a query to Masterdata. GraphQL allows us to implement queries in a simple and easy way, specifying the data you want to retrieve. This makes your API reliable, since GraphQL controls the data fetched instead of the server itself.
 
 **It's also the only possible way to create an interface between services and front end applications.**
 
 Therefore, GraphQL uses types and a query schema to specify the data retrieved and resolvers to get the exact data needed.
-
-Let's go!
 
 ## Retrieving data from Master Data
 
@@ -35,9 +33,9 @@ Let's go!
 
    > Keep in mind that the schema will define the structure of our query and the retrieved data.
   
-    Also, in this declaration, you can include directives. In some cases, it is required, for example, if you need to get the user token or use cookies (e.g.: `OrderForm`). To read more about it, check out [this link](https://github.com/vtex-apps/graphql-example).
+    Also, in this declaration you can include directives. In some cases, it is required, for example, if you need to get the user token or use cookies (e.g.: `OrderForm`). To read more about it, check out [this link](https://github.com/vtex-apps/graphql-example).
 
-3. With the schema, types, and the query defined, we need to create the query's resolver. The resolver is what happens when a query is executed. In our case, we want to perform a scroll on **Master Data**, ordering by the count (as we want to get a topmost viewed products) and limiting the page size (the top **n**). To define this resolver, in the `/node/resolvers` directory, create the file `products.ts` and do the following:
+3. With the schema, types and the query defined, we need to create the query's resolver. The resolver is what happens when a query is executed. In our case, we want to perform a scroll on `Masterdata`, ordering by the count (as we want to get a top most viewed products) and limiting the page size (the top **n**). To define this resolver, in the `/node/resolvers` directory, create the file `products.ts` and do the following:
 
     ```ts
       //node/resolvers/products.ts
@@ -61,13 +59,7 @@ Let's go!
 
    > Note: you can check the Master Data scroll documentation in this [link](https://help.vtex.com/tutorial/querying-the-master-data-via-scroll-path--tutorials_4631)
 
-4. Import the resolver on the `index.ts` file:
-
-    ```ts
-    import { productList } from './resolvers/products'
-    ```
-
-5. At last, we need to update the `index.ts` file to set up the resolver and the query. Complete the `service` declaration as below:
+4. At last, we need to update the `index.ts` file to set up the resolver and the query. Complete the `service` declaration as below:
 
     ```ts
         },
