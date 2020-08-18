@@ -20,8 +20,6 @@ In this step, it will be used to fetch data regarding the top-N most viewed prod
 
 > **NOTE:** It is important to highlight that the Master Data client will be available as long as the correct version of `@vtex/api` is installed in the node folder. It can be used by accessing `ctx.clients.masterdata`.
 
-Shall we start?
-
 ## Using the Master Data client to store information
 
 1. First, we need to setup the policies in our app, to authorize it to use **Master Data**. To do so, complement the `manifest.json` file:
@@ -86,7 +84,7 @@ Shall we start?
 
    > Note that we are using the `COURSE_ENTITY`, from the global constants, to access your data.
 
-3. Now, to make sure we are handling errors, implement a `try-catch` structure. To do so, do something like this:
+3. Now, to make sure we are handling erros, implement a `try-catch` structure. To do so, do something like this:
 
   ```diff
   export async function updateLiveUsers(ctx: EventContext<Clients>) {
@@ -107,7 +105,7 @@ Shall we start?
   ```
 
 
-4. If our product is already saved, we need to update it by incrementing its count. **Master Data** has a method that allows us to update an existing document or create a new document if the document does not exist - `createOrUpdateEntireDocument`. To use this method and implement the incrementation on the Master Data entity, in the same file that was changed before, right after the logline of _saved product_, add this code:
+4. If our product is already saved, we need to update it by incrementing its count. **Master Data** has a method that allows us to update an existing document or create a new document, if the document does not exist - `createOrUpdateEntireDocument`. To use this method and implement the incrementation on the Master Data entity, in the same file that was changed before, right after the log line of _saved product_, add this code:
 
    ```diff
    //node/event/updateLiveUsers.ts
@@ -143,8 +141,6 @@ Shall we start?
    curl --location --request GET 'https://api.vtex.com/api/dataentities/backendproductusers/search?_fields=slug,count&_schema=v1&an=appliancetheme' \
    --header 'Content-Type: application/json'
    ```
-
-  > **Attention**: To run the _cURL_ command on **Windows**, it's necessary to replace the single quotation marks (`'`) with double marks (`"`).
 
    The result should be like this:
 
