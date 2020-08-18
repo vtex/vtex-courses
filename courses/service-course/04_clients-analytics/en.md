@@ -101,6 +101,6 @@ In this step, we will implement the Analytics client. So,
 
    and it's expected that it replies with the data and status `200`.
 
-   > **Attention**: Generally, the account where you're running the app is `appliancetheme`.
+   > **Attention**! Generally, the account where you're running the app is `appliancetheme`.
 
 ![image](https://user-images.githubusercontent.com/19495917/84827089-53c00780-affa-11ea-857f-fdcba0fef7c2.png)
