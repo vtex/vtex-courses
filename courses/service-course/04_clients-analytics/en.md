@@ -82,18 +82,18 @@ In this step, we will implement the Analytics client. So,
 
    Inside the node directory, there is a folder called `handlers`. There is already a file named `analytics.ts`, in which its necessary to do two things for your test to work: get the analytics client from `ctx` and replace the content of `ctx.body` with the method mentioned before, as you can see in the code block below:
 
-  ```diff
-    export async function analytics(ctx: Context, next: () => Promise<any>) {
-  +    const {
-  +      clients: { analytics },
-  +    } = ctx
-  +    ctx.status = 200
-  -    ctx.body = 'OK'
-  +    ctx.body = await analytics.getLiveUsers()
-  +    ctx.set('cache-control', 'no-cache')
+   ```diff
+   export async function analytics(ctx: Context, next: () => Promise<any>) {
+   +  const {
+   +    clients: { analytics },
+   +  } = ctx
+   +  ctx.status = 200
+   -  ctx.body = 'OK'
+   +  ctx.body = await analytics.getLiveUsers()
+   +  ctx.set('cache-control', 'no-cache')
       await next()
-    }
-  ```
+   }
+   ```
 
 7. Now let's test it! It's possible to use Postman to send a `GET` request to the following route:
 
@@ -101,6 +101,6 @@ In this step, we will implement the Analytics client. So,
 
    and it's expected that it replies with the data and status `200`.
 
-> **Attention**: Generally, the account where you're running the app is `appliancetheme`.
+   > **Attention**: Generally, the account where you're running the app is `appliancetheme`.
 
 ![image](https://user-images.githubusercontent.com/19495917/84827089-53c00780-affa-11ea-857f-fdcba0fef7c2.png)
