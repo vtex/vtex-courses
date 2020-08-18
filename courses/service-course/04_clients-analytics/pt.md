@@ -81,23 +81,25 @@ Neste passo, vamos implementar o cliente de _Analytics_.
 
     Para fazer isso, há uma pasta dentro do diretório `/node`, chamada `handlers`. Há um arquivo chamado `analytics.ts`, no qual é necessário fazer duas coisas para que seu teste funcione: pegar o cliente de _analytics_ de `ctx` e substituir o conteúdo de `ctx.body` pelo método mencionado anteriormente, como você pode ver no bloco de código abaixo:
 
-    ```diff
-        export async function analytics(ctx: Context, next: () => Promise<any>) {
-    +    const {
-    +      clients: { analytics },
-    +    } = ctx
-    +    ctx.status = 200
-    -    ctx.body = 'OK'
-    +    ctx.body = await analytics.getLiveUsers()
-    +    ctx.set('cache-control', 'no-cache')
-        await next()
-        }
-    ```
+   ```diff
+   export async function analytics(ctx: Context, next: () => Promise<any>) {
+   +  const {
+   +    clients: { analytics },
+   +  } = ctx
+   +  ctx.status = 200
+   -  ctx.body = 'OK'
+   +  ctx.body = await analytics.getLiveUsers()
+   +  ctx.set('cache-control', 'no-cache')
+      await next()
+   }
+   ```
 
 Agora, vamos testá-lo! É possível utilizar o Postman para enviar um _request_ GET para a seguinte rota:
 
-   `{your workspace}--appliancetheme.myvtex.com/_v/app/analytics/realTime`
+   `{your workspace}--{your account}.myvtex.com/_v/app/analytics/realTime`
 
    e é esperado que esta responsa com os dados e com status `200`.
+
+   > Atenção! Geralmente, a conta utilizada para rodar aplicações em cursos é a `appliancetheme`
 
 ![image](https://user-images.githubusercontent.com/19495917/84827089-53c00780-affa-11ea-857f-fdcba0fef7c2.png)
