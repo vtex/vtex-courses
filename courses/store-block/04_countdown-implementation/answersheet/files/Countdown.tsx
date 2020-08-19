@@ -1,13 +1,13 @@
 // store-block/react/Countdown.tsx
 import React, { useState } from 'react'
 import { TimeSplit } from './typings/global'
-import { tick } from './utils/time'
+import { tick, getTwoDaysFromNow } from './utils/time'
 
 interface CountdownProps {
   targetDate: string
 }
 
-const DEFAULT_TARGET_DATE = new Date('2020-06-25').toISOString()
+const DEFAULT_TARGET_DATE = getTwoDaysFromNow()
 
 const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
   targetDate = DEFAULT_TARGET_DATE,

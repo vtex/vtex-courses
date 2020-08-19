@@ -74,7 +74,7 @@ Grande parte das definições de Tachyons podem ser alteradas, de forma que sua 
       tick(targetDate, setTime)
 
       return (
-    +   <div className={`${handles.countdown} t-heading-2 fw3 w-100 c-muted-1 db tc`}>
+    +   <div className={`${handles.countdown} c-muted-1 db tc`}>
           {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
         </div>
       )

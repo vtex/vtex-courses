@@ -1,19 +1,18 @@
 // store-block/react/Countdown.tsx
 import React, { useState } from 'react'
-import { TimeSplit } from './typings/global'
-import { tick } from './utils/time'
-import { useCssHandles } from 'vtex.css-handles'
 import { useQuery } from 'react-apollo'
 import useProduct from 'vtex.product-context/useProduct'
+import { useCssHandles } from 'vtex.css-handles'
+
+import { TimeSplit } from './typings/global'
+import { tick, getTwoDaysFromNow } from './utils/time'
 import productReleaseDate from './queries/productReleaseDate.graphql'
 
-interface CountdownProps {}
-
-const DEFAULT_TARGET_DATE = new Date('2020-06-25').toISOString()
+const DEFAULT_TARGET_DATE = getTwoDaysFromNow()
 
 const CSS_HANDLES = ['countdown']
 
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
+const Countdown: StorefrontFunctionComponent = () => {
   const [timeRemaining, setTime] = useState<TimeSplit>({
     hours: '00',
     minutes: '00',
@@ -22,17 +21,15 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
 
   const handles = useCssHandles(CSS_HANDLES)
 
-  const {
-    product: { linkText },
-  } = useProduct()
+  const { product } = useProduct()
   const { data, loading, error } = useQuery(productReleaseDate, {
     variables: {
-      slug: linkText,
+      slug: product?.linkText,
     },
     ssr: false,
   })
 
-  if (!linkText) {
+  if (!product) {
     return (
       <div>
         <span>There is no product context.</span>
@@ -59,7 +56,7 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
 
   return (
     <div
-      className={`${handles.countdown} t-heading-2 fw3 w-100 c-muted-1 db tc`}
+      className={`${handles.countdown} c-muted-1 db tc`}
     >
       <h1>{`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}</h1>
     </div>
