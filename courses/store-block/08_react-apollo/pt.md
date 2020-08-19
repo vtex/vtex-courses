@@ -41,7 +41,7 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
     "vtex.product-context": "0.x"
     ```
 
-3. Agora, é necessário importar os hook `useQuery`, para fazer a _query_ que retornará o dado que descrevemos, e `useProduct`, para nos dar a informação sobre o slug do produto atual. Além disso, também é preciso importar a _query_, definida anteriormente, que se encontra no arquivo `productReleaseDate.graphql`. Vale ressaltar também que a *prop* `targetDate` não será mais necessária.
+3. Agora, é necessário importar os hook `useQuery`, para fazer a _query_ que retornará o dado que descrevemos, e `useProduct`, para nos dar a informação sobre o slug do produto atual. Além disso, também é preciso importar a _query_, definida anteriormente, que se encontra no arquivo `productReleaseDate.graphql`.
 
     ```diff
     // react/Countdown.tsx
@@ -54,7 +54,9 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
     +import productReleaseDate from './queries/productReleaseDate.graphql'
     ```
 
-    > É importante notar que há a possibilidade da sua IDE mostrar um erro ao fazer o *import* do `product-context`.
+    > É importante notar que há a possibilidade da sua IDE mostrar um erro ao fazer o *import* do `product-context`. 
+    
+    > Vale ressaltar também que tanto a *prop* `targetDate` como a constante `DEFAULT_TARGET_DATE` não serão mais necessárias, então pode pode removê-las e ajustar os _imports_, no caso de não utilizar mais algumas funções.
 
 4. Feito isso, defina a query usando o `productReleaseDate` importado e o `useQuery`. Os dados de produto podem ser encontrados em `useProduct`. Ambos são [hooks](https://reactjs.org/docs/hooks-intro.html), e portanto, devem ser adicionados dentro de um componente funcional React.
 
