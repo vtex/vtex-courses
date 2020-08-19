@@ -59,10 +59,10 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
 4. Feito isso, defina a query usando o `productReleaseDate` importado e o `useQuery`. Os dados de produto podem ser encontrados em `useProduct`. Ambos são [hooks](https://reactjs.org/docs/hooks-intro.html), e portanto, devem ser adicionados dentro de um componente funcional React.
 
     ```diff
-    + const { product: { linkText } } = useProduct()
+    + const { product } = useProduct()
     + const { data, loading, error } = useQuery(productReleaseDate, {
     +   variables: {
-    +     slug: linkText
+    +     slug: product?.linkText
     +   },
     +   ssr: false
     + })
@@ -73,7 +73,7 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
 5. Agora que estamos utilizando nosso bloco em páginas que têm contexto de produto, é importante testar se este context existe. Para fazer isso, vamos adicionar o bloco de código abaixo:
 
     ```tsx
-    if (!linkText) {
+    if (!product) {
       return (
         <div>
           <span>There is no product context.</span>

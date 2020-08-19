@@ -76,7 +76,7 @@ A lot of the Tachyons' definitions can be changed, so that your store will have 
       tick(targetDate, setTime)
 
       return (
-    +   <div className={`${handles.countdown} t-heading-2 fw3 w-100 c-muted-1 db tc`}>
+    +   <div className={`${handles.countdown} c-muted-1 db tc`}>
           {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
         </div>
       )

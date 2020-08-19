@@ -1,14 +1,14 @@
 // store-block/react/Countdown.tsx
 import React, { useState } from 'react'
 import { TimeSplit } from './typings/global'
-import { tick } from './utils/time'
+import { tick, getTwoDaysFromNow } from './utils/time'
 import { useCssHandles } from 'vtex.css-handles'
 
 interface CountdownProps {
   targetDate: string
 }
 
-const DEFAULT_TARGET_DATE = new Date('2020-06-25').toISOString()
+const DEFAULT_TARGET_DATE = getTwoDaysFromNow()
 
 const CSS_HANDLES = ['countdown']
 
@@ -27,7 +27,7 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
 
   return (
     <div
-      className={`${handles.countdown} t-heading-2 fw3 w-100 c-muted-1 db tc`}
+      className={`${handles.countdown} c-muted-1 db tc`}
     >
       <h1>{`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}</h1>
     </div>

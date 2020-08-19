@@ -14,7 +14,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
    ```diff
        "product-gifts",
-   +	"countdown",
+   +	 "countdown",
        "flex-layout.row#buy-button",
        "availability-subscriber",
    ```
@@ -59,10 +59,10 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 4. After that, define the query using the `productReleaseDate` imported and the `useQuery` hook, you can find the product data in `useProduct` hook. Since they are [hooks](https://reactjs.org/docs/hooks-intro.html), they only work inside react functional components. 
 
     ```diff
-    + const { product: { linkText } } = useProduct()
+    + const { product } = useProduct()
     + const { data, loading, error } = useQuery(productReleaseDate, {
     +   variables: {
-    +     slug: linkText
+    +     slug: product?.linkText
     +   },
     +   ssr: false
     + })
@@ -73,7 +73,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 5. Now that we're using our block in pages that have the product context, it's important to test if this context exists. To do that, let's add the following code block:
 
     ```tsx
-    if (!linkText) {
+    if (!product) {
       return (
         <div>
           <span>There is no product context.</span>
