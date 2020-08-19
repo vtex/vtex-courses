@@ -8,7 +8,7 @@ Agora que o básico do nosso componente está funcional, é hora de implementar 
 
 É chamado dentro de um componente funcional para atualizar e consumir o *state* de um componente. O *state* simboliza o estado atual de um componente. 
 
->O `useState` retorna um par: o valor do estado atual e uma função para atualizá-lo.
+> O `useState` retorna um par: o valor do estado atual e uma função para atualizá-lo.
 
 Voltando ao exemplo apresentado na etapa anterior, podemos mostrar na prática os conceitos abordados anteriormente. Para lembrar do exemplo, veja o código abaixo:
 
