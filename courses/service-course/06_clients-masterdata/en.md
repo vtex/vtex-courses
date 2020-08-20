@@ -86,23 +86,23 @@ In this step, it will be used to fetch data regarding the top-N most viewed prod
 
 3. Now, to make sure we are handling erros, implement a `try-catch` structure. To do so, do something like this:
 
-  ```diff
-  export async function updateLiveUsers(ctx: EventContext<Clients>) {
-    const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
-    console.log('MOCKED LIVE USERS ', liveUsersProducts)
-    await Promise.all(
-      liveUsersProducts.map(async ({ slug, liveUsers }) => {
-  +      try {
-          ...
-  +      } catch (e) {
-  +        console.log(`failed to update product ${slug}`)
-  +        console.log(e)
-  +      }
-      })
-    )
-    return true
-  }
-  ```
+    ```diff
+    export async function updateLiveUsers(ctx: EventContext<Clients>) {
+      const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
+      console.log('MOCKED LIVE USERS ', liveUsersProducts)
+      await Promise.all(
+        liveUsersProducts.map(async ({ slug, liveUsers }) => {
+    +      try {
+            ...
+    +      } catch (e) {
+    +        console.log(`failed to update product ${slug}`)
+    +        console.log(e)
+    +      }
+        })
+      )
+      return true
+    }
+    ```
 
 
 4. If our product is already saved, we need to update it by incrementing its count. **Master Data** has a method that allows us to update an existing document or create a new document, if the document does not exist - `createOrUpdateEntireDocument`. To use this method and implement the incrementation on the Master Data entity, in the same file that was changed before, right after the log line of _saved product_, add this code:
