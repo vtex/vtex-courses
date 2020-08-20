@@ -65,7 +65,7 @@ In the block's definition, you can set its behavior and visual. **Customization 
 
 Read through the Rich Text [documentation](https://vtex.io/docs/app/vtex.rich-text#blocks-api) one more time and let's define the props we'll use to customize the block.
 
-We want to achieve a simple "Hello, World!", and looking at the props we notice one called: `text` [(Text written in markdown language to be displayed)](https://vtex.io/docs/app/vtex.rich-text#blocks-api). This is the prop that determines which text will be displayed.
+We want to achieve a simple "Hello, World!", and looking at the props we notice one called: `text` [(Text written in markdown language to be displayed)](https://developers.vtex.com/docs/vtex-rich-text#rich-text). This is the prop that determines which text will be displayed.
 
 Including this prop, we now have the following:
 
@@ -144,4 +144,3 @@ After running `vtex link`, your `rich-text` should look like this:
 <img src="https://user-images.githubusercontent.com/12139385/70143376-2e7d3480-167a-11ea-8727-2bc6a9422f21.png" width="150" />
 
 :information_source: Remember to access the Rich Text [documentation](https://vtex.io/docs/components/all/vtex.rich-text/) if you have any questions during the activity.
-
