@@ -34,7 +34,7 @@ Once successfully installed, your next step is to *log into* a VTEX account.
 
 ## Logging in
 
-1. Run `vtex login appliancetheme` in your terminal. During this training we will work on this account. 
+1. Run `vtex login appliancetheme` in your terminal. During this training, we will work on this account. 
 
 2. After *logging in*, run `vtex whoami` to confirm the account and workspace in which you find currently are.
 
