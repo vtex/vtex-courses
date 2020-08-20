@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/18701182/69843114-d6db6500-1244-11ea-82a7-b10880e2ed55.png)
 
-We've just implemented our product page and are moving on to the search page. Both are similar in the sense that both have blocks that are unique in this context. We will explore this block in a disorderly fashion for now, just to get an idea of its behavior.
+We've just implemented our product page and are moving on to the search page. Both are similar in the sense that both have blocks that are unique in this context. We will explore this block in a disorderly fashion, for now, just to get an idea of its behavior.
 
 ## Starting out with Search Layout  
 
@@ -24,7 +24,7 @@ The `search-result-layout`, in turn, must receive 3 other blocks:
 - `search-result-layout.mobile`
 - `search-not-found-layout`
 
-As you've already notice, the first two define which layout will be displayed on **desktop and mobile** respectively, while the third defines the layout of the **no results found search page**.
+As you've already noticed, the first two define which layout will be displayed on **desktop and mobile** respectively, while the third defines the layout of the **no results found search page**.
 
  ```json
 {
@@ -45,7 +45,7 @@ In the course, we'll **focus** on **desktop layout** implementation.
 
 ## Search blocks
 
-The [search results documentation](https://vtex.io/docs/components/search-related/vtex.search-result/) offers a good reference for blocks that can be use in a **search context**. This step will focus on highlighting the main ones:
+The [search results documentation](https://developers.vtex.com/docs/vtex-search-result) offers a good reference for blocks that can be used in a **search context**. This step will focus on highlighting the main ones:
 
 - Search breadcrumb (`breadcrumb.search`);
 - Search title (`search-title.v2`);
@@ -93,5 +93,4 @@ To do so, write a code similar to:
     ...
     ```
 
-:information_source: Remember to go through the Search Result [documentation](https://vtex.io/docs/components/all/vtex.search-result/) if you have any questions during the activity.
-
+:information_source: Remember to go through the Search Result [documentation](https://developers.vtex.com/docs/vtex-search-result) if you have any questions during the activity.

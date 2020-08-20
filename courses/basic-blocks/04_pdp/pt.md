@@ -23,7 +23,7 @@ Isso não significa que esses blocos sejam menos personalizáveis, muito pelo co
 
 ## Atividade
 
-Construa uma página de produto usando os seguintes blocos em `product.jsonc` e declare-a na pasta `store/blocks`: `product-images`](https://vtex.io/docs/components/product-related/vtex.store-components/product-images), [`product-price`](https://vtex.io/docs/components/product-related/vtex.store-components/product-price), [`product-name`](https://vtex.io/docs/components/product-related/vtex.store-components/product-name) e [`buy-button`](https://vtex.io/docs/app/vtex.store-components/buy-button). Esperamos que a estrutura contenha o seguinte:
+Construa uma página de produto usando os seguintes blocos em `product.jsonc` e declare-a na pasta `store/blocks`: [`product-images`](https://developers.vtex.com/docs/vtex-store-components-productimages), [`product-price`](https://developers.vtex.com/docs/vtex-product-price#product-price), [`product-name`](https://developers.vtex.com/docs/vtex-store-components-productname) and [`buy-button`](https://developers.vtex.com/docs/vtex-store-components-buybutton). Esperamos que a estrutura contenha o seguinte:
 
 1. Uma **row** em `store.product`;
 
@@ -51,7 +51,7 @@ Construa uma página de produto usando os seguintes blocos em `product.jsonc` e 
     }
     ```
 
-3. A coluna da esquerda deve conter [`product-images`](https://vtex.io/docs/components/all/vtex.store-components/product-images);
+3. A coluna da esquerda deve conter [`product-images`](https://developers.vtex.com/docs/vtex-store-components-productimages);
 
     ```json
     "flex-layout.col#left": {
@@ -61,7 +61,7 @@ Construa uma página de produto usando os seguintes blocos em `product.jsonc` e 
     }
     ```
 
-4. A coluna da direita deve conter [`product-name`](https://vtex.io/docs/components/all/vtex.store-components/product-name), [`product-price`](https://vtex.io/docs/components/all/vtex.store-components/product-price) e [`buy-button`](https://vtex.io/docs/app/vtex.store-components/buy-button):
+4. A coluna da direita deve conter [`product-name`](https://developers.vtex.com/docs/vtex-store-components-productname), [`product-price`](https://developers.vtex.com/docs/vtex-product-price#product-price) e [`buy-button`](https://developers.vtex.com/docs/vtex-store-components-buybutton):
 
     ```json
       "flex-layout.col#right": {    
@@ -75,7 +75,7 @@ Construa uma página de produto usando os seguintes blocos em `product.jsonc` e 
 
 Ainda queremos:
 
-1. A coluna da direita alinhada ao centro (veja as props `verticalAlign` e `preventVerticalStretch` na [documentação do Flex Layout Column](https://vtex.io/docs/app/vtex.flex-layout#flex-layoutcol)):
+1. A coluna da direita alinhada ao centro (veja as props `verticalAlign` e `preventVerticalStretch` na [documentação do Flex Layout Column](https://developers.vtex.com/docs/vtex-flex-layout#flex-layoutcol)):
 
     ```json
       "flex-layout.col#right": {    
@@ -89,7 +89,7 @@ Ainda queremos:
       },
     ```
 
-2. O [`product-price`](https://vtex.io/docs/components/all/vtex.store-components/product-price#configuration) mostrar economias totais e lista de preçoes (`showSavings` e `showListPrice`):
+2. O [`product-price`](https://developers.vtex.com/docs/vtex-product-price#configuration) mostrar economias totais e lista de preçoes (`showSavings` e `showListPrice`):
 
     ```json
       "product-price": {
@@ -101,4 +101,4 @@ Ainda queremos:
     ```
 
 
-:information_source: Lembre de acessar as documentações de [`product-images`](https://vtex.io/docs/components/product-related/vtex.store-components/product-images), [`product-price`](https://vtex.io/docs/components/product-related/vtex.store-components/product-price), [`product-name`](https://vtex.io/docs/components/product-related/vtex.store-components/product-name) e [`buy-button`](https://vtex.io/docs/app/vtex.store-components/buy-button) em caso de dúvidas durante a atividade. 
+:information_source: Lembre de acessar as documentações de [`product-images`](https://developers.vtex.com/docs/vtex-store-components-productimages), [`product-price`](https://developers.vtex.com/docs/vtex-product-price#product-price), [`product-name`](https://developers.vtex.com/docs/vtex-store-components-productname) e [`buy-button`](https://developers.vtex.com/docs/vtex-store-components-buybutton) em caso de dúvidas durante a atividade. 

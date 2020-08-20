@@ -10,10 +10,10 @@ During the last step we learned how to create a simple product page with a minim
 
 Our [documentation](https://vtex.io/docs/components/product-related) contains more than 30 product-related blocks. We'll explore 4 more in this step:
 
-- [Breadcrumb](https://vtex.io/docs/app/vtex.breadcrumb)
-- [Product Identifier](https://vtex.io/docs/components/product/vtex.product-identifier)
-- [Product Quantity](https://vtex.io/docs/components/product-related/vtex.product-quantity/)
-- [SKU Selector](https://vtex.io/docs/components/product/vtex.store-components/sku-selector)
+- [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb)
+- [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier)
+- [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity)
+- [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector)
 
 It's important that by the end of the course you take some time to fully explore our components, in addition to the customization possibilities that accompany each component. 
 
@@ -75,5 +75,4 @@ Develop the product page by adding the 4 blocks listed above to`product.jsonc` a
 ```
 
 
-:information_source: Remember to access the [Breadcrumb](https://vtex.io/docs/app/vtex.breadcrumb), [Product Identifier](https://vtex.io/docs/components/product/vtex.product-identifier), [Product Quantity](https://vtex.io/docs/components/product-related/vtex.product-quantity/) and [SKU Selector](https://vtex.io/docs/components/product/vtex.store-components/sku-selector) documentation if you have any questions during the activity. 
-
+:information_source: Remember to access the [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity) and [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector) documentation if you have any questions during the activity. 
