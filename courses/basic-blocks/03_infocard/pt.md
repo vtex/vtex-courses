@@ -4,7 +4,7 @@
 
 Uma loja precisa de uma boa *página inicial* para envolver os usuários, aumentando o tempo da sessão e, portanto, as chances de conversão. Para tal, é necessário utilizar vários elementos, como banners promocionais, estantes com destaques, material sobre nós, etc.
 
-Criamos o próximo bloco na *página inicial* usando uma *call to action*. No Store Framework, temos um bloco desenhado para esse fim, denominado [**Info Card**](https://vtex.io/docs/app/vtex.store-components/Info-Card).
+Criamos o próximo bloco na *página inicial* usando uma *call to action*. No Store Framework, temos um bloco desenhado para esse fim, denominado [**Info Card**](https://developers.vtex.com/docs/vtex-store-components-infocard).
 
 ## Começando com o Info Card
 
