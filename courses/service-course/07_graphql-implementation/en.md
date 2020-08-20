@@ -14,9 +14,10 @@ Therefore, GraphQL uses types and a query schema to specify the data retrieved a
 
 ## Retrieving data from Master Data
 
-1. On the directory `/graphql/types` create the `productView.graphql` file and declare the type of the product list we want to retrieve:
+1. Inside the `/graphql` directory, create a folder called `/types`. In this folder, create the `productView.graphql` file and declare the type of the product list we want to retrieve:
 
    ```
+   # /graphql/types/productView.graphql
    type ProductView {
        slug: String
        count: Int
@@ -35,10 +36,10 @@ Therefore, GraphQL uses types and a query schema to specify the data retrieved a
   
     Also, in this declaration you can include directives. In some cases, it is required, for example, if you need to get the user token or use cookies (e.g.: `OrderForm`). To read more about it, check out [this link](https://github.com/vtex-apps/graphql-example).
 
-3. With the schema, types and the query defined, we need to create the query's resolver. The resolver is what happens when a query is executed. In our case, we want to perform a scroll on `Masterdata`, ordering by the count (as we want to get a top most viewed products) and limiting the page size (the top **n**). To define this resolver, in the `/node/resolvers` directory, create the file `products.ts` and do the following:
+3. With the schema, types and the query defined, we need to create the query's resolver. The resolver is what happens when a query is executed. In our case, we want to perform a scroll on `Masterdata`, ordering by the count (as we want to get a top most viewed products) and limiting the page size (the top **n**). To define this resolver, create the `/node/resolvers` directory, and in it, create the file `products.ts` and do the following:
 
     ```ts
-      //node/resolvers/products.ts
+      // node/resolvers/products.ts
       import { COURSE_ENTITY } from '../utils/constants'
 
       export const productList = async (
@@ -78,7 +79,7 @@ Therefore, GraphQL uses types and a query schema to specify the data retrieved a
     ```diff
     //manifest.json
     "builders": {
-    +        "graphql": "1.x",
+    +   "graphql": "1.x",
         "docs": "0.x",
         "node": "6.x"
     },
