@@ -126,6 +126,7 @@ Vamos começar?
     +            slug,
     +          },
     +          id: savedProduct?.id,
+    +          schema: 'v1'
     +        })
             } catch {
             console.log(`failed to update product ${slug}`)
@@ -142,7 +143,7 @@ Vamos começar?
 4. Finalmente, rode `vtex link` e espere que um evento seja disparado. Uma vez que isso acontece, cheque o terminal por _logs_ no código. Quebre o `vtex link` através de `ctrl + C` e utilize o seguinte _cURL_ no terminal para checar as atualizações no **Master Data**:
 
    ```
-   curl --location --request GET 'https://api.vtex.com/api/dataentities/backendproductusers/search?_fields=slug,count&_schema=v1&an=appliancetheme' \
+   curl --location --request GET 'https://api.vtex.com/api/dataentities/course_backend_product_list/search?_fields=slug,count&_schema=v1&an=appliancetheme' \
    --header 'Content-Type: application/json'
    ```
     > **Atenção**: Para rodar o comando _cURL_ no **Windows**, é necessário substituir as aspas simples (`'`) por aspas duplas (`"`).

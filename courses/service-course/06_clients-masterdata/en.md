@@ -84,7 +84,7 @@ In this step, it will be used to fetch data regarding the top-N most viewed prod
 
    > Note that we are using the `COURSE_ENTITY`, from the global constants, to access your data.
 
-3. Now, to make sure we are handling erros, implement a `try-catch` structure. To do so, do something like this:
+3. Now, to make sure we are handling errors, implement a `try-catch` structure. To do so, do something like this:
 
     ```diff
     export async function updateLiveUsers(ctx: EventContext<Clients>) {
@@ -122,6 +122,7 @@ In this step, it will be used to fetch data regarding the top-N most viewed prod
    +            slug,
    +          },
    +          id: savedProduct?.id,
+   +          schema: 'v1'
    +        })
          } catch {
            console.log(`failed to update product ${slug}`)
