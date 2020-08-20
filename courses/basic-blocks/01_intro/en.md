@@ -1,6 +1,6 @@
 # Introduction
 
-During this course, you will learn how to use the main blocks of Store Framework to quick start your storefront development. 
+During this course, you will learn how to use the main blocks of Store Framework to quickly start your storefront development. 
 
 ## Boilerplate: Beginning the Course
 
