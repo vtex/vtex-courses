@@ -28,7 +28,7 @@ In VTEX IO, events are often used as triggers to other actions, such as sending 
    }
    ```
 
-   > Note: you can also globally declare your event context in the `index.ts` file. If you do so, you doesn't need to import in every file you want to use it.
+   > Note: you can also globally declare your event context in the `index.ts` file. If you do so, you don't need to import in every file you want to use it.
 
 3. Now, to use the _Analytics client_, do the following:
 
