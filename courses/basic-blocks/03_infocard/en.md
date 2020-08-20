@@ -93,7 +93,7 @@ All block have pre-established names, but you can create block instances and def
 > 
 ## Activity
 
-1. In the `home.jsonc` file, based on the code above, create the `info-card#button-left` right under the infocard: `info-card#button-right`. This new infocard must implement the following props:
+1. In the `home.jsonc` file, based on the code above, create the `info-card#button-left` right under the info card: `info-card#button-right`. This new info card must implement the following props:
 
     - The title must be `Shining chrome`
     - A link type call-to-action with the following text instead of a button: `Go to Collection` 
