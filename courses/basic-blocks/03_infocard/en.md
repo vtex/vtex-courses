@@ -4,7 +4,7 @@
 
 A store needs a good *home page* to engage users, increasing session time and therefore conversion chances. To achieve this, several elements need to be used, such as promotional banners, shelves with highlights, about us material, etc. 
 
-We have created the next block on the *home page* using a *call to action*. In Store Framework, we have a block designed for this purpose, called [**Info Card**](https://vtex.io/docs/app/vtex.store-components/Info-Card).
+We have created the next block on the *home page* using a *call to action*. In Store Framework, we have a block designed for this purpose, called [**Info Card**](https://developers.vtex.com/docs/vtex-store-components-infocard).
 
 ## Starting out with Info Card
 
