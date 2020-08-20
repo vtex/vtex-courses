@@ -63,7 +63,7 @@ In the block's definition, you can set its behavior and visual. **Customization 
 }
 ```
 
-Read through the Rich Text [documentation](https://vtex.io/docs/app/vtex.rich-text#blocks-api) one more time and let's define the props we'll use to customize the block.
+Read through the Rich Text [documentation](https://developers.vtex.com/docs/vtex-rich-text#rich-text) one more time and let's define the props we'll use to customize the block.
 
 We want to achieve a simple "Hello, World!", and looking at the props we notice one called: `text` [(Text written in markdown language to be displayed)](https://developers.vtex.com/docs/vtex-rich-text#rich-text). This is the prop that determines which text will be displayed.
 
