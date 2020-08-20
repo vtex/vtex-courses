@@ -89,8 +89,7 @@ All block have pre-established names, but you can create block instances and def
   }
 ```
 
-> **WARNING:** Throughout the course, you will notice several `...`, which you should not copy as it represents the progress achieved during previous steps. 
-> 
+
 ## Activity
 
 1. In the `home.jsonc` file, based on the code above, create the `info-card#button-left` right under the info card: `info-card#button-right`. This new info card must implement the following props:
