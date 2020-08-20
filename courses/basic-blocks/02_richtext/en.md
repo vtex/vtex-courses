@@ -121,7 +121,7 @@ To center align the text, we can add the `textPosition`  prop and give it the `C
 
 ## Activity
 
-Define a [Rich Text](https://vtex.io/docs/components/all/vtex.rich-text/) on your home page and create a **bold** "Hello, World!" that's **right aligned**. Do so by adding a code like this in the `store/blocks/home.jsonc` file:
+Define a [Rich Text](https://developers.vtex.com/docs/vtex-rich-text#rich-text) on your home page and create a **bold** "Hello, World!" that's **right-aligned**. Do so by adding a code block like this in the `store/blocks/home.jsonc` file:
 
     ```diff
     {
