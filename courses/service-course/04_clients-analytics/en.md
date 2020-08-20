@@ -80,7 +80,7 @@ In this step, we will implement the Analytics client. So,
 
 6. So as to see it working, it's possible to use `getLiveUsers` method inside the handler for the analytics client. Using a route that it's already defined in the project, it is possible to send a request to it and the handler responsible for this route will call the method that we created.
 
-   Inside the node directory, there is a folder called `handlers`. There is already a file named `analytics.ts`, in which its necessary to do two things for your test to work: get the analytics client from `ctx` and replace the content of `ctx.body` with the method mentioned before, as you can see in the code block below:
+   Inside the node directory, there is a folder called `handlers`. There is already a file named `analytics.ts`, in which it's necessary to do two things for your test to work: get the analytics client from `ctx` and replace the content of `ctx.body` with the method mentioned before, as you can see in the code block below:
 
    ```diff
    export async function analytics(ctx: Context, next: () => Promise<any>) {
