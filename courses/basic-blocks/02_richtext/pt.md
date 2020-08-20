@@ -65,7 +65,7 @@ Na definição do bloco, você pode definir seu comportamento e visual. **Pontos
 
 Leia o Rich Text [documentação](https://developers.vtex.com/docs/vtex-rich-text#rich-text) mais uma vez e vamos definir os adereços que usaremos para personalizar o bloco.
 
-Queremos obter um simples "Olá, Mundo!", E olhando para as props, notamos um chamado: `text` [(Texto escrito em linguagem de marcação a ser exibido)](https://vtex.io/docs/app /vtex.rich-text#blocks-api). Esta é a prop que determina qual texto será exibido.
+Queremos obter um simples "Olá, Mundo!", E olhando para as props, notamos um chamado: `text` [(Texto escrito em linguagem de marcação a ser exibido)](https://developers.vtex.com/docs/vtex-rich-text#rich-text). Esta é a prop que determina qual texto será exibido.
 
 Incluindo esta prop, agora temos o seguinte:
 
