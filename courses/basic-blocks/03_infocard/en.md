@@ -12,7 +12,7 @@ We have created the next block on the *home page* using a *call to action*. In S
 
 Using the Info Card, you can create images which have links and buttons (top or side of the block) that direct the user's flow (*Call to action*).
 
-Looking at the [documentation](https://vtex.io/docs/app/vtex.store-components/info-card#blocks-api), we can see that:
+Looking at the [documentation](https://developers.vtex.com/docs/vtex-store-components-infocard#configuration), we can see that:
 
 - `isFullModeStyle` defines whether the *Call to Action (CTA)* is set above the banner;
 - `textPosition` defines the position of the text;
