@@ -38,7 +38,7 @@ Once successfully installed, your next step is to *log into* a VTEX account.
 
 2. After *logging in*, run `vtex whoami` to confirm the account and workspace in which you find currently are.
 
-Workspaces are nothing other than what the namesake suggests. On VTEX IO, accounts have three main workspace types, namely [master](https://vtex.io/docs/recipes/store/promoting-a-workspace-to-master), [production](https://vtex.io/docs/recipes/store/creating-a-production-workspace) and development. 
+Workspaces are nothing other than what the namesake suggests. On VTEX IO, accounts have three main workspace types, namely [master](https://vtex.io/docs/recipes/store/promoting-a-workspace-to-master), [production](https://vtex.io/docs/recipes/store/creating-a-production-workspace), and development. 
 
 The next step is to create a development workspace, which will allow you to play with the configurations throughout the course without altering the store's final public version.
 
