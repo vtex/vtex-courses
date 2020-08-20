@@ -23,7 +23,7 @@ Olhando a [documentação](https://developers.vtex.com/docs/vtex-store-component
 - `callToActionText` define o texto *CTA*;
 - `callToActionUrl` determina a URL para a qual ele redireciona;
 
-Portanto, temos as seguintes props:
+Portanto, temos as seguintes _props_:
 
 ```json
   {
@@ -58,7 +58,7 @@ Portanto, temos as seguintes props:
 ## Instâncias de Blocos
 
 Você pode ter se perguntado:
-> "E se eu quisesse ter dois info cards diferentes?"
+> "E se eu quisesse ter dois _info cards_ diferentes?"
 
 É possível por meio de **instâncias de blocos**.
 
@@ -93,9 +93,9 @@ Todos os blocos têm nomes pré-estabelecidos, mas você pode criar instâncias 
 
 ## Atividade
 
-1. No arquivo `home.jsonc`, com base no código acima, crie o `info-card # button-left` logo abaixo do infocard: `info-card # button-right`. Este novo info card deve implementar os seguintes adereços:
+1. No arquivo `home.jsonc`, com base no código acima, crie o `info-card#button-left` logo abaixo do infocard: `info-card#button-right`. Este novo info card deve implementar os seguintes adereços:
 
-    - TO título deve ser `Shining chrome`
+    - O título deve ser `Shining chrome`
     - Uma frase de *call to action* do tipo link com o seguinte texto em vez de um botão: `Go to Collection` 
     - A seguinte imagem `https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png`
     - O seguinte subtítulo `Give your kitchen a cool style adding warm metallic finishes.<br>Available until December 2020.`
