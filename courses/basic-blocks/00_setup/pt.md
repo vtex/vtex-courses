@@ -44,7 +44,7 @@ O próximo passo é criar um *workspace* de desenvolvimento, que permitirá que 
 
 ## Criação de um *workspace* de desenvolvimento
 
-1. Execute `vtex use workspace-name`, substituindo` workspace-name` pelo nome desejado. Use um nome único para seu workspace.
+1. Execute `vtex use workspace-name`, substituindo `workspace-name` pelo nome desejado. Use um nome único para seu _workspace_.
 
 ### Acessando seu *workspace*
 
