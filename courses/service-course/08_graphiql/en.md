@@ -33,7 +33,7 @@ Exploring the IDE interface, there are three main areas: the coding area, the qu
    }
    ```
 
-   > :exclamation: The _Query Variables_ area is below the coding area, to amplify it's area just drag by the title.
+   > :exclamation: The _Query Variables_ area is below the coding area, to amplify its area just drag by the title.
 
 3. At last, just click on the _play_ button and check the outcome on the debug area. The query results should look like this:
 

@@ -1,12 +1,12 @@
-# GraphQL: Retrieving data from Masterdata
+# GraphQL: Retrieving data from Master Data
 
 ## Introduction
 
-Now that we have updated the products count, we need to retrieve the _top n_ most viewed products. We can, then, use Masterdata to retrieve the product page view data and sort by the _count_ field. We can also limit the length of retrieved products, creating a customized size rank of most visited products.
+Now that we have updated the products count, we need to retrieve the _top n_ most viewed products. We can, then, use Maste Ddata to retrieve the product page view data and sort by the _count_ field. We can also limit the length of retrieved products, creating a customized size rank of most visited products.
 
 ## GraphQL
 
-To get these product page views, we will use [GraphQL](https://graphql.org/), the technology used by VTEX IO for data fetching, to implement a query to Masterdata. GraphQL allows us to implement queries in a simple and easy way, specifying the data you want to retrieve. This makes your API reliable, since GraphQL controls the data fetched instead of the server itself.
+To get these product page views, we will use [GraphQL](https://graphql.org/), the technology used by VTEX IO for data fetching, to implement a query to Master Data. GraphQL allows us to implement queries in a simple and easy way, specifying the data you want to retrieve. This makes your API reliable, since GraphQL controls the data fetched instead of the server itself.
 
 **It's also the only possible way to create an interface between services and front end applications.**
 

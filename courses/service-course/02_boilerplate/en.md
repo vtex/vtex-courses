@@ -56,7 +56,7 @@ On this directory, you will find only the empty directories and the `/graphql/sc
 
 ## Dependencies
 
-For this course, this app has a dependency on the `events-example` app. The `events-example` app, when linked to your account and workspace, is responsable for providing events examples. Over the course, as we approach the events topic, there will be a more complete overview of the `events-example` app. 
+For this course, this app has a dependency on the `events-example` app. The `events-example` app, when linked to your account and workspace, is responsible for providing events examples. Over the course, as we approach the events topic, there will be a more complete overview of the `events-example` app.
 
 ## Getting started
 
