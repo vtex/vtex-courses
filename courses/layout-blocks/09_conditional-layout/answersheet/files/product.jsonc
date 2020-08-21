@@ -1,0 +1,92 @@
+{
+  "store.product": {
+    "children": [
+      "condition-layout.product",
+      "flex-layout.row#product-breadcrumb",
+      "flex-layout.row#product-main"
+    ]
+  },
+  "condition-layout.product": {
+    "children": ["condition.product#retro-refrigerator"]
+  },
+  "condition.product#retro-refrigerator": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productId",
+          "verb": "is",
+          "object": "3"
+        }
+      ]
+    },
+    "children": ["image#retro-refrigerator-banner"]
+  },
+  "image#retro-refrigerator-banner": { 
+    "props": { 
+      "src": "https://appliancetheme.vtexassets.com/assets/app/src/retroimage___92a8271aac7c51d2059193bdbe019016.jpg",
+      "width": "100%",
+      "height": "200px",
+      "blockClass": "cover"
+    }
+  },
+  "flex-layout.row#product-breadcrumb": {
+    "props": {
+      "marginTop": 20
+    },
+    "children": ["breadcrumb"]
+  },
+  "flex-layout.row#product-main": {
+    "props": {
+      "colGap": 9,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7
+    },
+    "children": ["product-images", "flex-layout.col#right-col"]
+  },
+  "product-images": {
+    "props": {
+      "displayThumbnailsArrows": true,
+      "thumbnailsOrientation": "vertical"
+    }
+  },
+  "flex-layout.col#right-col": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "product-name",
+      "product-price#product-details",
+      "sku-selector",
+      "flex-layout.row#buy-button",
+      "shipping-simulator",
+      "share#default"
+    ]
+  },
+  "product-price#product-details": {
+    "props": {
+      "showInstallments": true,
+      "showSavings": true
+    }
+  },
+  "flex-layout.row#buy-button": {
+    "props": {
+      "marginTop": 4,
+      "marginBottom": 7
+    },
+    "children": ["buy-button"]
+  },
+  "share#default": {
+    "props": {
+      "social": {
+        "Facebook": true,
+        "WhatsApp": true,
+        "Twitter": false,
+        "Pinterest": true
+      }
+    }
+  }
+}
