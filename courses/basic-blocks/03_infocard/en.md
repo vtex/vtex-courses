@@ -121,4 +121,4 @@ The expected result will look similar to this:
 
 ![image](https://appliancetheme.vteximg.com.br/arquivos/info-card-activity.png)
 
-:information_source: Remember to access the [Info Card](https://vtex.io/docs/app/vtex.store-components/Info-Card) documentation if you have any questions regarding the activity.
+:information_source: Remember to access the [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard) documentation if you have any questions regarding the activity.
