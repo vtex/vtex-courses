@@ -1,0 +1,3 @@
+## Customizing your store to create an unique experience for the end-user
+
+The Store Framework blocks do not provide a repetitive visual that would make stores very alike, but instead provide ample opportunity for customization through CSS properties and styling. In this course you'll learn how to customize Store Framework blocks in order to create storefronts that are aligned with your visual identity.
