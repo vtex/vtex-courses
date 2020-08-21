@@ -149,11 +149,11 @@ Sendo assim, o objeto formado é:
 }
 ```
 
-**NOTA:** Se você estiver fazendo o curso na sua própria loja, identifique o `productId` do produto que deseja customizar e coloque o valor no campo `object`. Você descobrir o valor atualizando a página, abrindo o console do seu browser e digitando `__RUNTIME__.route.params.id`: 
+**NOTA:** Se você estiver fazendo o curso na sua própria loja, identifique o `productId` do produto que deseja customizar e coloque o valor no campo `object`. Você descobrir o valor atualizando a página, abrindo o _console_ do seu navegador e digitando `__RUNTIME__.route.params.id`: 
 
 ![image](https://user-images.githubusercontent.com/18701182/90410392-aeb8be00-e080-11ea-8880-f5470c4e5d00.png)
 
-4. Para finalizar, vamos definir o banner retro: 
+4. Para finalizar, vamos definir o _banner_ retrô: 
 
 ```diff
 //product.jsonc
