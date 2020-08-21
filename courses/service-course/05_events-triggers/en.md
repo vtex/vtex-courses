@@ -1,4 +1,4 @@
-# Using Events as Triggers
+# Using events as triggers
 
 ## Introduction
 
@@ -41,6 +41,7 @@ In VTEX IO, events are often used as triggers to other actions, such as sending 
    }
    ```
 
-4. Finally, run `vtex link` and for every event fired, you should see the live users retrieved from the _Analytics_.
+4. Finally, run `vtex link`, and for every event fired, you should see the live users retrieved from the _Analytics_.
+
    The result should be like this:
    ![image](https://user-images.githubusercontent.com/43679629/85150833-69ffda80-b229-11ea-9260-b9255adf7d9c.png)
