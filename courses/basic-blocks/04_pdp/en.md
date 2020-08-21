@@ -100,5 +100,19 @@ In addition, we want:
       }
     ```
 
+After finishing the previous steps, you can search for a product in the search bar, on the top right of the page.
 
-:information_source: Remember to access the [`product-images`](https://developers.vtex.com/docs/vtex-store-components-productimages), [`product-price`](https://developers.vtex.com/docs/vtex-product-price#product-price), [`product-name`](https://developers.vtex.com/docs/vtex-store-components-productname) and [`buy-button`](https://developers.vtex.com/docs/vtex-store-components-buybutton) documentation in case you have any questions during your activity. 
+![image](https://user-images.githubusercontent.com/19495917/90903507-682ad280-e3a4-11ea-9781-77a9b111218b.png)
+
+
+If you are on `appliancetheme` account, try searching for a coffee machine, for example:
+
+<img src="https://user-images.githubusercontent.com/19495917/90903699-b049f500-e3a4-11ea-9e3e-6ad5f6a41333.png" height=300px>
+
+When clicking on the second one, the `Red Retro Coffee Maker`, you'll go to its product page, and you can see the blocks on it.
+
+![image](https://user-images.githubusercontent.com/19495917/90905481-9f9a7e80-e3a6-11ea-99c4-6a546e0000a3.png)
+
+> Note: Some of the products will not have the savings, since there are no discounts based on the list price.
+
+:information_source: Remember to access the [Product Images](https://developers.vtex.com/docs/vtex-store-components-productimages), [Product Price](https://developers.vtex.com/docs/vtex-product-price#product-price), [Product Name](https://developers.vtex.com/docs/vtex-store-components-productname) and [Buy Button](https://developers.vtex.com/docs/vtex-store-components-buybutton) documentation in case you have any questions during your activity. 
