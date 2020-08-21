@@ -44,7 +44,7 @@ Seguiremos os conceitos aprendidos no passo anterior e vamos aprofundar um pouco
 }
 ```
 
-3. Vamos, então, fazer com que o trigger para o modal seja a imagem do produto e definir que usaremos um layout: 
+3. Vamos, então, fazer com que o _trigger_ para o modal seja a imagem do produto e definir que usaremos um _layout_:
 
 ```diff
 {

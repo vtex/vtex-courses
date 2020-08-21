@@ -68,4 +68,4 @@ Nesta atividade, vamos criar um _slider_ de marcas para o nosso site:
    
 5. Por fim, você deve utilizar a propriedade de `autoplay` no bloco `slider-layout#home`. Faça com que o _slide_ aconteça automaticamente a cada **7 segundos e que ele pare quando o usuário passar o mouse em cima do _slide_**.
 
-:information_source: Lembre-se de acessar a documentação do [Slider Layout](https://vtex.io/docs/components/layout/vtex.slider-layout) e [Image](https://vtex.io/docs/components/general/vtex.store-components/image) caso tenha alguma dúvida durante a atividade.
+:information_source: Lembre-se de acessar a documentação do [Slider Layout](https://developers.vtex.com/docs/vtex-slider-layout) e [Image](https://developers.vtex.com/docs/vtex-store-components-image) caso tenha alguma dúvida durante a atividade.

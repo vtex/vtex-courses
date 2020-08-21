@@ -2,7 +2,7 @@
 
 ## Introdução
 
-O Stack Layout é mais um tipo possível de construir layouts complexos se alavancando dos blocos nativos, com ele é possível facilmente empilhar bloco. Para este passo, vamos criar um call-to-action (CTA) na página principal com um _banner_ e um botão de redirecionamento. 
+O Stack Layout é mais um tipo possível de construir _layouts_ complexos se alavancando dos blocos nativos, com ele é possível facilmente empilhar bloco. Para este passo, vamos criar um _call-to-action_ (CTA) na página principal com um _banner_ e um botão de redirecionamento.
 
 ## Atividade
 
@@ -16,7 +16,7 @@ Pensando melhor no problema que queremos resolver, conseguimos dividi-lo em duas
 
 ![image](https://user-images.githubusercontent.com/18701182/90291114-8a2cce00-de55-11ea-982c-3fef741535fb.png)
 
-Vamos, então, construir o info card usando ambos elementos: 
+Vamos então construir o _info card_ usando ambos elementos:
 
 1. Declare o `stack-layout` na sua página: 
 
