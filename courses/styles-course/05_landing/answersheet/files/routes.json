@@ -1,0 +1,9 @@
+// store/routes.json
+{
+  "store.custom#about-us": {
+    "path": "/about-us"
+  },
+  "store.custom#landing": {
+    "path": "/landing"
+  }
+}
