@@ -2,7 +2,7 @@
 
 ## Introdução
 
-O [Tab Layout](https://vtex.io/docs/components/layout/vtex.tab-layout) é um paradigma de estruturação de layouts criado no Store Framework para permitir a construção de layouts com abas ou guias.
+O [Tab Layout](https://developers.vtex.com/docs/vtex-tab-layout#tab-layout) é um paradigma de estruturação de _layouts_ criado no Store Framework para permitir a construção de _layouts_ com abas ou guias.
 
 Neste paradigma, temos dois containers: o `tab-list` e o `tab-content`. Em cada um destes containers, temos os itens que os compõem. Dentro do `tab-list`, temos os `tab-list.item`. Já no `tab-content`, temos os `tab-content.item`.
 
@@ -133,12 +133,12 @@ Nesta atividade, vamos criar a estrutura simples de um _tab layout_, conforme im
 ![](https://appliancetheme.vteximg.com.br/arquivos/tarefa-tab-layout.png)
 
 1. No arquivo `about-us.jsonc` criado anteriormente, adicione um `tab-layout#home` ao template `store.custom#about-us`;
-2. Declare o bloco `tab-layout#home` e adicione como seus children um `tab-list#home` e um `tab-content#home`;
-3. Declare um `tab-list#home` e adicione como seus children um `tab-list.item#home1` e um `tab-list.item#home2`;
+2. Declare o bloco `tab-layout#home` e adicione como seus filhos um `tab-list#home` e um `tab-content#home`;
+3. Declare um `tab-list#home` e adicione como seus filhos um `tab-list.item#home1` e um `tab-list.item#home2`;
 4. Declare as props do `tab-list.item#home1` de maneira que a interface exiba o texto "Major Appliances". (Dica: não se esqueça que incluir nas props um `tabId` = `"majorAppliances"` e a propriedade `defaultActiveTab` = `true`);
 5. Declare as _props_ do `tab-list.item#home2` de maneira que a interface exiba o texto "Electronics". (Dica: não se esqueça que incluir nas props um `tabId` = `"electronics"`);
-6. Agora, vamos para a parte o conteúdo. Declare um `tab-content#home` no seu tema e adicione os children `tab-content.item#home1` e `tab-content.item#home2`;
-7. Em cada `tab-content.item`, declare apenas um `rich-text` como children (por exemplo, `rich-text#home1` e `rich-text#home2`);
+6. Agora, vamos para a parte o conteúdo. Declare um `tab-content#home` no seu tema e adicione os filhos `tab-content.item#home1` e `tab-content.item#home2`;
+7. Em cada `tab-content.item`, declare apenas um `rich-text` como filho (por exemplo, `rich-text#home1` e `rich-text#home2`);
 8. Depois, inclua uma _prop_ `tabId` em cada `tab-content.item` de maneira que aconteça o _link_ entre o `tab-list` criado anteriormente e `tab-content`;
 9. Por fim, adicione os `rich-text` e declare suas _props_ conforme o código abaixo:
   
