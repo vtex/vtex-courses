@@ -44,7 +44,7 @@ The next step is to create a development workspace, which will allow you to play
 
 ## Creating a development workspace 
 
-1. Run `vtex use workspace-name`, replacing `workspace-name` with the desired name. Use an unique name for your workspace.
+1. Run `vtex use workspace-name`, replacing `workspace-name` with the desired name. Use an unique name for your workspace. It is important that you choose wisely this name, in order to avoid conflicts of more than one developer working on the same workspace.
 
 ### Accessing your workspace
 
