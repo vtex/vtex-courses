@@ -2,7 +2,7 @@
 
 ## Introdução 
 
-Seguiremos os conceitos aprendidos no passo anterior e vamos aprofundar um pouco mais para aprender como construir o comportamento de Quick View em uma prateleira de produtos.
+Seguiremos os conceitos aprendidos no passo anterior e vamos aprofundar um pouco mais para aprender como construir o comportamento de _Quick View_ em uma prateleira de produtos.
 
 ## Atividade
 
@@ -29,7 +29,7 @@ Seguiremos os conceitos aprendidos no passo anterior e vamos aprofundar um pouco
 }
 ```
 
-2. No product-summary adicione um trigger para o modal: 
+2. No `product-summary` adicione um _trigger_ para o modal: 
 
 ```diff
 {
@@ -44,7 +44,7 @@ Seguiremos os conceitos aprendidos no passo anterior e vamos aprofundar um pouco
 }
 ```
 
-3. Vamos então fazer com que o trigger para o modal seja a imagem do produto e definir que usaremos um layout: 
+3. Vamos, então, fazer com que o trigger para o modal seja a imagem do produto e definir que usaremos um layout: 
 
 ```diff
 {
@@ -79,7 +79,7 @@ Seguiremos os conceitos aprendidos no passo anterior e vamos aprofundar um pouco
 }
 ```
 
-O resultado então deve ser:
+O resultado, então, deve ser:
 
 ![modallayout](https://user-images.githubusercontent.com/18701182/90278764-585c3d00-de3e-11ea-8fa9-491a1cfd6001.gif)
   

@@ -1,4 +1,4 @@
-# Flex Layout: crie layouts utilizando o poder do Flexbox
+# Flex Layout: crie _layouts_ utilizando o poder do Flexbox
 
 ## Introdução
 
@@ -9,11 +9,11 @@ Existem dois blocos de construção básicos de cada Flex Layout:
 - `flex-layout.row`
 - `flex-layout.col`
 
-Se você já está familiarizado com o Flexbox utilizado no CSS, o Flex Layout deve ser simples de entender, já que o Flexbox está sendo utilizar "por debaixo dos panos" pelo flex-layout.row e flex-layout.col.
+Se você já está familiarizado com o Flexbox utilizado no CSS, o Flex Layout deve ser simples de entender, já que o Flexbox está sendo utilizar "por debaixo dos panos" pelo `flex-layout.row` e `flex-layout.col`.
 
 ## Flex Layout
 
-Com o Flex Layout é possível criar layouts personalizados, utilizando a estrutura de linhas e colunas do Flexbox.
+Com o Flex Layout é possível criar _layouts_ personalizados, utilizando a estrutura de linhas e colunas do Flexbox.
 
 Analisando a documentação do bloco, vemos que você pode utilizar qualquer *array* de blocos como `children` do Flex Layout. Além disso, você deve sempre usar `flex-layout.row` e `flex-layout.col`, **NUNCA** `flex-layout` de forma isolada.
 
