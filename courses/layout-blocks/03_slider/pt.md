@@ -2,7 +2,7 @@
 
 ## Introdução
 
-O Slider Layout, como o Flex Layout, é uma forma flexível de criar um novo bloco a partir de outros blocos usando `children`. Ele permite que sejam criados sliders de outros blocos, como `info-card`s e até mesmo `flex-layout`s por exemplo.
+O Slider Layout, como o Flex Layout, é uma forma flexível de criar um novo bloco a partir de outros blocos usando `children`. Ele permite que sejam criados _sliders_ de outros blocos, como `info-card`s e até mesmo `flex-layout`s por exemplo.
 
 Com o Slider Layout é possível criar um carrossel não só de imagens, como de qualquer conteúdo que se queira. Para este exemplo, vamos utilizar o Slider Layout para tornar um conjunto de info-cards em um slider.
 
@@ -48,7 +48,7 @@ Abaixo, segue um exemplo de implementação de um slider-layout com dois `info-c
 
 ## Atividade
 
-Nesta atividade, vamos criar um slider de marcas para o nosso site:
+Nesta atividade, vamos criar um _slider_ de marcas para o nosso site:
 
 ![](https://appliancetheme.vteximg.com.br/arquivos/brand-slider.png)
 
@@ -66,6 +66,6 @@ Nesta atividade, vamos criar um slider de marcas para o nosso site:
    5.  `https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square5.png`
    6.  `https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square6.png`
    
-5. Por fim, você deve utilizar a propriedade de `autoplay` no bloco `slider-layout#home`. Faça com que o slide aconteça automaticamente a cada **7 segundos e que ele pare quando o usuário passar o mouse em cima do slide**.
+5. Por fim, você deve utilizar a propriedade de `autoplay` no bloco `slider-layout#home`. Faça com que o _slide_ aconteça automaticamente a cada **7 segundos e que ele pare quando o usuário passar o mouse em cima do _slide_**.
 
 :information_source: Lembre-se de acessar a documentação do [Slider Layout](https://vtex.io/docs/components/layout/vtex.slider-layout) e [Image](https://vtex.io/docs/components/general/vtex.store-components/image) caso tenha alguma dúvida durante a atividade.

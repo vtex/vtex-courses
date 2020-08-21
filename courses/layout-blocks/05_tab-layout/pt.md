@@ -6,9 +6,9 @@ O [Tab Layout](https://vtex.io/docs/components/layout/vtex.tab-layout) é um par
 
 Neste paradigma, temos dois containers: o `tab-list` e o `tab-content`. Em cada um destes containers, temos os itens que os compõem. Dentro do `tab-list`, temos os `tab-list.item`. Já no `tab-content`, temos os `tab-content.item`.
 
-Abaixo, veremos um exemplo de implementação de um tab layout.
+Abaixo, veremos um exemplo de implementação de um _tab layout_.
 
-Primeiro, é necessário declarar o block `tab-layout` no template desejado:
+Primeiro, é necessário declarar o block `tab-layout` no _template_ desejado:
 
 ```json
 {
@@ -81,11 +81,11 @@ A propriedade `tabId` é muito importante, pois ela é a chave que conecta o bot
 }
 ```
 
-A seguir, vamos declarar as children e as props dos `tab-content.item`.
+A seguir, vamos declarar as _children_ e as _props_ dos `tab-content.item`.
 
-No array de children, é possível incluir diversos blocks como `rich-text`, `info-card`, `image`, `flex-layout` e etc.
+No _array_ de _children_, é possível incluir diversos blocos como `rich-text`, `info-card`, `image`, `flex-layout` e etc.
 
-Na prop `tabId`, é necessário incluir os mesmos ids declarados nos `tab-list.item` para que o link entre a aba e o conteúdo funcione.
+Na prop `tabId`, é necessário incluir os mesmos identificadores (_ids_) declarados nos `tab-list.item` para que o _link_ entre a aba e o conteúdo funcione.
 
 ```json
 ...
@@ -128,7 +128,7 @@ Por fim, você deve declarar as propriedades do seu conteúdo. No nosso exemplo,
 
 ## Atividade
 
-Nesta atividade, vamos criar a estrutura simples de um tab layout, conforme imagem abaixo. Mais tarde, vamos incluir algum conteúdo para estilizar nossa página customizada.
+Nesta atividade, vamos criar a estrutura simples de um _tab layout_, conforme imagem abaixo. Mais tarde, vamos incluir algum conteúdo para estilizar nossa página customizada.
 
 ![](https://appliancetheme.vteximg.com.br/arquivos/tarefa-tab-layout.png)
 
@@ -136,11 +136,11 @@ Nesta atividade, vamos criar a estrutura simples de um tab layout, conforme imag
 2. Declare o bloco `tab-layout#home` e adicione como seus children um `tab-list#home` e um `tab-content#home`;
 3. Declare um `tab-list#home` e adicione como seus children um `tab-list.item#home1` e um `tab-list.item#home2`;
 4. Declare as props do `tab-list.item#home1` de maneira que a interface exiba o texto "Major Appliances". (Dica: não se esqueça que incluir nas props um `tabId` = `"majorAppliances"` e a propriedade `defaultActiveTab` = `true`);
-5. Declare as props do `tab-list.item#home2` de maneira que a interface exiba o texto "Electronics". (Dica: não se esqueça que incluir nas props um `tabId` = `"electronics"`);
+5. Declare as _props_ do `tab-list.item#home2` de maneira que a interface exiba o texto "Electronics". (Dica: não se esqueça que incluir nas props um `tabId` = `"electronics"`);
 6. Agora, vamos para a parte o conteúdo. Declare um `tab-content#home` no seu tema e adicione os children `tab-content.item#home1` e `tab-content.item#home2`;
 7. Em cada `tab-content.item`, declare apenas um `rich-text` como children (por exemplo, `rich-text#home1` e `rich-text#home2`);
-8. Depois, inclua uma prop `tabId` em cada `tab-content.item` de maneira que aconteça o link entre o `tab-list` criado anteriormente e `tab-content`;
-9. Por fim, adicione os `rich-text` e declare suas props conforme o código abaixo:
+8. Depois, inclua uma _prop_ `tabId` em cada `tab-content.item` de maneira que aconteça o _link_ entre o `tab-list` criado anteriormente e `tab-content`;
+9. Por fim, adicione os `rich-text` e declare suas _props_ conforme o código abaixo:
   
     ```json
     "rich-text#home1": {

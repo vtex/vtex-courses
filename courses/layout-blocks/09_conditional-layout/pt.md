@@ -2,11 +2,11 @@
 
 ## Introdução
 
-Em alguns momentos, quando desenvolvendo uma loja, precisamos criar layouts condicionais que seriam aplicados somente a um contexto específico. Já vimos que na utilização de dispositivos diferentes, é possível condicionar o layout através do Responsive Layout, mas e se quiséssemos, por exemplo, ter uma página de produto diferente para produtos específicos? Para isso serve o Conditional Layout.
+Em alguns momentos, quando desenvolvendo uma loja, precisamos criar layouts condicionais que seriam aplicados somente a um contexto específico. Já vimos que na utilização de dispositivos diferentes, é possível condicionar o layout através do `Responsive Layout`, mas e se quiséssemos, por exemplo, ter uma página de produto diferente para produtos específicos? Para isso serve o Conditional Layout.
 
 ## Setup opcional
 
-Para criar um layout condicional de página de produto é necessário, inicialmente, ter uma página de produto. Se você já não tiver definido um template de produto para sua loja, copie o disponível abaixo: 
+Para criar um _layout_ condicional de página de produto é necessário, inicialmente, ter uma página de produto. Se você já não tiver definido um _template_ de produto para sua loja, copie o disponível abaixo: 
 
 ```json
 //product.jsonc
@@ -90,7 +90,7 @@ Fazendo isso, teremos uma página de produto como a mostrada abaixo:
 
 ## Atividade
 
-1. Vamos criar um banner exclusivo para a geladeira Geladeira Retrô, para isso, use como primeiro filho da `store.product` um `conditional-layout.product`: 
+1. Vamos criar um _banner_ exclusivo para a geladeira Geladeira Retrô, para isso, use como primeiro filho da `store.product` um `conditional-layout.product`: 
 
 ```diff
 //product.jsonc
@@ -176,11 +176,10 @@ Visite a página do produto testado para ver o layout funcionando, se tiver usan
 
 ![image](https://user-images.githubusercontent.com/18701182/90411815-ad889080-e082-11ea-9a55-581d6cfcb764.png)
 
-Para garantir que o layout condicional de fato funciona, visite qualquer outra página de produto, e verifique que o banner não é aplicado: 
+Para garantir que o layout condicional de fato funciona, visite qualquer outra página de produto, e verifique que o _banner_ não é aplicado: 
 
 ![image](https://user-images.githubusercontent.com/18701182/90412377-68b12980-e083-11ea-86a8-99495acfd997.png)
 
 ## Fim
 
 Chegamos ao último passo do curso e nele aprendemos como criar layouts complexos se alavancando de blocos mais simples, não exploramos todos os layouts possíveis, mas a ideia de todos eles é muito parecida, para conhecer mais visite a seção de [`VTEX STORE FRAMEWORK - LAYOUT APPS`](https://developers.vtex.com/docs/vtex-condition-layout) no Developer Portal. 
-
