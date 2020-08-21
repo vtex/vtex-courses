@@ -100,5 +100,18 @@ Ainda queremos:
       }
     ```
 
+Após terminados os passos anteriores, você pode procurar por um produto na barra de busca, no canto superior direito da página.
+
+![image](https://user-images.githubusercontent.com/19495917/90903507-682ad280-e3a4-11ea-9781-77a9b111218b.png)
+
+Se você estiver na conta `appliancetheme`, tente buscar por uma máquina de café, por exemplo:
+
+<img src="https://user-images.githubusercontent.com/19495917/90903699-b049f500-e3a4-11ea-9e3e-6ad5f6a41333.png" height=300px>
+
+Ao clicar na segunda, a `Red Retro Coffee Machine`, você i'ra para a sua página de produto, ou `pdp`, e verá os blocos que a compõe.
+
+![image](https://user-images.githubusercontent.com/19495917/90905481-9f9a7e80-e3a6-11ea-99c4-6a546e0000a3.png)
+
+> Nota: Alguns dos produtos não terão _savings_, dado que não há descontos baseados no preço de catálogo, ou _list price_.
 
 :information_source: Lembre de acessar as documentações de [`product-images`](https://developers.vtex.com/docs/vtex-store-components-productimages), [`product-price`](https://developers.vtex.com/docs/vtex-product-price#product-price), [`product-name`](https://developers.vtex.com/docs/vtex-store-components-productname) e [`buy-button`](https://developers.vtex.com/docs/vtex-store-components-buybutton) em caso de dúvidas durante a atividade. 

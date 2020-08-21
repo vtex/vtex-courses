@@ -41,15 +41,15 @@ We therefore have the following props:
     },
     "info-card": {
       "props": {
-      "isFullModeStyle": false,
-      "textPosition": "right",
-      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
-      "headline": "Vintage Pink",
-      "subhead": "Give your kitchen a boho style adding vintage apparels.<br>Available until January 2020.",
-      "callToActionMode": "button",
-      "callToActionText": "Explore",
-      "callToActionUrl": "/sale/d",
-      "textAlignment": "center"
+        "isFullModeStyle": false,
+        "textPosition": "right",
+        "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
+        "headline": "Vintage Pink",
+        "subhead": "Give your kitchen a boho style adding vintage apparels.<br>Available until January 2020.",
+        "callToActionMode": "button",
+        "callToActionText": "Explore",
+        "callToActionUrl": "/sale/d",
+        "textAlignment": "center"
       }
     }
   }
