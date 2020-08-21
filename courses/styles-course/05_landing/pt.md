@@ -2,7 +2,7 @@
 
 ## Introdução
 
-No step anterior, você pôde aprender um pouco mais sobre como criar um template customizado. É muito comum que, em cenários de promoção e datas comemorativas, seja necessário criar *landing pages* especiais.  
+No passo anterior, você pôde aprender um pouco mais sobre como criar um _template_ customizado. É muito comum que, em cenários de promoção e datas comemorativas, seja necessário criar *landing pages* especiais.  
 
 ## Buscas customizadas
 
@@ -10,7 +10,7 @@ Vimos que a busca infere o que precisa pelo contexto que está inclusa. Numa pá
 
 ## Query schema
 
-A query schema é uma das [props do _search result custom query_](https://developers.vtex.com/docs/vtex-search-result) com ela é possível controlar a busca que a nossa *landing page* deverá fazer. Para saber todas as possibilidades da query schema, veja sua [documentação aqui](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched).
+A _query schema_ é uma das [props do _search result custom query_](https://developers.vtex.com/docs/vtex-search-result) com ela é possível controlar a busca que a nossa *landing page* deverá fazer. Para saber todas as possibilidades da _query schema_, veja sua [documentação aqui](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched).
 
 ## Criando uma nova _landing page_
 
@@ -24,8 +24,8 @@ A query schema é uma das [props do _search result custom query_](https://develo
     ```
 
 2. Crie um novo arquivo na pasta de blocos chamado `search-landing.jsonc`;
-3. Crie um novo template custom `store.custom#landing`;
-4. Defina o bloco [`image`](https://developers.vtex.com/docs/vtex-store-components-image) como um dos blocos desse template. Este bloco deve possuir props `minWidth` de 100% e uma imagem a sua escolha.
+3. Crie um novo _template custom_ `store.custom#landing`;
+4. Defina o bloco [`image`](https://developers.vtex.com/docs/vtex-store-components-image) como um dos blocos desse template. Este bloco deve possuir _props_ `minWidth` de 100% e uma imagem a sua escolha.
 5. Adicione o bloco `search-result-layout.customQuery`:
 
     ```diff
