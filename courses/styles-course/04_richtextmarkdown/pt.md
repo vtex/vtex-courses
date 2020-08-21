@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Markdown é uma linguagem de marcação amigável que pode ser convertida de maneira simples para HTML. Nesta lição, veremos como é possível utilizar esta linguagem em nosso bloco [**Rich Text**](https://developers.vtex.com/docs/vtex-rich-text) para customizá-los e criar textos interessantes.
+[Markdown](https://www.markdownguide.org/) é uma linguagem de marcação amigável que pode ser convertida de maneira simples para HTML. Nesta lição, veremos como é possível utilizar esta linguagem em nosso bloco [**Rich Text**](https://developers.vtex.com/docs/vtex-rich-text) para customizá-los e criar textos interessantes.
 
 ## Rich Text com Markdown
 

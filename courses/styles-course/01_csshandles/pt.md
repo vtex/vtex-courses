@@ -15,7 +15,7 @@ Para criar uma identidade própria para os componentes da sua loja, você pode s
 Analisando a [recipe](https://developers.vtex.com/docs/vtex-io-documentation-using-css-handles-for-store-customization) para customizações de loja por CSS, percebemos que alguns passos serão necessários para aplicar o estilo próprio desejado por você, como:
 
 1. Criar um novo arquivo dentro da pasta `CSS` com o nome `vtex.{AppName}.css`
-2. Usar o CSS Handle do componente que será customizado dentro deste arquivo seguindo o formato abaixo:
+2. Usar o CSS _Handle_ do componente que será customizado dentro deste arquivo seguindo o formato abaixo:
 
     ```css
     .{CSSHandle} {
@@ -24,8 +24,8 @@ Analisando a [recipe](https://developers.vtex.com/docs/vtex-io-documentation-usi
     }
     ```
 
-3. Na falta de CSS Handles, aplicar CSS Selectors permitidos, como é o caso do `:global(vtex-{componentName})`.
-4. Para aplicar CSS em um bloco específico e não a todos os blocos daquele tipo, usa-se o recurso de blockClass, que aparece ao lado dos handles de css ao inspecionar seu código. As blockClass devem ser declaradas como uma prop no bloco em questão, e então referenciado no arquivo de estilo como mostrado abaixo:
+3. Na falta de CSS _Handles_, aplicar CSS _Selectors_ permitidos, como é o caso do `:global(vtex-{componentName})`.
+4. Para aplicar CSS em um bloco específico e não a todos os blocos daquele tipo, usa-se o recurso de `blockClass`, que aparece ao lado dos _handles_ de css ao inspecionar seu código. As `blockClass` devem ser declaradas como uma prop no bloco em questão, e então referenciado no arquivo de estilo como mostrado abaixo:
 
     ```css
     .{CSSHandle}--{blockClass} {
@@ -36,7 +36,7 @@ Analisando a [recipe](https://developers.vtex.com/docs/vtex-io-documentation-usi
 
 ## Adicionando Info Cards ao _Minimum Boilerplate_
 
-Antes de customizar um _info card_ é necessário adicioná-lo ao tema, dado que o _boilerplate_ é muito simples. Com isso em mente, vá ao arquivo `home.jsonc` e adicione dois info cards aos seus blocos:
+Antes de customizar um _info card_ é necessário adicioná-lo ao tema, dado que o _boilerplate_ é muito simples. Com isso em mente, vá ao arquivo `home.jsonc` e adicione dois _info cards_ aos seus blocos:
 
 ```diff
 {
@@ -58,7 +58,7 @@ Antes de customizar um _info card_ é necessário adicioná-lo ao tema, dado que
 }
 ```
 
-Agora, no mesmo arquivo, vamos definir os blocos logo abaixo da definição de `rich-text``. Você pode utilizar o código abaixo para inserir no arquivo:
+Agora, no mesmo arquivo, vamos definir os blocos logo abaixo da definição de `rich-text`. Você pode utilizar o código abaixo para inserir no arquivo:
 
 ```json
 "info-card#clearance": {
@@ -91,9 +91,9 @@ Agora, no mesmo arquivo, vamos definir os blocos logo abaixo da definição de `
 
 ## Customizando o Info Card
 
-Para descobrir os CSS Handles de um componente, como o Info Card, basta acessar a [seção **Customization**]((https://developers.vtex.com/docs/vtex-store-components-infocard#customization)) da sua documentação.
+Para descobrir os CSS _Handles_ de um componente, como o _Info Card_, basta acessar a [seção **Customization**]((https://developers.vtex.com/docs/vtex-store-components-infocard#customization)) da sua documentação.
 
-De acordo com a descrição dos CSS Handles e com a recipe customizações de loja por CSS, conseguimos implementar um exemplo de Info Card customizado.
+De acordo com a descrição dos CSS _Handles_ e com a recipe customizações de loja por CSS, conseguimos implementar um exemplo de _Info Card_ customizado.
 
 1. No arquivo `vtex.store-components.css` dentro de `/styles/css`, vamos alterar seu título e as configurações do botão _call to action_, adicionando o código a seguir:
 
@@ -125,7 +125,7 @@ De acordo com a descrição dos CSS Handles e com a recipe customizações de lo
 
     ![image](https://user-images.githubusercontent.com/19495917/90165063-82dec500-dd6e-11ea-8b0d-802fa5afc17f.png)
 
-2. Em seguida, vamos adicionar um estilo específico para o infocard Vintage.  Para isso, precisamos adicionar a propriedade `blockClass`ao info card, como mostrado a seguir:
+2. Em seguida, vamos adicionar um estilo específico para o _Info Card Vintage_.  Para isso, precisamos adicionar a propriedade `blockClass` ao info card, como mostrado a seguir:
 
     ```diff
     "info-card#vintage": {
@@ -143,7 +143,7 @@ De acordo com a descrição dos CSS Handles e com a recipe customizações de lo
     }
     ```
 
-3. E então declare uma `background-color` para este infocard específico no seu arquivo de css:
+3. E então declare uma `background-color` para este _Info Card_ específico no seu arquivo de CSS:
 
     ```css
     /* /styles/css/vtex.store-components.css */
@@ -154,7 +154,7 @@ De acordo com a descrição dos CSS Handles e com a recipe customizações de lo
 
     ![image](https://user-images.githubusercontent.com/19495917/90165339-e4069880-dd6e-11ea-89bf-80e63a25ffb4.png)
 
-4. Agora, vamos finalizar adicionando mais estilos customizados para o nosso Info Card. No mesmo arquivo CSS que foi utilizado anterioemente, defina a largura máxima (`max-width`) de de todos os infocards para `1260px`, a margin para `0 auto` e o padding para `0`.
+4. Agora, vamos finalizar adicionando mais estilos customizados para o nosso _Info Card_. No mesmo arquivo CSS que foi utilizado anterioemente, defina a largura máxima (`max-width`) de de todos os infocards para `1260px`, a margem (`margin`) para `0 auto` e o espaçamento (`padding`) para `0`.
 
     > Você pode se basear nos _Handles_ do [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard#customization).
 
