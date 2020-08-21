@@ -8,7 +8,7 @@ Com o Slider Layout é possível criar um carrossel não só de imagens, como de
 
 ## Slider Layout
 
-Analisando a [documentação](https://vtex.io/docs/components/layout/vtex.slider-layout), vemos que você pode utilizar qualquer _array_ de blocos como `children`, assim como no Flex Layout.
+Analisando a [documentação](https://developers.vtex.com/docs/vtex-slider-layout), vemos que você pode utilizar qualquer _array_ de blocos como `children`, assim como no Flex Layout.
 
 Abaixo, segue um exemplo de implementação de um slider-layout com dois `info-card`:
 
