@@ -9,12 +9,13 @@
 Para incluir textos no bloco de `rich-text`, é necessário utilizar a prop `text`:
 
 ```json
-  "rich-text#home1": {
-    "props": {
-      "text": "Meu texto",
-      "textPosition": "LEFT",
-      "textAlignment": "LEFT"
-    }
+"rich-text#home1": {
+  "props": {
+    "text": "Meu texto",
+    "textPosition": "LEFT",
+    "textAlignment": "LEFT"
+  }
+}
 ```
 
 A prop `text` aceita o formato de markdown. Portanto, se você deseja escrever seu texto utilizando essa linguagem, seu código deve ficar semelhante a este:
@@ -26,6 +27,7 @@ A prop `text` aceita o formato de markdown. Portanto, se você deseja escrever s
       "textPosition": "LEFT",
       "textAlignment": "LEFT"
     }
+  }
 ```
 
 >**Dica**: Sempre utilize o comando `\n` para pular linhas ao utilizar markdown na prop `text`.
