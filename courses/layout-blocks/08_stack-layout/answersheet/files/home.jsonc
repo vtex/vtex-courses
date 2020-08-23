@@ -1,0 +1,30 @@
+{
+  "store.home": {
+    "blocks": ["stack-layout#cta"]
+  },
+  "stack-layout#cta": { 
+    "children": [
+      "image#cta",
+      "link#cta"
+    ]
+  },
+  "image#cta": {
+    "props": { 
+      "blockClass": "cta",
+      "width": "100%",
+      "height": 400,
+      "src": "https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___1b7592b49667c6a89203a0997e06bc87.jpg"
+    }
+  },
+  "link#cta": { 
+    "props": {
+      "displayMode": "button",
+      "buttonProps": {
+        "variant": "primary",
+        "size": "large" 
+      },
+      "href": "/washer",
+      "label": "Check these awesome discounts"
+    }
+  }
+}

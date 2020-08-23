@@ -15,6 +15,7 @@ To include texts in the `rich-text` block, you need to use the `text` prop:
       "textPosition": "LEFT",
       "textAlignment": "LEFT"
     }
+  }
 ```
 
 The `text` prop accepts markdown format. However, if you want to write your text using this language, your code must be similar to the following: 
@@ -26,11 +27,12 @@ The `text` prop accepts markdown format. However, if you want to write your text
       "textPosition": "LEFT",
       "textAlignment": "LEFT"
     }
+  }
 ```
 
 > **Tip**: Always use the `\n` command to skip lines when using markdown in the `text` prop.
 
-Other properties of the `rich-text` component can be found in the [Store Framework official documentation](https://developers.vtex.com/docs/vtex-rich-text)
+Other properties of the `rich-text` component can be found in the [Store Framework official documentation](https://developers.vtex.com/docs/vtex-rich-text).
 
 ## Changing the rich text style and content through Markdown
 
