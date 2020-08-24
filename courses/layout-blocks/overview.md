@@ -1,5 +1,3 @@
-## Building stores using Store Framework
+## Construindo _layouts_ complexos
 
-This course will show you how to use Store Framework, a storefront low-code commerce development tool, designed to build a functional VTEX store's theme from scratch. Store Framework speeds theme creation by reusing visual blocks present in most stores without requiring any additional development. The blocks, however, do not provide a repetitive visual that would make stores very alike, but instead provide ample opportunity for customization through CSS properties and styling.
-
-Learn to use Store Framework and be more productive than ever before in building and maintaining VTEX stores.
+Este curso mostrará como utilizar os diversos blocos do Store Framework a fim de desenvolver _layouts_ mais complexos. Descubra como utilizar blocos de composição, junto com os blocos já aprendidos no curso de Blocos Básicos para obter _layouts_ diversos e complexos.
