@@ -1,0 +1,54 @@
+{
+  "steps":
+  [
+    {
+      "folder": "00_setup",
+      "title": {
+        "en": "Set Up",
+        "pt": "Configurando"
+      }
+    },
+    {
+      "folder": "01_intro",
+      "title": {
+        "en": "Introduction and Boilerplate",
+        "pt": "Introdução e Boilerplate"
+      }
+    },
+    {
+      "folder": "02_richtext",
+      "title": {
+        "en": "Getting started with Rich Text",
+        "pt": "Começando com o Rich Text"
+      }
+    },
+    {
+      "folder": "03_infocard",
+      "title": {
+        "en": "Info Card: Store Framework's call to action",
+        "pt": "Info Card: o call to action do Store Framework"
+      }
+    },
+    {
+      "folder": "04_pdp",
+      "title": {
+        "en": "Product page",
+        "pt": "Página de Produto"
+      }
+    },
+    {
+      "folder": "05_pdp2",
+      "title": {
+        "en": "Evolving your product page",
+        "pt": "Evoluindo sua página de produto"
+      }
+    },
+    {
+      "folder": "06_search",
+      "title": {
+        "en": "Search page",
+        "pt": "Página de busca"
+      }
+    }
+  ]
+}
