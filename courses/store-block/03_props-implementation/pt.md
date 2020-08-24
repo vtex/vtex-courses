@@ -50,7 +50,11 @@ Agora que temos um elemento `h1` renderizado, é possível utilizá-lo para most
     }
     ```
 
-Pronto! Agora você pode alterar o conteúdo do texto através do *Site Editor*. Vamos ver como ficou? Vá até o *Site Editor* e clique em `Countdown` no menu lateral, isso abrirá o menu de edição da *app*, que será como a imagem abaixo.
+Pronto! Agora você pode alterar o conteúdo do texto através do *Site Editor*. Vamos ver como ficou? 
+
+> Você pode acessar o _Site Editor_ através do seguinte _link_: `{yourWorkspace}--appliancetheme.myvtex.com/admin/cms/site-editor`.
+
+Vá até o *Site Editor* e clique em `Countdown` no menu lateral, isso abrirá o menu de edição da *app*, que será como a imagem abaixo.
 
 ![image](https://user-images.githubusercontent.com/19495917/80977387-0cd7d300-8dfb-11ea-87e4-35218eab524b.png)
 

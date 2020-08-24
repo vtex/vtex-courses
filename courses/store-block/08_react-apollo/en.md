@@ -14,7 +14,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
    ```diff
        "product-gifts",
-   +	"countdown",
+   +	 "countdown",
        "flex-layout.row#buy-button",
        "availability-subscriber",
    ```
@@ -42,7 +42,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
     "vtex.product-context": "0.x"
     ```
 
-3. Now, it is necessary to import the `useQuery` hooks, to make the _query_ that will return the data we described, and `useProduct`, to give us information about the current product slug. In addition, it is also necessary to import the _query_ defined previously, which is found in the file `productReleaseDate.graphql`. It is also important to notice that the prop `targetDate` will no longer be necessary.
+3. Now, it is necessary to import the `useQuery` hooks, to make the _query_ that will return the data we described, and `useProduct`, to give us information about the current product slug. In addition, it is also necessary to import the _query_ defined previously, which is found in the file `productReleaseDate.graphql`.
 
     ```diff
     // react/Countdown.tsx
@@ -54,15 +54,17 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
     +import productReleaseDate from './queries/productReleaseDate.graphql'
     ```
-    > It is important to higlight that there is the possibility of your IDE showing an error while importing `product-context`.
+    > It is important to higlight that there is the possibility of your IDE showing an error while importing `product-context`. 
+    
+    > The prop `targetDate` and the definition of `DEFAULT_TARGET_DATE` will no longer be necessary, so you can remove them and adjust the imports, in case of not using some functions anymore.
 
-4. After that, define the query using the `productReleaseDate` imported and the `useQuery` hook, you can find the product data in `useProduct` hook. Since they are (hooks)[https://reactjs.org/docs/hooks-intro.html], they only work inside react functional components. 
+4. After that, define the query using the `productReleaseDate` imported and the `useQuery` hook, you can find the product data in `useProduct` hook. Since they are [hooks](https://reactjs.org/docs/hooks-intro.html), they only work inside react functional components. 
 
     ```diff
-    + const { product: { linkText } } = useProduct()
+    + const { product } = useProduct()
     + const { data, loading, error } = useQuery(productReleaseDate, {
     +   variables: {
-    +     slug: linkText
+    +     slug: product?.linkText
     +   },
     +   ssr: false
     + })
@@ -70,7 +72,19 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
     > `linkText` will be the same as `'red-front-loading-washer'`, for example, when your component is rendered in this product's page.
 
-5. Besides, it is important to deal with the cases in which there is no data fetched when using `useQuery` and before returning the main component: *loading* and *error* In those cases, it is possible to return a span in the countdown component, such as the example below:
+5. Now that we're using our block in pages that have the product context, it's important to test if this context exists. To do that, let's add the following code block:
+
+    ```tsx
+    if (!product) {
+      return (
+        <div>
+          <span>There is no product context.</span>
+        </div>
+      )
+    }
+    ```
+
+6. Besides, it is important to deal with the cases in which there is no data fetched when using `useQuery` and before returning the main component: *loading* and *error* In those cases, it is possible to return a span in the countdown component, such as the example below:
 
     ```tsx
     if (loading) {
@@ -89,7 +103,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
     }
     ```
 
-6. After sending the changes, access a product page and note that the _query_ is working through a `console.log({data})` after calling `useQuery`, which should show something like this:
+7. After sending the changes, access a product page and note that the _query_ is working through a `console.log({data})` after calling `useQuery`, which should show something like this:
 
     ```ts
     {
@@ -102,11 +116,11 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
     }
     ```
 
-7. At last, but not least, to make Countdown set the hours for the product's `releaseDate`, change the `tick` function parameter. You can also remove the `props` received in the component, as they will no longer be used.
+8. At last, but not least, to make Countdown set the hours for the product's `releaseDate`, change the `tick` function parameter. You can also remove the `props` received in the component, as they will no longer be used.
 
     ```diff
     -tick(targetDate, setTime)
-    +tick(data?.product?.releaseDate || DEFAULT_TARGET_DATE, setTime)
+    +tick(data?.product?.releaseDate, setTime)
     ```
 
 Result using the _Red Front-Loading Washer_ product:

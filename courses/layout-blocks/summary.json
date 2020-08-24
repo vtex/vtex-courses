@@ -50,7 +50,7 @@
       "pt": "Layout modal"
     },
     "description": {
-      "pt": "Usando layout de abas na página institucional"
+      "pt": "Usando layout modal na página institucional"
     }
   },
   {
@@ -59,7 +59,7 @@
       "pt": "Quick View"
     },
     "description": {
-      "pt": "Usando layout de abas na página institucional"
+      "pt": "Usando o Quick View na página institucional"
     }
   },
   {
@@ -68,7 +68,7 @@
       "pt": "Stack Layout"
     },
     "description": {
-      "pt": "Usando layout de abas na página institucional"
+      "pt": "Usando layout de pilha na página institucional"
     }
   },
   {
@@ -77,7 +77,7 @@
       "pt": "Conditional Layout"
     },
     "description": {
-      "pt": "Usando layout de abas na página institucional"
+      "pt": "Usando layout condicional na página institucional"
     }
   }
 ]

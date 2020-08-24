@@ -18,7 +18,9 @@ Neste curso, será necessário criar um cliente que será utilizado para consult
 
 ## Implementando o cliente _analytics_ e fazendo testes
 
-Neste passo, vamos implementar o cliente de _Analytics_. Em primeiro lugar, no diretório `/node/clients`, você encontrará um arquivo chamado `analyticsClient.ts`, que já contém uma simples declaração de classe, como o código mostrado abaixo. É aqui que você implementará seu cliente.
+Neste passo, vamos implementar o cliente de _Analytics_. 
+
+1. Em primeiro lugar, no diretório `/node/clients`, você encontrará um arquivo chamado `analyticsClient.ts`, que já contém uma simples declaração de classe, como o código mostrado abaixo. É aqui que você implementará seu cliente.
 
    ```ts
    import { AppClient } from '@vtex/api'
@@ -28,7 +30,7 @@ Neste passo, vamos implementar o cliente de _Analytics_. Em primeiro lugar, no d
 
    > É possível notar neste bloco de código que `Analytics` é um cliente que estende de `AppClient`, pois esta classe oferece configurações já pré-esbeleciadas que asseguram que seu cliente tem uma comunicação segura com outras partes da sua _app_.
 
-1. O cliente precisa ter um construtor e apenas um método, que chamaremos de `getLiveUsers`. Este método retorna uma promessa de um _array_ em que seus elementos são do tipo `LiveUsersProduct`. Utilizando o código abaixo, adicione as linhas de código necessárias ao seu cliente:
+2. O cliente precisa ter um construtor e apenas um método, que chamaremos de `getLiveUsers`. Este método retorna uma promessa de um _array_ em que seus elementos são do tipo `LiveUsersProduct`. Utilizando o código abaixo, adicione as linhas de código necessárias ao seu cliente:
 
    ```diff
    //node/clients/analyticsClient.ts
@@ -50,7 +52,7 @@ Neste passo, vamos implementar o cliente de _Analytics_. Em primeiro lugar, no d
 
    > A interface que é definda será utilizada como tipagem para o método que vamos implementar.
 
-2. Agora, vamos implementar o método em si, `getLiveUsers`. Ele retorna um _request_ HTTP GET para um _endpoint_ bem definido, que é responsável por pegar os dados que são necessários para esta aplicação. Dessa forma, adicione a seguinte linha ao método `getLiveUsers`:
+3. Agora, vamos implementar o método em si, `getLiveUsers`. Ele retorna um _request_ HTTP GET para um _endpoint_ bem definido, que é responsável por pegar os dados que são necessários para esta aplicação. Dessa forma, adicione a seguinte linha ao método `getLiveUsers`:
 
    ```ts
    return this.http.get('_v/live-products')
@@ -58,7 +60,9 @@ Neste passo, vamos implementar o cliente de _Analytics_. Em primeiro lugar, no d
 
    > O método que você acabou de criar irá pegar os dados necessários para esta aplicação: um _array_ de objetos que contêm dois campos: `slug`, uma _string_ que representa o ID do produto e `liveUsers`, um número que é a quantidade de usuários visualizando o produto - que são os campos que estão na interface.
 
-3. Com o seu cliente de _analytics_ já implementado, é necessário declará-lo como um dos clientes na classe `Clientes`, de forma que ele ficará disponível e acessível através do uso de `Context`, do qual falamos anteriormente.
+4. O _endpoint_ `_v/live-products` que chamamos precisa da _app_ `mocked-analytics` para funcionar, ou seu método `getLiveUsers` não verá nenhum dado. **No caso de não estar rodando essa aplicação na conta `appliancetheme`**, você precisará instalar a aplicação `mocked-analytics` no seu _workspace_. Para fazer isso, você pode rodar o seguinte comando: `vtex install vtex.mocked-analytics`.
+
+5. Com o seu cliente de _analytics_ já implementado, é necessário declará-lo como um dos clientes na classe `Clientes`, de forma que ele ficará disponível e acessível através do uso de `Context`, do qual falamos anteriormente.
 
     Dessa forma, na pasta `/node/clients`, vá ao arquivo chamado `index.ts` e adicione um método referentes ao cliente de _analytics_. Também é necessário importar o cliente que você implementou anteriormente.
 
@@ -73,27 +77,29 @@ Neste passo, vamos implementar o cliente de _Analytics_. Em primeiro lugar, no d
    }
    ```
 
-4. De forma que você possa ver suas mudanças funcionando, é possível utilizar o método `getLiveUsers` dentro de um _handler_. Utilizando uma rota que já está definida no projeto, você pode enviar um _request_ para ela e o _handler_ responsável por essa rota irá chamar o método que criamos. 
+6. De forma que você possa ver suas mudanças funcionando, é possível utilizar o método `getLiveUsers` dentro de um _handler_. Utilizando uma rota que já está definida no projeto, você pode enviar um _request_ para ela e o _handler_ responsável por essa rota irá chamar o método que criamos. 
 
     Para fazer isso, há uma pasta dentro do diretório `/node`, chamada `handlers`. Há um arquivo chamado `analytics.ts`, no qual é necessário fazer duas coisas para que seu teste funcione: pegar o cliente de _analytics_ de `ctx` e substituir o conteúdo de `ctx.body` pelo método mencionado anteriormente, como você pode ver no bloco de código abaixo:
 
-    ```diff
-        export async function analytics(ctx: Context, next: () => Promise<any>) {
-    +    const {
-    +      clients: { analytics },
-    +    } = ctx
-    +    ctx.status = 200
-    -    ctx.body = 'OK'
-    +    ctx.body = await analytics.getLiveUsers()
-    +    ctx.set('cache-control', 'no-cache')
-        await next()
-        }
-    ```
+   ```diff
+   export async function analytics(ctx: Context, next: () => Promise<any>) {
+   +  const {
+   +    clients: { analytics },
+   +  } = ctx
+   +  ctx.status = 200
+   -  ctx.body = 'OK'
+   +  ctx.body = await analytics.getLiveUsers()
+   +  ctx.set('cache-control', 'no-cache')
+      await next()
+   }
+   ```
 
 Agora, vamos testá-lo! É possível utilizar o Postman para enviar um _request_ GET para a seguinte rota:
 
-   `{your workspace}--appliancetheme.myvtex.com/_v/app/analytics/realTime`
+   `{your workspace}--{your account}.myvtex.com/_v/app/analytics/realTime`
 
    e é esperado que esta responsa com os dados e com status `200`.
+
+   > Atenção! Geralmente, a conta utilizada para rodar aplicações em cursos é a `appliancetheme`
 
 ![image](https://user-images.githubusercontent.com/19495917/84827089-53c00780-affa-11ea-857f-fdcba0fef7c2.png)

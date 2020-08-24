@@ -1,7 +1,7 @@
 // store-block/react/Countdown.tsx
 import React, { useState } from 'react'
 import { TimeSplit } from './typings/global'
-import { tick } from './utils/time'
+import { tick, getTwoDaysFromNow } from './utils/time'
 import { useCssHandles } from 'vtex.css-handles'
 import { FormattedMessage } from 'react-intl'
 
@@ -10,7 +10,7 @@ interface CountdownProps {
   targetDate: string
 }
 
-const DEFAULT_TARGET_DATE = new Date('2020-06-25').toISOString()
+const DEFAULT_TARGET_DATE = getTwoDaysFromNow()
 
 const CSS_HANDLES = ['container', 'countdown', 'title']
 

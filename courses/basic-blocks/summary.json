@@ -6,6 +6,9 @@
       "title": {
         "en": "Set Up",
         "pt": "Configurando"
+      },
+      "description": {
+        "pt": "Configurações iniciais para o funcionamento do curso."
       }
     },
     {
@@ -13,6 +16,9 @@
       "title": {
         "en": "Introduction and Boilerplate",
         "pt": "Introdução e Boilerplate"
+      },
+      "description": {
+        "pt": "Introdução ao curso e ao boilerplate."
       }
     },
     {
@@ -20,6 +26,9 @@
       "title": {
         "en": "Getting started with Rich Text",
         "pt": "Começando com o Rich Text"
+      },
+      "description": {
+        "pt": "Aprendendo a usar o Rich Text."
       }
     },
     {
@@ -27,6 +36,9 @@
       "title": {
         "en": "Info Card: Store Framework's call to action",
         "pt": "Info Card: o call to action do Store Framework"
+      },
+      "description": {
+        "pt": "Adicionando e configurando um Info Card."
       }
     },
     {
@@ -34,6 +46,9 @@
       "title": {
         "en": "Product page",
         "pt": "Página de Produto"
+      },
+      "description": {
+        "pt": "Introdução à páginas de produto."
       }
     },
     {
@@ -41,6 +56,9 @@
       "title": {
         "en": "Evolving your product page",
         "pt": "Evoluindo sua página de produto"
+      },
+      "description": {
+        "pt": "Complementando a página de produto e possibilidades de evolução."
       }
     },
     {
@@ -48,6 +66,9 @@
       "title": {
         "en": "Search page",
         "pt": "Página de busca"
+      },
+      "description": {
+        "pt": "Introduzindo a página de busca."
       }
     }
   ]

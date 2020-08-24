@@ -17,7 +17,7 @@ There are three types of workspaces:
 In this step, we're going to create a production workspace and it's as simple as running the following command of our CLI:
 
 ```
-vtex use {{WorkspaceName}} --production
+vtex use {WorkspaceName} --production
 ```
 
 >`WorkspaceName` is the name that you want to use to identify your workspace. 

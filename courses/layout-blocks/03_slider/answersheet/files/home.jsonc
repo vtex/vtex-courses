@@ -1,0 +1,13 @@
+{
+  "store.home": {
+    "blocks": [
+        "rich-text",
+        "info-card#button-right",
+        "info-card#button-left",
+        "flex-layout.row",
+        "shelf",
+        "slider-layout#home"
+    ]
+  },
+  ...,
+}

@@ -12,7 +12,7 @@ Definindo os nomes dos seus *handles* e adicionando aos seus respectivos element
 ### Tachyons
 O Tachyons é um *framework* para CSS funcional. Diferentemente de outros *frameworks* conhecidos, como o Bootstrap, ele não apresenta componentes UI "pré-buildados". Na verdade, seu objetivo é justamente separar as regras de CSS em partes pequenas e reutilizáveis. Esse tipo de estratégia é comumente conhecida como *Subatomic Design System* e, caso você tenha interesse, pode encontrar uma referência [neste link](https://daneden.me/2018/01/05/subatomic-design-systems/). Essa estratégia torna *frameworks* como o Tachyons muito flexíveis, escaláveis e rápidos.
 
-Grande parte das definições de Tachyons podem ser alteradas, de forma que sua loja passe a ter um estilo mais customizado. Para isso, basta definir um arquivo JSON na pasta `styles/configs`; essas informações podem ser encontradas de forma mais detalhada em: [Build a store using VTEX IO - Customizing styles](https://help.vtex.com/tracks/build-a-store-using-vtex-io--5qJr8BIQXAKec9CpBWrTNv/6L2qQHU5kwbmTSiYl4MCuD). 
+Grande parte das definições de Tachyons podem ser alteradas, de forma que sua loja passe a ter um estilo mais customizado. Para isso, basta definir um arquivo JSON na pasta `styles/configs`; essas informações podem ser encontradas de forma mais detalhada em: [Customizing styles on VTEX IO](https://developers.vtex.com/docs/vtex-io-documentation-5-customizingstyles). 
 
 ## Customizando seu bloco
 
@@ -74,7 +74,7 @@ Grande parte das definições de Tachyons podem ser alteradas, de forma que sua 
       tick(targetDate, setTime)
 
       return (
-    +   <div className={`${handles.countdown} t-heading-2 fw3 w-100 c-muted-1 db tc`}>
+    +   <div className={`${handles.countdown} c-muted-1 db tc`}>
           {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
         </div>
       )
