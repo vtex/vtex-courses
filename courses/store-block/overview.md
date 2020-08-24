@@ -1,1 +1,3 @@
-In order to introduce developers to how to build custom apps in VTEX IO, this course was launched. It goes through all the necessary steps to have a custom block in a theme that uses React, Typescript, and GraphQL.
+## Desenvolvendo blocos customizados no VTEX IO
+
+De forma a introduzir os desenvolvedores a como construir blocos customizados no VTEX IO, este curso foi lançado. Ele complempla os conceitos necessários, passo a passo, para ter um bloco customizado em um tema, que utilize React, Typescript e GraphQL.

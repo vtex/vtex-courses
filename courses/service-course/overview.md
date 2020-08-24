@@ -1,1 +1,3 @@
-In this course, you will learn about the main possibilities of backend applications in VTEX IO. Export routes, handle events and connect with external and internal apps, to make your VTEX IO app even better and make the best out of VTEX infrastructure.
+## Desenvolvendo serviços no VTEX IO
+
+Neste curso, aprenda as inúmeras possibilidades de aplicações backend no VTEX IO. Exporte rotas, lide com eventos e conecte-se com aplicações internas e externas, de modo a tornar sua aplicação ainda melhor e aproveitar ao máximo a infraestrutura da VTEX.

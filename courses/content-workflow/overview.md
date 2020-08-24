@@ -1,1 +1,3 @@
-This course aims to introduce developers on how to use Site Editor and VTEX Toolbelt. Learn how to manage your different types of workspace, publishing and installing apps and customize your store front.
+## Utilizando o Site Editor e o VTEX Toolbelt para gerenciar e customizar sua loja
+
+Este curso tem como objetivo introduzir os desenvolvedores em como utilizar o Site Editor e o VTEX Toolbelt, de forma a aprender como gerenciar os diferentes tipos de workspace, publicar e instalar aplicações e, por fim, como customizar sua frente de loja.
