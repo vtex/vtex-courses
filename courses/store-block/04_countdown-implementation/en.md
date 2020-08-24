@@ -13,8 +13,10 @@ Now we covered the component's basics, it's time to implement the countdown effe
     //react/Countdown.tsx
     import React, { useState } from 'react'
     import { TimeSplit } from './typings/global'
-    import { tick } from './utils/time'
+    import { tick, getTwoDaysFromNow } from './utils/time'
     ```
+
+    > The `getTwoDaysFromNow` function will be used to deal with edge cases. It'll be explained later on in this step.
 
 2. Next step is to add the state update *hook* (`useState`):
 
@@ -35,11 +37,11 @@ Now we covered the component's basics, it's time to implement the countdown effe
     }
     ```
 
-3. After doing that, we'll add a default constant `targetDate` for the edge case where the prop is not defined:
+3. After doing that, we'll add a default constant `targetDate` for the edge case where the prop is not defined. We'll use as fallback a date that is defined as two days from the current date, this date is calculated on an util function that was previously imported from the `/utils` folder.
     
     ```typescript
     //react/Countdown.tsx
-    const DEFAULT_TARGET_DATE = (new Date('2020-06-25')).toISOString()
+    const DEFAULT_TARGET_DATE = getTwoDaysFromNow()
     ```
 
 4. Now, we need to add the `tick` function and the `DEFAULT_TARGET_DATE` constant to make the countdown work:

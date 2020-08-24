@@ -1,4 +1,4 @@
 # graphql/schema.graphql
 type Query {
-  productList(topN: Int): [ProductList]
+  productList(topN: Int): [ProductView]
 }

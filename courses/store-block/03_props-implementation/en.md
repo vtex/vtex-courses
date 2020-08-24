@@ -50,9 +50,12 @@ Now we have an `h1` element rendered, it's possible to use it to display informa
     }
     ```
 
-All set! Now you can change the text content through *Site Editor*. Go ahead to the *Site Editor* and click on `Countdown` on the side menu, this will open an edit menu, like the shown below:
+All set! Now you can change the text content through *Site Editor*.
+> You can go to the Site Editor by accessing the following link: `{yourWorkspace}--appliancetheme.myvtex.com/admin/cms/site-editor`.
 
-    ![image](https://user-images.githubusercontent.com/19495917/80523072-e382f700-8963-11ea-892d-3922a99de487.png)
+Go ahead to the *Site Editor* and click on `Countdown` on the side menu, this will open an edit menu, like the shown below:
+
+  ![image](https://user-images.githubusercontent.com/19495917/80523072-e382f700-8963-11ea-892d-3922a99de487.png)
 
 Now, in the field below the title, type the date in the format `AAAA-MM-DD` and see the change, that will then show the text you've typed! 
 

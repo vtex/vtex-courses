@@ -29,7 +29,7 @@ Agora, você irá separar o título do bloco do contador e adicioná-lo à nossa
     //react/Countdown.tsx
     import React, { useState } from 'react'
     import { TimeSplit } from './typings/global'
-    import { tick } from './utils/time'
+    import { tick, getTwoDaysFromNow } from './utils/time'
     import { useCssHandles } from 'vtex.css-handles'
     -import { FormattedMessage } from 'react-intl'
 
@@ -38,7 +38,7 @@ Agora, você irá separar o título do bloco do contador e adicioná-lo à nossa
     -  title: string
     }
 
-    const DEFAULT_TARGET_DATE = (new Date('2020-03-02')).toISOString()
+    const DEFAULT_TARGET_DATE = getTwoDaysFromNow()
     -const CSS_HANDLES = ['container', 'countdown', 'title']
     +const CSS_HANDLES = ['countdown']
     ```

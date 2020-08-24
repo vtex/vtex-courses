@@ -5,6 +5,7 @@
   "title": "Backend Course",
   "description": "Reference app for the Backend Course",
   "builders": {
+    "graphql": "1.x",
     "docs": "0.x",
     "node": "6.x"
   },

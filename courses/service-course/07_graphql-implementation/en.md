@@ -1,4 +1,4 @@
-# GraphQL
+# GraphQL: Retrieving data from Master Data
 
 ## Introduction
 
@@ -12,13 +12,12 @@ To get these product page views, we will use [GraphQL](https://graphql.org/), th
 
 Therefore, GraphQL uses types and a query schema to specify the data retrieved and resolvers to get the exact data needed.
 
-Let's go!
-
 ## Retrieving data from Master Data
 
-1. On the directory `/graphql/types` create the `productView.graphql` file and declare the type of the product list we want to retrieve:
+1. Inside the `/graphql` directory, create a folder called `/types`. In this folder, create the `productView.graphql` file and declare the type of the product list we want to retrieve:
 
    ```
+   # /graphql/types/productView.graphql
    type ProductView {
        slug: String
        count: Int
@@ -35,12 +34,12 @@ Let's go!
 
    > Keep in mind that the schema will define the structure of our query and the retrieved data.
   
-    Also, in this declaration, you can include directives. In some cases, it is required, for example, if you need to get the user token or use cookies (e.g.: `OrderForm`). To read more about it, check out [this link](https://github.com/vtex-apps/graphql-example).
+    Also, in this declaration you can include directives. In some cases, it is required, for example, if you need to get the user token or use cookies (e.g.: `OrderForm`). To read more about it, check out [this link](https://github.com/vtex-apps/graphql-example).
 
 3. With the schema, types, and the query defined, we need to create the query's resolver. The resolver is what happens when a query is executed. In our case, we want to perform a scroll on **Master Data**, ordering by the count (as we want to get a topmost viewed products) and limiting the page size (the top **n**). To define this resolver, in the `/node/resolvers` directory, create the file `products.ts` and do the following:
 
     ```ts
-      //node/resolvers/products.ts
+      // node/resolvers/products.ts
       import { COURSE_ENTITY } from '../utils/constants'
 
       export const productList = async (
@@ -61,7 +60,13 @@ Let's go!
 
    > Note: you can check the Master Data scroll documentation in this [link](https://help.vtex.com/tutorial/querying-the-master-data-via-scroll-path--tutorials_4631)
 
-4. At last, we need to update the `index.ts` file to set up the resolver and the query. Complete the `service` declaration as below:
+4. Import the resolver on the `index.ts` file:
+
+```ts
+import { productList } from './resolvers/products'
+```
+
+5. At last, we need to update the `index.ts` file to set up the resolver and the query. Complete the `service` declaration as below:
 
     ```ts
         },
@@ -80,7 +85,7 @@ Let's go!
     ```diff
     //manifest.json
     "builders": {
-    +        "graphql": "1.x",
+    +   "graphql": "1.x",
         "docs": "0.x",
         "node": "6.x"
     },

@@ -35,7 +35,7 @@ export async function updateLiveUsers(ctx: EventContext<Clients>) {
             },
             id: savedProduct?.id,
           })
-          .then(res => {
+          .then((res) => {
             console.log(res)
             return res
           })

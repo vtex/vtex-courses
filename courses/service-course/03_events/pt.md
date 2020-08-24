@@ -16,7 +16,7 @@ Vamos começar?
 
     ![image](https://user-images.githubusercontent.com/43679629/83802091-8c69f380-a680-11ea-82af-a438fb73f40b.png)
 
-    > Este acesso a rota de _healthcheck_ cria um context de cache que é necessário para que o VTEX IO dispare eventos. Sem isso, a _app_ `events-example` não será capaz de disparar eventos que sua _app_ irá ouvir.
+    > Este acesso a rota de _healthcheck_ cria um contexto de cache que é necessário para que o VTEX IO dispare eventos. Sem isso, a _app_ `events-example` não será capaz de disparar eventos que sua _app_ irá ouvir.
 
 2. Agora, precisamos adicionar o _handler_ de eventos na declaração de `Service`, que é responsável por definir o que a _app_ vai fazer enquanto estiver ouvindo os eventos que podem chegar. Para fazer isso, no arquivo `/node/index.ts`, incremente a declaração de `Service`: 
     ```diff

@@ -1,4 +1,3 @@
-```store/blocks/home.jsonc
 {
   "store.home": {
     "blocks": [
@@ -56,5 +55,5 @@
       "textAlignment": "CENTER"
     }
   },
-  ...
-  ```
+  ...,
+}

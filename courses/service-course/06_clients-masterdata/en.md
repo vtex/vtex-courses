@@ -20,8 +20,6 @@ In this step, it will be used to fetch data regarding the top-N most viewed prod
 
 > **NOTE:** It is important to highlight that the Master Data client will be available as long as the correct version of `@vtex/api` is installed in the node folder. It can be used by accessing `ctx.clients.masterdata`.
 
-Shall we start?
-
 ## Using the Master Data client to store information
 
 1. First, we need to setup the policies in our app, to authorize it to use **Master Data**. To do so, complement the `manifest.json` file:
@@ -88,26 +86,26 @@ Shall we start?
 
 3. Now, to make sure we are handling errors, implement a `try-catch` structure. To do so, do something like this:
 
-  ```diff
-  export async function updateLiveUsers(ctx: EventContext<Clients>) {
-    const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
-    console.log('MOCKED LIVE USERS ', liveUsersProducts)
-    await Promise.all(
-      liveUsersProducts.map(async ({ slug, liveUsers }) => {
-  +      try {
-          ...
-  +      } catch (e) {
-  +        console.log(`failed to update product ${slug}`)
-  +        console.log(e)
-  +      }
-      })
-    )
-    return true
-  }
-  ```
+    ```diff
+    export async function updateLiveUsers(ctx: EventContext<Clients>) {
+      const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
+      console.log('MOCKED LIVE USERS ', liveUsersProducts)
+      await Promise.all(
+        liveUsersProducts.map(async ({ slug, liveUsers }) => {
+    +      try {
+            ...
+    +      } catch (e) {
+    +        console.log(`failed to update product ${slug}`)
+    +        console.log(e)
+    +      }
+        })
+      )
+      return true
+    }
+    ```
 
 
-4. If our product is already saved, we need to update it by incrementing its count. **Master Data** has a method that allows us to update an existing document or create a new document if the document does not exist - `createOrUpdateEntireDocument`. To use this method and implement the incrementation on the Master Data entity, in the same file that was changed before, right after the logline of _saved product_, add this code:
+4. If our product is already saved, we need to update it by incrementing its count. **Master Data** has a method that allows us to update an existing document or create a new document, if the document does not exist - `createOrUpdateEntireDocument`. To use this method and implement the incrementation on the Master Data entity, in the same file that was changed before, right after the log line of _saved product_, add this code:
 
    ```diff
    //node/event/updateLiveUsers.ts
@@ -124,6 +122,7 @@ Shall we start?
    +            slug,
    +          },
    +          id: savedProduct?.id,
+   +          schema: 'v1'
    +        })
          } catch {
            console.log(`failed to update product ${slug}`)
@@ -140,7 +139,7 @@ Shall we start?
 4. Finally, run `vtex link` and wait for an event to be fired. Once it does, check your terminal for the logs in the code. Break the `vtex link` by typing `ctrl + C` and use the following _cURL_ on the terminal to check the updates on **Master Data**:
 
    ```
-   curl --location --request GET 'https://api.vtex.com/api/dataentities/backendproductusers/search?_fields=slug,count&_schema=v1&an=appliancetheme' \
+   curl --location --request GET 'https://api.vtex.com/api/dataentities/course_backend_product_list/search?_fields=slug,count&_schema=v1&an=appliancetheme' \
    --header 'Content-Type: application/json'
    ```
 
