@@ -20,11 +20,13 @@ export const getCourseFileContents = (
   }
 }
 
-export const getCourses = () => fs.readdirSync(COURSES_PATH)
+export const getCourses = () =>
+  JSON.parse(fs.readFileSync(`${COURSES_PATH}/index.json`).toString('utf-8'))
 
 export const getAnswersheets = (course: string, step: string) => {
   try {
     console.log(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
+
     return fs.readdirSync(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
   } catch {
     return []
