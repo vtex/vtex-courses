@@ -16,12 +16,5 @@ const getCourse = ({
 
 export default (courses: Course[]) => `
 <div class="course-container">
-  ${courses.map((course) => getCourse(course))}
+  ${courses.map((course) => getCourse(course)).join()}
 </div>`
-
-interface Course {
-  link: string
-  title: string
-  img: string
-  description: string
-}
