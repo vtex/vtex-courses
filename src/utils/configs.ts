@@ -8,7 +8,12 @@ export default () =>
     COURSE_STRUCTURE_FILES.reduce(
       (acc, file) => ({
         ...acc,
-        [getFileName(file)]: getCourseFileContents(folder, file),
+        [getFileName(file)]: getCourseFileContents(
+          folder,
+          file,
+          undefined,
+          file.includes('json')
+        ),
       }),
       { name: folder } as Course
     )
