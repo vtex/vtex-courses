@@ -101,7 +101,7 @@ Lendo a [documentação do Markdown](https://www.markdownguide.org/cheat-sheet/)
 }
 ```
 
-Para centralizar o alinhamento do texto, podemos adicionar a prop `textPosition` e atribuir a ela o valor` CENTER`:
+Para centralizar o alinhamento do texto, podemos adicionar a prop `textPosition` e atribuir a ela o valor `CENTER`:
 
 ```json
 {
