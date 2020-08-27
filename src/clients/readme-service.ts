@@ -20,7 +20,7 @@ export default class ReadMeService extends DefaultClient {
         await fetch('https://juzao--vtex.myvtex.com/_v/readme/getOrder', {
             method: 'POST',
             body: JSON.stringify({course: courseName})
-        }).then(async stepsOrder => console.log(await stepsOrder.json()))
+        }).then(async stepsOrder => console.log(stepsOrder))
         return
     }
 }
