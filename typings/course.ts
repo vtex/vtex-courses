@@ -27,8 +27,3 @@ export interface Step {
   link: string
   description: string
 }
-
-export interface CourseOrder {
-  course: string
-  steps: string[]
-}
