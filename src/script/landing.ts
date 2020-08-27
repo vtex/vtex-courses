@@ -7,8 +7,6 @@ export const handleLanding = async (courses: Course[]) => {
 
   const template = coursesTemplate(courses)
 
-  console.log('Upserting landing page...')
-
   await ReadMe.upsertCustomPage({
     slug: 'training-week-learning-path',
     title: 'Training Week Learning Path',
@@ -16,5 +14,5 @@ export const handleLanding = async (courses: Course[]) => {
     htmlmode: true,
   })
 
-  console.log('...upserted landing page')
+  console.log('Landing page updated 🚀')
 }
