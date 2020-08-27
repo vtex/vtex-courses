@@ -1,7 +1,7 @@
 import DefaultClient from './default'
 
 const CREDENTIALS = {
-  username: 'dQTjhQjHnl3eLTl6ZTMxbKFiF21kRjK1',
+  username: 'qj8ys4hNuCzSoEMvNoHppz53ajlsGb0b',
   password: '',
 }
 

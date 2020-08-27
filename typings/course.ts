@@ -12,6 +12,7 @@ export interface CourseStep {
 
 export interface Course {
   name: string
+  isActive: boolean
   metadata: CourseMetadata
   overview: string
   summary: CourseStep[]
@@ -26,4 +27,9 @@ export interface CourseMetadata {
 export interface Step {
   link: string
   description: string
+}
+
+export interface CourseInfo {
+  folder: string
+  isActive: boolean
 }

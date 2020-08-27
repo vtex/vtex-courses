@@ -5,8 +5,10 @@ import configs from './src/utils/configs'
 
 const courses = configs()
 
-Promise.all([
-  handleLanding(courses),
-  handleCourses(courses),
-  handleSteps(courses),
-])
+const execute = async () => {
+  await handleLanding(courses)
+  await handleCourses(courses)
+  await handleSteps(courses)
+}
+
+execute()
