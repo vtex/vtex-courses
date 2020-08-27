@@ -30,14 +30,17 @@ const createAnswersheet = async (
   course: string,
   stepFolder: string,
   stepTitle: string,
+  answersheets: string[],
   ReadMe: Readmeio
 ) => {
-  await ReadMe.upsertDoc({
-    body: answersheet(course, stepFolder),
-    slug: `${getCourseSlug(course, stepFolder)}-answersheet`,
-    title: `Gabarito do passo '${stepTitle}'`,
-    category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
-  })
+  if (answersheets.length > 0) {
+    await ReadMe.upsertDoc({
+      body: answersheet(course, stepFolder, answersheets),
+      slug: `${getCourseSlug(course, stepFolder)}-answersheet`,
+      title: `Gabarito do passo '${stepTitle}'`,
+      category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
+    })
+  }
 }
 
 export const handleSteps = (courses: Course[]) =>
@@ -47,10 +50,12 @@ export const handleSteps = (courses: Course[]) =>
         const ReadMe = new Readmeio()
         const courseSlug = getCourseSlug(course.name)
         const stepSlug = getCourseSlug(course.name, stepMeta.folder)
+        const answersheets = getAnswersheets(course.name, stepMeta.folder)
+
         const template = step(
           getCourseFileContents(course.name, 'pt.md', stepMeta.folder),
           stepSlug,
-          getAnswersheets.length > 0
+          answersheets.length > 0
         )
 
         await ReadMe.upsertDoc({
@@ -65,6 +70,7 @@ export const handleSteps = (courses: Course[]) =>
           course.name,
           stepMeta.folder,
           stepMeta.title.pt,
+          answersheets,
           ReadMe
         )
 
