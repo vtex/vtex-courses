@@ -12,7 +12,7 @@ export const handleCourses = (courses: Course[]) =>
       const template = courseSteps(
         course.summary.map((step) => ({
           link: step.folder,
-          description: step.title.en,
+          description: step.title.pt,
         })),
         course.metadata.image,
         course.overview,

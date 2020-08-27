@@ -7,7 +7,7 @@ const getStep = (
   link: string,
   course: string
 ) => `
-  <a class="course-link" href="${getCourseSlug(link, course)}">
+  <a class="course-link" href="${getCourseSlug(course, link)}">
     <div class="row-item">
         <h2 class="counter">${index}</h1>
         <span class="step">${description}</span>  
