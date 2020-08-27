@@ -30,8 +30,6 @@ export const getCourses = () =>
 
 export const getAnswersheets = (course: string, step: string) => {
   try {
-    console.log(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
-
     return fs.readdirSync(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
   } catch {
     return []

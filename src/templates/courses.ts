@@ -21,6 +21,13 @@ const getCourse = ({
 </div>`
 
 export default (courses: Course[]) => `
+<style>
+  #hub-container > .hub-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
 <div class="course-container">
   ${courses.map((course) => getCourse(course)).join('')}
 </div>`
