@@ -75,4 +75,4 @@ Desenvolva a página do produto adicionando os 4 blocos listados acima ao`produc
 ```
 
 
-:information_source: Lembre-se de acessar a documentação do [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity) e [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector) se tiver qualquer dúvida durante a atividade.
+Note: Lembre-se de acessar a documentação do [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity) e [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector) se tiver qualquer dúvida durante a atividade.

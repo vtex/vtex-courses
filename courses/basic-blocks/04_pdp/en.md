@@ -115,4 +115,4 @@ When clicking on the second one, the `Red Retro Coffee Maker`, you'll go to its 
 
 > Note: Some of the products will not have the savings, since there are no discounts based on the list price.
 
-:information_source: Remember to access the [Product Images](https://developers.vtex.com/docs/vtex-store-components-productimages), [Product Price](https://developers.vtex.com/docs/vtex-product-price#product-price), [Product Name](https://developers.vtex.com/docs/vtex-store-components-productname) and [Buy Button](https://developers.vtex.com/docs/vtex-store-components-buybutton) documentation in case you have any questions during your activity. 
+Note: Remember to access the [Product Images](https://developers.vtex.com/docs/vtex-store-components-productimages), [Product Price](https://developers.vtex.com/docs/vtex-product-price#product-price), [Product Name](https://developers.vtex.com/docs/vtex-store-components-productname) and [Buy Button](https://developers.vtex.com/docs/vtex-store-components-buybutton) documentation in case you have any questions during your activity. 

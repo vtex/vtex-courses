@@ -44,4 +44,4 @@ Este é o resultado esperado:
 
 ![image](https://user-images.githubusercontent.com/19495917/90180384-410d4900-dd85-11ea-88b9-3af68e8f3a08.png)
 
-:information_source: Lembre-se de acessar a [documentação](https://developers.vtex.com/docs/vtex-rich-text) do Rich Text caso tenha alguma dúvida durante a atividade.
+Note: Lembre-se de acessar a [documentação](https://developers.vtex.com/docs/vtex-rich-text) do Rich Text caso tenha alguma dúvida durante a atividade.
