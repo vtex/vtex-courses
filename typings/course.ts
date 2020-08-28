@@ -30,5 +30,6 @@ export interface Step {
 
 export interface CourseOrder {
   course: string
-  steps: string[]
+  steps: string[],
+  isReadme: boolean
 }
