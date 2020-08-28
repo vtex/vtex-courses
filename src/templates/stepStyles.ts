@@ -6,10 +6,6 @@ export const getStepStyles = () => `
         color: #f71963
       }
     
-      #hub-sidebar-parent{
-        display:none
-      }
-    
       p {
         line-height: 1.5rem;
       }
