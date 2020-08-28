@@ -33,3 +33,8 @@ export interface CourseInfo {
   folder: string
   isActive: boolean
 }
+export interface CourseOrder {
+  course: string
+  steps: string[],
+  isReadme: boolean
+}
