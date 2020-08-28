@@ -1,29 +1,31 @@
-import { getAnswersheets } from './../utils/files'
+import { getAnswersheets, getCourseFileContents } from '../utils/files'
 import { getCourseSlug } from '../utils/slugs'
 import Readmeio from '../clients/readmeio'
 import { Course } from '../../typings/course'
-import { getCourseFileContents } from '../utils/files'
 import step from '../templates/step'
 import answersheet from '../templates/answersheet'
 
-const referenceNextStep = (
-  nextStepSlug: string,
-  nextStepTitle: string,
+const referenceNextStepAndSetVisibility = (
+  isHidden: boolean,
   stepSlug: string,
-  ReadMe: Readmeio
+  ReadMe: Readmeio,
+  next?: NextStep
 ) =>
   ReadMe.updateDoc({
+    hidden: isHidden,
     slug: stepSlug,
-    next: {
-      description: '',
-      pages: [
-        {
-          type: 'doc',
-          name: nextStepTitle,
-          slug: nextStepSlug,
-        },
-      ],
-    },
+    next: next
+      ? {
+          description: '',
+          pages: [
+            {
+              type: 'doc',
+              name: next.title,
+              slug: next.slug,
+            },
+          ],
+        }
+      : undefined,
   })
 
 const createAnswersheet = async (
@@ -74,24 +76,32 @@ export const handleSteps = (courses: Course[]) =>
           ReadMe
         )
 
-        console.log(`Step ${stepSlug} upserted`)
-        if (index === course.summary.length - 1) {
-          return
-        }
+        console.log(`Step ${stepSlug} was updated 🥾`)
 
-        const nextStepSlug = getCourseSlug(
-          course.name,
-          course.summary[index + 1].folder
-        )
+        const next =
+          index < course.summary.length - 1
+            ? {
+                slug: getCourseSlug(
+                  course.name,
+                  course.summary[index + 1].folder
+                ),
+                title: course.summary[index + 1].title.pt,
+              }
+            : undefined
 
-        await referenceNextStep(
-          nextStepSlug,
-          course.summary[index + 1].title.pt,
+        await referenceNextStepAndSetVisibility(
+          !course.isActive,
           stepSlug,
-          ReadMe
+          ReadMe,
+          next
         )
 
-        console.log(`Step ${stepSlug} next defined`)
+        console.log(`Step ${stepSlug} next and visibility were updated 👀`)
       })
     )
   )
+
+interface NextStep {
+  title: string
+  slug: string
+}
