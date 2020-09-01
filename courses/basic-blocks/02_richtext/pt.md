@@ -101,7 +101,7 @@ Lendo a [documentação do Markdown](https://www.markdownguide.org/cheat-sheet/)
 }
 ```
 
-Para centralizar o alinhamento do texto, podemos adicionar a prop `textPosition` e atribuir a ela o valor` CENTER`:
+Para centralizar o alinhamento do texto, podemos adicionar a prop `textPosition` e atribuir a ela o valor `CENTER`:
 
 ```json
 {
@@ -143,4 +143,4 @@ Depois de executar o `vtex link`, seu` rich-text` deve ficar assim:
 
 <img src="https://user-images.githubusercontent.com/12139385/70143376-2e7d3480-167a-11ea-8727-2bc6a9422f21.png" width="150" />
 
-:information_source: Lembre-se de acessar a [documentação](https://vtex.io/docs/components/all/vtex.rich-text/) do Rich Text se você tiver alguma dúvida durante a atividade.
+Note: Lembre-se de acessar a [documentação](https://vtex.io/docs/components/all/vtex.rich-text/) do Rich Text se você tiver alguma dúvida durante a atividade.
