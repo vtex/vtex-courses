@@ -44,5 +44,5 @@ Expected result:
 
 ![image](https://user-images.githubusercontent.com/19495917/90180384-410d4900-dd85-11ea-88b9-3af68e8f3a08.png)
 
-:information_source: Remember to access the Rich Text [documentation](https://developers.vtex.com/docs/vtex-rich-text) if you have any questions during the activity.
+Note: Remember to access the Rich Text [documentation](https://developers.vtex.com/docs/vtex-rich-text) if you have any questions during the activity.
 
