@@ -1,8 +1,26 @@
 [
-  "basic-blocks",
-  "layout-blocks",
-  "styles-course",
-  "content-workflow",
-  "store-block",
-  "service-course"
+  {
+    "folder": "basic-blocks",
+    "isActive": true
+  },
+  {
+    "folder": "layout-blocks",
+    "isActive": false
+  },
+  {
+    "folder": "styles-course",
+    "isActive": false
+  },
+  {
+    "folder": "content-workflow",
+    "isActive": false
+  },
+  {
+    "folder": "store-block",
+    "isActive": false
+  },
+  {
+    "folder": "service-course",
+    "isActive": false
+  }
 ]

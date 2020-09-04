@@ -1,7 +1,7 @@
 import DefaultClient from './default'
 
 const CREDENTIALS = {
-  username: 'qj8ys4hNuCzSoEMvNoHppz53ajlsGb0b',
+  username: 'P02YTlEi3Peuxrnhzs6RHiIpmwDlba9o',
   password: '',
 }
 
@@ -21,7 +21,7 @@ export default class Readmeio extends DefaultClient {
   constructor() {
     super('https://dash.readme.io/api/v1', {
       headers: {
-        'x-readme-version': 'v2.1',
+        'x-readme-version': 'v1.0',
         Authorization: `Basic ${ENCODED_CREDENTIALS}`,
       },
     })

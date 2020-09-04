@@ -108,4 +108,4 @@ Nessa atividade, vamos brincar um pouco com o markdown do [Rich Text](https://de
 
 5. Analisando as props do [componente Image](https://developers.vtex.com/docs/vtex-store-components-image#configuration), defina a largura máxima das duas imagens como `100%`.
 
-:information_source: Lembre-se de acessar a [documentação](https://developers.vtex.com/docs/vtex-responsive-layout) do Responsive Layout caso tenha alguma dúvida durante a atividade.
+Note: Lembre-se de acessar a [documentação](https://developers.vtex.com/docs/vtex-responsive-layout) do Responsive Layout caso tenha alguma dúvida durante a atividade.

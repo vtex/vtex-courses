@@ -122,4 +122,4 @@ O resultado esperado será semelhante a este:
 
 ![imagem](https://appliancetheme.vteximg.com.br/arquivos/info-card-activity.png)
 
-:information_source: Lembre-se de acessar a documentação do [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard) se você tiver alguma dúvida sobre a atividade.
+Note: Lembre-se de acessar a documentação do [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard) se você tiver alguma dúvida sobre a atividade.

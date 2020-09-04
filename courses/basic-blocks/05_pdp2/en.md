@@ -75,4 +75,4 @@ Develop the product page by adding the 4 blocks listed above to`product.jsonc` a
 ```
 
 
-:information_source: Remember to access the [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity) and [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector) documentation if you have any questions during the activity. 
+Note: Remember to access the [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity) and [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector) documentation if you have any questions during the activity. 
