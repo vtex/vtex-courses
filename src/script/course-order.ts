@@ -12,9 +12,7 @@ export const handleCoursesOrder = (courses: Course[]) => {
         steps: course.summary.map((step) => step.folder),
         isReadme: true
       }
-
-      console.log(courseOrder)
-
+      
       await ReadMe.postStepsOrder(courseOrder)
 
       console.log(`...updated steps order of ${course.name}`)
