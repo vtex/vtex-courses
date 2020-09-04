@@ -93,4 +93,4 @@ To do so, write a code similar to:
     ...
     ```
 
-:information_source: Remember to go through the Search Result [documentation](https://developers.vtex.com/docs/vtex-search-result) if you have any questions during the activity.
+Note: Remember to go through the Search Result [documentation](https://developers.vtex.com/docs/vtex-search-result) if you have any questions during the activity.

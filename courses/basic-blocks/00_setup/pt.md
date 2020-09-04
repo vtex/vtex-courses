@@ -26,9 +26,9 @@ Instale o Git em seu computador clicando no link abaixo e selecionando seu siste
 Uma vez que é o Toolbelt que estabelece a comunicação entre o desenvolvedor e a plataforma, você precisará dele para realizar todas as atividades propostas durante esse e os outros cursos.
 
 1. Instale o [**Node.js**] (https://nodejs.org/). Se você estiver usando um MAC, instale também [**Yarn**] (https://yarnpkg.com/);
-2. Execute `npm i -g vtex` em seu terminal se estiver usando Windows ou` yarn global add vtex` se estiver usando MAC;
+2. Execute `npm i -g vtex` em seu terminal se estiver usando Windows ou `yarn global add vtex` se estiver usando MAC;
 
-Você pode executar `vtex-v` (Windows) ou` vtex` (MAC) para confirmar se a instalação do Toolbelt foi conforme o esperado.
+Você pode executar `vtex-v` (Windows) ou `vtex` (MAC) para confirmar se a instalação do Toolbelt foi conforme o esperado.
 
 Depois de instalado com sucesso, a próxima etapa é *fazer login* em uma conta VTEX.
 
@@ -48,7 +48,7 @@ O próximo passo é criar um *workspace* de desenvolvimento, que permitirá que 
 
 ### Acessando seu *workspace*
 
-Depois de criar o *workspace*, você poderá acessá-lo neste link: `https://{*workspace*}-{conta}.myvtex.com`, substituindo` {*workspace*} `e` {conta} `com o nome do *workspace* e conta criados anteriormente. Por exemplo, `https://devworkspace-appliancetheme.myvtex.com`
+Depois de criar o *workspace*, você poderá acessá-lo neste link: `https://{workspace}-{conta}.myvtex.com`, substituindo` {workspace} `e` {conta} `com o nome do *workspace* e conta criados anteriormente. Por exemplo, `https://devworkspace-appliancetheme.myvtex.com`
 
 ---
 

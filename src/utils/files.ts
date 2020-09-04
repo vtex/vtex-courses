@@ -1,5 +1,7 @@
 import fs from 'fs'
 
+import { CourseInfo } from '../../typings/course'
+
 const COURSES_PATH = `courses`
 
 export const getCourseFileContents = (
@@ -24,12 +26,10 @@ export const getCourseFileContents = (
 export const getCourses = () =>
   JSON.parse(
     fs.readFileSync(`${COURSES_PATH}/index.json`).toString('utf-8')
-  ) as string[]
+  ) as CourseInfo[]
 
 export const getAnswersheets = (course: string, step: string) => {
   try {
-    console.log(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
-
     return fs.readdirSync(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
   } catch {
     return []
