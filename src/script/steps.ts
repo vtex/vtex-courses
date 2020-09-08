@@ -1,43 +1,48 @@
-import { getAnswersheets } from './../utils/files'
+import { getAnswersheets, getCourseFileContents } from '../utils/files'
 import { getCourseSlug } from '../utils/slugs'
 import Readmeio from '../clients/readmeio'
 import { Course } from '../../typings/course'
-import { getCourseFileContents } from '../utils/files'
 import step from '../templates/step'
 import answersheet from '../templates/answersheet'
 
-const referenceNextStep = (
-  nextStepSlug: string,
-  nextStepTitle: string,
+const referenceNextStepAndSetVisibility = (
+  isHidden: boolean,
   stepSlug: string,
-  ReadMe: Readmeio
+  ReadMe: Readmeio,
+  next?: NextStep
 ) =>
   ReadMe.updateDoc({
+    hidden: isHidden,
     slug: stepSlug,
-    next: {
-      description: '',
-      pages: [
-        {
-          type: 'doc',
-          name: nextStepTitle,
-          slug: nextStepSlug,
-        },
-      ],
-    },
+    next: next
+      ? {
+          description: '',
+          pages: [
+            {
+              type: 'doc',
+              name: next.title,
+              slug: next.slug,
+            },
+          ],
+        }
+      : undefined,
   })
 
 const createAnswersheet = async (
   course: string,
   stepFolder: string,
   stepTitle: string,
+  answersheets: string[],
   ReadMe: Readmeio
 ) => {
-  await ReadMe.upsertDoc({
-    body: answersheet(course, stepFolder),
-    slug: `${getCourseSlug(stepFolder, course)}-answersheet`,
-    title: `Gabarito do passo '${stepTitle}'`,
-    category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
-  })
+  if (answersheets.length > 0) {
+    await ReadMe.upsertDoc({
+      body: answersheet(course, stepFolder, answersheets),
+      slug: `${getCourseSlug(course, stepFolder)}-answersheet`,
+      title: `Gabarito do passo '${stepTitle}'`,
+      category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
+    })
+  }
 }
 
 export const handleSteps = (courses: Course[]) =>
@@ -46,11 +51,13 @@ export const handleSteps = (courses: Course[]) =>
       course.summary.map(async (stepMeta, index) => {
         const ReadMe = new Readmeio()
         const courseSlug = getCourseSlug(course.name)
-        const stepSlug = getCourseSlug(stepMeta.folder, course.name)
+        const stepSlug = getCourseSlug(course.name, stepMeta.folder)
+        const answersheets = getAnswersheets(course.name, stepMeta.folder)
+
         const template = step(
           getCourseFileContents(course.name, 'pt.md', stepMeta.folder),
           stepSlug,
-          getAnswersheets.length > 0
+          answersheets.length > 0
         )
 
         await ReadMe.upsertDoc({
@@ -65,27 +72,36 @@ export const handleSteps = (courses: Course[]) =>
           course.name,
           stepMeta.folder,
           stepMeta.title.pt,
+          answersheets,
           ReadMe
         )
 
-        console.log(`Step ${stepSlug} upserted`)
-        if (index === course.summary.length - 1) {
-          return
-        }
+        console.log(`Step ${stepSlug} was updated 🥾`)
 
-        const nextStepSlug = getCourseSlug(
-          course.summary[index + 1].folder,
-          course.name
-        )
+        const next =
+          index < course.summary.length - 1
+            ? {
+                slug: getCourseSlug(
+                  course.name,
+                  course.summary[index + 1].folder
+                ),
+                title: course.summary[index + 1].title.pt,
+              }
+            : undefined
 
-        await referenceNextStep(
-          nextStepSlug,
-          course.summary[index + 1].title.pt,
+        await referenceNextStepAndSetVisibility(
+          !course.isActive,
           stepSlug,
-          ReadMe
+          ReadMe,
+          next
         )
 
-        console.log(`Step ${stepSlug} next defined`)
+        console.log(`Step ${stepSlug} next and visibility were updated 👀`)
       })
     )
   )
+
+interface NextStep {
+  title: string
+  slug: string
+}

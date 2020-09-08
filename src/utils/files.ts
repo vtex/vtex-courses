@@ -1,11 +1,14 @@
 import fs from 'fs'
 
+import { CourseInfo } from '../../typings/course'
+
 const COURSES_PATH = `courses`
 
 export const getCourseFileContents = (
   course: string,
   path: string,
-  step?: string
+  step?: string,
+  toJSON?: boolean
 ) => {
   try {
     const content = fs
@@ -14,17 +17,19 @@ export const getCourseFileContents = (
       )
       .toString('utf-8')
 
-    return path.includes('.json') ? JSON.parse(content) : content
+    return toJSON ? JSON.parse(content) : content
   } catch {
     return ''
   }
 }
 
-export const getCourses = () => fs.readdirSync(COURSES_PATH)
+export const getCourses = () =>
+  JSON.parse(
+    fs.readFileSync(`${COURSES_PATH}/index.json`).toString('utf-8')
+  ) as CourseInfo[]
 
 export const getAnswersheets = (course: string, step: string) => {
   try {
-    console.log(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
     return fs.readdirSync(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
   } catch {
     return []
