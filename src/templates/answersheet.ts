@@ -17,5 +17,12 @@ export default (course: string, step: string, answersheetPaths: string[]) => {
     codes: getCodes(course, step, answersheetPaths),
   })}
   [/block]
+
+  [block:html]
+  <div id="back-button">
+      <i class="fa fa-angle-left"></i>
+      <a id="back-link" href="/learning/docs/${course}-${step}">voltar</a>
+  </div>
+  [/block]
 `
 }
