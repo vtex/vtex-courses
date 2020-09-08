@@ -29,6 +29,11 @@ export interface Step {
   description: string
 }
 
+export interface CourseOrder {
+  course: string
+  steps: string[],
+  isReadme: boolean
+}
 export interface CourseInfo {
   folder: string
   isActive: boolean
