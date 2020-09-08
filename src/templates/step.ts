@@ -19,7 +19,6 @@ export default (content: string, slug: string, hasAnswersheet: boolean) => `
       ?
       `<div
         id="finish-course">
-        <i class="fa fa-chevron-right" ></i>
         <a id="finish-link" href="/learning/page/training-week-learning-path">Finalizar Curso</a>
       </div>`
       : ``
