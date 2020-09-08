@@ -11,10 +11,10 @@
   {
     "folder": "02_flexlayout",
     "title": {
-      "pt": "Carrossel de blocos"
+      "pt": "Flex layout"
     },
     "description": {
-      "pt": "Insira conteúdo num layout de carrossel"
+      "pt": "Criando layouts de grid com blocos básicos"
     }
   },
   {
@@ -23,7 +23,7 @@
       "pt": "Carrossel de blocos"
     },
     "description": {
-      "pt": "Use o responsive layout para adaptar seu conteúdo para diferentes dispositivos"
+      "pt": "Insira conteúdo num layout de carrossel"
     }
   },
   {
@@ -32,7 +32,7 @@
       "pt": "Tornando seu conteúdo responsivo"
     },
     "description": {
-      "pt": "Usando layout de abas na página institucional"
+      "pt": "Use o responsive layout para adaptar seu conteúdo para diferentes dispositivos"
     }
   },
   {
@@ -50,7 +50,7 @@
       "pt": "Layout modal"
     },
     "description": {
-      "pt": "Usando layout de abas na página institucional"
+      "pt": "Usando layout modal na página institucional"
     }
   },
   {
@@ -59,7 +59,7 @@
       "pt": "Quick View"
     },
     "description": {
-      "pt": "Usando layout de abas na página institucional"
+      "pt": "Usando o Quick View na página institucional"
     }
   },
   {
@@ -68,7 +68,7 @@
       "pt": "Stack Layout"
     },
     "description": {
-      "pt": "Usando layout de abas na página institucional"
+      "pt": "Usando layout de pilha na página institucional"
     }
   },
   {
@@ -77,7 +77,7 @@
       "pt": "Conditional Layout"
     },
     "description": {
-      "pt": "Usando layout de abas na página institucional"
+      "pt": "Usando layout condicional na página institucional"
     }
   }
 ]

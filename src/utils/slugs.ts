@@ -1,6 +1,11 @@
 import slugify from 'slugify'
 
-export const getCourseSlug = (name: string, course = '') =>
-  `course-${slugify(course + name, {
+const createSlug = (text: string) =>
+  slugify(`${text}`, {
     remove: /_/g,
-  })}`
+  })
+
+const getStep = (step: string) => (step ? `-step${createSlug(step)}` : '')
+
+export const getCourseSlug = (course: string, step = '') =>
+  `course-${createSlug(course)}${getStep(step)}`

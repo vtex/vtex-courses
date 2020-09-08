@@ -7,7 +7,7 @@ const getStep = (
   link: string,
   course: string
 ) => `
-  <a class="course-link" href="${getCourseSlug(link, course)}">
+  <a class="course-link" href="${getCourseSlug(course, link)}">
     <div class="row-item">
         <h2 class="counter">${index}</h1>
         <span class="step">${description}</span>  
@@ -18,10 +18,6 @@ const getSummary = (steps: Step[], course: string) => `
   <style>
     section#hub-content header h1, section#hub-content header h2 {
       color: #f71963
-    }
-
-    #hub-sidebar-parent{
-      display:none
     }
 
     p {
