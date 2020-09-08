@@ -53,11 +53,13 @@ export const handleSteps = (courses: Course[]) =>
         const courseSlug = getCourseSlug(course.name)
         const stepSlug = getCourseSlug(course.name, stepMeta.folder)
         const answersheets = getAnswersheets(course.name, stepMeta.folder)
+        const isLast = index === course.summary.length - 1
 
         const template = step(
           getCourseFileContents(course.name, 'pt.md', stepMeta.folder),
           stepSlug,
-          answersheets.length > 0
+          answersheets.length > 0,
+          isLast
         )
 
         await ReadMe.upsertDoc({
@@ -78,16 +80,15 @@ export const handleSteps = (courses: Course[]) =>
 
         console.log(`Step ${stepSlug} was updated 🥾`)
 
-        const next =
-          index < course.summary.length - 1
-            ? {
-                slug: getCourseSlug(
-                  course.name,
-                  course.summary[index + 1].folder
-                ),
-                title: course.summary[index + 1].title.pt,
-              }
-            : undefined
+        const next = !isLast
+          ? {
+              slug: getCourseSlug(
+                course.name,
+                course.summary[index + 1].folder
+              ),
+              title: course.summary[index + 1].title.pt,
+            }
+          : undefined
 
         await referenceNextStepAndSetVisibility(
           !course.isActive,
