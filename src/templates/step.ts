@@ -1,8 +1,12 @@
 import { getStepStyles } from './stepStyles'
 import { BASE_PATH } from '../utils/constants'
-import { isLastStep } from '../utils/lastStep'
 
-export default (content: string, slug: string, hasAnswersheet: boolean) => `
+export default (
+  content: string,
+  slug: string,
+  hasAnswersheet: boolean,
+  isLast: boolean
+) => `
   ${getStepStyles()}
   ${content}
 
@@ -15,7 +19,7 @@ export default (content: string, slug: string, hasAnswersheet: boolean) => `
   }
 
   ${
-    isLastStep(slug)
+    isLast
       ?
       `<div
         id="finish-course">
