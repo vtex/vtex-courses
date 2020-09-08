@@ -20,7 +20,8 @@ export default (
 
   ${
     isLast
-      ? `<div
+      ?
+      `<div
         id="finish-course">
         <a id="finish-link" href="/learning/page/training-week-learning-path">Finalizar Curso</a>
       </div>`
