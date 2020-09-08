@@ -45,29 +45,75 @@ const createAnswersheet = async (
   }
 }
 
+const createChallenge = async (
+  course: string,
+  courseTitle: string,
+  category: string,
+  parentDoc: string,
+  isLast: boolean,
+  ReadMe: Readmeio
+) => {
+  const challenge = getCourseFileContents(course, 'challenge.md')
+  const challengeSlug = `${getCourseSlug(course)}-challenge`
+
+  if (!challenge || !isLast) {
+    return undefined
+  }
+
+  await ReadMe.upsertDoc({
+    slug: challengeSlug,
+    title: `Desafio do curso ${courseTitle}`,
+    category,
+    body: challenge,
+    parentDoc,
+  })
+
+  console.log(`Challenge for course ${course} upserted 🎁`)
+
+  return challengeSlug
+}
+
 export const handleSteps = (courses: Course[]) =>
   Promise.all(
     courses.map((course) =>
       course.summary.map(async (stepMeta, index) => {
         const ReadMe = new Readmeio()
+
         const courseSlug = getCourseSlug(course.name)
         const stepSlug = getCourseSlug(course.name, stepMeta.folder)
+
+        const courseCategory = await ReadMe.getCategory('courses').then(
+          ({ _id }) => _id
+        )
+
+        const parentDoc = await ReadMe.getDoc(courseSlug).then(({ _id }) => _id)
+
         const answersheets = getAnswersheets(course.name, stepMeta.folder)
         const isLast = index === course.summary.length - 1
+
+        const challengeSlug = await createChallenge(
+          course.name,
+          course.metadata.title,
+          courseCategory,
+          parentDoc,
+          isLast,
+          ReadMe
+        )
 
         const template = step(
           getCourseFileContents(course.name, 'pt.md', stepMeta.folder),
           stepSlug,
           answersheets.length > 0,
-          isLast
+          isLast,
+          challengeSlug
         )
 
         await ReadMe.upsertDoc({
           slug: stepSlug,
           title: stepMeta.title.pt,
-          category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
+          category: courseCategory,
           body: template,
-          parentDoc: await ReadMe.getDoc(courseSlug).then(({ _id }) => _id),
+          parentDoc,
         })
 
         await createAnswersheet(
