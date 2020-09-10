@@ -1,8 +1,25 @@
 import { getStepStyles } from './stepStyles'
 import { BASE_PATH } from '../utils/constants'
-import { isLastStep } from '../utils/lastStep'
+import courseEnding from './course-ending'
 
-export default (content: string, slug: string, hasAnswersheet: boolean) => `
+const getFinishCourseBtn = () =>
+  `
+[block:html]
+${JSON.stringify({
+  html: `<div id="finish-course">
+  <a id="finish-link" href="/learning/page/training-week-learning-path">Finalizar Curso</a>
+</div>`,
+})}
+[/block]
+`
+
+export default (
+  content: string,
+  slug: string,
+  hasAnswersheet: boolean,
+  isLast: boolean,
+  challengeLink?: string
+) => `
   ${getStepStyles()}
   ${content}
 
@@ -15,12 +32,11 @@ export default (content: string, slug: string, hasAnswersheet: boolean) => `
   }
 
   ${
-    isLastStep(slug)
-      ?
-      `<div
-        id="finish-course">
-        <a id="finish-link" href="/learning/page/training-week-learning-path">Finalizar Curso</a>
-      </div>`
+    isLast
+      ? `
+      ${courseEnding(challengeLink)}
+      ${getFinishCourseBtn()}
+      `
       : ``
   }
 `
