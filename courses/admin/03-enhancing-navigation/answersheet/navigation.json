@@ -1,0 +1,6 @@
+{
+  "section": "orders",
+  "titleId": "admin-example.navigation.label",
+  "path": "/admin/iotraining",
+  "searchKeyWordsHelpers": "admin-example.navigation.search.kws"
+}
