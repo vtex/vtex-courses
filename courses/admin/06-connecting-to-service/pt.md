@@ -89,7 +89,7 @@ query hello {
 }
 ```
 
-6. Para finalizar, precisamos adicionar essa query ao nosso componente no `adminExample.ts`
+6. Para finalizar, precisamos adicionar essa *query* ao nosso componente no `adminExample.ts`
 
 ```diff
 import React, { FC } from 'react'
