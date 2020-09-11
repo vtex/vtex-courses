@@ -43,7 +43,7 @@ Feito isso, conseguimos agora ver uma mensagem traduzível para o menu que criam
 }
 ```
 
-3. Analogamente, crie as mensagens para as keywords, separadas por virgulas: 
+3. Analogamente, crie as mensagens para as _keywords_, separadas por vírgulas: 
 
 /messages/pt.json
 ```diff
@@ -70,4 +70,3 @@ Feito isso, conseguimos agora ver uma mensagem traduzível para o menu que criam
 ```
 
 ![image](https://user-images.githubusercontent.com/18701182/92777236-65eddf80-f376-11ea-9c07-fac14f5d5172.png)
-
