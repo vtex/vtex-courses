@@ -50,7 +50,7 @@ export default new Service({
 })
 ```
 
-Nosso serviço vai então, na query `helloworld` retornar um número aleatório
+Nosso serviço vai então, na query `helloworld` retornar um número aleatório.
 
 4. Na pasta `/node` para que você consiga desenvolver bem localmente, será necessário um `package.json`, voce pode adicionar um simples: 
 
