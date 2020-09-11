@@ -17,7 +17,7 @@ O routes é quem define as rotas e componentes react associados, da sua aplicaç
 
 ## Atividade
 
-1. Dentro da pasta `admin/` criada no passo anterior, crie mais dois arquivos, o `navigation.json`e o `routes.json`
+1. Dentro da pasta `admin/` criada no passo anterior, crie mais dois arquivos, o `navigation.json` e o `routes.json`
 
 ```diff
 |_ admin/
