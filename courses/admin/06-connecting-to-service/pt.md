@@ -6,7 +6,7 @@ Uma app de admin acaba perdendo o seu sentido se não puder consumir dados. Send
 
 ## Atividade
 
-1. Comece adicionando os builders para serviço necessários: 
+1. Comece adicionando os *builders* para serviço necessários: 
 
 /manifest.json
 ```diff
