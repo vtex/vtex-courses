@@ -22,5 +22,9 @@
   {
     "folder": "service-course",
     "isActive": false
+  },
+  {
+    "folder": "admin",
+    "isActive": false
   }
 ]
