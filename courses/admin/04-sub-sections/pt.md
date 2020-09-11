@@ -6,7 +6,7 @@ Em alguns casos a sua aplicação é mais complexa e precisa de vários seções
 
 ## Atividade
 
-1. Remova o `path` do navigation que tínhamos usado antes e adicione um novo campo `subSectionItems` com um array vazio:
+1. Remova o `path` do navigation que tínhamos usado antes e adicione um novo campo `subSectionItems` com um _array_ vazio:
 
 ```diff
 {
