@@ -18,7 +18,7 @@ Em alguns casos a sua aplicação é mais complexa e precisa de vários seções
 }
 ```
 
-2. Adicione um elemento para o array de `subSectionItems` com uma labelId e um path (que pode ser o mesmo do anterior):
+2. Adicione um elemento para o _array_ de `subSectionItems` com uma `labelId` e um `path` (que pode ser o mesmo do anterior):
 
 ```diff
 {
