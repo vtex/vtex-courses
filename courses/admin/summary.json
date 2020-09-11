@@ -1,0 +1,56 @@
+[
+  {
+    "folder": "01-introduction",
+    "title": {
+      "pt": "Admin framework"
+    },
+    "description": {
+      "pt": "Configurações iniciais para o funcionamento do curso."
+    }
+  },
+  {
+    "folder": "02-navigation-routes",
+    "title": {
+      "pt": "Navigation & Routes"
+    },
+    "description": {
+      "pt": "Introdução ao curso e ao boilerplate."
+    }
+  },
+  {
+    "folder": "03-enhancing-navigation",
+    "title": {
+      "pt": "Melhorando a navegação"
+    },
+    "description": {
+      "pt": "Aprendendo a usar o Rich Text."
+    }
+  },
+  {
+    "folder": "04-sub-sections",
+    "title": {
+      "pt": "Sub seções"
+    },
+    "description": {
+      "pt": "Adicionando e configurando um Info Card."
+    }
+  },
+  {
+    "folder": "05-look-n-feel",
+    "title": {
+      "pt": "Homogeneidade visual"
+    },
+    "description": {
+      "pt": "Introdução à páginas de produto."
+    }
+  },
+  {
+    "folder": "06-connecting-to-service",
+    "title": {
+      "pt": "Conectando a um serviço"
+    },
+    "description": {
+      "pt": "Complementando a página de produto e possibilidades de evolução."
+    }
+  }
+]
