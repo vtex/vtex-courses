@@ -34,7 +34,7 @@ Em alguns casos a sua aplicação é mais complexa e precisa de vários seções
 }
 ```
 
-3. Adicione mais outro elemento com um labelId diferente e outro path: 
+3. Adicione mais outro elemento com um `labelId` diferente e outro `path`: 
 
 ```diff
 {
