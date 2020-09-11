@@ -117,3 +117,5 @@ export default AdminExample
 O resultado deve ser: 
 
 ![image](https://user-images.githubusercontent.com/18701182/92937440-b79f7400-f421-11ea-9e92-a24ef710e83e.png)
+
+Com isto você tem um serviço conectado à sua aplicação de admin e pode, agora, conectar a serviços externos (aprenda mais sobre no nosso curso de serviços 🚀).
