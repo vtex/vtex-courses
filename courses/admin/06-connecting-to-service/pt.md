@@ -80,7 +80,7 @@ Nosso serviço vai então, na query `helloworld` retornar um número aleatório.
 
 ```
 
-5. Na pasta `react/` nós vamos precisar definir uma query para conseguir usar o resolver que definimos no serviço, para fazer isso, crie uma pasta `graphql/` dentro da pasta `react/` e nesta pasta, crie um `helloworld.gql` com: 
+5. Na pasta `react/` nós vamos precisar definir uma *query* para conseguir usar o resolver que definimos no serviço, para fazer isso, crie uma pasta `graphql/` dentro da pasta `react/` e nesta pasta, crie um `helloworld.gql` com: 
 
 /react/graphql/helloworld.gql: 
 ```
