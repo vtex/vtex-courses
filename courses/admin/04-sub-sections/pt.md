@@ -1,4 +1,4 @@
-# Sub seções
+# Subseções
 
 ## Introdução
 
