@@ -2,7 +2,7 @@
 
 ## Introdução 
 
-O `navigation.json` tem uma série de funcionalidades que podem melhorar a relevância e navegação da sua aplicação, neste passo aprenderemos como definir uma mensagem de título e criar keywords. 
+O `navigation.json` tem uma série de funcionalidades que podem melhorar a relevância e navegação da sua aplicação, neste passo aprenderemos como definir uma mensagem de título e criar _keywords_. 
 
 ## Atividade
 
@@ -70,5 +70,4 @@ Feito isso, conseguimos agora ver uma mensagem traduzível para o menu que criam
 ```
 
 ![image](https://user-images.githubusercontent.com/18701182/92777236-65eddf80-f376-11ea-9c07-fac14f5d5172.png)
-
 
