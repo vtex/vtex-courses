@@ -41,7 +41,7 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
 }
 ```
 
-3. Edite o vendor, name, title e description com da aplicação: 
+3. Edite o `vendor`, `name`, `title` e `description` da aplicação: 
 
 ```diff
 //manifest.json
