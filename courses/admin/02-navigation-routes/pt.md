@@ -35,7 +35,7 @@ O routes é quem define as rotas e componentes react associados, da sua aplicaç
 }
 ```
 
-3. No `routes.json` atribua um component e um path para a navegação criada:
+3. No `routes.json` atribua um `component` e um `path` para a navegação criada:
 
 ```
 {
