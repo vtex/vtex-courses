@@ -54,7 +54,7 @@ Em alguns casos a sua aplicação é mais complexa e precisa de vários seções
 }
 ```
 
-4. Com os paths novos, faça as alterações necessárias no `routes.json`: 
+4. Com os _paths_ novos, faça as alterações necessárias no `routes.json`: 
 
 ```diff
 {
