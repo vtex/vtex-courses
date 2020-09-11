@@ -10,3 +10,7 @@ Links para as imagens:
 - https://user-images.githubusercontent.com/43679629/92658175-82354200-f2cc-11ea-967d-0e54579edb90.jpg
 
 O resultado final deve que ser semelhante à:
+
+![print](https://user-images.githubusercontent.com/43679629/92954566-06590800-f43a-11ea-9365-b425a3808f9b.gif)
+
+
