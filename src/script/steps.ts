@@ -4,6 +4,7 @@ import Readmeio from '../clients/readmeio'
 import { Course } from '../../typings/course'
 import step from '../templates/step'
 import answersheet from '../templates/answersheet'
+import challenge from '../templates/challenge'
 
 const referenceNextStepAndSetVisibility = (
   isHidden: boolean,
@@ -51,12 +52,13 @@ const createChallenge = async (
   category: string,
   parentDoc: string,
   isLast: boolean,
+  stepSlug: string,
   ReadMe: Readmeio
 ) => {
-  const challenge = getCourseFileContents(course, 'challenge.md')
+  const challengeContent = challenge(course, stepSlug)
   const challengeSlug = `${getCourseSlug(course)}-challenge`
 
-  if (!challenge || !isLast) {
+  if (!challengeContent || !isLast) {
     return undefined
   }
 
@@ -64,7 +66,7 @@ const createChallenge = async (
     slug: challengeSlug,
     title: `Desafio do curso ${courseTitle}`,
     category,
-    body: challenge,
+    body: challengeContent,
     parentDoc,
   })
 
@@ -97,6 +99,7 @@ export const handleSteps = (courses: Course[]) =>
           courseCategory,
           parentDoc,
           isLast,
+          stepSlug,
           ReadMe
         )
 
