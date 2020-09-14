@@ -17,9 +17,7 @@
   },
   "rich-text#trigger": {
     "props": {
-      "text": "CLICK ME",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER"
+      "text": "CLICK ME"
     }
   },
   "rich-text#hello": { 
