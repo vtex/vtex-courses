@@ -9,7 +9,7 @@ Existem dois blocos de construção básicos de cada Flex Layout:
 - `flex-layout.row`
 - `flex-layout.col`
 
-Se você já está familiarizado com o Flexbox utilizado no CSS, o Flex Layout deve ser simples de entender, já que o Flexbox está sendo utilizar "por debaixo dos panos" pelo `flex-layout.row` e `flex-layout.col`.
+Se você já está familiarizado com o Flexbox utilizado no CSS, o Flex Layout deve ser simples de entender, já que o Flexbox está sendo utilizado "por debaixo dos panos" pelo `flex-layout.row` e `flex-layout.col`.
 
 ## Flex Layout
 
@@ -48,7 +48,7 @@ Abaixo, temos um exemplo de flex layout composto de um `flex-layout.row` com doi
 
 1. Declare o `flex-layout.row` dentro dos `blocks` do template de `store.home` e declare os blocos propostos acima no seu arquivo `home.jsonc`
 2. Altere as *children* do `flex-layout.row`, substituindo o bloco `rich-text` por uma coluna `flex-layout.col`.
-3. Delete o bloco de `rich-text` proposto acima mo seu tema.
+3. Delete do seu tema o bloco de `rich-text` proposto acima.
 4. Declare o bloco `flex-layout.col` no seu arquivo `home.jsonc` com dois componentes de imagem como children: `image#electronics` e `image#major-appliance`, *nesta ordem*.
 5. Defina os blocos `image` com as seguintes props:
 

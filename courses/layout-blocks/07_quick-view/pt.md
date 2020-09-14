@@ -17,7 +17,7 @@ Seguiremos os conceitos aprendidos no passo anterior e vamos aprofundar um pouco
     ]
   },
 + "list-context.product-list": {
-+   "blocks": ["product-summary.shelf#modal"],
++   "blocks": ["product-summary.shelf"],
 +   "children": ["slider-layout"]
 + },
 + "product-summary.shelf": {
