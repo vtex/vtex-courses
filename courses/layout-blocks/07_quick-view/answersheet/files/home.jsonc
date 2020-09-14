@@ -1,8 +1,8 @@
 {
   "store.home": {
-    "blocks": ["list-context.product-list#demo1"]
+    "blocks": ["list-context.product-list"]
   },
-  "list-context.product-list#demo1": {
+  "list-context.product-list": {
     "blocks": ["product-summary.shelf"],
     "children": ["slider-layout"]
   },
