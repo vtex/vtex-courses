@@ -90,14 +90,14 @@ Fazendo isso, teremos uma página de produto como a mostrada abaixo:
 
 ## Atividade
 
-1. Vamos criar um _banner_ exclusivo para a geladeira Geladeira Retrô, para isso, use como primeiro filho da `store.product` um `conditional-layout.product`: 
+1. Vamos criar um _banner_ exclusivo para a geladeira Geladeira Retrô, para isso, use como primeiro filho da `store.product` um `condition-layout.product`: 
 
 ```diff
 //product.jsonc
 {
   "store.product": {
     "children": [
-+     "conditional-layout.product"
++     "condition-layout.product"
       ...
     ]
   }
@@ -105,7 +105,7 @@ Fazendo isso, teremos uma página de produto como a mostrada abaixo:
 }
 ```
 
-2. Defina, então, o `conditional-layout.product`, com uma condição específica para a Geladeira Retrô: 
+2. Defina, então, o `condition-layout.product`, com uma condição específica para a Geladeira Retrô: 
 
 ```diff
 //product.jsonc
@@ -141,7 +141,7 @@ Sendo assim, o objeto formado é:
 +         "subject": "productId",
 +         "verb": "is",
 +         "object": "3"
-+       },
++       }
 +     ]
 +   },
 +   "children": ["image#retro-refrigerator-banner"]
