@@ -1,6 +1,5 @@
 // store/blocks/home.jsonc
 {
-  "store.home": { 
   "store.home": {
     "blocks": [
       "rich-text",

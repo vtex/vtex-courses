@@ -64,7 +64,7 @@ O `modal-layout` define quais blocos filhos serão usados dentro do modal. É, p
 +     "rich-text#hello"
 +   ]
 + },
-+ "rich-text#modal": { 
++ "rich-text#hello": { 
 +   "props": {
 +     "text": "Hello"
 +   }

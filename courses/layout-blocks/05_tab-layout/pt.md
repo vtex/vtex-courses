@@ -132,7 +132,7 @@ Nesta atividade, vamos criar a estrutura simples de um _tab layout_, conforme im
 
 ![](https://appliancetheme.vteximg.com.br/arquivos/tarefa-tab-layout.png)
 
-1. No arquivo `about-us.jsonc` criado anteriormente, adicione um `tab-layout#home` ao template `store.custom#about-us`;
+1. No arquivo `home.jsonc` criado anteriormente, adicione um `tab-layout#home`;
 2. Declare o bloco `tab-layout#home` e adicione como seus filhos um `tab-list#home` e um `tab-content#home`;
 3. Declare um `tab-list#home` e adicione como seus filhos um `tab-list.item#home1` e um `tab-list.item#home2`;
 4. Declare as props do `tab-list.item#home1` de maneira que a interface exiba o texto "Major Appliances". (Dica: não se esqueça que incluir nas props um `tabId` = `"majorAppliances"` e a propriedade `defaultActiveTab` = `true`);
