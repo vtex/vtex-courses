@@ -2,7 +2,7 @@
 
 ## Introdução
 
-O Site Editor é um painel que se encontra dentro da página de _admin_ de uma loja que permite você alterar propriedades dos blocos referentes à frente de loja. As mudanças que são feitas aqui são automaticamente refletidas na loja e todos os blocos que estão na frente de loja podem ser alterados através deste painel. Por exemplo, é possível alterar o conteúdo de um _rich text_, propriedades de uma prateleira, como as coleções sendo mostradas, entre outras coisas.
+O Site Editor é um painel que se encontra dentro da página de _admin_ de uma loja que permite você alterar propriedades dos blocos referentes à frente de loja. A página de _admin_ de sua loja pode ser acessada adicionando `/admin` na url. As mudanças que são feitas aqui são automaticamente refletidas na loja e todos os blocos que estão na frente de loja podem ser alterados através deste painel. Por exemplo, é possível alterar o conteúdo de um _rich text_, propriedades de uma prateleira, como as coleções sendo mostradas, entre outras coisas.
 
 ![site-editor](https://user-images.githubusercontent.com/19495917/90414123-c181c180-e085-11ea-91f0-cd5a70a3b803.png)
 
