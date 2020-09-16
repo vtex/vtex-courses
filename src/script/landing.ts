@@ -1,11 +1,11 @@
 import Readmeio from '../clients/readmeio'
-import coursesTemplate from '../templates/courses'
 import { Course } from '../../typings/course'
+import landing from '../templates/landing'
 
 export const handleLanding = async (courses: Course[]) => {
   const ReadMe = new Readmeio()
 
-  const template = coursesTemplate(courses)
+  const template = landing(courses)
 
   await ReadMe.upsertCustomPage({
     slug: 'training-week-learning-path',
