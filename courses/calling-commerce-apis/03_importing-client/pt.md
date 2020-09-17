@@ -1,10 +1,12 @@
-# Introdução
+# Importando um Client em sua aplicação
 
-Neste passo você aprenderá como buscar Clients já prontos que abstraem as APIs de Commerce, e como importá-los para sua app no VTEX IO. Importaremos o client `Catalog` que permitirá que busquemos detalhes sobre um SKU dentro da plataforma VTEX.
+## Introdução
+
+Neste passo você aprenderá como buscar Clients já prontos que abstraem as APIs de Core Commerce, além de como importá-los para sua app no VTEX IO. Importaremos o client `Catalog` que permitirá que busquemos detalhes sobre um SKU dentro da plataforma VTEX.
 
 ## Clients
 
-*Clients*, no VTEX IO, são abstrações para serviços externos e é como, nativamente, fazemos requisições em serviços de backend. Você pode ler um pouco sobre eles [aqui](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
+*Clients*, no VTEX IO, são abstrações para serviços externos e é como, nativamente, fazemos requisições externas em serviços de backend. Você pode ler um pouco sobre eles [aqui](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
 
 ## VTEX IO Commerce Clients
 
@@ -20,7 +22,7 @@ Mas, caso o serviço que você esteja tentando acessar seja um provedor externo 
 
 # Importando um Client
 
-Vamos agora importar um Client do módulo **Catalog** em nossa app. Para isso, utilizaremos a app [`service-example`](https://github.com/vtex-apps/service-example) como modelo. Caso você ainda não tenha essa aplicação clonada locamente para outro curso, rode o seguinte comando:
+Vamos agora importar um Client do módulo **Catalog** em nossa app. Para isso, utilizaremos a app [`service-example`](https://github.com/vtex-apps/service-example) como modelo. Caso você ainda não tenha essa aplicação clonada locamente por outro curso, rode o seguinte comando:
 
 `git clone https://github.com/vtex-apps/service-example`
 
