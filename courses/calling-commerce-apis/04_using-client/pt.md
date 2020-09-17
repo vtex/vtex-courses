@@ -4,7 +4,7 @@
 
 Neste passo você aprenderá como usar o Client que você acabou de configurar em um _middleware_ da app `service-example`. Iremos usar o método `getSkuById` para retornar informações de um SKU (Stock Keeping Unit) no Catálogo da VTEX.
 
-> O termo Stock Keeping Unit (SKU), em português Unidade de Manutenção de Estoque está ligado à logística de armazém e designa os diferentes itens do estoque, estando normalmente associado a um código identificador. _(Wikipedia)_
+> O termo Stock Keeping Unit (SKU), em português Unidade de Manutenção de Estoque, está ligado à logística de armazém e designa os diferentes itens do estoque, estando normalmente associado a um código identificador. _(Wikipedia)_
 
 ## Rota de Testes
 
@@ -50,7 +50,7 @@ Para o nosso caso especificamente, precisamos adicionar a seguinte sessão no ca
       "name": "outbound-access",
       "attrs": {
         "host": "portal.vtexcommercestable.com.br",
-        "path": "/api/catalog*"
+        "path": "/api/catalog/*"
       }
     },
 ```
