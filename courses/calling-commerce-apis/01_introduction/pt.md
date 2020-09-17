@@ -6,12 +6,12 @@ Neste curso você aprenderá alguns conceitos básicos sobre as **APIs de Commer
 
 ## Requerimentos
 
-- É importante que você tenha finalizado o **VTEX IO Service Course**, que explica como funcionam os serviços de _backend_ dentro do VTEX IO.
-- Esperamos também que você tenha aprendido o conceito de Client nos serviços.
+- É importante que você tenha finalizado o **VTEX IO Service Course**, que explica como funcionam os serviços de backend dentro do VTEX IO.
+- Esperamos também que você tenha aprendido o conceito de _Client_ nos serviços.
 
 ## O que você aprenderá?
 
 - Como encontrar as referências sobre as APIs de Commerce da VTEX.
 - Como se autenticar para realizar as chamadas às APIs.
-- Como reusar Clients disponíveis na comunidade.
-- Como utilizar estes Clients para fazer requisições em uma aplicação do VTEX IO.
+- Como reusar _Clients_ disponíveis na comunidade.
+- Como utilizar estes _Clients_ para fazer requisições em uma aplicação do VTEX IO.

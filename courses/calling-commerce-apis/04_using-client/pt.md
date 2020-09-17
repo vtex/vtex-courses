@@ -2,19 +2,19 @@
 
 ## Introdução
 
-Neste passo você aprenderá como usar o Client que você acabou de configurar em um _middleware_ da app `service-example`. Iremos usar o método `getSkuById` para retornar informações de um SKU (Stock Keeping Unit) no Catálogo da VTEX.
+Neste passo você aprenderá como usar o _Client_ que você acabou de configurar em um _middleware_ da app `service-example`. Iremos usar o método `getSkuById` para retornar informações de um SKU (Stock Keeping Unit) no Catálogo da VTEX.
 
 > O termo Stock Keeping Unit (SKU), em português Unidade de Manutenção de Estoque, está ligado à logística de armazém e designa os diferentes itens do estoque, estando normalmente associado a um código identificador. _(Wikipedia)_
 
 ## Rota de Testes
 
-Já que o app `service-example` já exporta uma rota pública para testes (`https://{workspace}--{account}.myvtex.com/_v/status/:code`), iremos utilizá-la para testar realizar uma chamada utilizando o Client de Catalog. Iremos usar o parâmetro `code` como o nosso "ID do Sku" para rapidamente testarmos o nosso Client.
+Já que o app `service-example` já exporta uma rota pública para testes (`https://{workspace}--{account}.myvtex.com/_v/status/:code`), iremos utilizá-la para testar realizar uma chamada utilizando o _Client_ de _Catalog_. Iremos usar o parâmetro `code` como o nosso "ID do Sku" para rapidamente testarmos o nosso _Client_.
 
 Para verificar se tudo está bem com sua aplicação, rode `vtex link` para iniciar o desenvolvimento. Você pode manter este processo rodando, já que a CLI da VTEX **atualiza automaticamente sua aplicação com mudanças no código.**
 
 ## Modificando o _middleware_
 
-Como vimos no passo anterior, agora já temos disponível os métodos do nosso Client em `ctx.clients.catalog`. Para utilizá-lo, precisaremos chamar os métodos em algum _middleware_ de nossa app.
+Como vimos no passo anterior, agora já temos disponível os métodos do nosso _Client_ em `ctx.clients.catalog`. Para utilizá-lo, precisaremos chamar os métodos em algum _middleware_ de nossa app.
 
 Vamos alterar o arquivo `node/middlewares/status.ts` para usar o `ctx.clients.catalog`. Cole lá o seguinte código:
 
@@ -35,13 +35,13 @@ export async function status(ctx: Context, next: () => Promise<any>) {
 **O que estamos fazendo?**
 - Extraindo `catalog` do contexto que é recebido nas funções de middleware. Isso é um atalho para não precisarmos chamar `ctx.clients.catalog`. Saiba mais sobre Destructuring [aqui](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 - Extraindo a variável `code`, que virá como parâmetro da URL da nossa rota (`/_v/status/:code`). Usaremos este dado para representar o ID do SKU que iremos testar na chamada ao Catálogo.
-- Chamando o método `getSkuById` do Client Catalog. Este método irá, internamente, chamar o endpoint relativo no módulo do catálogo, repassando o parâmetro que estamos passando (`code`) como o ID do SKU a ser buscado. Lembrando que esta é uma chamado assíncrona, então precisamos adicionar o `await` logo antes para esperá-la.
+- Chamando o método `getSkuById` do _Client_ Catalog. Este método irá, internamente, chamar o endpoint relativo no módulo do catálogo, repassando o parâmetro que estamos passando (`code`) como o ID do SKU a ser buscado. Lembrando que esta é uma chamado assíncrona, então precisamos adicionar o `await` logo antes para esperá-la.
 
 Porém, ainda precisamos configurar um último passo para testar!
 
 ## Autorização
 
-Geralmente, os Clients do `commerce-clients` já são configurados automaticamente para fazerem chamadas autenticadas, por padrão **usando o token da app**. Porém, mesmo assim, ainda precisamos **declarar que nossa aplicação estará fazendo requisições para algum serviço**, e isso é feito no arquivo `manifest.json`. 
+Geralmente, os _Clients_ do `commerce-clients` já são configurados automaticamente para fazerem chamadas autenticadas, por padrão **usando o token da app**. Porém, mesmo assim, ainda precisamos **declarar que nossa aplicação estará fazendo requisições para algum serviço**, e isso é feito no arquivo `manifest.json`. 
 
 Para o nosso caso especificamente, precisamos adicionar a seguinte sessão no campo `policies` deste arquivo:
 
@@ -55,7 +55,7 @@ Para o nosso caso especificamente, precisamos adicionar a seguinte sessão no ca
     },
 ```
 
-Isso permitirá que sua app faça chamadas para essa URL, especificamente. Por mais que você não tenha precisado colocá-la em seu código, é ela que é usada internamente pelo Catalog Client.
+Isso permitirá que sua app faça chamadas para essa URL, especificamente. Por mais que você não tenha precisado colocá-la em seu código, é ela que é usada internamente pelo Catalog _Client._
 
 > Essa declaração é necessária e importante para apps distribuídas na [App Store da VTEX](https://apps.vtex.com). No processo de instalação, o responsável pela conta deve ler e aceitar todas as permissões que a app está solicitando.
 
