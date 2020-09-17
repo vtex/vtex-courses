@@ -1,4 +1,6 @@
-# Introdução
+# Chamando APIs do VTEX Commerce pelo VTEX IO
+
+## Introdução
 
 Neste curso você aprenderá alguns conceitos básicos sobre as **APIs de Commerce da VTEX** e também como usá-las em sua aplicação rodando no VTEX IO.
 
@@ -12,4 +14,4 @@ Neste curso você aprenderá alguns conceitos básicos sobre as **APIs de Commer
 - Como encontrar as referências sobre as APIs de Commerce da VTEX.
 - Como se autenticar para realizar as chamadas às APIs.
 - Como reusar Clients disponíveis na comunidade.
-- Como criar novos Clients, se necessário.
+- Como utilizar estes Clients para fazer requisições em uma aplicação do VTEX IO.

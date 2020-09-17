@@ -1,4 +1,6 @@
-# Introdução
+# Usando o Client Catalog para fazer requisições
+
+## Introdução
 
 Neste passo você aprenderá como usar o Client que você acabou de configurar em um _middleware_ da app `service-example`. Iremos usar o método `getSkuById` para retornar informações de um SKU (Stock Keeping Unit) no Catálogo da VTEX.
 
