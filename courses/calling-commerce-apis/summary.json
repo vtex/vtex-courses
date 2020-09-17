@@ -1,46 +1,46 @@
 [
   {
-      "folder": "01_workspaces",
+      "folder": "01_introduction",
       "title": {
-          "pt": "Conhecendo mais sobre workspaces",
-          "en": "Getting to know about workspaces"
+          "pt": "Introdução ao curso",
+          "en": "Course Introduction"
       },
       "description": {
-          "pt": "Neste passo, você aprenderá mais sobre o uso de workspaces no VTEX IO e seus diferentes tipos",
-          "en": "In this step, you'll learn more about workspaces on VTEX IO and its different types"
+          "pt": "Neste passo, você aprenderá o básico sobre Clients no VTEX IO",
+          "en": "In this step, you'll learn the basics about VTEX IO Clients"
       }
   },
   {
-      "folder": "02_publishing-app",
+      "folder": "02_references",
       "title": {
-          "pt": "Publicando uma aplicação no VTEX IO",
-          "en": "Publishing an app on VTEX IO"
+          "pt": "Encontrando as APIs do VTEX Commerce",
+          "en": "Discovering VTEX Commerce APIs"
       },
       "description": {
-          "pt": "Após conhecer um pouco mais sobre os workspaces, você aprenderá como publicar uma app",
-          "en": "After getting to know more about workspaces, you'll learn how to publish an app"
+          "pt": "Neste passo você descobrirá como encontrar as APIs de Commerce",
+          "en": "In this step, you'll learn how to look for VTEX Commerce APIs"
       }
   },
   {
-      "folder": "03_installing-app",
+      "folder": "03_importing-client",
       "title": {
-          "pt": "Instalando uma app em uma conta VTEX",
-          "en": "Installing an app on a VTEX account"
+          "pt": "Importando Clients do pacote VTEX",
+          "en": "Importing Clients from VTEX package"
       },
       "description": {
-          "pt": "Depois de publicar uma aplicação, é importante saber como instalá-la",
-          "en": "After publishing an app, it's important to know how to install an app"
+          "pt": "Importe Clients já prontos para usar na sua aplicação",
+          "en": "Import ready-to-use Clients on your VTEX IO App"
       }
   },
   {
-      "folder": "04_site-editor",
+      "folder": "04_using-client",
       "title": {
-          "pt": "Apresentando o Site Editor e alterando um banner de uma loja",
-          "en": "Changing the store front through Site Editor"
+          "pt": "Usando o Client Catalog para fazer requisições",
+          "en": "Using Catalog Client to make requests"
       },
       "description": {
-          "pt": "Após aprender um pouco mais sobre os workspaces, vamos apresentar o Site Editor e fazer uma pequena alteração na frente de loja",
-          "en": "After learning a little bit more about workspaces, we'll present the Site Editor and make a small change on a store front"
+          "pt": "Após importar, basta facilmente usar o Client em seus resolvers ou middlewares",
+          "en": "After importing it, it's easy to use a Client on your app's resolvers"
       }
   }
 ]

@@ -1,3 +1,3 @@
-## Utilizando o Site Editor e o VTEX Toolbelt para gerenciar e customizar sua loja
+## Chamando as APIs de Core Commerce no VTEX IO
 
-Este curso tem como objetivo introduzir os desenvolvedores em como utilizar o Site Editor e o VTEX Toolbelt, de forma a aprender como gerenciar os diferentes tipos de workspace, publicar e instalar aplicações e, por fim, como customizar sua frente de loja.
+Neste curso você aprenderá como encontrar e usar as APIs de Commerce da VTEX dentro de sua aplicação no VTEX IO, aprendendo sobre autorização e também como reusar Clients já feitos pela comunidade. 

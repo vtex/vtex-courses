@@ -1,8 +1,10 @@
-# Introdução
+# Encontrando as APIs do VTEX Commerce
+
+## Introdução
 
 Neste passo, você aprenderá como encontrar a documentação das APIs da VTEX, além de entender as diferenças para chamá-las através do VTEX IO.
 
-# Portal do Desenvolvedor
+## Portal do Desenvolvedor
 
 Antes de começar a desenvolver sua integração com as APIs de Commerce da VTEX, é fundamental que você possa **descobrí-las** e entender seu funcionamento. O [Portal de Desenvolvedor](https://developers.vtex.com/reference/get-to-know-vtex-apis) da VTEX lista todas as APIs disponíveis, além de conter explicações sobre como usar cada um dos _endpoints_ oferecidos.
 
@@ -10,7 +12,7 @@ Antes de começar a desenvolver sua integração com as APIs de Commerce da VTEX
 
 A maioria das APIs seguem a especificação [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Também é importante ressaltar que todas as chamadas **operam sobre uma conta** na VTEX.
 
-# Diferenças no VTEX IO
+## Diferenças no VTEX IO
 
 O VTEX IO é um *first-class citizen* para as APIs da VTEX, e por isso existem algumas diferenças usando-as na sua aplicação. O Portal do Desenvolvedor recebe alguns parâmetros de identificação e autorização que não são necessários quando chamando os *endpoints* pelo VTEX IO.
 
