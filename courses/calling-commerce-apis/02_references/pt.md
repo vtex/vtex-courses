@@ -38,3 +38,20 @@ Você aprenderá como realizar essas configurações logo mais!
 Como dito, todas as chamadas para módulos do Commerce da VTEX são relativas à alguma `account` na VTEX, e tradicionalmente essa informação é passada através da *query string* `?an`. Porém, ao longo do curso, iremos apresentar abstrações criadas no VTEX IO que **dispensam essa configuração manual**.
 
 Vale ressaltar que as apps que são desenvolvidas no VTEX IO **devem funcionar independente da conta onde estão instaladas**, por isso é importante que nenhuma destas informações críticas seja *"hard-coded"*.
+
+## Atividade
+
+1. Para verificar o token que cada aplicação recebe da plataforma, no _middleware_  de validação da app `service-example`,  adicione o seguinte _log_:
+
+`node/middlewares/validate.ts`
+```diff
++ console.log(ctx.vtex.authToken)
+  console.log('Received params:', params)
+
+  const { code } = params
+  ...
+```
+2. Agora, **linke sua app** e acesse a URL pública fornecida no processo. A URL será algo como `https://{workspace}--{account}.myvtex.com/_v/status/:code`. Substitua `code` por `200` e, após acessar a URL, verifique o conteúdo que foi loggado no `console.log` através do processo do `vtex link`.
+![Exemplo do console.log do Token](https://user-images.githubusercontent.com/18706156/93616134-b4206580-f9aa-11ea-8331-0fbecc7cf586.png)
+
+> Você pode verificar o conteúdo desse token no site https://jwt.io/. Ele é um token parecido com o seu token pessoal (rode o comando `vtex local token`), porém representa a aplicação que você está desenvolvendo e conterá as permissões que foram solicitadas por esta app no `manifest.json`.
