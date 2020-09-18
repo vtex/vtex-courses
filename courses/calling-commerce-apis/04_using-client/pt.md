@@ -12,11 +12,11 @@ Já que o app `service-example` já exporta uma rota pública para testes (`http
 
 Para verificar se tudo está bem com sua aplicação, rode `vtex link` para iniciar o desenvolvimento. Você pode manter este processo rodando, já que a CLI da VTEX **atualiza automaticamente sua aplicação com mudanças no código.**
 
-## Modificando o _middleware_
+## Atividade
 
 Como vimos no passo anterior, agora já temos disponível os métodos do nosso _Client_ em `ctx.clients.catalog`. Para utilizá-lo, precisaremos chamar os métodos em algum _middleware_ de nossa app.
 
-Vamos alterar o arquivo `node/middlewares/status.ts` para usar o `ctx.clients.catalog`. Cole lá o seguinte código:
+1. No arquivo `node/middlewares/status.ts` para usar o `ctx.clients.catalog`. Cole lá o seguinte código:
 
 ```typescript
 export async function status(ctx: Context, next: () => Promise<any>) {
@@ -32,16 +32,15 @@ export async function status(ctx: Context, next: () => Promise<any>) {
 }
 ```
 
-**O que estamos fazendo?**
-- Extraindo `catalog` do contexto que é recebido nas funções de middleware. Isso é um atalho para não precisarmos chamar `ctx.clients.catalog`. Saiba mais sobre Destructuring [aqui](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
-- Extraindo a variável `code`, que virá como parâmetro da URL da nossa rota (`/_v/status/:code`). Usaremos este dado para representar o ID do SKU que iremos testar na chamada ao Catálogo.
-- Chamando o método `getSkuById` do _Client_ Catalog. Este método irá, internamente, chamar o endpoint relativo no módulo do catálogo, repassando o parâmetro que estamos passando (`code`) como o ID do SKU a ser buscado. Lembrando que esta é uma chamado assíncrona, então precisamos adicionar o `await` logo antes para esperá-la.
+  **O que estamos fazendo?**
+  - Extraindo `catalog` do contexto que é recebido nas funções de middleware. Isso é um atalho para não precisarmos chamar `ctx.clients.catalog`. Saiba mais sobre Destructuring [aqui](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+  - Extraindo a variável `code`, que virá como parâmetro da URL da nossa rota (`/_v/status/:code`). Usaremos este dado para representar o ID do SKU que iremos testar na chamada ao Catálogo.
+  - Chamando o método `getSkuById` do _Client_ Catalog. Este método irá, internamente, chamar o endpoint relativo no módulo do catálogo, repassando o parâmetro que estamos passando (`code`) como o ID do SKU a ser buscado. Lembrando que esta é uma chamado assíncrona, então precisamos adicionar o `await` logo antes para esperá-la.
 
 Porém, ainda precisamos configurar um último passo para testar!
 
-## Autorização
 
-Geralmente, os _Clients_ do `commerce-clients` já são configurados automaticamente para fazerem chamadas autenticadas, por padrão **usando o token da app**. Porém, mesmo assim, ainda precisamos **declarar que nossa aplicação estará fazendo requisições para algum serviço**, e isso é feito no arquivo `manifest.json`. 
+2. Geralmente, os _Clients_ do `commerce-clients` já são configurados automaticamente para fazerem chamadas autenticadas, por padrão **usando o token da app**. Porém, mesmo assim, ainda precisamos **declarar que nossa aplicação estará fazendo requisições para algum serviço**, e isso é feito no arquivo `manifest.json`. 
 
 Para o nosso caso especificamente, precisamos adicionar a seguinte sessão no campo `policies` deste arquivo:
 
@@ -59,9 +58,9 @@ Isso permitirá que sua app faça chamadas para essa URL, especificamente. Por m
 
 > Essa declaração é necessária e importante para apps distribuídas na [App Store da VTEX](https://apps.vtex.com). No processo de instalação, o responsável pela conta deve ler e aceitar todas as permissões que a app está solicitando.
 
-## Testando
 
-Após finalizar os passos anteriores, vamos testar o que fizemos! O processo do `vtex link` já deve ter atualizado, e poderemos copiar a URL pública que nosso serviço está expondo: 
+
+3. Agora, vamos testar o que fizemos! O processo do `vtex link` já deve ter atualizado, e poderemos copiar a URL pública que nosso serviço está expondo: 
 ![Exemplo](https://user-images.githubusercontent.com/18706156/93384506-4d306e80-f83b-11ea-9cec-0e1b23f23a48.png)
 
 Neste caso, a app está sendo desenvolvida na conta `marinbrasil` e no workspace `trainingweek`, mas no seu Terminal você deverá copiar o link fornecido para seu ambiente.
