@@ -1,0 +1,46 @@
+[
+  {
+      "folder": "01_introduction",
+      "title": {
+          "pt": "Introdução ao curso",
+          "en": "Course Introduction"
+      },
+      "description": {
+          "pt": "Neste passo, você aprenderá o básico sobre Clients no VTEX IO",
+          "en": "In this step, you'll learn the basics about VTEX IO Clients"
+      }
+  },
+  {
+      "folder": "02_references",
+      "title": {
+          "pt": "Encontrando as APIs do VTEX Commerce",
+          "en": "Discovering VTEX Commerce APIs"
+      },
+      "description": {
+          "pt": "Neste passo você descobrirá como encontrar as APIs de Commerce",
+          "en": "In this step, you'll learn how to look for VTEX Commerce APIs"
+      }
+  },
+  {
+      "folder": "03_importing-client",
+      "title": {
+          "pt": "Importando Clients do pacote VTEX",
+          "en": "Importing Clients from VTEX package"
+      },
+      "description": {
+          "pt": "Importe Clients já prontos para usar na sua aplicação",
+          "en": "Import ready-to-use Clients on your VTEX IO App"
+      }
+  },
+  {
+      "folder": "04_using-client",
+      "title": {
+          "pt": "Usando o Client Catalog para fazer requisições",
+          "en": "Using Catalog Client to make requests"
+      },
+      "description": {
+          "pt": "Após importar, basta facilmente usar o Client em seus resolvers ou middlewares",
+          "en": "After importing it, it's easy to use a Client on your app's resolvers"
+      }
+  }
+]
