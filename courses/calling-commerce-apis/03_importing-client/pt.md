@@ -2,15 +2,15 @@
 
 ## Introdução
 
-Neste passo você aprenderá como buscar Clients já prontos que abstraem as APIs de Core Commerce, além de como importá-los para sua app no VTEX IO. Importaremos o client `Catalog` que permitirá que busquemos detalhes sobre um SKU dentro da plataforma VTEX.
+Neste passo você aprenderá como buscar _Clients_ já prontos que abstraem as APIs de Core Commerce, além de como importá-los para sua app no VTEX IO. Importaremos o _Client_ `Catalog` que permitirá que busquemos detalhes sobre um SKU dentro da plataforma VTEX.
 
 ## Clients
 
-*Clients*, no VTEX IO, são abstrações para serviços externos e é como, nativamente, fazemos requisições externas em serviços de backend. Você pode ler um pouco sobre eles [aqui](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
+*Clients*, no VTEX IO, são abstrações para serviços externos e são usados nativamente para fazermos requisições externas em serviços de _backend_. Você pode ler um pouco sobre eles [aqui](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
 
 ## VTEX IO Commerce Clients
 
-O pacote [Commerce Clients](https://github.com/vtex/commerce-io-clients/blob/master/src/clients/catalog.ts) é uma biblioteca Typescript que oferece vários **clientes já configurados** para acessar as APIs de Core Commerce da VTEX. Para usá-lo em sua app, basta instalá-lo na pasta `node/` rodando: 
+O pacote [Commerce Clients](https://github.com/vtex/commerce-io-clients/blob/master/src/clients/catalog.ts) é uma biblioteca Typescript que oferece vários **clients já configurados** para acessar as APIs de Core Commerce da VTEX. Para usá-lo em sua app, basta instalá-lo na pasta `node/` rodando: 
 
 `yarn add @vtex/clients`
 
@@ -41,5 +41,5 @@ Mas, caso o serviço que você esteja tentando acessar seja um provedor externo 
     }
   ```
 
-Pronto! Agora, em qualquer uma das funções de _resolver_ GraphQL ou _middlewares_ de serviço podem utilizar este cliente através de `ctx.clients.catalog`. Por conta do Typescript, conseguimos até ver os métodos e suas respectivas assinaturas.
+Pronto! Agora, qualquer uma das funções de _resolver_ GraphQL ou _middlewares_ de serviço pode utilizar este Client através de `ctx.clients.catalog`. Por conta do Typescript, é possível ter _autocomplete_ dos métodos e ver detalhes dos tipos necessários nos parâmetros.
 

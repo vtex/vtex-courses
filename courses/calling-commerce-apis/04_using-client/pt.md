@@ -8,9 +8,9 @@ Neste passo você aprenderá como usar o _Client_ que você acabou de configurar
 
 ## Rota de Testes
 
-Já que o app `service-example` já exporta uma rota pública para testes (`https://{workspace}--{account}.myvtex.com/_v/status/:code`), iremos utilizá-la para testar realizar uma chamada utilizando o _Client_ de _Catalog_. Iremos usar o parâmetro `code` como o nosso "ID do Sku" para rapidamente testarmos o nosso _Client_.
+Já que o app `service-example` já exporta uma rota pública para testes (`https://{workspace}--{account}.myvtex.com/_v/status/:code`), iremos utilizá-la para testar a realização de uma chamada utilizando o _Client_ de _Catalog_. Iremos usar o parâmetro `code` como o nosso "ID do Sku" para rapidamente testarmos o nosso _Client_.
 
-Para verificar se tudo está bem com sua aplicação, rode `vtex link` para iniciar o desenvolvimento. Você pode manter este processo rodando, já que a CLI da VTEX **atualiza automaticamente sua aplicação com mudanças no código.**
+Se você já rodou o comando `vtex link`, basta mantê-lo rodando já que a CLI da VTEX **atualiza automaticamente sua aplicação com mudanças no código.** Caso não, rode o comando agora.
 
 ## Atividade
 
@@ -39,8 +39,7 @@ export async function status(ctx: Context, next: () => Promise<any>) {
 
 Porém, ainda precisamos configurar um último passo para testar!
 
-
-2. Geralmente, os _Clients_ do `commerce-clients` já são configurados automaticamente para fazerem chamadas autenticadas, por padrão **usando o token da app**. Porém, mesmo assim, ainda precisamos **declarar que nossa aplicação estará fazendo requisições para algum serviço**, e isso é feito no arquivo `manifest.json`. 
+2. Geralmente, os _Clients_ do `commerce-clients` já são configurados automaticamente para fazerem chamadas autenticadas, por padrão **usando o token da app**. Mesmo assim, ainda precisamos **declarar que nossa aplicação estará fazendo requisições para algum serviço**, e isso é feito no arquivo `manifest.json`. 
 
 Para o nosso caso especificamente, precisamos adicionar a seguinte sessão no campo `policies` deste arquivo:
 
@@ -58,6 +57,7 @@ Isso permitirá que sua app faça chamadas para essa URL, especificamente. Por m
 
 > Essa declaração é necessária e importante para apps distribuídas na [App Store da VTEX](https://apps.vtex.com). No processo de instalação, o responsável pela conta deve ler e aceitar todas as permissões que a app está solicitando.
 
+> Caso o recurso que você esteja tentando acessar precise de algum _role_ de autorização, você também precisará adicioná-lo nesta sessão. Por exemplo, a app `store-graphql` precisa [declarar que precisa da _policy_](https://github.com/vtex-apps/store-graphql/blob/91454631bffad6ad661cb87391f42f8886d9edd5/manifest.json#L117) `LogisticsAdmin` para que possa ser autorizadas a acessar alguns recursos do módulo de Logística.
 
 
 3. Agora, vamos testar o que fizemos! O processo do `vtex link` já deve ter atualizado, e poderemos copiar a URL pública que nosso serviço está expondo: 
