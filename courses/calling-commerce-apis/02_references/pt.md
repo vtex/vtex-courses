@@ -14,23 +14,25 @@ A maioria das APIs seguem a especificação [REST](https://en.wikipedia.org/wiki
 
 ## Diferenças no VTEX IO
 
-O VTEX IO é um *first-class citizen* para as APIs da VTEX, e por isso existem algumas diferenças usando-as na sua aplicação. O Portal do Desenvolvedor recebe alguns parâmetros de identificação e autorização que não são necessários quando chamando os *endpoints* pelo VTEX IO.
+O VTEX IO é um *first-class citizen* para as APIs da VTEX e, por isso, existem algumas diferenças usando-as na sua aplicação. O Portal do Desenvolvedor recebe alguns parâmetros de identificação e autorização que não são necessários quando chamando os *endpoints* pelo VTEX IO.
 
 ## Autenticação
 
-Tradicionalmente, a VTEX autentica chamadas para rotas privadas (`/pvt`) utilizando um par **AppKey** e **AppToken**, obtidos no painel de administração de uma conta. No VTEX IO **não é recomendado que use esse par de chave e token para se autenticar**, já que a plataform oferece outra maneira mais escalável e elegante.
+Tradicionalmente, a VTEX autentica chamadas para rotas privadas (`/pvt`) utilizando um par **AppKey** e **AppToken**, obtidos no painel de administração de uma conta. No VTEX IO **não é recomendado que se use esse par de chave e token para se autenticar**, já que a plataforma oferece outra maneira mais escalável e elegante.
 
-Todas as apps que são desenvolvidas no VTEX IO representam um **recurso** no ecossistema, o que possibilita que um aplicação consiga interagir com outros sistemas **em nome de si mesma**, devidamente autorizada pelo administrador da conta.
+Todas as apps que são desenvolvidas no VTEX IO representam um **recurso** na plataforma, o que possibilita uma aplicação interagir com outros sistemas **em nome de si mesma**, devidamente autorizada pelo administrador da conta. Fica a cargo do desenvolvedor da app **declarar as permissões necessárias**.
 
 Na prática, isso significa duas coisas:
-1. As chamadas devem ser realizadas com **um token do VTEX ID** ao invés do par **AppKey** e **AppToken**.
-2. Tanto o endpoint como o *role* necessário para acessar alguma API devem ser **declarados no `manifest.json` da app**. 
+1. Tanto o endpoint como o *role* necessários para acessar alguma API devem ser **declarados no `manifest.json` da app**.
+2. As chamadas devem ser realizadas com **um token do VTEX ID** ao invés do par **AppKey** e **AppToken**. 
 
 Você aprenderá como realizar essas configurações logo mais!
 
+> O *role*, falando sobre autorização dentro da VTEX, representa um "papel" no *License Manager*, gerenciador de usuários e autorizações na plataforma. Alguns módulos da VTEX não requerem nenhum *role* específico, mas outros podem requerer e são necessários ao "caller" para conseguir acessar aquele recuros.
+
 ## Token da app e Token do usuário
 - Cada app no VTEX IO, automaticamente, recebe um `authToken` que pode ser utilizado para chamar APIs externas. Esse token, que pode ser obtido no objeto de contexto em qualquer requisição, tem todas as permissões que foram declaradas no campo `policies` do manifesto da aplicação.
-- É necessário verificar se faz sentido usar este token nas requisições que são feitas, especialmente ao acessar **sistemas críticos** das contas. Caso você identifique uma situação assim, também é possível utilizar o **token do usuário que está usando a app**. 
+- É necessário verificar se faz sentido usar este token nas requisições, especialmente ao acessar **sistemas críticos** das contas. Caso você identifique uma situação assim, também é possível utilizar o **token do usuário que está usando a app**. 
 
 
 ## `accountName`

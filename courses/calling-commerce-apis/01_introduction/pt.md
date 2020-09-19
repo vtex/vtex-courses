@@ -6,7 +6,7 @@ Neste curso você aprenderá alguns conceitos básicos sobre as **APIs de Commer
 
 ## Requerimentos
 
-- É importante que você tenha finalizado o **VTEX IO Service Course**, que explica como funcionam os serviços de backend dentro do VTEX IO.
+- É importante que você tenha finalizado o **VTEX IO Service Course**, que explica como funcionam os serviços de _backend_ dentro do VTEX IO.
 - Esperamos também que você tenha aprendido o conceito de _Client_ nos serviços.
 
 ## O que você aprenderá?
@@ -21,4 +21,5 @@ Para exercitarmos os conceitos aprendidos neste curso, é necessário que você 
 
 Portanto, caso você já não tenha essa aplicação no seu computador:
 
-1. Clone o repositório `vtex-apps/service.example` com o comando: `git clone https://github.com/vtex-apps/service-example`
+1. Clone o repositório `vtex-apps/service.example` com o comando: `git clone https://github.com/vtex-apps/service-example`.
+2. Dentro da pasta da app, rode `vtex link` para verificar se a app builda normalmente. Você deve receber um link de uma rota pública que o código expões.
