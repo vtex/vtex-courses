@@ -28,7 +28,7 @@ Mas, caso o serviço que você esteja tentando acessar seja um provedor externo 
 
 `yarn add @vtex/clients`
 
-3. Agora que o pacote foi instalado, precisamos configurar o _Client_ para utilizá-lo nos _resolvers_  e _middlewares_ de nossa app. Para isso, precisamos abra no seu editor o arquivo `node/clients/index.ts`.
+3. Agora que o pacote foi instalado, precisamos configurar o _Client_ para utilizá-lo nos _resolvers_  e _middlewares_ de nossa app. Para isso, precisamos que você abra no seu editor o arquivo `node/clients/index.ts`.
 
 4. Importe o _Client_ `Catalog` a partir da biblioteca `@vtex/clients`.
 5.  Adicione o _getter_ `catalog`, similar ao método acima na classe `Clients`.
@@ -42,4 +42,3 @@ Mas, caso o serviço que você esteja tentando acessar seja um provedor externo 
   ```
 
 Pronto! Agora, qualquer uma das funções de _resolver_ GraphQL ou _middlewares_ de serviço pode utilizar este Client através de `ctx.clients.catalog`. Por conta do Typescript, é possível ter _autocomplete_ dos métodos e ver detalhes dos tipos necessários nos parâmetros.
-
