@@ -7,7 +7,7 @@
   "modal-trigger#first": {
     "children": [
       "rich-text#trigger",
-      "modal-layout#teste"
+      "modal-layout#first"
     ]
   },
   "modal-layout#first": {
