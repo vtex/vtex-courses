@@ -28,10 +28,10 @@ Mas, caso o serviço que você esteja tentando acessar seja um provedor externo 
 
 `yarn add @vtex/clients`
 
-3. Agora que o pacote foi instalado, precisamos configurar o _Client_ para utilizá-lo nos _resolvers_  e _middlewares_ de nossa app. Para isso, precisamos abrir o arquivo `node/clients/index.ts` e:
+3. Agora que o pacote foi instalado, precisamos configurar o _Client_ para utilizá-lo nos _resolvers_  e _middlewares_ de nossa app. Para isso, precisamos abra no seu editor o arquivo `node/clients/index.ts`.
 
-  1. Importar o _Client_ `Catalog` a partir da biblioteca `@vtex/clients`.
-  2. Adicionar o _getter_ `catalog`, similar ao método acima na classe `Clients`.
+4. Importe o _Client_ `Catalog` a partir da biblioteca `@vtex/clients`.
+5.  Adicione o _getter_ `catalog`, similar ao método acima na classe `Clients`.
 
   ```diff
 +    import { Catalog } from '@vtex/clients'
