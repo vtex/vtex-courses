@@ -44,13 +44,13 @@ Porém, ainda precisamos configurar um último passo para testar!
 Para o nosso caso especificamente, precisamos adicionar a seguinte sessão no campo `policies` deste arquivo:
 
 ```json
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "portal.vtexcommercestable.com.br",
-        "path": "/api/catalog/*"
-      }
-    },
+{
+  "name": "outbound-access",
+  "attrs": {
+    "host": "portal.vtexcommercestable.com.br",
+    "path": "/api/catalog/*"
+  }
+},
 ```
 
 Isso permitirá que sua app faça chamadas para essa URL, especificamente. Por mais que você não tenha precisado colocá-la em seu código, é ela que é usada internamente pelo Catalog _Client._
