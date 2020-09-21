@@ -33,12 +33,12 @@ Mas, caso o serviço que você esteja tentando acessar seja um provedor externo 
   1. Importar o _Client_ `Catalog` a partir da biblioteca `@vtex/clients`.
   2. Adicionar o _getter_ `catalog`, similar ao método acima na classe `Clients`.
 
-  ```
-  + import { Catalog } from '@vtex/clients'
+  ```diff
++    import { Catalog } from '@vtex/clients'
   ...
-    public get catalog() {
-      return this.getOrSet('catalog', Catalog)
-    }
++    public get catalog() {
++      return this.getOrSet('catalog', Catalog)
++    }
   ```
 
 Pronto! Agora, qualquer uma das funções de _resolver_ GraphQL ou _middlewares_ de serviço pode utilizar este Client através de `ctx.clients.catalog`. Por conta do Typescript, é possível ter _autocomplete_ dos métodos e ver detalhes dos tipos necessários nos parâmetros.
