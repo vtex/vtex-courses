@@ -120,7 +120,7 @@ Fazendo isso, teremos uma página de produto como a mostrada abaixo:
 
 ```
 
-3. Agora, precisamos definir a condição para a geladeira. 
+3. Agora, precisamos definir a condição para a batedeira. 
 
 O `condition.product` requer a *prop* `conditions` para definir em quais condições deve ser aplicada (veja a [documentação](https://developers.vtex.com/docs/vtex-condition-layout)), uma condição é dividida em três partes:
 
