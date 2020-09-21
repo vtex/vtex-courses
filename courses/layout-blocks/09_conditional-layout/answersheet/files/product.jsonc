@@ -7,21 +7,21 @@
     ]
   },
   "condition-layout.product": {
-    "children": ["condition.product#retro-refrigerator"]
+    "children": ["condition.product#retro-mixer"]
   },
-  "condition.product#retro-refrigerator": {
+  "condition.product#retro-mixer": {
     "props": {
       "conditions": [
         {
           "subject": "productId",
           "verb": "is",
-          "object": "3"
+          "object": "20"
         }
       ]
     },
-    "children": ["image#retro-refrigerator-banner"]
+    "children": ["image#retro-mixer-banner"]
   },
-  "image#retro-refrigerator-banner": { 
+  "image#retro-mixer-banner": { 
     "props": { 
       "src": "https://appliancetheme.vtexassets.com/assets/app/src/retroimage___92a8271aac7c51d2059193bdbe019016.jpg",
       "width": "100%",
