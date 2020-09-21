@@ -126,7 +126,7 @@ O `condition.product` requer a *prop* `conditions` para definir em quais condiç
 
 - **subject:** é o dado que vai ser usado para fins de comparação, no nosso caso usaremos `productId`, na documentação é possível ver todas as opções disponíveis;
 - **verb:** é o método comparativo, usaremos o `is` para validar se o `productId` é de um produto específico, mas poderíamos usar: `is`, `is-not`, `contains` ou `does-not-contain`;
-- **object:** é o valor com que queremos comparar, no nosso caso, usaremos o *productId* `3`. 
+- **object:** é o valor com que queremos comparar, no nosso caso, usaremos o *productId* `20`. 
 
 Sendo assim, o objeto formado é:
 
@@ -140,7 +140,7 @@ Sendo assim, o objeto formado é:
 +       {
 +         "subject": "productId",
 +         "verb": "is",
-+         "object": "3"
++         "object": "20"
 +       }
 +     ]
 +   },
@@ -172,9 +172,9 @@ Sendo assim, o objeto formado é:
 
 Visite a página do produto testado para ver o layout funcionando, se tiver usando a `appliancetheme` e o produto for a geladeira retro, a url será: 
 
-`https://{{seuworkspace}}--appliancetheme.myvtex.com/retro-refrigerator/p`:
+`https://{{seuworkspace}}--appliancetheme.myvtex.com/3-colors-retro-stand-mixer/p`:
 
-![image](https://user-images.githubusercontent.com/18701182/90411815-ad889080-e082-11ea-9a55-581d6cfcb764.png)
+![image](https://user-images.githubusercontent.com/43679629/93816381-d37af500-fc2d-11ea-9422-73cdb76268eb.png)
 
 Para garantir que o layout condicional de fato funciona, visite qualquer outra página de produto, e verifique que o _banner_ não é aplicado: 
 
