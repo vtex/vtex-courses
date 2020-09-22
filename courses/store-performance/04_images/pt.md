@@ -18,7 +18,7 @@ No Store Framework, existem basicamente dois pontos em que as imagens podem ser 
 
 ![image](https://user-images.githubusercontent.com/18701182/93837727-ad6d4900-fc5d-11ea-818c-1f4942f091cf.png)
 
-2. No arquivo `/store/blocks/default.jsonc`, defina então o product-image, especificando o seu `width`: 
+2. No arquivo `/store/blocks/default.jsonc`, defina então o `product-image`, especificando o seu `width`: 
 
 ```diff
 {
