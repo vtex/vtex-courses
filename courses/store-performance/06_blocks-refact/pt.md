@@ -102,7 +102,7 @@ O Slider Layout (conhecido no curso de Layouts Complexos) foi aprimorado para qu
     }
     ```
 
-6. Edite os blocos que tão sendo usados no template: 
+6. Edite os blocos que estão sendo usados no _template_: 
 
 ```diff
 {
