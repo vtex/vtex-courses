@@ -16,57 +16,60 @@ No Store Framework, existem basicamente dois pontos em que as imagens podem ser 
 
 1. Na página principal, inspecione algum dos produtos da prateleira de *New arrivals* clicando com o botão direito em cima e em seguida em `Inspecionar`. É possível observar no código que aparece, que existe um desperdício de resolução, está sendo solicitado `500px` como valor padrão, sendo que apenas `281px` estão sendo utilizados: 
 
-![image](https://user-images.githubusercontent.com/18701182/93837727-ad6d4900-fc5d-11ea-818c-1f4942f091cf.png)
+    ![image](https://user-images.githubusercontent.com/18701182/93837727-ad6d4900-fc5d-11ea-818c-1f4942f091cf.png)
 
-2. No arquivo `/store/blocks/default.jsonc`, defina então o `product-image`, especificando o seu `width`: 
+2. No arquivo `/store/blocks.jsonc`, defina então o `product-image`, especificando o seu `width`: 
 
-```diff
-{
-  ...
-  "stack-layout#prodsum": {
-    "children": [
-      "product-summary-image",
-      "product-summary-specification-badges"
-    ]
-  },
-+ "product-summary-image": {
-+   "props": {
-+     "width": 281
-+   }
-+ },
-  ...
-}
-```
+    ```diff
+    // /store/blocks.jsonc
+    {
+      ...
+      "stack-layout#prodsum": {
+        "children": [
+          "product-summary-image",
+          "product-summary-specification-badges"
+        ]
+      },
+    + "product-summary-image": {
+    +   "props": {
+    +     "width": 281
+    +   }
+    + },
+      ...
+    }
+    ```
 
-Inspecionando novamente, vemos que todas as imagens de prateleira e resultado de busca estão com o tamanho correto: 
+    Inspecionando novamente, vemos que todas as imagens de prateleira e resultado de busca estão com o tamanho correto: 
 
-![image](https://user-images.githubusercontent.com/18701182/93838221-481a5780-fc5f-11ea-8d6f-139fac6a2592.png)
+    <img src="https://user-images.githubusercontent.com/18701182/93838221-481a5780-fc5f-11ea-8d6f-139fac6a2592.png" height=400px></img>
 
 
-3. Para melhorar o _caching_ de CDN e garantir que nenhuma imagem externa está sendo carregada, no arquivo `store/blocks/search.jsonc`, edite o info-card existente para atualizar sua implementação e fazê-lo usando um `image`: 
+3. Para melhorar o _caching_ de CDN e garantir que nenhuma imagem externa está sendo carregada, no arquivo `store/blocks/search.jsonc`, edite o `info-card` existente para atualizar sua implementação e fazê-lo usando um `image`: 
 
-```diff
-{
-  "flex-layout.row#depBanner": {
-    "children": [
--     "info-card#depbanner" 
-+     "image#depbanner"
-    ]
-  },
-}  
-```
-> Para saber um pouco mais sobre a definicação de _Content Delivery Network_ (CDN), veja [esse artigo](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) da Cloudflare
+    ```diff
+    // /store/blocks/search.jsonc
+    {
+      "flex-layout.row#depBanner": {
+        "children": [
+    -     "info-card#depbanner" 
+    +     "image#depbanner"
+        ]
+      },
+    }  
+    ```
+    > Para saber um pouco mais sobre a definicação de _Content Delivery Network_ (CDN), veja [esse artigo](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) da Cloudflare.
+
 4. Defina, por último, o `image#depbanner`: 
 
-```diff
-{
-  ... 
-+ "image#depbanner": {
-+    "props": {
-+      "src": "assets/electronics.png"
-+    }
-+ },
-}
-```
+    ```diff
+    {
+      ... 
+    + "image#depbanner": {
+    +    "props": {
+    +      "src": "assets/electronics.png"
+    +    }
+    + },
+    }
+    ```
 
-Usamos o exemplo `electronics.png` que já estava disponível no repositório, mas qualquer imagem pode ser adicionada se inserida dentro da pasta `/assets`.
+> Usamos o exemplo `electronics.png` que já estava disponível no repositório, mas qualquer imagem pode ser adicionada se inserida dentro da pasta `/assets`.
