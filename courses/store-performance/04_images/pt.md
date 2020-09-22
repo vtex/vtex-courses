@@ -10,7 +10,7 @@ No Store Framework, existem basicamente dois pontos em que as imagens podem ser 
 
 - `product-image`: é a imagem de produto que é mostrada em sua página (pdp);
 - `product-summary-image` é a imagem de produto que é exibida em prateleiras e resultados de busca;
--  `image`: são imagens comuns, usadas para banners, carrosséis e *infocards*
+- `image`: são imagens comuns, usadas para banners, carrosséis e *infocards*
 
 ## Atividade
 
