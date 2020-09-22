@@ -14,7 +14,7 @@ No Store Framework, existem basicamente dois pontos em que as imagens podem ser 
 
 ## Atividade
 
-1. Na página principal, inspeciona algum dos produtos da prateleira de *New arrivals* clicando com o botão direito em cima e em seguida em `Inspecionar`. É possível observar no código que aparece, que existe um desperdício de resolução, está sendo solicitado 500px por default, sendo que apenas 281px estão sendo utilizados: 
+1. Na página principal, inspecione algum dos produtos da prateleira de *New arrivals* clicando com o botão direito em cima e em seguida em `Inspecionar`. É possível observar no código que aparece, que existe um desperdício de resolução, está sendo solicitado 500px por default, sendo que apenas 281px estão sendo utilizados: 
 
 ![image](https://user-images.githubusercontent.com/18701182/93837727-ad6d4900-fc5d-11ea-818c-1f4942f091cf.png)
 
