@@ -56,7 +56,7 @@ Inspecionando novamente, vemos que todas as imagens de prateleira e resultado de
 }  
 ```
 
-4. Defina, por último o image#depbanner: 
+4. Defina, por último, o `image#depbanner`: 
 
 ```diff
 {
