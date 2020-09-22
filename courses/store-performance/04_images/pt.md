@@ -2,7 +2,7 @@
 
 As imagens são parte essencial de uma loja. É imprescindível ter fotos de muito boa qualidade e que estejam com excelente resolução, para garantir que a experiência do produto esteja sendo passada da melhor maneira possível. 
 
-Buscar qualidade ótima, no entanto, não deve ser sinônimo de desperdiçar banda. Não é necessário, por exemplo, carregar uma imagem de 8000px de largura, sendo que na loja ela vai ser renderizada em uma tela de 600px de largura. O que acontece, nesses casos, é que a imagem, depois de baixada, é redimensionada pelo *browser* e a resolução extra é, então, perdida. 
+Buscar qualidade ótima, no entanto, não deve ser sinônimo de desperdiçar banda. Não é necessário, por exemplo, carregar uma imagem de `8000px` de largura, sendo que na loja ela vai ser renderizada em uma tela de `600px` de largura. O que acontece, nesses casos, é que a imagem, depois de baixada, é redimensionada pelo navegador e a resolução extra é, então, perdida. 
 
 ## Pontos de otimização
 
