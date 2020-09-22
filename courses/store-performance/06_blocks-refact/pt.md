@@ -6,7 +6,7 @@ O Slider Layout (conhecido no curso de Layouts Complexos) foi aprimorado para qu
 
 ## Atividade
 
-1. Na home.jsonc declare dois blocos de texto para substituir os títulos: 
+1. No arquivo `home.jsonc` declare dois blocos de texto para substituir os títulos: 
 
 /store/blocks/home/home.jsonc
 ```diff
