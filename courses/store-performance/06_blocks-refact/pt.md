@@ -105,4 +105,4 @@ O resultado deve ser:
 
 ![image](https://user-images.githubusercontent.com/18701182/93842015-c977e700-fc6b-11ea-8cf5-0678a5f890fa.png)
 
-**DICA:** Experimente fazer a mesma investigação do `view-source` do passo 3 e ver que os produtos da segunda página de cada shelf não são carregados no HTML depois do refatoramento.
+**DICA:** Experimente fazer a mesma investigação do `view-source` do passo 3 e ver que os produtos da segunda página de cada prateleira não são carregados no HTML depois do refatoramento.
