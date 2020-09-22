@@ -10,7 +10,7 @@ Todavia, como o usuário não vai ver o conteúdo dos submenus quando a página 
 
 ## Atividade
 
-1. Para entender como podemos otimizar submenus, vamos modificar um pouco nosso exemplo para ficar mais parecido com o que temos na Store Theme, comece editando o nome do bloco que trabalhamos no step anterior (`"vtex.menu@2.x:menu#category-menu"`) para `"vtex.menu@2.x:menu#categories"`:
+1. Para entender como podemos otimizar submenus, vamos modificar um pouco nosso exemplo para ficar mais parecido com o que temos na Store Theme, comece editando o nome do bloco que trabalhamos no passo anterior (`"vtex.menu@2.x:menu#category-menu"`) para `"vtex.menu@2.x:menu#categories"`:
 
 /store/blocks/header/category-menu.jsonc
 ```diff
