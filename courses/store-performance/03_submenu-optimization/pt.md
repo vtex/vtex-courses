@@ -83,4 +83,4 @@ Volte para o código fonte, atualize a página e procure novamente por `title="M
 
 ![image](https://user-images.githubusercontent.com/18701182/93837006-f5d73780-fc5a-11ea-84c8-18542756e5a7.png)
 
-Veja que nenhuma referência é encontrada, mas que se você navegar, o comportamento continua o mesmo. Isso porque os sub-menus são carregados somente depois do *load* inicial. 
+Veja que nenhuma referência é encontrada, mas que se você navegar, o comportamento continua o mesmo. Isso porque os submenus são carregados somente depois do *load* inicial.
