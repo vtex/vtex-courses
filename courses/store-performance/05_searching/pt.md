@@ -33,7 +33,7 @@ Uma das operações mais pesadas e pouco performáticas na navegação de uma lo
 }
 ```
 
-3. Para tornar os preços mais *cache*aveis e evitar simulá-lo para cada resultado de busca obtido, podemos também escolher `skip` como `simulationBehavior`: 
+3. Para tornar os preços mais _cacheáveis_ e evitar simulá-lo para cada resultado de busca obtido, podemos também escolher `skip` como `simulationBehavior`: 
 
 ```diff
 {
