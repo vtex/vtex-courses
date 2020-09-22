@@ -43,7 +43,7 @@ Inspecionando novamente, vemos que todas as imagens de prateleira e resultado de
 ![image](https://user-images.githubusercontent.com/18701182/93838221-481a5780-fc5f-11ea-8d6f-139fac6a2592.png)
 
 
-3. Para melhorar o caching de CDN e garantir que nenhuma imagem externa está sendo carregada, no arquivo `store/blocks/search.jsonc`, edite o info-card existente para atualizar sua implementação e fazê-lo usando um `image`: 
+3. Para melhorar o _caching_ de CDN e garantir que nenhuma imagem externa está sendo carregada, no arquivo `store/blocks/search.jsonc`, edite o info-card existente para atualizar sua implementação e fazê-lo usando um `image`: 
 
 ```diff
 {
