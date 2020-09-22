@@ -102,6 +102,24 @@ O Slider Layout (conhecido no curso de Layouts Complexos) foi aprimorado para qu
     }
     ```
 
+6. Edite os blocos que tão sendo usados no template: 
+
+```diff
+{
+  "store.home": {
+    "blocks": [
+-     "shelf#new-arrivals",     
+-     "shelf#clearance",
++     "rich-text#new-arrivals",
++     "list-context.product-list#new-arrivals",
++     "rich-text#clearance",
++     "list-context.product-list#clearance",
+    ]
+  }
+}
+      
+```
+
 O resultado deve ser: 
 
 ![image](https://user-images.githubusercontent.com/18701182/93842015-c977e700-fc6b-11ea-8cf5-0678a5f890fa.png)
