@@ -22,7 +22,7 @@ Todavia, como o usuário não vai ver o conteúdo dos submenus quando a página 
 }
 ```
 
-2. Defina um menu e um sub-menu agora no lugar do antigo #category-menu, nele colocaremos todo o menu que já tínhamos construído: 
+2. Defina um `menu` e um `sub-menu` agora no lugar do antigo `#category-menu`, nele colocaremos todo o menu que já tínhamos construído: 
 
 ```diff
 {
