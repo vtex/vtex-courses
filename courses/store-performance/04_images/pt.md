@@ -55,7 +55,7 @@ Inspecionando novamente, vemos que todas as imagens de prateleira e resultado de
   },
 }  
 ```
-
+> Para saber um pouco mais sobre a definicação de _Content Delivery Network_ (CDN), veja [esse artigo](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) da Cloudflare
 4. Defina, por último, o `image#depbanner`: 
 
 ```diff
