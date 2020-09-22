@@ -1,0 +1,38 @@
+[
+  {
+    "folder": "01_fold-block",
+    "title": {
+      "pt": "Melhorando load inicial"
+    }
+  },
+  {
+    "folder": "02_menu-items",
+    "title": {
+      "pt": "Otimizando menus"
+    }
+  },
+  {
+    "folder": "03_submenu-optimization",
+    "title": {
+      "pt": "Otimização de submenus"
+    }
+  },
+  {
+    "folder": "04_images",
+    "title": {
+      "pt": "Imagens"
+    }
+  },
+  {
+    "folder": "05_searching",
+    "title": {
+      "pt": "Melhorias na busca"
+    }
+  },
+  {
+    "folder": "06_blocks-refact",
+    "title": {
+      "pt": "Refatorando blocos"
+    }
+  }
+]
