@@ -15,7 +15,7 @@ git clone https://github.com/vtex-apps/demostore-theme
 
 ## Bloco de fold
 
-Nem todo conteúdo de uma página precisa ser carregado de primeira. Inicialmente quando um usuário entra na loja existe um limite do quanto este consegue ver. É por isso que com o bloco de `__fold__` você consegue controlar o que inicialmente aparecerá será visto, diminuindo assim a necessidade de carregamento de dados no *load* inicial. Automaticamente, o que fica abaixo do `__fold__` é então carregado depois que o essencial já estiver disponível e o usuário começar a *scroll*ar para baixo. 
+Nem todo conteúdo de uma página precisa ser carregado de primeira. Inicialmente quando um usuário entra na loja existe um limite do quanto este consegue ver. É por isso que com o bloco de `__fold__` você consegue controlar o que inicialmente será visto, diminuindo assim a necessidade de carregamento de dados no *load* inicial. Automaticamente, o que fica abaixo do `__fold__` é então carregado depois que o essencial já estiver disponível e o usuário começar a *scroll*ar para baixo. 
 
 
 
@@ -55,6 +55,5 @@ Você deve ver a seguinte loja:
 No seu browser, então, rode um CTRL(Cmd) + `-` e perceba que tudo que está abaixo da `Clearance` é carregado posteriormente (assim que o *scroll* é executado) ao que está acima: 
 
 ![image](https://user-images.githubusercontent.com/18701182/93830718-5fe5e180-fc47-11ea-9caf-f7b8a10b0a23.png)
-
 
 
