@@ -63,7 +63,7 @@ O que estamos fazendo aqui é criar um nível acima do menu que já tínhamos de
 
 ![image](https://user-images.githubusercontent.com/18701182/93836918-a7299d80-fc5a-11ea-8804-0b2722742e17.png)
 
-4. Com o menu em níveis agora definido, podemos adicionar uma nova prop ao menu pai, a fim de prevenir que os submenus sejam carregados até que o usuário interaja com as categorias: 
+4. Com o menu em níveis agora definido, podemos adicionar uma nova `prop` ao menu pai, a fim de prevenir que os submenus sejam carregados até que o usuário interaja com as categorias: 
 
 ```diff
 {
