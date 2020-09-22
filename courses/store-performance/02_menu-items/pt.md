@@ -1,6 +1,6 @@
 # Otimizando menus
 
-O menu é um dos pontos críticos de performance em uma loja. Por estar presente em (quase) todas as páginas, quando mal otimizado, pode fazer com que qualquer página tenha problemas de performance independente do quão bem implementada ela esteja. Neste passo, vamos aprender como reduzir a sua implementação para, não só viabilizar a edição deste no Site Editor, como reduzir o overhead de blocos necessários em sua definição
+O menu é um dos pontos críticos de performance em uma loja. Por estar presente em (quase) todas as páginas, quando mal otimizado, pode fazer com que qualquer página tenha problemas de performance independente do quão bem implementada ela esteja. Neste passo, vamos aprender como otimizar a sua implementação para, não só viabilizar a edição deste no Site Editor, como reduzir o overhead de blocos necessários em sua definição
 
 ## Props vs children
 
@@ -100,4 +100,3 @@ Existem dois problemas em implementar um menu desta forma:
 O resultado esperado é um menu exatamente igual ao que tínhamos, mas que agora conseguimos controlar pelo Site Editor e adicionar novos itens. 
 
 ![image](https://user-images.githubusercontent.com/18701182/93832191-53638800-fc4b-11ea-9b51-b2ba59ebdb47.png)
-
