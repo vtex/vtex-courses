@@ -55,7 +55,7 @@ Todavia, como o usuário não vai ver o conteúdo dos submenus quando a página 
 }
 ```
 
-O que estamos fazendo aqui é criar um nível acima do menu que já tínhamos definido para então modificar a navegação para um formato de sub-menu, o resultado deve ser: 
+O que estamos fazendo aqui é criar um nível acima do menu que já tínhamos definido para então modificar a navegação para um formato de submenu, o resultado deve ser: 
 
 ![image](https://user-images.githubusercontent.com/18701182/93835843-fa015600-fc56-11ea-9b0e-b30a281b2d2b.png)
 
