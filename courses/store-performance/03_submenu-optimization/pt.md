@@ -4,7 +4,7 @@ No passo anterior aprendemos como otimizar itens de menu, tornando-os propriedad
 
 ![image](https://user-images.githubusercontent.com/18701182/93831521-5d848700-fc49-11ea-9773-c2d727013f95.png)
 
-Estes se comportam como um layout, então não há otimizações que possam ser feitas além de usar o comportamento de `children`. Para esses casos, o ideal é ir para uma solução híbrida, em que os menus pais são usados com `children` e os menus *folha* (últimos na árvore de menus) podem ser usados como props. 
+Estes se comportam como um _layout_, então não há otimizações que possam ser feitas além de usar o comportamento de `children`. Para esses casos, o ideal é ir para uma solução híbrida, em que os menus pais são usados com `children` e os menus *folha* (últimos na árvore de menus) podem ser usados como `props`. 
 
 Todavia, como o usuário não vai ver o conteúdo dos submenus quando a página é carregada, podemos postergar o carregamento do seu conteúdo. 
 
