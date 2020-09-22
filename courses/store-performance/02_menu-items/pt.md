@@ -71,7 +71,7 @@ Existem dois problemas em implementar um menu desta forma:
 }
 ```
 
-3. Para fechar, para cada um dos menu-items que tínhamos  ( `"menu-item#category-electronics"`; `"menu-item#category-major-appliances"`; `"menu-item#category-small-appliances"`), adicione suas `props` como itens do array que criamos: 
+3. Para fechar, para cada um dos `menu-items` que tínhamos  ( `"menu-item#category-electronics"`; `"menu-item#category-major-appliances"`; `"menu-item#category-small-appliances"`), adicione suas `props` como itens do _array_ que criamos: 
 
 ```diff
 {
