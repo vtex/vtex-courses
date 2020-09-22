@@ -12,7 +12,7 @@ No Store Framework, existem basicamente dois pontos em que as imagens podem ser 
 - `product-summary-image` é a imagem de produto que é exibida em prateleiras e resultados de busca;
 - `image`: são imagens comuns, usadas para banners, carrosséis e _infocards_
 
-Se estiver responsável por cuidar do cadastramento de imagens de uma loja, tenha certeza de comprimi-las antes. Isto pode garantir uma redução de até 85% do seu peso, sem que seja necessário também perder qualidade. Uma boa alternativa de ferramenta para facilitar este trabalho é usar o [Squoosh](https://www.pexels.com/).
+Se estiver responsável por cuidar do cadastramento de imagens de uma loja, tenha certeza de comprimi-las antes. Isto pode garantir uma redução de até 85% do seu peso, sem que seja necessário também perder qualidade. Uma boa alternativa de ferramenta para facilitar este trabalho é usar o [Squoosh](https://squoosh.app/).
 
 ## Atividade
 
