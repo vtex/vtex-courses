@@ -4,7 +4,7 @@ Uma das operações mais pesadas e pouco performáticas na navegação de uma lo
 
 ## Atividade
 
-1. Para otimizar o contexto da busca, adicione a propriedade context ao template de busca no arquivo `store/blocks/search.jsonc`: 
+1. Para otimizar o contexto da busca, adicione a propriedade `context` ao _template_ de busca no arquivo `store/blocks/search.jsonc`: 
 
 ```diff
 {
