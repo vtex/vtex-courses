@@ -59,7 +59,7 @@ O que estamos fazendo aqui é criar um nível acima do menu que já tínhamos de
 
 ![image](https://user-images.githubusercontent.com/18701182/93835843-fa015600-fc56-11ea-9b0e-b30a281b2d2b.png)
 
-3. No browser, antes da url do seu workspace adicione um `view-source:` e procure por `title="Major Appliances"`, você verá 2 referências no código, uma para o header e outra para o footer. Isto significa que quando carregamos o HTML estamos trazendo juntos esses menus, ainda que não estejam sendo consumidos no primeiro momento:
+3. No navegador, antes da URL do seu _workspace_ adicione um `view-source:` e procure por `title="Major Appliances"`, você verá duas referências no código, uma para o _header_ e outra para o _footer_. Isto significa que quando carregamos o HTML estamos trazendo juntos esses menus, ainda que não estejam sendo consumidos no primeiro momento:
 
 ![image](https://user-images.githubusercontent.com/18701182/93836918-a7299d80-fc5a-11ea-8804-0b2722742e17.png)
 
