@@ -1,11 +1,11 @@
 [
   {
     "folder": "basic-blocks",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "layout-blocks",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "styles-course",
@@ -13,6 +13,10 @@
   },
   {
     "folder": "content-workflow",
+    "isActive": false
+  },
+  { 
+    "folder": "store-performance",
     "isActive": false
   },
   {
