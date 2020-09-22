@@ -37,7 +37,7 @@ Em geral uma implementação de menu em uma loja segue o seguinte padrão:
 
 Existem dois problemas em implementar um menu desta forma: 
 
-1. Por se usar o `children`, o menu passa a ter implementação parecida com a de um layout, o que faz com que todo o conteúdo dentro dele não seja facilmente editável no Site Editor
+1. Por se usar o `children`, o menu passa a ter implementação parecida com a de um _layout_, o que faz com que todo o conteúdo dentro dele não seja facilmente editável no Site Editor
 
 2. Para cada novo menu que for criado, é necessária a definição de um novo bloco, o que aumenta o overhead dos blocos que são necessários para compor uma página
 
