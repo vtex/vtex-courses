@@ -21,38 +21,38 @@ Nem todo conteúdo de uma página precisa ser carregado de primeira. Inicialment
 
 ## Atividade
 
-1 - Rode um `vtex workspace reset` garantindo que nenhum outro tema está linkado na loja
+1. Rode um `vtex workspace reset` garantindo que nenhum outro tema está linkado na loja
 
-2 - Vá até o diretório do repositório clonado e *link*e, então, o tema oferecido: 
+2. Vá até o diretório do repositório clonado e *link*e, então, o tema oferecido: 
 
-```
-vtex link
-```
+    ```
+    vtex link
+    ```
 
-Você deve ver a seguinte loja:
+    Você deve ver a seguinte loja:
 
-![screencapture-savioperformance-appliancetheme-myvtex-2020-09-21-19_42_00](https://user-images.githubusercontent.com/18701182/93828834-91a87980-fc42-11ea-9f84-dd3053822621.png)
+    ![screencapture-savioperformance-appliancetheme-myvtex-2020-09-21-19_42_00](https://user-images.githubusercontent.com/18701182/93828834-91a87980-fc42-11ea-9f84-dd3053822621.png)
 
 
-3 - O conteúdo abaixo da prateleira de *Clearance* não pode ser visto pelo usuário, vamos então otimizar o primeiro carregamento, postergando o *fetching* deste. Para isso, no arquivo `home.jsonc` no diretório `/store/blocks/home/` adicione o bloco `__fold__` logo abaixo do `"shelf#clearance"`: 
+3. O conteúdo abaixo da prateleira de *Clearance* não pode ser visto pelo usuário, vamos então otimizar o primeiro carregamento, postergando o *fetching* deste. Para isso, no arquivo `home.jsonc` no diretório `/store/blocks/home/` adicione o bloco `__fold__` logo abaixo do `"shelf#clearance"`: 
 
-```diff
- "store.home": {
-    "blocks": [
-      "flex-layout.row#slider",
-      "shelf#new-arrivals",
-      "shelf#clearance",
-+     "__fold__",
-      "flex-layout.row#newsletter",
-      "rich-text#brands",
-      "flex-layout.row#brands",
-      "rich-text#instagram",
-      "flex-layout.row#instagram"
-    ]
-  }
-```
+    ```diff
+    "store.home": {
+        "blocks": [
+          "flex-layout.row#slider",
+          "shelf#new-arrivals",
+          "shelf#clearance",
+    +     "__fold__",
+          "flex-layout.row#newsletter",
+          "rich-text#brands",
+          "flex-layout.row#brands",
+          "rich-text#instagram",
+          "flex-layout.row#instagram"
+        ]
+      }
+    ```
 
-No seu browser, então, rode um CTRL(Cmd) + `-` e perceba que tudo que está abaixo da `Clearance` é carregado posteriormente (assim que o *scroll* é executado) ao que está acima: 
+No seu navegador, então, rode um CTRL(Cmd) + `-` e perceba que tudo que está abaixo da `Clearance` é carregado posteriormente (assim que o *scroll* é executado) ao que está acima: 
 
 ![image](https://user-images.githubusercontent.com/18701182/93830718-5fe5e180-fc47-11ea-9caf-f7b8a10b0a23.png)
 

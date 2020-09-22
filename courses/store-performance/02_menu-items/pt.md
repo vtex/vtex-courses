@@ -45,57 +45,57 @@ Existem dois problemas em implementar um menu desta forma:
 
 1. Para melhorar, então, a performance do menu da nossa *Appliance Store*, vá até o arquivo `/store/blocks/header/category-menu.jsonc` e remova sua seção de `children`: 
 
-```diff
-{
-  "vtex.menu@2.x:menu#category-menu": {
--   "children": [
--     "menu-item#category-electronics",
--     "menu-item#category-major-appliances",
--     "menu-item#category-small-appliances"
--   ]
-  }
-  ...
-}
-```
+    ```diff
+    {
+      "vtex.menu@2.x:menu#category-menu": {
+    -   "children": [
+    -     "menu-item#category-electronics",
+    -     "menu-item#category-major-appliances",
+    -     "menu-item#category-small-appliances"
+    -   ]
+      }
+      ...
+    }
+    ```
 
 2. Adicione agora uma nova seção de `props` e um _array_ de `items`: 
 
-```diff
-{
-  "vtex.menu@2.x:menu#category-menu": {
-+   "props": {
-+     "items": []
-+   }
-  }
-  ...
-}
-```
+    ```diff
+    {
+      "vtex.menu@2.x:menu#category-menu": {
+    +   "props": {
+    +     "items": []
+    +   }
+      }
+      ...
+    }
+    ```
 
 3. Para fechar, para cada um dos `menu-items` que tínhamos  ( `"menu-item#category-electronics"`; `"menu-item#category-major-appliances"`; `"menu-item#category-small-appliances"`), adicione suas `props` como itens do _array_ que criamos: 
 
-```diff
-{
-  "vtex.menu@2.x:menu#category-menu": {
-    "props": {
-      "items": [
-+       {
-+         "id": "menu-item-category-electronics",
-+         "type": "custom",
-+         "iconId": null,
-+         "highlight": false,
-+         "itemProps": {
-+           "categoryId": 153,
-+           "type": "internal",
-+           "href": "/electronics/",
-+           "noFollow": true,
-+           "tagTitle": "Electronics",
-+           "text": "Electronics"
-+         }
-+       }
-+       ...
-      ]
-    }
-```
+    ```diff
+    {
+      "vtex.menu@2.x:menu#category-menu": {
+        "props": {
+          "items": [
+    +       {
+    +         "id": "menu-item-category-electronics",
+    +         "type": "custom",
+    +         "iconId": null,
+    +         "highlight": false,
+    +         "itemProps": {
+    +           "categoryId": 153,
+    +           "type": "internal",
+    +           "href": "/electronics/",
+    +           "noFollow": true,
+    +           "tagTitle": "Electronics",
+    +           "text": "Electronics"
+    +         }
+    +       }
+    +       ...
+          ]
+        }
+    ```
 
 O resultado esperado é um menu exatamente igual ao que tínhamos, mas que agora conseguimos controlar pelo Site Editor e adicionar novos itens. 
 

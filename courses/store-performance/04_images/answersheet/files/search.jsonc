@@ -1,3 +1,4 @@
+// /store/blocks/search.jsonc
 {
   "store.search": {
     "blocks": ["search-result-layout#search"]

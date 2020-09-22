@@ -1,3 +1,4 @@
+// store/blocks/header/category-menu.json
 {
   "vtex.menu@2.x:menu#category-menu": {
     "props": {
