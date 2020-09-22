@@ -72,4 +72,6 @@ No Store Framework, existem basicamente dois pontos em que as imagens podem ser 
     }
     ```
 
+![image](https://user-images.githubusercontent.com/18701182/93905955-f52db800-fcd1-11ea-9129-065bea80145b.png)
+
 > Usamos o exemplo `electronics.png` que já estava disponível no repositório, mas qualquer imagem pode ser adicionada se inserida dentro da pasta `/assets`.

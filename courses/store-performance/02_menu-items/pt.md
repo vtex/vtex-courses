@@ -58,6 +58,8 @@ Existem dois problemas em implementar um menu desta forma:
     }
     ```
 
+**NOTA:** Não apague as definições destes blocos, eles estão sendo utilizados em outros lugares
+
 2. Adicione agora uma nova seção de `props` e um _array_ de `items`: 
 
     ```diff

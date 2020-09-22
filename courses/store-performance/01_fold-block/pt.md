@@ -52,7 +52,7 @@ Nem todo conteúdo de uma página precisa ser carregado de primeira. Inicialment
       }
     ```
 
-No seu navegador, então, rode um CTRL(Cmd) + `-` e perceba que tudo que está abaixo da `Clearance` é carregado posteriormente (assim que o *scroll* é executado) ao que está acima: 
+No seu navegador, então, rode um CTRL(Cmd) + `-` (dando um zoom out para conseguir enxergar toda a página) e perceba que tudo que está abaixo da `Clearance` é carregado posteriormente (assim que o *scroll* é executado) ao que está acima: 
 
 ![image](https://user-images.githubusercontent.com/18701182/93830718-5fe5e180-fc47-11ea-9caf-f7b8a10b0a23.png)
 
