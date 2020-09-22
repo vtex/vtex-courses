@@ -1,0 +1,141 @@
+{
+  "vtex.menu@2.x:menu#category-menu": {
+    "props": {
+      "experimentalOptimizeRendering": true
+    },
+    "children": [
+      "menu-item#categories"
+    ]
+  },
+  "menu-item#categories": {
+    "props": {
+      "id": "menu-item-custom-categories",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": true,
+        "tagTitle": "Categories",
+        "text": "Categories"
+      }
+    },
+    "blocks": [ "vtex.menu@2.x:submenu#categories" ]
+  },
+  "vtex.menu@2.x:submenu#categories": {
+    "children": ["vtex.menu@2.x:menu#categories"]
+  },
+  "vtex.menu@2.x:menu#categories": {
+    "props": {
+      "items": [
+        {
+          "id": "menu-item-category-electronics",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": 153,
+            "type": "internal",
+            "href": "/electronics/",
+            "noFollow": true,
+            "tagTitle": "Electronics",
+            "text": "Electronics"
+          }
+        },
+        {
+          "id": "menu-item-category-major-appliances",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": "151",
+            "type": "internal",
+            "href": "/major-appliances/",
+            "noFollow": true,
+            "tagTitle": "Major Appliances",
+            "text": "Major Appliances"
+          }
+        },
+        {
+          "id": "menu-item-category-small-appliances",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "categoryId": 152,
+            "type": "internal",
+            "href": "/small-appliances",
+            "noFollow": true,
+            "tagTitle": "Small appliances",
+            "text": "Small appliances"
+          }
+        }
+      ]
+    }
+  },
+  "menu-item#category-electronics": {
+    "props": {
+      "id": "menu-item-category-electronics",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 153,
+        "type": "internal",
+        "href": "/electronics/",
+        "noFollow": true,
+        "tagTitle": "Electronics",
+        "text": "Electronics"
+      }
+    }
+  },
+
+  "menu-item#category-major-appliances": {
+    "props": {
+      "id": "menu-item-category-major-appliances",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "categoryId": "151",
+        "type": "internal",
+        "href": "/major-appliances/",
+        "noFollow": true,
+        "tagTitle": "Major Appliances",
+        "text": "Major Appliances"
+      }
+    }
+  },
+  "menu-item#category-small-appliances": {
+    "props": {
+      "id": "menu-item-category-small-appliances",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 152,
+        "type": "internal",
+        "href": "/small-appliances",
+        "noFollow": true,
+        "tagTitle": "Small appliances",
+        "text": "Small appliances"
+      }
+    }
+  },
+  "menu-item#login": {
+    "props": {
+      "id": "menu-item-custom-login",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/account",
+        "noFollow": true,
+        "tagTitle": "My account",
+        "text": "My account"
+      }
+    }
+  }
+}
