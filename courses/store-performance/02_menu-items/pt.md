@@ -58,7 +58,7 @@ Existem dois problemas em implementar um menu desta forma:
 }
 ```
 
-2. Adicione agora uma nova seção de props e um array de items: 
+2. Adicione agora uma nova seção de `props` e um _array_ de `items`: 
 
 ```diff
 {
