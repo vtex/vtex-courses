@@ -2,7 +2,7 @@
 
 Alguns blocos ao longo do tempo são substituídos por outros não só para aumentar a flexibilidade e facilidade de operação, mas também para otimizar o seu comportamento e performance. 
 
-O Slider Layout (conhecido no curso de Layouts Complexos) foi aprimorado para que usasse lazy load no conteúdo carregado. Isto quer dizer que produtos e imagens só são carregados quando o usuário, de fato, as solicita. Este tipo de comportamento não estão disponíveis na Shelf e Carrossel, e para otimizar ainda mais a performance, vamos ver como podemos substituí-los.
+O Slider Layout (conhecido no curso de Layouts Complexos) foi aprimorado para que usasse lazy load no conteúdo carregado. Isto quer dizer que produtos e imagens só são carregados quando o usuário, de fato, as solicita. Este tipo de comportamento não está disponíveis na Shelf e Carrossel, e para otimizar ainda mais a performance, vamos ver como podemos substituí-los.
 
 ## Atividade
 
