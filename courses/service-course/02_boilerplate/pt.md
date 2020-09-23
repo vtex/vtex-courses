@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Fazendo uma breve apresentação do _boilerplate_, há duas pastas (`/node` e `/graphql`) e o arquivo `manifest.json`, que é um arquivo impoetant para a sua aplicação no VTEX IO, dado que será o primeiro ponto de comunicação da sua _app_ com o VTEX IO.
+Fazendo uma breve apresentação do _boilerplate_, há duas pastas (`/node` e `/graphql`) e o arquivo `manifest.json`, que é um arquivo importante para a sua aplicação no VTEX IO, dado que será o primeiro ponto de comunicação da sua _app_ com o VTEX IO.
 
 ## Visão geral do `manifest.json`
 
