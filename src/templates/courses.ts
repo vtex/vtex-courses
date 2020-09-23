@@ -2,7 +2,7 @@ import { Course } from '../../typings/course'
 import { BASE_PATH } from '../utils/constants'
 
 const applyInactive = (className: string, isActive: boolean) =>
-  isActive ? className : 'inactive-card'
+  isActive ? `active-card ${className}` : 'inactive-card'
 
 const getCourse = ({
   isActive,
