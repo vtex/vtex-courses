@@ -9,23 +9,23 @@
   },
   {
     "folder": "styles-course",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "content-workflow",
-    "isActive": false
+    "isActive": true
   },
   { 
     "folder": "store-performance",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "store-block",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "service-course",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "admin",
