@@ -22,4 +22,4 @@ Para exercitarmos os conceitos aprendidos neste curso, é necessário que você 
 Portanto, caso você já não tenha essa aplicação no seu computador:
 
 1. Clone o repositório `vtex-apps/service.example` com o comando: `git clone https://github.com/vtex-apps/service-example`.
-2. Dentro da pasta da app, rode `vtex link` para verificar se a app builda normalmente. Você deve receber um link de uma rota pública que o código expões.
+2. Dentro da pasta da app, rode `vtex link` para verificar se a app builda normalmente. Você deve receber um link de uma rota pública que o código expõe.
