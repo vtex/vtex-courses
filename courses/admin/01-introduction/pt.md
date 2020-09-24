@@ -92,3 +92,17 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
 ```
+
+6. Na raiz do projeto, crie um diretório `/admin`, a sua estrutura deve ficar: 
+
+```diff
+|
+|_ CHANGELOG.md  
+|_ docs/         
+|_ messages/
+|_ react/
++|_ admin/
+|_ package.json
+|_ manifest.json  
+|_ yarn.lock
+```
