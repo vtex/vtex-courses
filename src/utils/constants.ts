@@ -1,1 +1,1 @@
-export const BASE_PATH = 'https://vtex-enterprise-group.readme.io/learning'
+export const BASE_PATH = 'https://developers.vtex.com/learning'
