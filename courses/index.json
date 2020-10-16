@@ -29,10 +29,10 @@
   },
   {
     "folder": "admin",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "calling-commerce-apis",
-    "isActive": false
+    "isActive": true
   }
 ]
