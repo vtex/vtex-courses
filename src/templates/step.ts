@@ -7,7 +7,7 @@ const getFinishCourseBtn = () =>
 [block:html]
 ${JSON.stringify({
   html: `<div id="finish-course">
-  <a id="finish-link" href="/learning/page/training-week-learning-path">Finalizar Curso</a>
+  <a id="finish-link" href="/learning/page/learning-path">Finalizar Curso</a>
 </div>`,
 })}
 [/block]
