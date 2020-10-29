@@ -2,55 +2,79 @@
   {
     "folder": "01-introduction",
     "title": {
-      "pt": "Admin framework"
+      "pt": "Admin Framework", 
+      "en": "Admin Framework", 
+      "es": ""
     },
     "description": {
-      "pt": "Configurações iniciais para o funcionamento do curso."
+      "pt": "Configurações iniciais para o funcionamento do curso.",
+      "en": "", 
+      "es": ""
     }
   },
   {
     "folder": "02-navigation-routes",
     "title": {
-      "pt": "Navigation & Routes"
+      "pt": "Navigation & Routes",
+      "en": "Navigation & Routes", 
+      "es": ""
     },
     "description": {
-      "pt": "Introdução ao curso e ao boilerplate."
+      "pt": "",
+      "en": "", 
+      "es": ""
     }
   },
   {
     "folder": "03-enhancing-navigation",
     "title": {
-      "pt": "Melhorando a navegação"
+      "pt": "Melhorando a Navegação",
+      "en": "Improving Navigation", 
+      "es": ""
     },
     "description": {
-      "pt": "Aprendendo a usar o Rich Text."
+      "pt": "",
+      "en": "", 
+      "es": ""
     }
   },
   {
     "folder": "04-sub-sections",
     "title": {
-      "pt": "Sub seções"
+      "pt": "Sub Seções",
+      "en": "Sub Sections", 
+      "es": ""
     },
     "description": {
-      "pt": "Adicionando e configurando um Info Card."
+      "pt": "",
+      "en": "", 
+      "es": ""
     }
   },
   {
     "folder": "05-look-n-feel",
     "title": {
-      "pt": "Homogeneidade visual"
+      "pt": "Homogeneidade visual",
+      "en": "Look'n Feel", 
+      "es": ""
     },
     "description": {
-      "pt": "Introdução à páginas de produto."
+      "pt": "",
+      "en": "", 
+      "es": ""
     }
   },
   {
     "folder": "06-connecting-to-service",
     "title": {
-      "pt": "Conectando a um serviço"
+      "pt": "Conectando a um Serviço",
+      "en": "Connecting to a Service", 
+      "es": ""
     },
     "description": {
-      "pt": "Complementando a página de produto e possibilidades de evolução."
+      "pt": "",
+      "en": "", 
+      "es": ""
     }
   }
 ]

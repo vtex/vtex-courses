@@ -1,5 +1,15 @@
 {
-    "title": "Serviços",
-    "description": "Aprenda sobre as aplicações backend no VTEX IO: rotas, eventos e aplicações internas e externas.",
+    "pt": {
+        "title": "Serviços",
+        "description": "Aprenda sobre as aplicações backend no VTEX IO: rotas, eventos e aplicações internas e externas."
+      },
+    "en": {
+        "title": "Services",
+        "description": "Learn about backend applications in VTEX IO: routes, events, and internal and external applications."
+    },
+    "es": {
+        "title": "",
+        "description": ""
+    },
     "image": "https://appliancetheme.vtexassets.com/assets/app/src/service_course_icon___6283464c6cfe69d5eee47f04a65097f7.svg"
 }
