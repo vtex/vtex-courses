@@ -1,5 +1,15 @@
 {
-  "title": "Aplicações administrativas",
-  "description": "Aprenda a construir apps administrativas usando o Admin Framework",
+  "pt": {
+    "title": "Aplicações administrativas",
+    "description": "Aprenda a construir apps administrativas usando o Admin Framework"
+  }, 
+  "en": {
+    "title": "Admin Applications",
+    "description": "Learn how to build admin apps using the Admin Framework"
+  },
+  "es": {
+    "title": "",
+    "description": ""
+  }, 
   "image": "https://appliancetheme.vtexassets.com/assets/app/src/teste___8467f5dba2a1d42e8176e0af56ae5612.svg"
 }

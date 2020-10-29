@@ -1,5 +1,15 @@
 {
-    "title": "Blocos customizados",
-    "description": "Aprenda a usar React e GraphQL para exportar seus componentes como blocos VTEX",
+    "pt": { 
+        "title": "Blocos customizados",
+        "description": "Aprenda a usar React e GraphQL para exportar seus componentes como blocos VTEX"
+      },
+    "en": {
+        "title": "Custom Blocks",
+        "description": "Learn how to use React and GraphQL to export your components as VTEX blocks"
+    },
+    "es": {
+        "title": "",
+        "description": ""
+    },
     "image": "https://appliancetheme.vtexassets.com/assets/app/src/store_block_course_icon___96162ef277cedddeacc76e2fb3f04ec5.svg"
 }

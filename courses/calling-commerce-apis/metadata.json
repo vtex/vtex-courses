@@ -1,5 +1,15 @@
 {
-  "title": "Chamando as APIs de Commerce",
-  "description": "Utilize Clients para facilmente criar integrações com os módulos Core da VTEX",
+  "pt": {
+    "title": "Chamando as APIs de Commerce",
+    "description": "Utilize Clients para facilmente criar integrações com os módulos Core da VTEX"
+  },
+  "en": {
+    "title": "Calling Commerce APIs",
+    "description": "Use Clients to easily integrate with VTEX's Core modules."
+  },
+  "es": {
+    "title": "",
+    "description": ""
+  },
   "image": "https://appliancetheme.vtexassets.com/assets/app/src/commerce___3be244818b3406676036a346daedc0cd.svg"
 }
