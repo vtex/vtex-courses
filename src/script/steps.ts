@@ -104,7 +104,7 @@ export const handleSteps = (courses: Course[]) =>
         )
 
         const template = step(
-          getCourseFileContents(course.name, 'pt.md', stepMeta.folder),
+          getCourseFileContents(course.name, {step: stepMeta.folder, lang: 'pt'}),
           stepSlug,
           answersheets.length > 0,
           isLast,
