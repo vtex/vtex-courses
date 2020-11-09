@@ -14,7 +14,6 @@ export interface Course {
   name: string
   isActive: boolean
   metadata: CourseMetadata
-  overview: string
   summary: CourseStep[]
 }
 
@@ -43,3 +42,5 @@ export interface CourseOrder {
   steps: string[],
   isReadme: boolean
 }
+
+export type Language = 'en' | 'pt' | 'es'

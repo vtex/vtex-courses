@@ -10,8 +10,7 @@ export default () =>
         ...acc,
         [getFileName(file)]: getCourseFileContents(
           folder,
-          file,
-          undefined,
+          {rawPath: file, lang: 'pt'},
           file.includes('json')
         ),
       }),
