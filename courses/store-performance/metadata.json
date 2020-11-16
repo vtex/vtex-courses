@@ -1,5 +1,13 @@
 {
-  "title": "Melhorando performance",
-  "description": "Aprenda a usar as melhores práticas de Store Framework e garantir evolução de performance",
+  "title": {
+    "pt": "Melhorando performance",
+    "en": "Improving Performance",
+    "es": ""
+  },
+  "description": {
+    "pt": "Aprenda a usar as melhores práticas de Store Framework e garantir evolução de performance",
+    "en": "Learn Store Framework's best practices and ensure performance evolution",
+    "es": ""
+  },
   "image": "https://appliancetheme.vtexassets.com/assets/app/src/performance___6e393531676510783779281dca92ade0.svg"
 }
