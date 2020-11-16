@@ -5,6 +5,7 @@ import { Course, CourseStep, Language } from '../../typings/course'
 import stepTemplate from '../templates/step'
 import answersheetTemplate from '../templates/answersheet'
 import challenge from '../templates/challenge'
+import messages from '../templates/messages'
 
 const referenceNextStepAndSetVisibility = (
   isHidden: boolean,
@@ -34,13 +35,14 @@ const createAnswersheet = async (
   stepFolder: string,
   stepTitle: string,
   answersheets: string[],
+  lang: Language,
   ReadMe: Readmeio
 ) => {
   if (answersheets.length > 0) {
     await ReadMe.upsertDoc({
       body: answersheetTemplate(course, stepFolder, answersheets),
       slug: `${getCourseSlug(course, stepFolder)}-answersheet`,
-      title: `Gabarito do passo '${stepTitle}'`,
+      title: `${messages.answersheetTo[lang]} '${stepTitle}'`,
       category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
     })
   }
@@ -53,6 +55,7 @@ const createChallenge = async (
   parentDoc: string,
   isLast: boolean,
   stepSlug: string,
+  lang: Language,
   ReadMe: Readmeio
 ) => {
   const challengeContent = challenge(course, stepSlug)
@@ -64,13 +67,12 @@ const createChallenge = async (
 
   await ReadMe.upsertDoc({
     slug: challengeSlug,
-    title: `Desafio do curso ${courseTitle}`,
+    title: `${messages.challengeFor[lang]} ${courseTitle}`,
     category,
     body: challengeContent,
     parentDoc,
   })
 
-  console.log(`Challenge for course ${course} upserted 🎁`)
 
   return challengeSlug
 }
@@ -105,6 +107,7 @@ const intlStep = async (course: Course, step: CourseStep, stepIndex: number, lan
     parentDoc,
     isLast,
     stepSlug,
+    lang,
     ReadMe
   )
 
@@ -129,10 +132,10 @@ const intlStep = async (course: Course, step: CourseStep, stepIndex: number, lan
     step.folder,
     step.title[lang],
     answersheets,
+    lang,
     ReadMe
   )
 
-  console.log(`Step ${stepSlug} was updated 🥾`)
 
   const next = !isLast
     ? {
@@ -140,7 +143,7 @@ const intlStep = async (course: Course, step: CourseStep, stepIndex: number, lan
           course.name,
           course.summary[stepIndex + 1].folder
         ),
-        title: course.summary[stepIndex + 1].title.pt,
+        title: course.summary[stepIndex + 1].title[lang],
       }
     : undefined
 
@@ -150,8 +153,6 @@ const intlStep = async (course: Course, step: CourseStep, stepIndex: number, lan
     ReadMe,
     next
   )
-
-  console.log(`Step ${stepSlug} next and visibility were updated 👀`)
 
 }
 

@@ -17,4 +17,4 @@ export const getAnswersheetSlug = (stepSlug: string) => `${BASE_PATH}/docs/${ste
 export const languageSlugFormatter = (lang: Language) => `-lang-${lang}` 
 
 export const getLearningPathSlug = (lang: Language = 'en') =>
-  `learning-path-${languageSlugFormatter(lang)}`
+  `learning-path${languageSlugFormatter(lang)}`
