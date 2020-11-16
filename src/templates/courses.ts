@@ -32,9 +32,7 @@ const getCourse = (
   </p>
 </div>`
 
-export default (courses: Course[], lang: Language = 'en') => {
-  console.log(courses)
-  return `
+export default (courses: Course[], lang: Language = 'en') => `
 <style>
   #hub-container > .hub-container {
     display: flex;
@@ -45,4 +43,3 @@ export default (courses: Course[], lang: Language = 'en') => {
 <div class="course-container">
   ${courses.map((course) => getCourse(course, lang)).join('')}
 </div>`
-}

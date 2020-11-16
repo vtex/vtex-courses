@@ -38,6 +38,14 @@ const messages: Record<string, LanguageSwitcher> = {
   'checkAnswersheet': { 
     pt: 'Confira aqui o [gabarito para esta etapa]',
     en: 'Check here the [answersheet for this step]'
+  }, 
+  'answersheetTo': {
+    pt: 'Gabarito para o passo',
+    en: 'Answersheet to '
+  },
+  'challengeFor': {
+    pt: 'Desafio do Curso',
+    en: 'Challenge for the Course'
   }
 }
 

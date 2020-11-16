@@ -13,7 +13,7 @@ export const getCourseFileContents = (
     let filePath = `${COURSES_PATH}/${course}`
 
     if (step) {
-      filePath += `steps/${step}`
+      filePath += `/steps/${step}`
     }
     
     if (rawPath) {
@@ -24,7 +24,6 @@ export const getCourseFileContents = (
       filePath += `/${lang}.md`
     }
 
-    console.log(filePath)
     const content = fs
       .readFileSync(
         filePath
@@ -44,7 +43,8 @@ export const getCourses = () =>
 
 export const getAnswersheets = (course: string, step: string) => {
   try {
-    return fs.readdirSync(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
+
+    return fs.readdirSync(`${COURSES_PATH}/${course}/steps/${step}/answersheet/files`)
   } catch {
     return []
   }
