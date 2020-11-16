@@ -1,13 +1,8 @@
-import { getLearningPathSlug } from './../utils/slugs';
+import { getLearningPathSlug } from '../utils/slugs'
 import Readmeio from '../clients/readmeio'
 import { Course, Language } from '../../typings/course'
 import { logLanguage } from '../utils/log'
 import landing from '../templates/landing'
-
-export const handleLanding = async (courses: Course[], inLanguages: Language[]) => 
-  Promise.all(
-    inLanguages.map(lang => intlLanding(courses, lang))
-  )
 
 const intlLanding = async (courses: Course[], lang: Language) => {
   const ReadMe = new Readmeio()
@@ -23,3 +18,8 @@ const intlLanding = async (courses: Course[], lang: Language) => {
 
   console.log(`Landing page updated 🚀${logLanguage(lang)}`)
 }
+
+export const handleLanding = async (
+  courses: Course[],
+  inLanguages: Language[]
+) => Promise.all(inLanguages.map((lang) => intlLanding(courses, lang)))
