@@ -1,5 +1,13 @@
 {
-  "title": "Blocos básicos",
-  "description": "Aprenda a utilizar os blocos básicos no Store Framework",
+  "title": {
+    "pt": "Blocos básicos",
+    "en": "Basic Blocks",
+    "es": ""
+  },
+  "description": {
+    "pt": "Aprenda a utilizar os blocos básicos no Store Framework.",
+    "en": "Learn how to use the basic blocks of Store Framework.",
+    "es": ""
+  },
   "image": "https://appliancetheme.vtexassets.com/assets/app/src/basic_components_course_icon___9ff128c958c4eb6b798c9ca07d3dfe13.svg"
 }
