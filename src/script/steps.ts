@@ -6,6 +6,7 @@ import stepTemplate from '../templates/step'
 import answersheetTemplate from '../templates/answersheet'
 import challenge from '../templates/challenge'
 import messages from '../templates/messages'
+import { logProgress } from '../utils/log'
 
 const referenceNextStepAndSetVisibility = (
   isHidden: boolean,
@@ -87,6 +88,8 @@ const intlStep = async (
   const courseSlug = getCourseSlug(course.name, '', lang)
   const stepSlug = getCourseSlug(course.name, step.folder, lang)
 
+  const logFinished = logProgress('step', stepSlug, lang)
+
   const courseCategory = await ReadMe.getCategory('courses').then(
     ({ _id }) => _id
   )
@@ -132,8 +135,6 @@ const intlStep = async (
     ReadMe
   )
 
-  console.log(`Step ${stepSlug} was updated 🥾`)
-
   const next = !isLast
     ? {
         slug: getCourseSlug(course.name, course.summary[stepIndex + 1].folder),
@@ -147,6 +148,8 @@ const intlStep = async (
     ReadMe,
     next
   )
+
+  logFinished()
 }
 
 export const handleSteps = (courses: Course[], inLanguages: Language[]) =>
