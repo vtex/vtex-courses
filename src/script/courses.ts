@@ -2,8 +2,11 @@ import { getCourseSlug } from '../utils/slugs'
 import { Course, Language } from '../../typings/course'
 import Readmeio from '../clients/readmeio'
 import courseOverview from '../templates/course-overview'
+import { logProgress } from '../utils/log'
 
 const intlCourse = async (course: Course, lang: Language) => {
+  const logFinished = logProgress('course', getCourseSlug(course.name), lang)
+
   const ReadMe = new Readmeio()
   const template = courseOverview(
     course.summary.map((step) => ({
@@ -24,7 +27,7 @@ const intlCourse = async (course: Course, lang: Language) => {
     body: template,
   })
 
-  console.log(`Course ${getCourseSlug(course.name)} was updated 🏫`)
+  logFinished()
 }
 
 export const handleCourses = (courses: Course[], inLanguages: Language[]) =>
