@@ -1,5 +1,13 @@
 {
-  "title": "Tornando sua loja única",
-  "description": "Customize os blocos da sua loja para alinhar com a sua identidade visual",
+  "title": {
+    "pt": "Tornando sua loja única",
+    "en": "Making Your Store Unique",
+    "es": ""
+  },
+  "description": {
+    "pt": "Customize os blocos da sua loja para alinhar com a sua identidade visual",
+    "en": "Customize your store's blocks to match your visual identity",
+    "es": ""
+  },
   "image": "https://appliancetheme.vtexassets.com/assets/app/src/styles_course_icon___e66a5085f6323e5feb92e3aada493d39.svg"
 }
