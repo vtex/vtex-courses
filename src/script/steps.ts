@@ -73,23 +73,19 @@ const createChallenge = async (
     parentDoc,
   })
 
-
   return challengeSlug
 }
 
-export const handleSteps = (courses: Course[], inLanguages: Language[]) =>
-  Promise.all(
-    inLanguages.map(lang => courses.map((course) =>
-    course.summary.map(async (step, index) => intlStep(course, step, index, lang))
-  ))
-    
-  )
-
-const intlStep = async (course: Course, step: CourseStep, stepIndex: number, lang: Language) => {
+const intlStep = async (
+  course: Course,
+  step: CourseStep,
+  stepIndex: number,
+  lang: Language
+) => {
   const ReadMe = new Readmeio()
 
-  const courseSlug = getCourseSlug(course.name)
-  const stepSlug = getCourseSlug(course.name, step.folder)
+  const courseSlug = getCourseSlug(course.name, '', lang)
+  const stepSlug = getCourseSlug(course.name, step.folder, lang)
 
   const courseCategory = await ReadMe.getCategory('courses').then(
     ({ _id }) => _id
@@ -112,7 +108,7 @@ const intlStep = async (course: Course, step: CourseStep, stepIndex: number, lan
   )
 
   const template = stepTemplate(
-    getCourseFileContents(course.name, {step: step.folder, lang}),
+    getCourseFileContents(course.name, { step: step.folder, lang }),
     stepSlug,
     answersheets.length > 0,
     isLast,
@@ -136,13 +132,11 @@ const intlStep = async (course: Course, step: CourseStep, stepIndex: number, lan
     ReadMe
   )
 
+  console.log(`Step ${stepSlug} was updated 🥾`)
 
   const next = !isLast
     ? {
-        slug: getCourseSlug(
-          course.name,
-          course.summary[stepIndex + 1].folder
-        ),
+        slug: getCourseSlug(course.name, course.summary[stepIndex + 1].folder),
         title: course.summary[stepIndex + 1].title[lang],
       }
     : undefined
@@ -153,8 +147,18 @@ const intlStep = async (course: Course, step: CourseStep, stepIndex: number, lan
     ReadMe,
     next
   )
-
 }
+
+export const handleSteps = (courses: Course[], inLanguages: Language[]) =>
+  Promise.all(
+    inLanguages.map((lang) =>
+      courses.map((course) =>
+        course.summary.map(async (step, index) =>
+          intlStep(course, step, index, lang)
+        )
+      )
+    )
+  )
 
 interface NextStep {
   title: string

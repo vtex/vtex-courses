@@ -9,10 +9,18 @@ const getCodes = (course: string, step: string, answersheetPaths: string[]) =>
   answersheetPaths.map((cheatFile) => ({
     language: getLangFromFile(cheatFile),
     name: cheatFile,
-    code: getCourseFileContents(course, {rawPath: `answersheet/files/${cheatFile}`, step}),
+    code: getCourseFileContents(course, {
+      rawPath: `answersheet/files/${cheatFile}`,
+      step,
+    }),
   }))
 
-export default (course: string, step: string, answersheetPaths: string[], lang: Language = 'en') => {
+export default (
+  course: string,
+  step: string,
+  answersheetPaths: string[],
+  lang: Language = 'en'
+) => {
   return `
   ${getStepStyles()}
   [block:code]
@@ -27,8 +35,8 @@ export default (course: string, step: string, answersheetPaths: string[], lang: 
             <i class="fa fa-angle-left"></i>
             <a id="back-link" href="/learning/docs/${getCourseSlug(
               course,
-              step, 
-              lang,
+              step,
+              lang
             )}">${messages['back'][lang]}</a>
           </div>`,
   })}
