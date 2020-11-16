@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "npx ts-node index.ts"
+    "deploy": "npx ts-node index.ts"
   },
   "author": "",
   "license": "ISC",

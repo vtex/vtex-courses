@@ -1,15 +1,13 @@
 {
-    "pt": {
-        "title": "Site Editor e conteúdo",
-        "description": "Aprenda a gerenciar seus workspaces, aplicações e conteúdo da frente de loja."
-      },
-    "en": {
-        "title": "Site Editor and Content",
-        "description": "Learn how to manage your workspaces, applications and store front content."
-    },
-    "es": {
-        "title": "",
-        "description": ""
-    },
-    "image": "https://appliancetheme.vtexassets.com/assets/app/src/content_workflow_course_icon___636dd275082a178841e4df1764fbf8e1.svg"
+  "title": {
+    "pt": "Site Editor e conteúdo",
+    "en": "Site Editor and Content",
+    "es": ""
+  },
+  "description": {
+    "pt": "Aprenda a gerenciar seus workspaces, aplicações e conteúdo da frente de loja.",
+    "en": "Learn how to manage your workspaces, applications and store front content.",
+    "es": ""
+  },
+  "image": "https://appliancetheme.vtexassets.com/assets/app/src/content_workflow_course_icon___636dd275082a178841e4df1764fbf8e1.svg"
 }

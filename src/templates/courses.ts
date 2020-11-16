@@ -1,15 +1,15 @@
 import { Course, Language } from '../../typings/course'
 import { BASE_PATH } from '../utils/constants'
+import { getCourseSlug } from '../utils/slugs'
 import messages from './messages'
 
 const applyInactive = (className: string, isActive: boolean) =>
   isActive ? `active-card ${className}` : 'inactive-card'
 
-const getCourse = ({
-  isActive,
-  metadata: { description, image, title },
-  name,
-}: Course, lang: Language = 'en') => `
+const getCourse = (
+  { isActive, metadata: { description, image, title }, name }: Course,
+  lang: Language = 'en'
+) => `
 <div class="${isActive ? 'course-card' : 'course-card inactive-border'}"}>
   <img class=${applyInactive(
     'course-icon',
@@ -18,17 +18,23 @@ const getCourse = ({
   <h3 class=${applyInactive('', isActive)}>
     ${
       isActive
-        ? `<a class="course-title" href="${BASE_PATH}/docs/course-${name}">${title}</a>`
-        : `<p class="course-title">${title}<p>`
+        ? `<a class="course-title" href="${BASE_PATH}/docs/${getCourseSlug(
+            name,
+            '',
+            lang
+          )}">${title[lang]}</a>`
+        : `<p class="course-title">${title[lang]}<p>`
     }
   </h3>
   ${isActive ? '' : `<div class="label">${messages['comingSoon'][lang]}</div>`}
   <p class="course-description">
-    ${description}
+    ${description[lang]}
   </p>
 </div>`
 
-export default (courses: Course[], lang: Language = 'en') => `
+export default (courses: Course[], lang: Language = 'en') => {
+  console.log(courses)
+  return `
 <style>
   #hub-container > .hub-container {
     display: flex;
@@ -39,3 +45,4 @@ export default (courses: Course[], lang: Language = 'en') => `
 <div class="course-container">
   ${courses.map((course) => getCourse(course, lang)).join('')}
 </div>`
+}

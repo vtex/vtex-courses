@@ -1,7 +1,6 @@
 import fs from 'fs'
 
 import { CourseInfo, Language } from '../../typings/course'
-import { languageSlugFormatter } from './slugs'
 
 const COURSES_PATH = `courses`
 
@@ -21,10 +20,11 @@ export const getCourseFileContents = (
       filePath += `/${rawPath}`
     }
 
-    if (lang) {
+    if (lang && !toJSON) {
       filePath += `/${lang}.md`
     }
 
+    console.log(filePath)
     const content = fs
       .readFileSync(
         filePath
