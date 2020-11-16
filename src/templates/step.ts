@@ -1,13 +1,15 @@
 import { getStepStyles } from './stepStyles'
-import { BASE_PATH } from '../utils/constants'
 import courseEnding from './course-ending'
+import messages from './messages'
+import { Language } from '../../typings/course'
+import { getAnswersheetSlug } from '../utils/slugs'
 
-const getFinishCourseBtn = () =>
+const getFinishCourseBtn = (lang: Language = 'en') =>
   `
 [block:html]
 ${JSON.stringify({
   html: `<div id="finish-course">
-  <a id="finish-link" href="/learning/page/learning-path">Finalizar Curso</a>
+  <a id="finish-link" href="/learning/page/learning-path">${messages['finishCourse'][lang]}</a>
 </div>`,
 })}
 [/block]
@@ -18,16 +20,17 @@ export default (
   slug: string,
   hasAnswersheet: boolean,
   isLast: boolean,
-  challengeLink?: string
+  challengeLink?: string,
+  lang: Language = 'en',
 ) => `
   ${getStepStyles()}
   ${content}
 
   ${
     hasAnswersheet
-      ? `### Está com dúvidas?
+      ? `### ${messages['anyQuestion'][lang]}
 
-  Confira [aqui o gabarito para esta etapa](${BASE_PATH}/docs/${slug}-answersheet) ou peça ajuda a um de nossos monitores`
+  ${messages['checkAnswersheet'][lang]}(${getAnswersheetSlug(slug)})`
       : ''
   }
 
@@ -35,7 +38,7 @@ export default (
     isLast
       ? `
       ${courseEnding(challengeLink)}
-      ${getFinishCourseBtn()}
+      ${getFinishCourseBtn(lang)}
       `
       : ``
   }
