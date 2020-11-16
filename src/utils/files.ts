@@ -1,19 +1,32 @@
 import fs from 'fs'
 
-import { CourseInfo } from '../../typings/course'
+import { CourseInfo, Language } from '../../typings/course'
 
 const COURSES_PATH = `courses`
 
 export const getCourseFileContents = (
   course: string,
-  path: string,
-  step?: string,
+  { rawPath, step, lang }: PathParams,
   toJSON?: boolean
 ) => {
   try {
+    let filePath = `${COURSES_PATH}/${course}`
+
+    if (step) {
+      filePath += `/steps/${step}`
+    }
+    
+    if (rawPath) {
+      filePath += `/${rawPath}`
+    }
+
+    if (lang && !toJSON) {
+      filePath += `/${lang}.md`
+    }
+
     const content = fs
       .readFileSync(
-        `${COURSES_PATH}/${course}/${step ? `${step}/${path}` : path}`
+        filePath
       )
       .toString('utf-8')
 
@@ -30,10 +43,17 @@ export const getCourses = () =>
 
 export const getAnswersheets = (course: string, step: string) => {
   try {
-    return fs.readdirSync(`${COURSES_PATH}/${course}/${step}/answersheet/files`)
+
+    return fs.readdirSync(`${COURSES_PATH}/${course}/steps/${step}/answersheet/files`)
   } catch {
     return []
   }
 }
 
 export const getFileName = (filePath: string) => filePath.split('.')[0]
+
+interface PathParams {
+  rawPath?: string
+  step?: string
+  lang?: Language
+}
