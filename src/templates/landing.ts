@@ -1,4 +1,4 @@
 import coursesTemplate from '../templates/courses'
-import { Course } from '../../typings/course'
+import { Course, Language } from '../../typings/course'
 
-export default (courses: Course[]) => coursesTemplate(courses)
+export default (courses: Course[], lang: Language = 'en') => coursesTemplate(courses, lang)

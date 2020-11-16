@@ -1,14 +1,29 @@
-import { handleSteps } from './src/script/steps'
-import { handleCourses } from './src/script/courses'
+// import { handleSteps } from './src/script/steps'
+// import { handleCourses } from './src/script/courses'
 import { handleLanding } from './src/script/landing'
 import configs from './src/utils/configs'
+import { Language } from './typings/course'
 
 const courses = configs()
 
+const LANGUAGES = ['pt', 'en']
+const ALL = 'all'
+
+const areValidLangs = (inLanguages: string[]) => inLanguages.every(lang => LANGUAGES.includes(lang) || lang === ALL)
+
 const execute = async () => {
-  await handleLanding(courses)
-  await handleCourses(courses)
-  await handleSteps(courses)
+  let inLanguages = process.argv.slice(2)
+  
+  if (!areValidLangs(inLanguages)) {
+    console.error(`❌  Language must be one of these: ${LANGUAGES.join(', ')}, ${ALL}`)
+    return
+  } else if (inLanguages.includes(ALL)) {
+    inLanguages = LANGUAGES
+  } 
+
+  await handleLanding(courses, inLanguages as Language[])
+  // await handleCourses(courses, inLanguages as Language[])
+  // await handleSteps(courses, inLanguages as Language[])
 }
 
 execute()
