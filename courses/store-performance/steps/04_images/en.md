@@ -2,7 +2,7 @@
 
 Images are an essential part of a store. It is essential to have photos of very good quality and with excellent resolution, to ensure that the product experience is being passed in the best possible way.
 
-Seeking optimum quality, however, should not be synonymous with wasting bandwidth. It is not necessary, for example, to upload an image of `8000px` in width, in the store it will be rendered on a screen of` 600px` in width. What happens in these cases is that the image, once downloaded, is resized by the browser, and the extra resolution is then lost.
+Seeking optimum quality, however, should not be synonymous with wasting bandwidth. It is not necessary, for example, to upload an image of `8000px` in width, in the store it will be rendered on a screen of`600px` in width. What happens in these cases is that the image, once downloaded, is resized by the browser, and the extra resolution is then lost.
 
 ## Optimization points
 
@@ -16,11 +16,11 @@ If you are responsible for taking care of registering images from a store, be su
 
 ## Activity
 
-1. On the main page, inspect any of the products on the _New arrivals_ shelf by right-clicking on the top and then clicking on 'Inspect'. It is possible to observe in the code that appears, that there is a waste of resolution, `500px` is being requested as the default value, with only` 281px` being used:
+1. On the main page, inspect any of the products on the _New arrivals_ shelf by right-clicking on the top and then clicking on 'Inspect'. It is possible to observe in the code that appears, that there is a waste of resolution, `500px` is being requested as the default value, with only`281px` being used:
 
    ![image](https://user-images.githubusercontent.com/18701182/93837727-ad6d4900-fc5d-11ea-818c-1f4942f091cf.png)
 
-2. In the `/store/blocks.jsonc` file, then define the` product-image`, specifying its `width`:
+2. In the `/store/blocks.jsonc` file, then define the`product-image`, specifying its `width`:
 
    ```diff
    // /store/blocks.jsonc
@@ -59,7 +59,7 @@ If you are responsible for taking care of registering images from a store, be su
    }
    ```
 
-    > To learn more about the definition of _Content Delivery Network_ (CDN), see [this article](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) da Cloudflare.
+   > To learn more about the definition of _Content Delivery Network_ (CDN), see [this article](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) da Cloudflare.
 
 4. Finally, define the ʻimage#depBanner`:
 
@@ -91,4 +91,5 @@ If you are responsible for taking care of registering images from a store, be su
 ```
 
 ![image](https://user-images.githubusercontent.com/18701182/93907719-168fa380-fcd4-11ea-8b03-6d864d4aeadd.png)
+
 > Example of 60% reduction in compression with Squoosh

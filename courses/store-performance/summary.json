@@ -3,7 +3,7 @@
     "folder": "01_fold-block",
     "title": {
       "pt": "Melhorando load inicial",
-      "en": "Improving Initial Load", 
+      "en": "Improving Initial Load",
       "es": ""
     }
   },
@@ -11,7 +11,7 @@
     "folder": "02_menu-items",
     "title": {
       "pt": "Otimizando menus",
-      "en": "Menu's Optimization", 
+      "en": "Menu's Optimization",
       "es": ""
     }
   },
@@ -19,7 +19,7 @@
     "folder": "03_submenu-optimization",
     "title": {
       "pt": "Otimização de submenus",
-      "en": "Submenu's Optimization", 
+      "en": "Submenu's Optimization",
       "es": ""
     }
   },
@@ -27,7 +27,7 @@
     "folder": "04_images",
     "title": {
       "pt": "Imagens",
-      "en": "Images", 
+      "en": "Images",
       "es": ""
     }
   },
@@ -35,7 +35,7 @@
     "folder": "05_searching",
     "title": {
       "pt": "Melhorias na busca",
-      "en": "Search Improvements", 
+      "en": "Search Improvements",
       "es": ""
     }
   },
@@ -43,7 +43,7 @@
     "folder": "06_blocks-refact",
     "title": {
       "pt": "Refatorando blocos",
-      "en": "Refactoring Blocks", 
+      "en": "Refactoring Blocks",
       "es": ""
     }
   }

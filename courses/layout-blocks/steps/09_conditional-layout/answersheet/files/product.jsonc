@@ -21,8 +21,8 @@
     },
     "children": ["image#retro-mixer-banner"]
   },
-  "image#retro-mixer-banner": { 
-    "props": { 
+  "image#retro-mixer-banner": {
+    "props": {
       "src": "https://appliancetheme.vtexassets.com/assets/app/src/retroimage___92a8271aac7c51d2059193bdbe019016.jpg",
       "width": "100%",
       "height": "200px",

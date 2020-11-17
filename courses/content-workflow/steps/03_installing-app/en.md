@@ -1,6 +1,7 @@
-# Installing an app on VTEX IO 
+# Installing an app on VTEX IO
 
 ## Introduction
+
 Once you publish an app, you can install it on a VTEX account. Generally, after installing it, there is a robot, called House Keeper, that makes sure all the VTEX accounts have the installed apps kept up to date. Minor and patches versions that are launched are automatically updated on all the accounts.
 
 However, for installing an app for the first time or a major update, it needs to be done manually. In this step, you'll learn how to do that.
@@ -19,13 +20,14 @@ vtex install {vendor}.{appName}@{version}
 ```
 
 In case of having the app's project, you just need to go to its folder and run the following command:
+
 ```
 vtex install
 ```
 
 > In both cases, you need to be sure that you're on the correct account, the one you want to install the app on.
 
-Considering the case that we have - having the app's project - it's simple as running the second command that was mentioned before. 
+Considering the case that we have - having the app's project - it's simple as running the second command that was mentioned before.
 
 First, make sure that you're on the correct account, by using `vtex whoami`; you're going to install the app on `appliancetheme` account. By running the command, the result should be as the following screenshot:
 

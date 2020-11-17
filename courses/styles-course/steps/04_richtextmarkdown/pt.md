@@ -30,7 +30,7 @@ A prop `text` aceita o formato de markdown. Portanto, se você deseja escrever s
   }
 ```
 
->**Dica**: Sempre utilize o comando `\n` para pular linhas ao utilizar markdown na prop `text`.
+> **Dica**: Sempre utilize o comando `\n` para pular linhas ao utilizar markdown na prop `text`.
 
 Outras propriedades do componente `rich-text` podem ser encontrados na [documentação oficial do Store Framework](https://developers.vtex.com/docs/vtex-rich-text).
 

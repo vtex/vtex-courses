@@ -81,4 +81,4 @@ We will follow the concepts learned in the previous step and go a little deeper 
 
 The result, then, should be:
 
-! [modallayout] (https://user-images.githubusercontent.com/18701182/90278764-585c3d00-de3e-11ea-8fa9-491a1cfd6001.gif)
+! [modallayout](https://user-images.githubusercontent.com/18701182/90278764-585c3d00-de3e-11ea-8fa9-491a1cfd6001.gif)

@@ -3,7 +3,7 @@ import { Language, Course, Step } from '../../typings/course'
 
 const getStep = (
   index: number,
-  description: Step["description"],
+  description: Step['description'],
   link: string,
   course: string,
   lang: Language
@@ -71,7 +71,7 @@ const getSummary = (steps: Step[], course: string, lang: Language) => `
 export default (
   steps: Step[],
   image: string,
-  overview: Course["overview"],
+  overview: Course['overview'],
   course: string,
   lang: Language
 ) => `

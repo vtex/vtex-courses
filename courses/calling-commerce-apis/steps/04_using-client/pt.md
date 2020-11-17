@@ -32,14 +32,15 @@ export async function status(ctx: Context, next: () => Promise<any>) {
 }
 ```
 
-  **O que estamos fazendo?**
-  - Extraindo `catalog` do contexto que é recebido nas funções de middleware. Isso é um atalho para não precisarmos chamar `ctx.clients.catalog`. Saiba mais sobre Destructuring [aqui](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
-  - Extraindo a variável `code`, que virá como parâmetro da URL da nossa rota (`/_v/status/:code`). Usaremos este dado para representar o ID do SKU que iremos testar na chamada ao Catálogo.
-  - Chamando o método `getSkuById` do _Client_ Catalog. Este método irá, internamente, chamar o endpoint relativo no módulo do catálogo, repassando o parâmetro que estamos passando (`code`) como o ID do SKU a ser buscado. Lembrando que esta é uma chamado assíncrona, então precisamos adicionar o `await` logo antes para esperá-la.
+**O que estamos fazendo?**
+
+- Extraindo `catalog` do contexto que é recebido nas funções de middleware. Isso é um atalho para não precisarmos chamar `ctx.clients.catalog`. Saiba mais sobre Destructuring [aqui](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+- Extraindo a variável `code`, que virá como parâmetro da URL da nossa rota (`/_v/status/:code`). Usaremos este dado para representar o ID do SKU que iremos testar na chamada ao Catálogo.
+- Chamando o método `getSkuById` do _Client_ Catalog. Este método irá, internamente, chamar o endpoint relativo no módulo do catálogo, repassando o parâmetro que estamos passando (`code`) como o ID do SKU a ser buscado. Lembrando que esta é uma chamado assíncrona, então precisamos adicionar o `await` logo antes para esperá-la.
 
 Porém, ainda precisamos configurar um último passo para testar!
 
-2. Geralmente, os _Clients_ do `commerce-clients` já são configurados automaticamente para fazerem chamadas autenticadas, por padrão **usando o token da app**. Mesmo assim, ainda precisamos **declarar que nossa aplicação estará fazendo requisições para algum serviço**, e isso é feito no arquivo `manifest.json`. 
+2. Geralmente, os _Clients_ do `commerce-clients` já são configurados automaticamente para fazerem chamadas autenticadas, por padrão **usando o token da app**. Mesmo assim, ainda precisamos **declarar que nossa aplicação estará fazendo requisições para algum serviço**, e isso é feito no arquivo `manifest.json`.
 
 Para o nosso caso especificamente, precisamos adicionar a seguinte sessão no campo `policies` deste arquivo:
 
@@ -59,15 +60,14 @@ Isso permitirá que sua app faça chamadas para essa URL, especificamente. Por m
 
 > Caso o recurso que você esteja tentando acessar precise de algum _role_ de autorização, você também precisará adicioná-lo nesta sessão. Por exemplo, a app `store-graphql` precisa [declarar que precisa da _policy_](https://github.com/vtex-apps/store-graphql/blob/91454631bffad6ad661cb87391f42f8886d9edd5/manifest.json#L117) `LogisticsAdmin` para que possa ser autorizadas a acessar alguns recursos do módulo de Logística.
 
-
-3. Agora, vamos testar o que fizemos! O processo do `vtex link` já deve ter atualizado, e poderemos copiar a URL pública que nosso serviço está expondo: 
-![Exemplo](https://user-images.githubusercontent.com/18706156/93384506-4d306e80-f83b-11ea-9cec-0e1b23f23a48.png)
+3. Agora, vamos testar o que fizemos! O processo do `vtex link` já deve ter atualizado, e poderemos copiar a URL pública que nosso serviço está expondo:
+   ![Exemplo](https://user-images.githubusercontent.com/18706156/93384506-4d306e80-f83b-11ea-9cec-0e1b23f23a48.png)
 
 Neste caso, a app está sendo desenvolvida na conta `marinbrasil` e no workspace `trainingweek`, mas no seu Terminal você deverá copiar o link fornecido para seu ambiente.
 
 Como o nosso _middleware_ é ativado por uma requisição GET, podemos testar a funcionalidade no nosso próprio navegador. Cole na barra de endereços `https://{workspace}--{account}.myvtex.com/_v/status/1` para buscarmos informações sobre o SKU de ID 1.
 
-O resultado abaixo deve ser esperado: 
+O resultado abaixo deve ser esperado:
 
 ![image](https://user-images.githubusercontent.com/18706156/93388848-b87d3f00-f841-11ea-8d2e-bed1c14d355d.png)
 

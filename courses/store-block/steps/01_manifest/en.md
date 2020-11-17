@@ -5,6 +5,7 @@ In order to build a complete custom application with VTEX IO, it's necessary to 
 ### Manifest file
 
 This file defines some basic configurations and abstractions that are needed for the build of your application to work. In this step, some fields of this file are going to be explained, which are:
+
 - vendor
 - name
 - version
@@ -12,37 +13,37 @@ This file defines some basic configurations and abstractions that are needed for
 
 Let's begin!
 
-### *vendor*
+### _vendor_
 
 It defines the name of the VTEX account that is developing the app. This account is responsible for its maintenance and distribution (the app can be installed in other accounts or only in its own)
 
->The `vtex` vendor is used for native apps.
+> The `vtex` vendor is used for native apps.
 
-### *name* 
+### _name_
 
 It identifies the name of the application. It should not contain any special characters (except from `-`) or uppercase characters.
 
-### *version* 
+### _version_
 
-It identifies the current app version. We use the [Semantic Versioning 2.0.0](https://semver.org/) specification for versioning. The format is well defined, divided in *patch*, *minor* and *major* releases.
+It identifies the current app version. We use the [Semantic Versioning 2.0.0](https://semver.org/) specification for versioning. The format is well defined, divided in _patch_, _minor_ and _major_ releases.
 
-You can find bellow a summary of the specification: 
+You can find bellow a summary of the specification:
 
-- *Patches*: Should be used for bug fixes that are backwards compatible 
-- *Minors*: Should be used to add a new backwards compatible feature 
-- *Majors*: Should be used when API incompatible changes are made (*breaking changes*)
+- _Patches_: Should be used for bug fixes that are backwards compatible
+- _Minors_: Should be used to add a new backwards compatible feature
+- _Majors_: Should be used when API incompatible changes are made (_breaking changes_)
 
 For example: If an API is at version `2.3.2` and it adds a new non breaking change feature, it can then be updated to version `2.4.0`.
 
-At the moment the deployment is made, there is a worker called *housekeeper* which is responsible for updating automatically the new version for every account. It will, therefore, update new *minor* and *patch* releases because of its backward compatibility. It will not, however, automatically update *major* versions since it might come with dependency changes. 
+At the moment the deployment is made, there is a worker called _housekeeper_ which is responsible for updating automatically the new version for every account. It will, therefore, update new _minor_ and _patch_ releases because of its backward compatibility. It will not, however, automatically update _major_ versions since it might come with dependency changes.
 
-### *dependencies*
+### _dependencies_
 
-An app might depend on other applications. This field lists all of the necessary dependencies for the correct app functioning. 
+An app might depend on other applications. This field lists all of the necessary dependencies for the correct app functioning.
 
 ## Example
 
-In the example of the `manifest.json` structure below, it's possible to see characteristics pointed out above. In particular, the app version is `0.0.1` and these numbers correspond respectively to its *major*, *minor* and *patch*.
+In the example of the `manifest.json` structure below, it's possible to see characteristics pointed out above. In particular, the app version is `0.0.1` and these numbers correspond respectively to its _major_, _minor_ and _patch_.
 
 ```json
 {

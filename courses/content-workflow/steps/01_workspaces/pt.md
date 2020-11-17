@@ -6,7 +6,6 @@ Workspaces são geralmente definidos como ambientes que são diferentes versões
 
 > _Workspaces_ são isolados uns dos outros.
 
-
 Há três diferentes tipos de _workspaces_:
 
 - Workspace de desenvolvimento: um ambiente onde é possível linkar, desenvolver, instalar e publicar aplicações. É um _workspace_ onde você tem mais liberdade nas configurações que irá fazer. Não lida com o tráfego de clientes de produção, não pode ser promovido a _master_ e nem pode ser utilizado para testes A/B;

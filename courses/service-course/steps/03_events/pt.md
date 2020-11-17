@@ -12,77 +12,78 @@ Vamos começar?
 
 ## Ouvindo eventos na aplicação
 
-1. Em primeiro lugar, vamos começar com o disparo de eventos sendo feito através da _app_ `events-example`. Esta _app_ irá disparar um evento a cada X segundos. Após rodar o comando `vtex link` no diretório de `events-example`,  clique na rota de _healthcheck_ disponível e uma mensagem "ok" deve aparecer no navegador:
+1. Em primeiro lugar, vamos começar com o disparo de eventos sendo feito através da _app_ `events-example`. Esta _app_ irá disparar um evento a cada X segundos. Após rodar o comando `vtex link` no diretório de `events-example`, clique na rota de _healthcheck_ disponível e uma mensagem "ok" deve aparecer no navegador:
 
-    ![image](https://user-images.githubusercontent.com/43679629/83802091-8c69f380-a680-11ea-82af-a438fb73f40b.png)
+   ![image](https://user-images.githubusercontent.com/43679629/83802091-8c69f380-a680-11ea-82af-a438fb73f40b.png)
 
-    > Este acesso a rota de _healthcheck_ cria um contexto de cache que é necessário para que o VTEX IO dispare eventos. Sem isso, a _app_ `events-example` não será capaz de disparar eventos que sua _app_ irá ouvir.
+   > Este acesso a rota de _healthcheck_ cria um contexto de cache que é necessário para que o VTEX IO dispare eventos. Sem isso, a _app_ `events-example` não será capaz de disparar eventos que sua _app_ irá ouvir.
 
-2. Agora, precisamos adicionar o _handler_ de eventos na declaração de `Service`, que é responsável por definir o que a _app_ vai fazer enquanto estiver ouvindo os eventos que podem chegar. Para fazer isso, no arquivo `/node/index.ts`, incremente a declaração de `Service`: 
-    ```diff
-    //node/index/ts
+2. Agora, precisamos adicionar o _handler_ de eventos na declaração de `Service`, que é responsável por definir o que a _app_ vai fazer enquanto estiver ouvindo os eventos que podem chegar. Para fazer isso, no arquivo `/node/index.ts`, incremente a declaração de `Service`:
 
-    + const TREE_SECONDS_MS = 3 * 1000
-    + const CONCURRENCY = 10
+   ```diff
+   //node/index/ts
 
-    export default new Service<Clients, State, ParamsContext>({
-        clients: {
-        implementation: Clients,
-        options: {
-            default: {
-                retries: 2,
-                timeout: 10000,
-            },
-    +       events: {
-    +           exponentialTimeoutCoefficient: 2,
-    +           exponentialBackoffCoefficient: 2,
-    +           initialBackoffDelay: 50,
-    +           retries: 1,
-    +           timeout: TREE_SECONDS_MS,
-    +           concurrency: CONCURRENCY,
-    +      },
-    +    },
-    +  },
-    })
-    ```
+   + const TREE_SECONDS_MS = 3 * 1000
+   + const CONCURRENCY = 10
 
-    Passando por cada uma das configurações, temos o seguinte:
+   export default new Service<Clients, State, ParamsContext>({
+       clients: {
+       implementation: Clients,
+       options: {
+           default: {
+               retries: 2,
+               timeout: 10000,
+           },
+   +       events: {
+   +           exponentialTimeoutCoefficient: 2,
+   +           exponentialBackoffCoefficient: 2,
+   +           initialBackoffDelay: 50,
+   +           retries: 1,
+   +           timeout: TREE_SECONDS_MS,
+   +           concurrency: CONCURRENCY,
+   +      },
+   +    },
+   +  },
+   })
+   ```
 
-      | Campo                           | Tipo    | Descrição                                                                     |
-      | ------------------------------- | ------- | ------------------------------------------------------------------------------- |
-      | `exponentialTimeoutCoefficient` | seconds | fator exponencial em que `timeout` é incrementado a cada tentativa              |
-      | `exponentialBackoffCoefficient` | seconds | fator exponencial em que o `backoff delay` será incrementado a cada tentativa   |
-      | `initialBackoffDelay`           | seconds | tempo que a _app_ irá esperar até a próxima tentativa                           |
-      | `retries`                       | -       | quantidade máxima de tentativas da _app_                                        |
-      | `timeout`                       | seconds | _timeout_ até ser considerado como uma tentativa mal sucedida                   |
-      | `concurrency`                   | -       | quantidade de processos simultâneos que o evento é capaz de ter                 |
+   Passando por cada uma das configurações, temos o seguinte:
 
-      > Ao adicionar esse código ao `Service`, estamos adicionando ao `Client` de `Service` a capacidade de lidar com eventos. Neste ponto, não estamos utilizando ainda os clientes em si ao lidar com eventos.
+   | Campo                           | Tipo    | Descrição                                                                     |
+   | ------------------------------- | ------- | ----------------------------------------------------------------------------- |
+   | `exponentialTimeoutCoefficient` | seconds | fator exponencial em que `timeout` é incrementado a cada tentativa            |
+   | `exponentialBackoffCoefficient` | seconds | fator exponencial em que o `backoff delay` será incrementado a cada tentativa |
+   | `initialBackoffDelay`           | seconds | tempo que a _app_ irá esperar até a próxima tentativa                         |
+   | `retries`                       | -       | quantidade máxima de tentativas da _app_                                      |
+   | `timeout`                       | seconds | _timeout_ até ser considerado como uma tentativa mal sucedida                 |
+   | `concurrency`                   | -       | quantidade de processos simultâneos que o evento é capaz de ter               |
 
-    Por enquanto, vamos apenas criar um _log_ de recebimento de eventos. Para criar este _handler_, vá ao arquivo `liveUsersUpdate.ts`, que se encontra na pasta `/node/event` e faça as seguintes alterações:
+   > Ao adicionar esse código ao `Service`, estamos adicionando ao `Client` de `Service` a capacidade de lidar com eventos. Neste ponto, não estamos utilizando ainda os clientes em si ao lidar com eventos.
 
-    ```ts
-    //node/event/liveUsersUpdate.ts
-    export async function updateLiveUsers() {
-        console.log('EVENT HANDLER: received event')
-    }
-    ```
+   Por enquanto, vamos apenas criar um _log_ de recebimento de eventos. Para criar este _handler_, vá ao arquivo `liveUsersUpdate.ts`, que se encontra na pasta `/node/event` e faça as seguintes alterações:
+
+   ```ts
+   //node/event/liveUsersUpdate.ts
+   export async function updateLiveUsers() {
+     console.log('EVENT HANDLER: received event')
+   }
+   ```
 
 3. Após adicionar o bloco de código mencionado anteriormente, precisamos declarar em `Service`, a referência para esta função. No arquivo `/node/index.ts`, adicione o seguinte código:
 
-    ```diff
-    ...
-    + import { updateLiveUsers } from './event/liveUsersUpdate'
-    ...
+   ```diff
+   ...
+   + import { updateLiveUsers } from './event/liveUsersUpdate'
+   ...
 
-    export default new Service<Clients, State, ParamsContext>({
-        ...
-    +  events: {
-    +    liveUsersUpdate: updateLiveUsers,
-    +  },
-    })
+   export default new Service<Clients, State, ParamsContext>({
+       ...
+   +  events: {
+   +    liveUsersUpdate: updateLiveUsers,
+   +  },
+   })
 
-    ```
+   ```
 
 4. Também é necessário modificar o arquivo `service.json`. De forma a ouvir os eventos que são enviados, precisamos declarar isto para darmos a _app_ de serviço que estamos desenvolvendo esta capacidade. É possível fazer isso através das seguintes alterações no arquivo `service.json`:
 

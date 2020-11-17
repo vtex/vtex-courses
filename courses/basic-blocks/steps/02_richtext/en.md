@@ -2,9 +2,9 @@
 
 ## Rich Text
 
-We'll start by customizing the *home page*. In your theme's `/store/blocks` folder, you'll find a file called `home.jsonc`. This file determines how the blocks you intend to use are organized. The language used in the layout composition is simple and based on [JSON](http://www.json.org/json-en.html).
+We'll start by customizing the _home page_. In your theme's `/store/blocks` folder, you'll find a file called `home.jsonc`. This file determines how the blocks you intend to use are organized. The language used in the layout composition is simple and based on [JSON](http://www.json.org/json-en.html).
 
-In `home.jsonc`, you'll notice a block which is default in all themes, namely `store.home`. This block determines which child blocks will be displayed on the home page. 
+In `home.jsonc`, you'll notice a block which is default in all themes, namely `store.home`. This block determines which child blocks will be displayed on the home page.
 
 ```json
 {
@@ -32,7 +32,7 @@ Thus, `store.home` now knows that it needs to render a Rich Text. However, we're
 
 ## Defining blocks
 
-Defining a block must always be performed apart from any other block, at thee source level of the JSON file. 
+Defining a block must always be performed apart from any other block, at thee source level of the JSON file.
 
 ```json
 {
@@ -46,19 +46,15 @@ Defining a block must always be performed apart from any other block, at thee so
 }
 ```
 
-In the block's definition, you can set its behavior and visual. **Customization points** have to be used to achieve this, so we'll start off using the Rich Text `props`: 
+In the block's definition, you can set its behavior and visual. **Customization points** have to be used to achieve this, so we'll start off using the Rich Text `props`:
 
 ```json
 {
   "store.home": {
-    "blocks": [
-      "rich-text"
-    ]
+    "blocks": ["rich-text"]
   },
   "rich-text": {
-    "props": {
-
-    }
+    "props": {}
   }
 }
 ```
@@ -72,9 +68,7 @@ Including this prop, we now have the following:
 ```json
 {
   "store.home": {
-    "blocks": [
-      "rich-text"
-    ]
+    "blocks": ["rich-text"]
   },
   "rich-text": {
     "props": {
@@ -84,14 +78,12 @@ Including this prop, we now have the following:
 }
 ```
 
-Reading through the [Markdown documentation](https://www.markdownguide.org/cheat-sheet/), we learn that in order for a text to appear in *italic*, we just need to place that text between `*`: 
+Reading through the [Markdown documentation](https://www.markdownguide.org/cheat-sheet/), we learn that in order for a text to appear in _italic_, we just need to place that text between `*`:
 
 ```json
 {
   "store.home": {
-    "blocks": [
-      "rich-text"
-    ]
+    "blocks": ["rich-text"]
   },
   "rich-text": {
     "props": {
@@ -101,14 +93,12 @@ Reading through the [Markdown documentation](https://www.markdownguide.org/cheat
 }
 ```
 
-To center align the text, we can add the `textPosition`  prop and give it the `CENTER` value:
+To center align the text, we can add the `textPosition` prop and give it the `CENTER` value:
 
 ```json
 {
   "store.home": {
-    "blocks": [
-      "rich-text"
-    ]
+    "blocks": ["rich-text"]
   },
   "rich-text": {
     "props": {
@@ -125,7 +115,7 @@ Define a [Rich Text](https://developers.vtex.com/docs/vtex-rich-text#rich-text) 
 
     ```diff
     {
-      "store.home": { 
+      "store.home": {
         "blocks": [
     +      "rich-text"
         ]

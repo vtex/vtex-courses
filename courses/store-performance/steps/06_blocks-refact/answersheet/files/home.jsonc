@@ -39,9 +39,7 @@
   },
 
   "flex-layout.row#brands": {
-    "children": [
-      "slider-layout#brands"
-    ],
+    "children": ["slider-layout#brands"],
     "props": {
       "marginTop": 4,
       "marginBottom": 8
@@ -64,7 +62,6 @@
       "textAlign": "CENTER"
     }
   },
-
 
   "list-context.product-list#new-arrivals": {
     "blocks": ["product-summary.shelf"],

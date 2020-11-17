@@ -1,6 +1,7 @@
 # Publishing an app on VTEX IO
 
 ## Introduction
+
 After being presented to the concepts regarding the types of workspaces, we're going to teach how to publish an app on VTEX IO. In order to realize operations like these, we use commands on [VTEX Toolbelt](https://developers.vtex.com/docs/vtex-io-documentation-toolbelt), our CLI that gives you access to the platform features.
 
 ## Using VTEX Toolbelt to publish an app
@@ -10,6 +11,7 @@ To publish an app on VTEX IO, one needs to use the following command on VTEX Too
 ```
 vtex publish
 ```
+
 > Which app are we going to publish?
 
 At the end of the Store Framework course, you implemented a functional store and it's that app you are going to publish.
@@ -23,6 +25,7 @@ With an application of a theme, go to `manifest.json` file and change the app na
 ```
 trainingweek-{{devname}}
 ```
+
 where `devname` is a name of your choice, that identifies you. Besides, it's necessary to change the application vendor, which **needs** to be `appliancetheme`.
 
 Below you will find a part of a valid `manifest.json` file with the previous changes already made:

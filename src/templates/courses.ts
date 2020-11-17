@@ -26,7 +26,7 @@ const getCourse = (
         : `<p class="course-title">${title[lang]}<p>`
     }
   </h3>
-  ${isActive ? '' : `<div class="label">${messages['comingSoon'][lang]}</div>`}
+  ${isActive ? '' : `<div class="label">${messages.comingSoon[lang]}</div>`}
   <p class="course-description">
     ${description[lang]}
   </p>

@@ -20,68 +20,68 @@ A lot of the Tachyons' definitions can be changed, so that your store will have 
 
 1. First, import the `useCssHandles` _hook_. To do so, return to `Countdown.tsx` and do the _import_:
 
-    ```tsx
-    // react/Countdown.tsx
-    import { useCssHandles } from "vtex.css-handles"
-    ```
+   ```tsx
+   // react/Countdown.tsx
+   import { useCssHandles } from 'vtex.css-handles'
+   ```
 
 2. Now, define in a _Array_ all necessary _handles_ (in this case, only `'countdown'` will be used):
 
-    ```tsx
-    // react/Countdown.tsx
-    const CSS_HANDLES = ["countdown"]
-    ```
+   ```tsx
+   // react/Countdown.tsx
+   const CSS_HANDLES = ['countdown']
+   ```
 
 3. After defining the array, let's use the `useCssHandles` in the component `Countdown` to define the `countdown` _handle_:
 
-    ```diff
-    // react/Countdown.tsx
-    const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
-      const [timeRemaining, setTime] = useState<TimeSplit>({
-        hours: '00',
-        minutes: '00',
-        seconds: '00'
-      })
+   ```diff
+   // react/Countdown.tsx
+   const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
+     const [timeRemaining, setTime] = useState<TimeSplit>({
+       hours: '00',
+       minutes: '00',
+       seconds: '00'
+     })
 
-    + const handles = useCssHandles(CSS_HANDLES)
+   + const handles = useCssHandles(CSS_HANDLES)
 
-      tick(targetDate, setTime)
+     tick(targetDate, setTime)
 
-      return (
-        <div>
-          <h1>
-            { `${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}` }
-          </h1>
-        </div>
-      )
-    }
-    ```
+     return (
+       <div>
+         <h1>
+           { `${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}` }
+         </h1>
+       </div>
+     )
+   }
+   ```
 
 4. At last, it is needed to use the _handle_ in the component to see the customization. For this, use the prop `className` with the classes to be used and the Tachyons classes, for global styles.
 
-    ```diff
-    // react/Countdown.tsx
-    import React from 'react'
-    ...
+   ```diff
+   // react/Countdown.tsx
+   import React from 'react'
+   ...
 
-    const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
-      const [timeRemaining, setTime] = useState<TimeSplit>({
-        hours: '00',
-        minutes: '00',
-        seconds: '00'
-      })
+   const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
+     const [timeRemaining, setTime] = useState<TimeSplit>({
+       hours: '00',
+       minutes: '00',
+       seconds: '00'
+     })
 
-      const handles = useCssHandles(CSS_HANDLES)
+     const handles = useCssHandles(CSS_HANDLES)
 
-      tick(targetDate, setTime)
+     tick(targetDate, setTime)
 
-      return (
-    +   <div className={`${handles.countdown} c-muted-1 db tc`}>
-          {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
-        </div>
-      )
-    }
-    ```
+     return (
+   +   <div className={`${handles.countdown} c-muted-1 db tc`}>
+         {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
+       </div>
+     )
+   }
+   ```
 
 Let's see the result?
 

@@ -2,13 +2,14 @@
 
 ## Introdução
 
-Uma app de admin acaba perdendo o seu sentido se não puder consumir dados. Sendo assim, no último passo do curso, vamos aprender como conectar sua app de admin a um serviço e, em seguida, usá-lo no *front-end* da aplicação.
+Uma app de admin acaba perdendo o seu sentido se não puder consumir dados. Sendo assim, no último passo do curso, vamos aprender como conectar sua app de admin a um serviço e, em seguida, usá-lo no _front-end_ da aplicação.
 
 ## Atividade
 
-1. Comece adicionando os *builders* para serviço necessários: 
+1. Comece adicionando os _builders_ para serviço necessários:
 
 /manifest.json
+
 ```diff
 {
   ...
@@ -24,18 +25,20 @@ Uma app de admin acaba perdendo o seu sentido se não puder consumir dados. Send
 
 ```
 
-2. Crie uma pasta `graphql/` e adicione um arquivo simples `schema.graphql` com uma única query: 
+2. Crie uma pasta `graphql/` e adicione um arquivo simples `schema.graphql` com uma única query:
 
 /graphql/schema.graphql
+
 ```
 type Query {
-  helloworld: String 
+  helloworld: String
 }
 ```
 
-3. Crie uma pasta `node/` e nela adicione um `index.ts` que vai instanciar nosso serviço: 
+3. Crie uma pasta `node/` e nela adicione um `index.ts` que vai instanciar nosso serviço:
 
 /node/index.ts
+
 ```
 import { Service } from '@vtex/api'
 
@@ -52,9 +55,10 @@ export default new Service({
 
 Nosso serviço vai então, na query `helloworld` retornar um número aleatório.
 
-4. Na pasta `/node` para que você consiga desenvolver bem localmente, será necessário um `package.json`, voce pode adicionar um simples: 
+4. Na pasta `/node` para que você consiga desenvolver bem localmente, será necessário um `package.json`, voce pode adicionar um simples:
 
 /node/package.json
+
 ```
 {
   "dependencies": {
@@ -80,16 +84,17 @@ Nosso serviço vai então, na query `helloworld` retornar um número aleatório.
 
 ```
 
-5. Na pasta `react/` nós vamos precisar definir uma *query* para conseguir usar o resolver que definimos no serviço, para fazer isso, crie uma pasta `graphql/` dentro da pasta `react/` e nesta pasta, crie um `helloworld.gql` com: 
+5. Na pasta `react/` nós vamos precisar definir uma _query_ para conseguir usar o resolver que definimos no serviço, para fazer isso, crie uma pasta `graphql/` dentro da pasta `react/` e nesta pasta, crie um `helloworld.gql` com:
 
-/react/graphql/helloworld.gql: 
+/react/graphql/helloworld.gql:
+
 ```
 query hello {
   helloworld
 }
 ```
 
-6. Para finalizar, precisamos adicionar essa *query* ao nosso componente no `adminExample.ts`
+6. Para finalizar, precisamos adicionar essa _query_ ao nosso componente no `adminExample.ts`
 
 ```diff
 import React, { FC } from 'react'
@@ -114,7 +119,7 @@ const AdminExample: FC = () => {
 export default AdminExample
 ```
 
-O resultado deve ser: 
+O resultado deve ser:
 
 ![image](https://user-images.githubusercontent.com/18701182/92937440-b79f7400-f421-11ea-9e92-a24ef710e83e.png)
 

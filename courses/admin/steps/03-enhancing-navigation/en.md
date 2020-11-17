@@ -1,6 +1,6 @@
 # Enhancing Navegation
 
-## Introduction 
+## Introduction
 
 `Navigation.json` has a series of features that can improve the relevance and navigation of your application, in this step we will learn how to define a title message and create keywords.
 
@@ -9,6 +9,7 @@
 1. In the previous step we used `titleId`: ʻadmin-example.navigation.label`. To assign a textual value to this key, we need to write the corresponding value in the messages folder, in the three language files:
 
 /messages/pt.json
+
 ```
 {
   "admin-example.navigation.label": "Treinamento de IO"
@@ -16,6 +17,7 @@
 ```
 
 /messages/en.json
+
 ```
 {
   "admin-example.navigation.label": "IO Training"
@@ -23,6 +25,7 @@
 ```
 
 /messages/es.json
+
 ```
 {
   "admin-example.navigation.label": "Entrenamiento de IO"
@@ -36,6 +39,7 @@ That done, we can now see a translatable message for the menu we created:
 2. Add keywords to make your application search easier:
 
 /admin/navigation.json
+
 ```diff
 {
   ...
@@ -46,6 +50,7 @@ That done, we can now see a translatable message for the menu we created:
 3. Similarly, create the messages for the keywords, separated by commas:
 
 /messages/pt.json
+
 ```diff
 {
   "admin-example.navigation.label": "Treinamento de IO",
@@ -54,6 +59,7 @@ That done, we can now see a translatable message for the menu we created:
 ```
 
 /messages/en.json
+
 ```diff
 {
   "admin-example.navigation.label": "IO Training",
@@ -62,6 +68,7 @@ That done, we can now see a translatable message for the menu we created:
 ```
 
 /messages/es.json
+
 ```diff
 {
   "admin-example.navigation.label": "Entrenamiento de IO",
