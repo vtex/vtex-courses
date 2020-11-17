@@ -31,8 +31,7 @@ Vamos supor que você queira criar uma página simples com informações sobre a
 ```json
 {
   "store.custom#{templatename}": {
-    "blocks": [
-    ]
+    "blocks": []
   }
 }
 ```
@@ -67,69 +66,66 @@ Vamos criar uma página com informações sobre a sua loja conforme o exemplo ab
 2. Declare um template `store.custom#about-us` neste arquivo;
 3. Inclua um block "flex-layout.row#about-us" neste _template_:
 
-    ```json
-    {
-        "store.custom#about-us": {
-          "blocks": [
-            "flex-layout.row#about-us"
-          ]
-        }
-    }
-    ```
+   ```json
+   {
+     "store.custom#about-us": {
+       "blocks": ["flex-layout.row#about-us"]
+     }
+   }
+   ```
+
 4. No mesmo arquivo, adicione o código abaixo, logo depois da declaração de `store.custom#about-us`. Ele é responsável por definir `flex-layout.row#about-us`.
 
-    ```json
-      "flex-layout.row#about-us": {
-        "children": [
-          "image#about-us",
-          "flex-layout.col#text-about-us"
-        ]
-      },
-    ```
+   ```json
+     "flex-layout.row#about-us": {
+       "children": [
+         "image#about-us",
+         "flex-layout.col#text-about-us"
+       ]
+     },
+   ```
 
+5) Agora, vamos definir seus blocos filhos para montar o _layout_:
 
+   ```json
+     "flex-layout.col#text-about-us": {
+       "children": [
+         "rich-text#about-title",
+         "rich-text#about-content"
+       ],
+       "props": {
+         "preventVerticalStretch": true
+       }
+     },
+     "rich-text#about-title": {
+       "props": {
+           "text": "# About Minimum Theme"
+       }
+     },
+     "rich-text#about-content": {
+       "props": {
+         "text":
+           " This is the VTEX Minimum Theme, you can use it to test blocks usage and build your first store from scratch."
+       }
+     },
+     "image#about-us": {
+       "props": {
+         "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
+         "maxHeight": "600px"
+       }
+     }
+   ```
 
-5. Agora, vamos definir seus blocos filhos para montar o _layout_:
+6) Na pasta `store`, crie um arquivo chamado `routes.json`;
 
-    ```json
-      "flex-layout.col#text-about-us": {
-        "children": [
-          "rich-text#about-title",
-          "rich-text#about-content"
-        ],
-        "props": {
-          "preventVerticalStretch": true
-        }
-      },
-      "rich-text#about-title": {
-        "props": {
-            "text": "# About Minimum Theme"
-        }
-      },
-      "rich-text#about-content": {
-        "props": {
-          "text":
-            " This is the VTEX Minimum Theme, you can use it to test blocks usage and build your first store from scratch."
-        }
-      },
-      "image#about-us": {
-        "props": {
-          "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
-          "maxHeight": "600px"
-        }
-      }
-    ```
+7) Neste arquivo, declare um _path_ `/about-us`:
 
-6. Na pasta `store`, crie um arquivo chamado `routes.json`;
+   ```json
+   {
+     "store.custom#about-us": {
+       "path": "/about-us"
+     }
+   }
+   ```
 
-6. Neste arquivo, declare um _path_ `/about-us`:
-
-    ```json
-    {
-      "store.custom#about-us": {
-        "path": "/about-us"
-      }
-    }
-    ```
-
-7. Com o código linkado, acesse `{workspace}--appliancetheme.myvtex.com/about-us` para ver sua nova _landing page_.
+8) Com o código linkado, acesse `{workspace}--appliancetheme.myvtex.com/about-us` para ver sua nova _landing page_.

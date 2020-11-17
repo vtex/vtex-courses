@@ -1,90 +1,90 @@
 [
-    {
-        "folder": "01_services",
-        "title": {
-            "en": "Services in VTEX IO",
-            "pt": "Serviços no VTEX IO"
-        },
-        "description": {
-            "en": "On this step, we have an overview of services in VTEX IO and brief explanation of backend possibilities",
-            "pt": "Neste passo, você terá uma visão geral de serviços no VTEX IO e uma breve explicação das possibilidades de desenvolvimento backend"
-        }
+  {
+    "folder": "01_services",
+    "title": {
+      "en": "Services in VTEX IO",
+      "pt": "Serviços no VTEX IO"
     },
-    {
-        "folder": "02_boilerplate",
-        "title": {
-            "en": "Overview: Understanding the Boilerplate",
-            "pt": "Visão geral: Entendendo o Boilerplate"
-        },
-        "description": {
-            "en": "Here we have a walkthrough the boilerplate, explaining each file's purpose",
-            "pt": "Aqui será apresentada a estrutura do boilerplate, explicando o propósito de cada arquivo"
-        }
-    },
-    {
-        "folder": "03_events",
-        "title": {
-            "en": "Events: handling and receiving events",
-            "pt": "Eventos: recebendo e lidando com eventos"
-        },
-        "description": {
-            "en": "On this step we approach using events in VTEX IO and learn how to configure an app to listen to events",
-            "pt": "Neste passo, vamos utilizar os eventos no VTEX IO e aprender como configurar uma apicação para ouvir eventos"
-        }
-    },
-    {
-        "folder": "04_clients-analytics",
-        "title": {
-            "en": "Getting to know more about clients",
-            "pt": "Conhecendo um pouco mais sobre clientes"
-        },
-        "description": {
-            "en": "Here we have an introduction of clients in VTEX IO and implementation of a external app client",
-            "pt": "Aqui teremos uma introdução sobre clientes no VTEX IO e implementaremos um cliente externo"
-        }
-    },
-    {
-        "folder": "05_events-triggers",
-        "title": {
-            "en": "Using events as triggers",
-            "pt": "Utilizando eventos como gatilhos"
-        },
-        "description": {
-            "en": "Learn how to use an event as triggers to actions",
-            "pt": "Aprenda como usar um evento como gatilho para ações"
-        }
-    },
-    {
-        "folder": "06_clients-masterdata",
-        "title": {
-            "en": "Clients: Using Master Data",
-            "pt": "Clientes: Usando o Master Data"
-        },
-        "description": {
-            "en": "On this step we approach the Master Data client and its usage",
-            "pt": "Neste passo, vamos abordar o cliente de Master Data e seus usos"
-        }
-    },
-    {
-        "folder": "07_graphql-implementation",
-        "title": {
-            "en": "GraphQL: Retrieving data from Masterdata",
-            "pt": "GraphQL: Consultando dados do Master Data"
-        },
-        "description": {
-            "en": "Here we see how to use GraphQL to retrieve data from Mater Data",
-            "pt": "Aqui você verá como utilizar GraphQL para consultar dados no Master Data"
-        }
-    },
-    {
-        "folder": "08_graphiql",
-        "title": {
-            "en": "GraphQL: Using GraphiQL",
-            "pt": "GraphQL: Utilizando GraphiQL"
-        },
-        "description": {
-            "en": "Here we learn how to use GraphiQL to test queries",
-            "pt": "Aqui você aprenderá como usar o GraphiQL para testar queries"
-        }
+    "description": {
+      "en": "On this step, we have an overview of services in VTEX IO and brief explanation of backend possibilities",
+      "pt": "Neste passo, você terá uma visão geral de serviços no VTEX IO e uma breve explicação das possibilidades de desenvolvimento backend"
     }
+  },
+  {
+    "folder": "02_boilerplate",
+    "title": {
+      "en": "Overview: Understanding the Boilerplate",
+      "pt": "Visão geral: Entendendo o Boilerplate"
+    },
+    "description": {
+      "en": "Here we have a walkthrough the boilerplate, explaining each file's purpose",
+      "pt": "Aqui será apresentada a estrutura do boilerplate, explicando o propósito de cada arquivo"
+    }
+  },
+  {
+    "folder": "03_events",
+    "title": {
+      "en": "Events: handling and receiving events",
+      "pt": "Eventos: recebendo e lidando com eventos"
+    },
+    "description": {
+      "en": "On this step we approach using events in VTEX IO and learn how to configure an app to listen to events",
+      "pt": "Neste passo, vamos utilizar os eventos no VTEX IO e aprender como configurar uma apicação para ouvir eventos"
+    }
+  },
+  {
+    "folder": "04_clients-analytics",
+    "title": {
+      "en": "Getting to know more about clients",
+      "pt": "Conhecendo um pouco mais sobre clientes"
+    },
+    "description": {
+      "en": "Here we have an introduction of clients in VTEX IO and implementation of a external app client",
+      "pt": "Aqui teremos uma introdução sobre clientes no VTEX IO e implementaremos um cliente externo"
+    }
+  },
+  {
+    "folder": "05_events-triggers",
+    "title": {
+      "en": "Using events as triggers",
+      "pt": "Utilizando eventos como gatilhos"
+    },
+    "description": {
+      "en": "Learn how to use an event as triggers to actions",
+      "pt": "Aprenda como usar um evento como gatilho para ações"
+    }
+  },
+  {
+    "folder": "06_clients-masterdata",
+    "title": {
+      "en": "Clients: Using Master Data",
+      "pt": "Clientes: Usando o Master Data"
+    },
+    "description": {
+      "en": "On this step we approach the Master Data client and its usage",
+      "pt": "Neste passo, vamos abordar o cliente de Master Data e seus usos"
+    }
+  },
+  {
+    "folder": "07_graphql-implementation",
+    "title": {
+      "en": "GraphQL: Retrieving data from Masterdata",
+      "pt": "GraphQL: Consultando dados do Master Data"
+    },
+    "description": {
+      "en": "Here we see how to use GraphQL to retrieve data from Mater Data",
+      "pt": "Aqui você verá como utilizar GraphQL para consultar dados no Master Data"
+    }
+  },
+  {
+    "folder": "08_graphiql",
+    "title": {
+      "en": "GraphQL: Using GraphiQL",
+      "pt": "GraphQL: Utilizando GraphiQL"
+    },
+    "description": {
+      "en": "Here we learn how to use GraphiQL to test queries",
+      "pt": "Aqui você aprenderá como usar o GraphiQL para testar queries"
+    }
+  }
 ]

@@ -5,10 +5,7 @@
   },
 
   "search-result-layout#search": {
-    "blocks": [
-      "search-result-layout.desktop",
-      "search-not-found-layout"
-    ]
+    "blocks": ["search-result-layout.desktop", "search-not-found-layout"]
   },
   "search-result-layout.desktop": {
     "children": [
@@ -207,9 +204,7 @@
   },
 
   "flex-layout.row#depBanner": {
-    "children": [
-      "image#depbanner"
-    ]
+    "children": ["image#depbanner"]
   },
 
   "search-result-layout.mobile#dep": {

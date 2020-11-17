@@ -71,7 +71,8 @@ In some cases, your application is more complex and needs several navigable sect
 
 5. Create the new `adminOtherExample.tsx` component at the root of the `react/` folder:
 
-/react/adminOtherExample.tsx 
+/react/adminOtherExample.tsx
+
 ```
 import React, { FC } from 'react'
 
@@ -84,8 +85,8 @@ export default AdminOtherExample
 
 6. Finish by creating the messages for each of the `labelId` defined in step 3:
 
-
 /messages/pt.json
+
 ```diff
 {
   "admin-example.navigation.label": "Treinamento de IO",
@@ -96,6 +97,7 @@ export default AdminOtherExample
 ```
 
 /messages/en.json
+
 ```diff
 {
   "admin-example.navigation.label": "IO Training",
@@ -106,6 +108,7 @@ export default AdminOtherExample
 ```
 
 /messages/es.json
+
 ```diff
 {
   "admin-example.navigation.label": "Entrenamiento de IO",
@@ -115,6 +118,6 @@ export default AdminOtherExample
 }
 ```
 
-The expected result is, then: 
+The expected result is, then:
 
 ![admin](https://user-images.githubusercontent.com/18701182/92791871-6fca0f80-f383-11ea-98f8-382c743a6657.gif)

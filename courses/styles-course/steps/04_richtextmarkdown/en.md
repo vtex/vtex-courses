@@ -18,7 +18,7 @@ To include texts in the `rich-text` block, you need to use the `text` prop:
   }
 ```
 
-The `text` prop accepts markdown format. However, if you want to write your text using this language, your code must be similar to the following: 
+The `text` prop accepts markdown format. However, if you want to write your text using this language, your code must be similar to the following:
 
 ```json
   "rich-text#home1": {
@@ -45,4 +45,3 @@ Expected result:
 ![image](https://user-images.githubusercontent.com/19495917/90180384-410d4900-dd85-11ea-88b9-3af68e8f3a08.png)
 
 Note: Remember to access the Rich Text [documentation](https://developers.vtex.com/docs/vtex-rich-text) if you have any questions during the activity.
-

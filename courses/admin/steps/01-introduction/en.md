@@ -30,7 +30,7 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
     "react": "3.x",
     "messages": "1.x",
     "docs": "0.x",
-+   "admin": "0.x" 
++   "admin": "0.x"
   },
   "dependencies": {},
   "registries": [
@@ -41,7 +41,7 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
 }
 ```
 
-3. Edit the `vendor`,` name`, `title` and` description` of the application:
+3. Edit the `vendor`,`name`, `title` and`description` of the application:
 
 ```diff
 //manifest.json
@@ -55,7 +55,7 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
     "react": "3.x",
     "messages": "1.x",
     "docs": "0.x",
-    "admin": "0.x" 
+    "admin": "0.x"
   },
   "dependencies": {},
   "registries": [
@@ -65,9 +65,11 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
 ```
-**NOTE:** If you are taking the course at your own store and developing your own app, remember that you will have to go through the [form of whitelist] (https://forms.gle/ovi4h7mnwgUKS2hu5).
+
+**NOTE:** If you are taking the course at your own store and developing your own app, remember that you will have to go through the [form of whitelist](https://forms.gle/ovi4h7mnwgUKS2hu5).
 
 5. Add `vtex.styleguide` as a dependency, we will use it later in the course:
+
 ```diff
 //manifest.json
 {
@@ -80,7 +82,7 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
     "react": "3.x",
     "messages": "1.x",
     "docs": "0.x",
-    "admin": "0.x" 
+    "admin": "0.x"
   },
   "dependencies": {
 +   "vtex.styleguide": "9.x"
@@ -93,16 +95,16 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
 }
 ```
 
-6. In the project's root directory, create an `/admin` directory, its structure should be: 
+6. In the project's root directory, create an `/admin` directory, its structure should be:
 
 ```diff
 |
-|_ CHANGELOG.md  
-|_ docs/         
+|_ CHANGELOG.md
+|_ docs/
 |_ messages/
 |_ react/
 +|_ admin/
 |_ package.json
-|_ manifest.json  
+|_ manifest.json
 |_ yarn.lock
 ```

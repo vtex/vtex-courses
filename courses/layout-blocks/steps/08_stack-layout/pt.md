@@ -6,19 +6,19 @@ O Stack Layout é mais um tipo possível de construir _layouts_ complexos se ala
 
 ## Atividade
 
-Pensando melhor no problema que queremos resolver, conseguimos dividi-lo em duas partes: 
+Pensando melhor no problema que queremos resolver, conseguimos dividi-lo em duas partes:
 
-- Uma imagem (bloco `image`) de fundo: 
+- Uma imagem (bloco `image`) de fundo:
 
 ![image](https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___1b7592b49667c6a89203a0997e06bc87.jpg)
 
-- Um botão de CTA: 
+- Um botão de CTA:
 
 ![image](https://user-images.githubusercontent.com/18701182/90291114-8a2cce00-de55-11ea-982c-3fef741535fb.png)
 
 Vamos então construir o _info card_ usando ambos elementos:
 
-1. Declare o `stack-layout` na sua página: 
+1. Declare o `stack-layout` na sua página:
 
 ```diff
 {
@@ -39,7 +39,7 @@ Vamos então construir o _info card_ usando ambos elementos:
      "stack-layout#cta"
     ]
   },
-+ "stack-layout#cta": { 
++ "stack-layout#cta": {
 +   "children": [
 +     "image#cta",
 +     "link#cta"
@@ -48,25 +48,25 @@ Vamos então construir o _info card_ usando ambos elementos:
 }
 ```
 
-3. Declare a imagem e o _link_ que usaremos: 
+3. Declare a imagem e o _link_ que usaremos:
 
 ```diff
 {
   ...
 + "image#cta": {
-+   "props": { 
++   "props": {
 +     "blockClass": "cover",
 +     "width": "100%",
 +     "height": 400,
 +     "src": "https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___1b7592b49667c6a89203a0997e06bc87.jpg"
 +   }
 + },
-+ "link#cta": { 
++ "link#cta": {
 +   "props": {
 +     "displayMode": "button",
 +     "buttonProps": {
 +       "variant": "primary",
-+       "size": "large" 
++       "size": "large"
 +     },
 +     "href": "/washer",
 +     "label": "Check these awesome discounts"
@@ -79,9 +79,9 @@ Vamos então construir o _info card_ usando ambos elementos:
 
 ![infocard](https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___0a2e8bde5418359bdaf0a06d9a4d09f5.jpg)
 
-**OPCIONAL:** Se você quiser melhorar um pouco o visual do _info card_ criado, siga os passos seguintes: 
+**OPCIONAL:** Se você quiser melhorar um pouco o visual do _info card_ criado, siga os passos seguintes:
 
-5. Crie um arquivo `vtex.stack-layout.css` na pasta `/styles/css` e adicione os seguintes estilos: 
+5. Crie um arquivo `vtex.stack-layout.css` na pasta `/styles/css` e adicione os seguintes estilos:
 
 ```
 .stackItem {
@@ -93,7 +93,7 @@ Vamos então construir o _info card_ usando ambos elementos:
 }
 ```
 
-6. No arquivo `vtex.store-components.css` da pasta `/styles/css` adicione: 
+6. No arquivo `vtex.store-components.css` da pasta `/styles/css` adicione:
 
 ```
 .imageElement--cover {

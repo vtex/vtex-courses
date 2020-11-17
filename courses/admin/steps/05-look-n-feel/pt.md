@@ -8,13 +8,13 @@ A fim de facilitar a integração visual para o desenvolvedor, o [Styleguide](ht
 
 ## Atividade
 
-1. No passo 1, adicionamos o `vtex.styleguide` como dependência, importe o `Layout` e `PageBlock` do styleguide para que possamos usá-los: 
+1. No passo 1, adicionamos o `vtex.styleguide` como dependência, importe o `Layout` e `PageBlock` do styleguide para que possamos usá-los:
 
 ```
 import { Layout, PageBlock } from 'vtex.styleguide'
 ```
 
-2. Ambos estes componentes são responsáveis por criar o layout de admin que é utilizado pelas apps VTEX, você pode compô-los da seguinte forma: 
+2. Ambos estes componentes são responsáveis por criar o layout de admin que é utilizado pelas apps VTEX, você pode compô-los da seguinte forma:
 
 ```
 import React, { FC } from 'react'
@@ -56,7 +56,6 @@ const AdminExample: FC = () => {
 export default AdminExample;
 ```
 
-O resultado esperado deve ser: 
+O resultado esperado deve ser:
 
 ![image](https://user-images.githubusercontent.com/18701182/92802313-cc7df800-f38c-11ea-95a1-035948dbbc85.png)
-

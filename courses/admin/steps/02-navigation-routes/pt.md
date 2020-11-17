@@ -10,10 +10,9 @@ O navigation é o arquivo que define as regras de navegação na barra lateral d
 
 ![image](https://user-images.githubusercontent.com/18701182/92757455-21f1df00-f364-11ea-8798-87f8f73863c8.png)
 
-
 ## routes.json
 
-O routes é quem define as rotas e componentes react associados, da sua aplicação, qualquer componente que esteja mapeado para uma rota, deve ser declarado no routes, ainda que não esteja diretamente associado a um item de navegação no `navigation.json`. 
+O routes é quem define as rotas e componentes react associados, da sua aplicação, qualquer componente que esteja mapeado para uma rota, deve ser declarado no routes, ainda que não esteja diretamente associado a um item de navegação no `navigation.json`.
 
 ## Atividade
 
@@ -46,7 +45,7 @@ O routes é quem define as rotas e componentes react associados, da sua aplicaç
 }
 ```
 
-**NOTA:** O mapeamento de um *navigation* para uma *route* é feito através do path. O path deve divergir apenas por um `/app/` no routes.json
+**NOTA:** O mapeamento de um _navigation_ para uma _route_ é feito através do path. O path deve divergir apenas por um `/app/` no routes.json
 
 ```
 //navigation.json
@@ -71,7 +70,7 @@ const AdminExample: FC = () => {
 export default AdminExample
 ```
 
-Link a aplicação (`vtex link`). O resultado deve ser o seguinte: 
+Link a aplicação (`vtex link`). O resultado deve ser o seguinte:
 
 ![image](https://user-images.githubusercontent.com/18701182/92773790-486b4680-f373-11ea-8d1b-c4b84dad4375.png)
 

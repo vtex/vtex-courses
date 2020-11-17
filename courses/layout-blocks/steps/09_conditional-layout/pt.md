@@ -6,7 +6,7 @@ Em alguns momentos, quando desenvolvendo uma loja, precisamos criar _layouts_ co
 
 ## Setup opcional
 
-Para criar um _layout_ condicional de página de produto é necessário, inicialmente, ter uma página de produto. Se você já não tiver definido um _template_ de produto para sua loja, copie o disponível abaixo: 
+Para criar um _layout_ condicional de página de produto é necessário, inicialmente, ter uma página de produto. Se você já não tiver definido um _template_ de produto para sua loja, copie o disponível abaixo:
 
 ```json
 //product.jsonc
@@ -33,10 +33,7 @@ Para criar um _layout_ condicional de página de produto é necessário, inicial
       "paddingBottom": 7,
       "blockClass": "product-main"
     },
-    "children": [
-      "product-images",
-      "flex-layout.col#right-col"
-    ]
+    "children": ["product-images", "flex-layout.col#right-col"]
   },
   "product-images": {
     "props": {
@@ -84,13 +81,13 @@ Para criar um _layout_ condicional de página de produto é necessário, inicial
 }
 ```
 
-Fazendo isso, teremos uma página de produto como a mostrada abaixo: 
+Fazendo isso, teremos uma página de produto como a mostrada abaixo:
 
 ![image](https://user-images.githubusercontent.com/18701182/90407144-84650180-e07c-11ea-9036-838d4d662ba1.png)
 
 ## Atividade
 
-1. Vamos criar um _banner_ exclusivo para a geladeira Geladeira Retrô, para isso, use como primeiro filho da `store.product` um `condition-layout.product`: 
+1. Vamos criar um _banner_ exclusivo para a geladeira Geladeira Retrô, para isso, use como primeiro filho da `store.product` um `condition-layout.product`:
 
 ```diff
 //product.jsonc
@@ -105,7 +102,7 @@ Fazendo isso, teremos uma página de produto como a mostrada abaixo:
 }
 ```
 
-2. Defina, então, o `condition-layout.product`, com uma condição específica para a Batedeira Retrô: 
+2. Defina, então, o `condition-layout.product`, com uma condição específica para a Batedeira Retrô:
 
 ```diff
 //product.jsonc
@@ -120,13 +117,13 @@ Fazendo isso, teremos uma página de produto como a mostrada abaixo:
 
 ```
 
-3. Agora, precisamos definir a condição para a batedeira. 
+3. Agora, precisamos definir a condição para a batedeira.
 
-O `condition.product` requer a *prop* `conditions` para definir em quais condições deve ser aplicada (veja a [documentação](https://developers.vtex.com/docs/vtex-condition-layout)), uma condição é dividida em três partes:
+O `condition.product` requer a _prop_ `conditions` para definir em quais condições deve ser aplicada (veja a [documentação](https://developers.vtex.com/docs/vtex-condition-layout)), uma condição é dividida em três partes:
 
 - **subject:** é o dado que vai ser usado para fins de comparação, no nosso caso usaremos `productId`, na documentação é possível ver todas as opções disponíveis;
 - **verb:** é o método comparativo, usaremos o `is` para validar se o `productId` é de um produto específico, mas poderíamos usar: `is`, `is-not`, `contains` ou `does-not-contain`;
-- **object:** é o valor com que queremos comparar, no nosso caso, usaremos o *productId* `20`. 
+- **object:** é o valor com que queremos comparar, no nosso caso, usaremos o _productId_ `20`.
 
 Sendo assim, o objeto formado é:
 
@@ -149,18 +146,18 @@ Sendo assim, o objeto formado é:
 }
 ```
 
-**NOTA:** Se você estiver fazendo o curso na sua própria loja, identifique o `productId` do produto que deseja customizar e coloque o valor no campo `object`. Você descobrir o valor atualizando a página, abrindo o _console_ do seu navegador e digitando `__RUNTIME__.route.params.id`: 
+**NOTA:** Se você estiver fazendo o curso na sua própria loja, identifique o `productId` do produto que deseja customizar e coloque o valor no campo `object`. Você descobrir o valor atualizando a página, abrindo o _console_ do seu navegador e digitando `__RUNTIME__.route.params.id`:
 
 ![image](https://user-images.githubusercontent.com/18701182/90410392-aeb8be00-e080-11ea-8880-f5470c4e5d00.png)
 
-4. Para finalizar, vamos definir o _banner_ retrô: 
+4. Para finalizar, vamos definir o _banner_ retrô:
 
 ```diff
 //product.jsonc
 {
   ...
-+  "image#retro-mixer-banner": { 
-+    "props": { 
++  "image#retro-mixer-banner": {
++    "props": {
 +      "src": "https://appliancetheme.vtexassets.com/assets/app/src/retroimage___92a8271aac7c51d2059193bdbe019016.jpg",
 +      "width": "100%",
 +      "height": "200px",
@@ -170,16 +167,16 @@ Sendo assim, o objeto formado é:
 }
 ```
 
-Visite a página do produto testado para ver o layout funcionando, se tiver usando a `appliancetheme` e o produto for a batedeira retro, a url será: 
+Visite a página do produto testado para ver o layout funcionando, se tiver usando a `appliancetheme` e o produto for a batedeira retro, a url será:
 
 `https://{{seuworkspace}}--appliancetheme.myvtex.com/3-colors-retro-stand-mixer/p`:
 
 ![image](https://user-images.githubusercontent.com/43679629/93816475-f6a5a480-fc2d-11ea-80e9-45f4b7907007.png)
 
-Para garantir que o layout condicional de fato funciona, visite qualquer outra página de produto, e verifique que o _banner_ não é aplicado: 
+Para garantir que o layout condicional de fato funciona, visite qualquer outra página de produto, e verifique que o _banner_ não é aplicado:
 
 ![image](https://user-images.githubusercontent.com/18701182/90412377-68b12980-e083-11ea-86a8-99495acfd997.png)
 
 ## Fim
 
-Chegamos ao último passo do curso e nele aprendemos como criar layouts complexos se alavancando de blocos mais simples, não exploramos todos os layouts possíveis, mas a ideia de todos eles é muito parecida, para conhecer mais visite a seção de [`VTEX STORE FRAMEWORK - LAYOUT APPS`](https://developers.vtex.com/docs/vtex-condition-layout) no Developer Portal. 
+Chegamos ao último passo do curso e nele aprendemos como criar layouts complexos se alavancando de blocos mais simples, não exploramos todos os layouts possíveis, mas a ideia de todos eles é muito parecida, para conhecer mais visite a seção de [`VTEX STORE FRAMEWORK - LAYOUT APPS`](https://developers.vtex.com/docs/vtex-condition-layout) no Developer Portal.

@@ -1,12 +1,12 @@
 # Refatorando blocos
 
-Alguns blocos ao longo do tempo são substituídos por outros não só para aumentar a flexibilidade e facilidade de operação, mas também para otimizar o seu comportamento e performance. 
+Alguns blocos ao longo do tempo são substituídos por outros não só para aumentar a flexibilidade e facilidade de operação, mas também para otimizar o seu comportamento e performance.
 
 O Slider Layout (conhecido no curso de Layouts Complexos) foi aprimorado para que usasse _lazy load_ no conteúdo carregado. Isto quer dizer que produtos e imagens só são carregados quando o usuário, de fato, as solicita. Este tipo de comportamento não está disponível na Shelf e Carrossel, e para otimizar ainda mais a performance, vamos ver como podemos substituí-los.
 
 ## Atividade
 
-1. No arquivo `home.jsonc` declare dois blocos de texto para substituir os títulos: 
+1. No arquivo `home.jsonc` declare dois blocos de texto para substituir os títulos:
 
 
     ```diff
@@ -32,83 +32,83 @@ O Slider Layout (conhecido no curso de Layouts Complexos) foi aprimorado para qu
     }
     ```
 
-2. Mude o nome das `shelf`'s para que use `list-context.product-list`: 
+2. Mude o nome das `shelf`'s para que use `list-context.product-list`:
 
-    ```diff
-    {
-      ...
-    - "shelf#new-arrivals": {
-    + "list-context.product-list#new-arrivals": {
-      ...
-    - "shelf#clearance": {
-    + "list-context.product-list#clearance": {
-      ...
-    }
-    ```
+   ```diff
+   {
+     ...
+   - "shelf#new-arrivals": {
+   + "list-context.product-list#new-arrivals": {
+     ...
+   - "shelf#clearance": {
+   + "list-context.product-list#clearance": {
+     ...
+   }
+   ```
 
 3. Remova as propriedades da shelf que não são mais necessárias em **ambas as shelfs**:
 
-    ```diff
-    {
-      "list-context.product-list#new-arrivals": {
-        "blocks": ["product-summary.shelf"],
-        "props": {
-          "orderBy": "OrderByTopSaleDESC",
-    -     "paginationDotsVisibility": "never",
-          "collection": "139",
-    -     "productList": {
-    -       "maxItems": 9,
-    -       "itemsPerPage": 3,
-    -       "minItemsPerPage": 1.5,
-    -       "scroll": "BY_PAGE",
-    -       "arrows": true,
-    -       "titleText": "New arrivals"
-    -     }
-        }
-      },
-      ...
-    }
-    ```
+   ```diff
+   {
+     "list-context.product-list#new-arrivals": {
+       "blocks": ["product-summary.shelf"],
+       "props": {
+         "orderBy": "OrderByTopSaleDESC",
+   -     "paginationDotsVisibility": "never",
+         "collection": "139",
+   -     "productList": {
+   -       "maxItems": 9,
+   -       "itemsPerPage": 3,
+   -       "minItemsPerPage": 1.5,
+   -       "scroll": "BY_PAGE",
+   -       "arrows": true,
+   -       "titleText": "New arrivals"
+   -     }
+       }
+     },
+     ...
+   }
+   ```
 
-4. Adicione um `slider-layout#shelf` a ambos `product-list`'s: 
+4. Adicione um `slider-layout#shelf` a ambos `product-list`'s:
 
-    ```diff
-    {
-      "list-context.product-list#new-arrivals": {
-        "blocks": ["product-summary.shelf"],
-    +   "children": ["slider-layout#shelf"],
-        ...
-      },
-      "list-context.product-list#clearance": {
-        "blocks": ["product-summary.shelf"],
-    +   "children": ["slider-layout#shelf"],
-        ...
-      },
-    }
-    ```
+   ```diff
+   {
+     "list-context.product-list#new-arrivals": {
+       "blocks": ["product-summary.shelf"],
+   +   "children": ["slider-layout#shelf"],
+       ...
+     },
+     "list-context.product-list#clearance": {
+       "blocks": ["product-summary.shelf"],
+   +   "children": ["slider-layout#shelf"],
+       ...
+     },
+   }
+   ```
 
-5. Por fim, defina o `slider-layout#shelf` para que tenha o mesmo comportamento da prateleira que tiramos: 
+5. Por fim, defina o `slider-layout#shelf` para que tenha o mesmo comportamento da prateleira que tiramos:
 
-    ```diff
-    {
-      ...
-    + "slider-layout#shelf": {
-    +   "props": {
-    +     "itemsPerPage": {
-    +       "desktop": 3
-    +     }
-    +   }
-    + }
-    }
-    ```
+   ```diff
+   {
+     ...
+   + "slider-layout#shelf": {
+   +   "props": {
+   +     "itemsPerPage": {
+   +       "desktop": 3
+   +     }
+   +   }
+   + }
+   }
+   ```
 
-6. Edite os blocos que estão sendo usados no _template_: 
+6. Edite os blocos que estão sendo usados no _template_:
 
 ```diff
 {
   "store.home": {
     "blocks": [
--     "shelf#new-arrivals",     
+-     "shelf#new-arrivals",
 -     "shelf#clearance",
 +     "rich-text#new-arrivals",
 +     "list-context.product-list#new-arrivals",
@@ -117,10 +117,10 @@ O Slider Layout (conhecido no curso de Layouts Complexos) foi aprimorado para qu
     ]
   }
 }
-      
+
 ```
 
-O resultado deve ser: 
+O resultado deve ser:
 
 ![image](https://user-images.githubusercontent.com/18701182/93842015-c977e700-fc6b-11ea-8cf5-0678a5f890fa.png)
 

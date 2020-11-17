@@ -18,7 +18,7 @@ export default class DefaultClient {
   protected get(url: string, config?: AxiosRequestConfig) {
     return this.http.get(url, config).then(({ data }) => data)
   }
-  
+
   protected post<T>(url: string, body: T, config?: AxiosRequestConfig) {
     return this.http.post(url, body, config).then(({ data }) => data)
   }

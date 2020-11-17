@@ -6,11 +6,11 @@ Neste passo você aprenderá como buscar _Clients_ já prontos que abstraem as A
 
 ## Clients
 
-*Clients*, no VTEX IO, são abstrações para serviços externos e são usados nativamente para fazermos requisições externas em serviços de _backend_. Você pode ler um pouco sobre eles [aqui](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
+_Clients_, no VTEX IO, são abstrações para serviços externos e são usados nativamente para fazermos requisições externas em serviços de _backend_. Você pode ler um pouco sobre eles [aqui](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
 
 ## VTEX IO Commerce Clients
 
-O pacote [Commerce Clients](https://github.com/vtex/commerce-io-clients/blob/master/src/clients/catalog.ts) é uma biblioteca Typescript que oferece vários **clients já configurados** para acessar as APIs de Core Commerce da VTEX. Para usá-lo em sua app, basta instalá-lo na pasta `node/` rodando: 
+O pacote [Commerce Clients](https://github.com/vtex/commerce-io-clients/blob/master/src/clients/catalog.ts) é uma biblioteca Typescript que oferece vários **clients já configurados** para acessar as APIs de Core Commerce da VTEX. Para usá-lo em sua app, basta instalá-lo na pasta `node/` rodando:
 
 `yarn add @vtex/clients`
 
@@ -28,17 +28,17 @@ Mas, caso o serviço que você esteja tentando acessar seja um provedor externo 
 
 `yarn add @vtex/clients`
 
-3. Agora que o pacote foi instalado, precisamos configurar o _Client_ para utilizá-lo nos _resolvers_  e _middlewares_ de nossa app. Para isso, precisamos que você abra no seu editor o arquivo `node/clients/index.ts`.
+3. Agora que o pacote foi instalado, precisamos configurar o _Client_ para utilizá-lo nos _resolvers_ e _middlewares_ de nossa app. Para isso, precisamos que você abra no seu editor o arquivo `node/clients/index.ts`.
 
 4. Importe o _Client_ `Catalog` a partir da biblioteca `@vtex/clients`.
-5.  Adicione o _getter_ `catalog`, similar ao método acima na classe `Clients`.
+5. Adicione o _getter_ `catalog`, similar ao método acima na classe `Clients`.
 
-  ```diff
+```diff
 +    import { Catalog } from '@vtex/clients'
-  ...
+...
 +    public get catalog() {
 +      return this.getOrSet('catalog', Catalog)
 +    }
-  ```
+```
 
 Pronto! Agora, qualquer uma das funções de _resolver_ GraphQL ou _middlewares_ de serviço pode utilizar este Client através de `ctx.clients.catalog`. Por conta do Typescript, é possível ter _autocomplete_ dos métodos e ver detalhes dos tipos necessários nos parâmetros.

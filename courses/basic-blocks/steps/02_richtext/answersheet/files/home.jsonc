@@ -1,9 +1,7 @@
 // store/blocks/home.jsonc
 {
-  "store.home": { 
-    "blocks": [
-      "rich-text"
-    ]
+  "store.home": {
+    "blocks": ["rich-text"]
   },
   "rich-text": {
     "props": {

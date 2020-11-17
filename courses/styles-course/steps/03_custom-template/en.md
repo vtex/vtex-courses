@@ -31,19 +31,18 @@ Let's imagine that you want to create a simple page containing information about
 ```json
 {
   "store.custom#{templatename}": {
-    "blocks": [
-    ]
+    "blocks": []
   }
 }
 ```
 
-where `{templateName}` must be replaced with the template's identifying name. 
+where `{templateName}` must be replaced with the template's identifying name.
 
 Then, you should fill in the code with the components needed to create the layout, this will be better shown in the activity.
 
 ### Path
 
-Now that a new template with the page layout has been defined in the store theme's code, the next step is to establish the page's page that would lead to this layout. 
+Now that a new template with the page layout has been defined in the store theme's code, the next step is to establish the page's page that would lead to this layout.
 
 We must create a `routes.json` file in your theme's `store` folder. Afterwards, insert the code below,
 
@@ -59,7 +58,7 @@ where `{URL}` is the name of the desired path.
 
 ## Creating a custom template
 
-Let's create a page containing information about your store, as in the example below: 
+Let's create a page containing information about your store, as in the example below:
 
 ![image](https://user-images.githubusercontent.com/19495917/90177742-5aac9180-dd81-11ea-9566-be74d563664f.png)
 
@@ -67,65 +66,65 @@ Let's create a page containing information about your store, as in the example b
 2. Declare a `store.custom#about-us` template in this file;
 3. Include a "flex-layout.row#about-us" block in this template:
 
-    ```json
-    {
-        "store.custom#about-us": {
-          "blocks": [
-            "flex-layout.row#about-us"
-          ]
-        }
-    }
-    ```
+   ```json
+   {
+     "store.custom#about-us": {
+       "blocks": ["flex-layout.row#about-us"]
+     }
+   }
+   ```
+
 4. In the same file, add the code block below, right afer the declaration of `store.custom#about-us`. It's responsible for defining `flex-layout.row#about-us`.
 
-    ```json
-      "flex-layout.row#about-us": {
-        "children": [
-          "image#about-us",
-          "flex-layout.col#text-about-us"
-        ]
-      },
-    ```
+   ```json
+     "flex-layout.row#about-us": {
+       "children": [
+         "image#about-us",
+         "flex-layout.col#text-about-us"
+       ]
+     },
+   ```
 
 5. Now, let's define its childen blocks in order to create the complete _layout_:
 
-    ```json
-    "flex-layout.col#text-about-us": {
-      "children": [
-        "rich-text#about-title",
-        "rich-text#about-content"
-      ],
-      "props": {
-        "preventVerticalStretch": true
-      }
-    },
-    "rich-text#about-title": {
-      "props": {
-          "text": "# About Minimum Theme"
-      }
-    },
-    "rich-text#about-content": {
-      "props": {
-        "text":
-          " This is the VTEX Minimum Theme, you can use it to test blocks usage and build your first store from scratch."
-      }
-    },
-    "image#about-us": {
-      "props": {
-        "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
-        "maxHeight": "600px"
-      }
-    }
-    ```
+   ```json
+   "flex-layout.col#text-about-us": {
+     "children": [
+       "rich-text#about-title",
+       "rich-text#about-content"
+     ],
+     "props": {
+       "preventVerticalStretch": true
+     }
+   },
+   "rich-text#about-title": {
+     "props": {
+         "text": "# About Minimum Theme"
+     }
+   },
+   "rich-text#about-content": {
+     "props": {
+       "text":
+         " This is the VTEX Minimum Theme, you can use it to test blocks usage and build your first store from scratch."
+     }
+   },
+   "image#about-us": {
+     "props": {
+       "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
+       "maxHeight": "600px"
+     }
+   }
+   ```
+
 6. In the `store` folder, create a file called `routes.json`;
 7. In this file, declare an `/about-us` path:
 
-    ```json
-    {
-      "store.custom#about-us": {
-        "path": "/about-us"
-      }
-    }
-    ```
+   ```json
+   {
+     "store.custom#about-us": {
+       "path": "/about-us"
+     }
+   }
+   ```
 
-7. Once the code is linked, access `{workspace}--appliancetheme.myvtex.com/about-us` to see your new landing page.
+8. Once the code is linked, access `{workspace}--appliancetheme.myvtex.com/about-us` to see your new landing page.

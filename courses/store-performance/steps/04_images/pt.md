@@ -91,4 +91,5 @@ Se estiver responsável por cuidar do cadastramento de imagens de uma loja, tenh
 ```
 
 ![image](https://user-images.githubusercontent.com/18701182/93907719-168fa380-fcd4-11ea-8b03-6d864d4aeadd.png)
->Exemplo de redução de 60% na compressão com Squoosh
+
+> Exemplo de redução de 60% na compressão com Squoosh
