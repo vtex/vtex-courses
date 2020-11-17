@@ -12,6 +12,14 @@ const areValidLangs = (inLanguages: string[]) =>
 
 const execute = async () => {
   let inLanguages = process.argv.slice(2)
+  const isGithubAction = process.env.CI?.toLowerCase() === 'true'
+
+  if (!isGithubAction) {
+    console.error(
+      `❌  Please don't run deploy locally. Instead go through PR process on Github so we can keep source of truth.`
+    )
+    return
+  }
 
   if (!areValidLangs(inLanguages)) {
     console.error(
