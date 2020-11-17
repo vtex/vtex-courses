@@ -16,4 +16,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
       - run: yarn run eslint src
-      - run: yarn run prettier --check 'src/**/**.*'
+      - run: yarn run prettier --check .
