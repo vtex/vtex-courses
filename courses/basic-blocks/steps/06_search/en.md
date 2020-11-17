@@ -1,19 +1,19 @@
 # Search page
 
-## Introduction  
+## Introduction
 
 ![image](https://user-images.githubusercontent.com/18701182/69843114-d6db6500-1244-11ea-82a7-b10880e2ed55.png)
 
 We've just implemented our product page and are moving on to the search page. Both are similar in the sense that both have blocks that are unique in this context. We will explore this block in a disorderly fashion, for now, just to get an idea of its behavior.
 
-## Starting out with Search Layout  
+## Starting out with Search Layout
 
 Same as other templates, `store.search` can also be flexible. To build a unique layout you'll need to use a block called `search-result-layout`.
 
- ```json
+```json
 {
   "store.search": {
-     "blocks": ["search-result-layout"]
+    "blocks": ["search-result-layout"]
   }
 }
 ```
@@ -26,22 +26,22 @@ The `search-result-layout`, in turn, must receive 3 other blocks:
 
 As you've already noticed, the first two define which layout will be displayed on **desktop and mobile** respectively, while the third defines the layout of the **no results found search page**.
 
- ```json
+```json
 {
   "store.search": {
-     "blocks": ["search-result-layout"]
+    "blocks": ["search-result-layout"]
   },
   "search-result-layout": {
-     "blocks": [
-        "search-result-layout.desktop",
-        "search-result-layout.mobile",
-        "search-not-found-layout"
-     ]
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
   }
 }
 ```
 
-In the course, we'll **focus** on **desktop layout** implementation.  
+In the course, we'll **focus** on **desktop layout** implementation.
 
 ## Search blocks
 
@@ -79,7 +79,7 @@ To do so, write a code similar to:
     ...
       },
       "search-result-layout.desktop": {
-        "children": [ 
+        "children": [
           "breadcrumb.search",
           "search-title.v2",
           "total-products.v2",

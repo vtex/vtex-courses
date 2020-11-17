@@ -4,9 +4,7 @@
     "props": {
       "experimentalOptimizeRendering": true
     },
-    "children": [
-      "menu-item#categories"
-    ]
+    "children": ["menu-item#categories"]
   },
   "menu-item#categories": {
     "props": {
@@ -22,7 +20,7 @@
         "text": "Categories"
       }
     },
-    "blocks": [ "vtex.menu@2.x:submenu#categories" ]
+    "blocks": ["vtex.menu@2.x:submenu#categories"]
   },
   "vtex.menu@2.x:submenu#categories": {
     "children": ["vtex.menu@2.x:menu#categories"]

@@ -23,46 +23,46 @@ Desenvolva a página do produto adicionando os 4 blocos listados acima ao`produc
 
 1. Defina a `breadcrumb` logo antes da **row**;
 
-    ```json
-    "store.product": {
-      "children": [
-        "breadcrumb",
-        "flex-layout.row#main"
-      ]
-    }
-    ```
+   ```json
+   "store.product": {
+     "children": [
+       "breadcrumb",
+       "flex-layout.row#main"
+     ]
+   }
+   ```
 
 2. Defina o `product-identifier.product` logo depois de `product-name`;
 
-    ```diff
-        },
-        "children": [
-          "product-name",
-    +      "product-identifier.product",
-          ...
-        ]
-      },
-    ```
+   ```diff
+       },
+       "children": [
+         "product-name",
+   +      "product-identifier.product",
+         ...
+       ]
+     },
+   ```
 
 3. Crie uma **row** logo abaixo do preço, contendo o `sku-selector` e `product-quantity` como filhos;
 
-    ```json
-    {
-      ...
-        "children": [ 
-          "product-price",
-          "flex-layout.row#qty-sku"
-        ]
-      },
-      "flex-layout.row#qty-sku": {
-        "children": [
-          "sku-selector",
-          "product-quantity"
-        ]
-      },
-      ...
-    }
-    ```
+   ```json
+   {
+     ...
+       "children": [
+         "product-price",
+         "flex-layout.row#qty-sku"
+       ]
+     },
+     "flex-layout.row#qty-sku": {
+       "children": [
+         "sku-selector",
+         "product-quantity"
+       ]
+     },
+     ...
+   }
+   ```
 
 4. Defina o `shipping-simulator` logo abaixo da linha definindo o `SKU Selector` e o `Product Quantity`:
 
@@ -73,6 +73,5 @@ Desenvolva a página do produto adicionando os 4 blocos listados acima ao`produc
       "buy-button"
     ]
 ```
-
 
 Note: Lembre-se de acessar a documentação do [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity) e [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector) se tiver qualquer dúvida durante a atividade.

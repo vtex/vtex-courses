@@ -15,7 +15,7 @@ Our [documentation](https://vtex.io/docs/components/product-related) contains mo
 - [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity)
 - [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector)
 
-It's important that by the end of the course you take some time to fully explore our components, in addition to the customization possibilities that accompany each component. 
+It's important that by the end of the course you take some time to fully explore our components, in addition to the customization possibilities that accompany each component.
 
 ## Activity
 
@@ -23,46 +23,46 @@ Develop the product page by adding the 4 blocks listed above to`product.jsonc` a
 
 1. Define a `breadcrumb` right before the product's **main line**;
 
-    ```json
-    "store.product": {
-      "children": [
-        "breadcrumb",
-        "flex-layout.row#main"
-      ]
-    }
-    ```
+   ```json
+   "store.product": {
+     "children": [
+       "breadcrumb",
+       "flex-layout.row#main"
+     ]
+   }
+   ```
 
 2. Define the `product-identifier.product` right under the `product-name`;
 
-    ```diff
-        },
-        "children": [
-          "product-name",
-    +      "product-identifier.product",
-          ...
-        ]
-      },
-    ```
+   ```diff
+       },
+       "children": [
+         "product-name",
+   +      "product-identifier.product",
+         ...
+       ]
+     },
+   ```
 
 3. Create a **row** right under the price, having `sku-selector` and `product-quantity` as children;
 
-    ```json
-    {
-      ...
-        "children": [ 
-          "product-price",
-          "flex-layout.row#qty-sku"
-        ]
-      },
-      "flex-layout.row#qty-sku": {
-        "children": [
-          "sku-selector",
-          "product-quantity"
-        ]
-      },
-      ...
-    }
-    ```
+   ```json
+   {
+     ...
+       "children": [
+         "product-price",
+         "flex-layout.row#qty-sku"
+       ]
+     },
+     "flex-layout.row#qty-sku": {
+       "children": [
+         "sku-selector",
+         "product-quantity"
+       ]
+     },
+     ...
+   }
+   ```
 
 4. Define `shipping-simulator` right under the line containing the SKU Selector and Product Quantity:
 
@@ -74,5 +74,4 @@ Develop the product page by adding the 4 blocks listed above to`product.jsonc` a
     ]
 ```
 
-
-Note: Remember to access the [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity) and [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector) documentation if you have any questions during the activity. 
+Note: Remember to access the [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity) and [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector) documentation if you have any questions during the activity.

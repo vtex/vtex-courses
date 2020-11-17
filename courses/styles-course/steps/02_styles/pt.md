@@ -38,22 +38,23 @@ Em um cabeçalho nível 1, por exemplo, ao inspecionar descobrimos que seu taman
 
 ![image](https://user-images.githubusercontent.com/19495917/90170541-9b52dd80-dd76-11ea-8390-f243e267e145.png)
 
-## Alterando globalmente a cor e a tipografia 
+## Alterando globalmente a cor e a tipografia
 
 1. No arquivo `style.json`, substitua todas as ocorrências das cores que encontramos, trocando:
+
 - **#3f3f40** with **#e68e94**
 
 2. Mude o tamanho da fonte do cabeçalho de nível 1 (`heading level 1`) para que agora tenha `2.5 rem` de altura:
 
-    ```diff
-        "heading-1": {
-            "fontFamily": "Fabriga, -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif",
-            "fontWeight": "700",
-    +       "fontSize": "2.5rem",
-            "textTransform": "initial",
-            "letterSpacing": "0"
-        },
-    ```
+   ```diff
+       "heading-1": {
+           "fontFamily": "Fabriga, -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif",
+           "fontWeight": "700",
+   +       "fontSize": "2.5rem",
+           "textTransform": "initial",
+           "letterSpacing": "0"
+       },
+   ```
 
 O resultado esperado pode ser visto abaixo:
 

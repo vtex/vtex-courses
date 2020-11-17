@@ -8,7 +8,7 @@ Agora que estamos utilizando os dados que são consultados através do cliente d
 
 **Master Data** é o serviço da VTEX que torna possível criar arquiteturas de base de dados para uma loja. Em geral, é utilizada para armazenar e organizar dados de clientes, mas também é amplamente utilizada por lojas VTEX para customizações de regras de negócio e para criar aplicações para sua loja virtual. Você pode configurar aplicações que utilizam este módulo como um repositório de dados para criar um sistema em cima do Master Data, sendo necessário apenas a modelagem dos novos dados.
 
-Na versão atual do **Master Data**, utilizamos o conceito de _data entities_ e, para isso, usa-se o [JSON Schema](https://spacetelescope.github.io/understanding-json-schema/) para validar e indexar documentos. Uma entidade de dados  pode ter diversos _schemas_, dependendo de como você utiliza os dados armazenados. Você precisará do nome do _JSON Schema_ para implementar a _query_, como você verá neste passo.
+Na versão atual do **Master Data**, utilizamos o conceito de _data entities_ e, para isso, usa-se o [JSON Schema](https://spacetelescope.github.io/understanding-json-schema/) para validar e indexar documentos. Uma entidade de dados pode ter diversos _schemas_, dependendo de como você utiliza os dados armazenados. Você precisará do nome do _JSON Schema_ para implementar a _query_, como você verá neste passo.
 
 > Nota: o _JSON Schema_ não é necessário para todos os _endpoints_. Se você não precisa validar seus dados, você pode salvar seus documentos sem nenhum tipo de configuração, apenas indicando a entidade dos dados e provendo credenciais de acesso. No caso deste passo, como precisaremos de validação, é necessário criar um _JSON Schema_.
 
@@ -88,65 +88,65 @@ Vamos começar?
 
 3. Agora, para nos certificarmos de que estamos lidando corretamente com erros, implemente uma estrutura de `try-catch`. Veja o exemplo abaixo:
 
-    ```diff
-    export async function updateLiveUsers(ctx: EventContext<Clients>) {
-        const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
-        console.log('MOCKED LIVE USERS ', liveUsersProducts)
-        await Promise.all(
-        liveUsersProducts.map(async ({ slug, liveUsers }) => {
-    +      try {
-            ...
-    +      } catch (e) {
-    +        console.log(`failed to update product ${slug}`)
-    +        console.log(e)
-    +      }
-        })
-        )
-        return true
-    }
-    ```
+   ```diff
+   export async function updateLiveUsers(ctx: EventContext<Clients>) {
+       const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
+       console.log('MOCKED LIVE USERS ', liveUsersProducts)
+       await Promise.all(
+       liveUsersProducts.map(async ({ slug, liveUsers }) => {
+   +      try {
+           ...
+   +      } catch (e) {
+   +        console.log(`failed to update product ${slug}`)
+   +        console.log(e)
+   +      }
+       })
+       )
+       return true
+   }
+   ```
 
+4) Se o produto já está salvo, precisamos atualizá-lo, de forma a incrementar seu contador de visualizações. O cliente de **Master Data** tem um método que permite que atualizemos um documento que já existe ou que criemos um novo, no caso do documento não existir - `createOrUpdateEntireDocument`.
 
-4. Se o produto já está salvo, precisamos atualizá-lo, de forma a incrementar seu contador de visualizações. O cliente de **Master Data** tem um método que permite que atualizemos um documento que já existe ou que criemos um novo, no caso do documento não existir - `createOrUpdateEntireDocument`. 
+   Para utilizar este método e implementar o incremento na entidade do Master Data, no mesmo arquivo que foi alterado anteriormente, logo após a linha de _log_, adicione o seguinte bloco de código:
 
-    Para utilizar este método e implementar o incremento na entidade do Master Data, no mesmo arquivo que foi alterado anteriormente, logo após a linha de _log_, adicione o seguinte bloco de código:
-
-    ```diff
-    //node/event/updateLiveUsers.ts
-    export async function updateLiveUsers(ctx: EventContext<Clients>) {
-        await Promise.all(
-        liveUsersProducts.map(async ({ slug, liveUsers }) => {
-            try {
-            ...
-            console.log({savedProduct})
-    +       await ctx.clients.masterdata.createOrUpdateEntireDocument({
-    +          dataEntity: COURSE_ENTITY,
-    +          fields: {
-    +            count: liveUsers,
-    +            slug,
-    +          },
-    +          id: savedProduct?.id,
-    +          schema: 'v1'
-    +        })
-            } catch {
-            console.log(`failed to update product ${slug}`)
-            console.log(e)
-            }
-        })
-        )
-        return true
-    }
-    ```
+   ```diff
+   //node/event/updateLiveUsers.ts
+   export async function updateLiveUsers(ctx: EventContext<Clients>) {
+       await Promise.all(
+       liveUsersProducts.map(async ({ slug, liveUsers }) => {
+           try {
+           ...
+           console.log({savedProduct})
+   +       await ctx.clients.masterdata.createOrUpdateEntireDocument({
+   +          dataEntity: COURSE_ENTITY,
+   +          fields: {
+   +            count: liveUsers,
+   +            slug,
+   +          },
+   +          id: savedProduct?.id,
+   +          schema: 'v1'
+   +        })
+           } catch {
+           console.log(`failed to update product ${slug}`)
+           console.log(e)
+           }
+       })
+       )
+       return true
+   }
+   ```
 
    > Nota: se um erro é gerado dentro do _handler_ de eventos, o VTEX IO tentará novamente fazer o envio do evento.
 
-4. Finalmente, rode `vtex link` e espere que um evento seja disparado. Uma vez que isso acontece, cheque o terminal por _logs_ no código. Quebre o `vtex link` através de `ctrl + C` e utilize o seguinte _cURL_ no terminal para checar as atualizações no **Master Data**:
+5) Finalmente, rode `vtex link` e espere que um evento seja disparado. Uma vez que isso acontece, cheque o terminal por _logs_ no código. Quebre o `vtex link` através de `ctrl + C` e utilize o seguinte _cURL_ no terminal para checar as atualizações no **Master Data**:
 
    ```
    curl --location --request GET 'https://api.vtex.com/api/dataentities/course_backend_product_list/search?_fields=slug,count&_schema=v1&an=appliancetheme' \
    --header 'Content-Type: application/json'
    ```
-    > **Atenção**: Para rodar o comando _cURL_ no **Windows**, é necessário substituir as aspas simples (`'`) por aspas duplas (`"`).
+
+   > **Atenção**: Para rodar o comando _cURL_ no **Windows**, é necessário substituir as aspas simples (`'`) por aspas duplas (`"`).
 
    O resultado deve ser algo similar a imagem abaixo:
 

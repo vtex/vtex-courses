@@ -43,61 +43,61 @@ There are two problems with implementing a menu this way:
 
 ## Activity
 
-1. To improve the menu performance of our * Appliance Store *, go to the `/store/blocks/header/category-menu.jsonc` file and remove your `children` section:
+1. To improve the menu performance of our _ Appliance Store _, go to the `/store/blocks/header/category-menu.jsonc` file and remove your `children` section:
 
-    ```diff
-    {
-      "vtex.menu@2.x:menu#category-menu": {
-    -   "children": [
-    -     "menu-item#category-electronics",
-    -     "menu-item#category-major-appliances",
-    -     "menu-item#category-small-appliances"
-    -   ]
-      }
-      ...
-    }
-    ```
+   ```diff
+   {
+     "vtex.menu@2.x:menu#category-menu": {
+   -   "children": [
+   -     "menu-item#category-electronics",
+   -     "menu-item#category-major-appliances",
+   -     "menu-item#category-small-appliances"
+   -   ]
+     }
+     ...
+   }
+   ```
 
 **NOTE:** Do not delete the definitions of these blocks, they are being used elsewhere
 
-2. Now add a new section of `props` and an array of `items`: 
+2. Now add a new section of `props` and an array of `items`:
 
-    ```diff
-    {
-      "vtex.menu@2.x:menu#category-menu": {
-    +   "props": {
-    +     "items": []
-    +   }
-      }
-      ...
-    }
-    ```
+   ```diff
+   {
+     "vtex.menu@2.x:menu#category-menu": {
+   +   "props": {
+   +     "items": []
+   +   }
+     }
+     ...
+   }
+   ```
 
-3. To wrap it up, for each of the `menu-items` we had (`"menu-item#category-electronics" `;` "menu-item#category-major-appliances" `;` "menu-item#category-small-appliances "`), add your `props` as array items that we created:
+3. To wrap it up, for each of the `menu-items` we had (`"menu-item#category-electronics"`;`"menu-item#category-major-appliances"`;`"menu-item#category-small-appliances "`), add your `props` as array items that we created:
 
-    ```diff
-    {
-      "vtex.menu@2.x:menu#category-menu": {
-        "props": {
-          "items": [
-    +       {
-    +         "id": "menu-item-category-electronics",
-    +         "type": "custom",
-    +         "iconId": null,
-    +         "highlight": false,
-    +         "itemProps": {
-    +           "categoryId": 153,
-    +           "type": "internal",
-    +           "href": "/electronics/",
-    +           "noFollow": true,
-    +           "tagTitle": "Electronics",
-    +           "text": "Electronics"
-    +         }
-    +       }
-    +       ...
-          ]
-        }
-    ```
+   ```diff
+   {
+     "vtex.menu@2.x:menu#category-menu": {
+       "props": {
+         "items": [
+   +       {
+   +         "id": "menu-item-category-electronics",
+   +         "type": "custom",
+   +         "iconId": null,
+   +         "highlight": false,
+   +         "itemProps": {
+   +           "categoryId": 153,
+   +           "type": "internal",
+   +           "href": "/electronics/",
+   +           "noFollow": true,
+   +           "tagTitle": "Electronics",
+   +           "text": "Electronics"
+   +         }
+   +       }
+   +       ...
+         ]
+       }
+   ```
 
 The expected result is a menu exactly the same as the one we had, but now we are able to control it through the Site Editor and add new items.
 

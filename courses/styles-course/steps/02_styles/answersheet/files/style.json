@@ -3,50 +3,50 @@
     "base": "#ffffff",
     "base--inverted": "#03044e",
     "action-primary": "#52BAB7",
-    ...
+    "...": "..."
   },
   "hover-background": {
     "action-primary": "#45a6a3",
     "action-secondary": "#dbe9fd",
-    ...
+    "...": "..."
   },
   "text": {
     "action-primary": "#52BAB7",
     "action-secondary": "#eef3f7",
     "link": "#52BAB7",
-    ...
+    "...": "..."
   },
   "hover-text": {
     "action-primary": "#45a6a3",
     "action-secondary": "#dbe9fd",
-    ...
+    "...": "..."
   },
   "border": {
     "action-primary": "#52BAB7",
     "action-secondary": "#eef3f7",
-    ...
+    "...": "..."
   },
   "hover-border": {
     "action-primary": "#45a6a3 ",
     "action-secondary": "#dbe9fd",
-    ...
+    "...": "...",
     "action-primary": "#ffffff",
     "action-secondary": "#52BAB7",
     "emphasis": "#ffffff",
-    ...
+    "...": "..."
   },
   "on": {
     "base": "#e68e94",
     "base--inverted": "#ffffff",
     "action-primary": "#ffffff",
     "action-secondary": "#0F3E99",
-    ...
+    "...": "..."
   },
   "active-on": {
     "action-primary": "#ffffff",
     "action-secondary": "#52BAB7",
     "emphasis": "#ffffff",
-    ...
+    "...": "...",
     "heading-1": {
       "fontFamily": "Fabriga, -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif",
       "fontWeight": "700",
@@ -54,6 +54,6 @@
       "textTransform": "initial",
       "letterSpacing": "0"
     },
-  ...
+    "...": "..."
   }
 }

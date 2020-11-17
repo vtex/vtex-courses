@@ -6,9 +6,10 @@ An admin app ends up losing its meaning if it cannot consume data. So, in the la
 
 ## Activity
 
-1. Start by adding the required builders for service: 
+1. Start by adding the required builders for service:
 
 /manifest.json
+
 ```diff
 {
   ...
@@ -24,18 +25,20 @@ An admin app ends up losing its meaning if it cannot consume data. So, in the la
 
 ```
 
-2. Create a `graphql/` folder and add a simple `schema.graphql` file with a single query: 
+2. Create a `graphql/` folder and add a simple `schema.graphql` file with a single query:
 
 /graphql/schema.graphql
+
 ```
 type Query {
-  helloworld: String 
+  helloworld: String
 }
 ```
 
 3. Create a `node/` folder and add an `index.ts` file to it that will instantiate our service:
 
 /node/index.ts
+
 ```
 import { Service } from '@vtex/api'
 
@@ -52,9 +55,10 @@ export default new Service({
 
 Our service will then, in the query `helloworld`, return a random number.
 
-4. In the `/node` folder so that you can develop well locally, you will need a` package.json`, you can add a simple one:
+4. In the `/node` folder so that you can develop well locally, you will need a`package.json`, you can add a simple one:
 
 /node/package.json
+
 ```
 {
   "dependencies": {
@@ -82,7 +86,8 @@ Our service will then, in the query `helloworld`, return a random number.
 
 5. In the `react/` folder we will need to define a query to be able to use the resolver that we defined in the service. To do this, create a `graphql/` folder inside the `react/` folder and in this folder, create a `helloworld.gql` with:
 
-/react/graphql/helloworld.gql: 
+/react/graphql/helloworld.gql:
+
 ```
 query hello {
   helloworld

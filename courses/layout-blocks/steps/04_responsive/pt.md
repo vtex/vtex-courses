@@ -26,12 +26,9 @@ Por exemplo: a frase acima ( `# Your Coffee, Your Way \n ### New Coffee Makers C
 
 Para resolver esse cenário e tornar o componente mais adaptável a outros dispositivos, devemos usar o [**Responsive Layout**](https://developers.vtex.com/docs/vtex-responsive-layout).
 
-
 Primeiramente devemos declarar os blocos dentro do template `store.home`:
 
-`"responsive-layout.desktop#desktop",
- "responsive-layout.mobile#mobile"`
-
+`"responsive-layout.desktop#desktop", "responsive-layout.mobile#mobile"`
 
 Em seguida devemos declarar esses blocos da seguinte forma:
 
@@ -64,7 +61,7 @@ Em seguida devemos declarar esses blocos da seguinte forma:
 }
 ```
 
-Ao interpretar o código acima, perceba como duas configurações de Rich Text são construídas a partir do uso de `responsive-layout.desktop#desktop` e `responsive-layout.mobile#mobile`. 
+Ao interpretar o código acima, perceba como duas configurações de Rich Text são construídas a partir do uso de `responsive-layout.desktop#desktop` e `responsive-layout.mobile#mobile`.
 
 ## Atividade
 
@@ -80,31 +77,31 @@ Nessa atividade, vamos brincar um pouco com o markdown do [Rich Text](https://de
 
 1. Adicione o código proposto acima no arquivo `home.jsonc` e declare os blocos de `responsive-layout` no template `store.home`;
 2. No `rich-text#mobile`, altere o markdown da primeira frase para `h3` e da segunda para `h4`;
-    > Se você não se lembra da sintaxe de Markdown, é possível consultá-la em [**Markdown Documentation**](https://www.markdownguide.org/).
-3. Adicione `image#desktop` como children de `responsive-layout.desktop#desktop`. Faça o mesmo com `image#mobile`  em `responsive-layout.mobile#mobile`;
+   > Se você não se lembra da sintaxe de Markdown, é possível consultá-la em [**Markdown Documentation**](https://www.markdownguide.org/).
+3. Adicione `image#desktop` como children de `responsive-layout.desktop#desktop`. Faça o mesmo com `image#mobile` em `responsive-layout.mobile#mobile`;
 4. Declare os seguintes blocos de Image:
 
-    ```json
-    "image#desktop": {
-      "props": {
-        "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Desktop.jpg?q=1",
-        "link": {
-          "url": "/small-appliances/coffee-makers"
-        } ,
-        "alt": "Coffee Makers Collection"
-      }
-    },
+   ```json
+   "image#desktop": {
+     "props": {
+       "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Desktop.jpg?q=1",
+       "link": {
+         "url": "/small-appliances/coffee-makers"
+       } ,
+       "alt": "Coffee Makers Collection"
+     }
+   },
 
-    "image#mobile": {
-      "props": {
-        "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Mobile.jpg?q=1",
-        "link": {
-          "url": "/small-appliances/coffee-makers"
-        } ,
-        "alt": "Coffee Makers Collection"
-      }
-    },
-    ```
+   "image#mobile": {
+     "props": {
+       "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Mobile.jpg?q=1",
+       "link": {
+         "url": "/small-appliances/coffee-makers"
+       } ,
+       "alt": "Coffee Makers Collection"
+     }
+   },
+   ```
 
 5. Analisando as props do [componente Image](https://developers.vtex.com/docs/vtex-store-components-image#configuration), defina a largura máxima das duas imagens como `100%`.
 

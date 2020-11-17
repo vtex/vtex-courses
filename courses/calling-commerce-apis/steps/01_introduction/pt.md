@@ -17,6 +17,7 @@ Neste curso você aprenderá alguns conceitos básicos sobre as **APIs de Commer
 - Como utilizar estes _Clients_ para fazer requisições em uma aplicação do VTEX IO.
 
 ## Atividade
+
 Para exercitarmos os conceitos aprendidos neste curso, é necessário que você tenha disponível localmente a app `vtex.service-example`, também utilizada no curso de Serviços.
 
 Portanto, caso você já não tenha essa aplicação no seu computador:

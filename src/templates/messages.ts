@@ -1,4 +1,5 @@
-const congratulationsMsg = (congrats: string, youReDone: string) => `<b class="rebelPink">${congrats}</b>, ${youReDone}!`
+const congratulationsMsg = (congrats: string, youReDone: string) =>
+  `<b class="rebelPink">${congrats}</b>, ${youReDone}!`
 
 interface LanguageSwitcher {
   pt?: string
@@ -7,46 +8,46 @@ interface LanguageSwitcher {
 }
 
 const messages: Record<string, LanguageSwitcher> = {
-  'back': {
+  back: {
     pt: 'voltar',
-    en: 'back'
+    en: 'back',
   },
-  'timeLeft': {
+  timeLeft: {
     pt: 'Ainda tem tempo sobrando?',
     en: 'Still have time left?',
   },
-  'comingSoon': {
+  comingSoon: {
     pt: 'Em breve',
-    en: 'Coming soon'
+    en: 'Coming soon',
   },
-  'tryChallenge': {
+  tryChallenge: {
     pt: 'Tenta nosso desafio para este curso!',
     en: 'Try our challenge for this course!',
-  }, 
-  'congrats': {
+  },
+  congrats: {
     pt: congratulationsMsg('Parabéns', 'você terminou o curso'),
-    en: congratulationsMsg('Congratulations', 'you finished the course')
+    en: congratulationsMsg('Congratulations', 'you finished the course'),
   },
-  'finishCourse': {
+  finishCourse: {
     pt: 'Finalizar Curso',
-    en: 'Finish Cours'
-  }, 
-  'anyQuestion': {
+    en: 'Finish Cours',
+  },
+  anyQuestion: {
     pt: 'Está com duvidas?',
-    en: 'Any questions?'
+    en: 'Any questions?',
   },
-  'checkAnswersheet': { 
+  checkAnswersheet: {
     pt: 'Confira aqui o [gabarito para esta etapa]',
-    en: 'Check here the [answersheet for this step]'
-  }, 
-  'answersheetTo': {
-    pt: 'Gabarito para o passo',
-    en: 'Answersheet to '
+    en: 'Check here the [answersheet for this step]',
   },
-  'challengeFor': {
+  answersheetTo: {
+    pt: 'Gabarito para o passo',
+    en: 'Answersheet to ',
+  },
+  challengeFor: {
     pt: 'Desafio do Curso',
-    en: 'Challenge for the Course'
-  }
+    en: 'Challenge for the Course',
+  },
 }
 
 export default messages

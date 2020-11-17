@@ -1,14 +1,15 @@
 # Melhorando a navegação
 
-## Introdução 
+## Introdução
 
-O `navigation.json` tem uma série de funcionalidades que podem melhorar a relevância e navegação da sua aplicação, neste passo aprenderemos como definir uma mensagem de título e criar _keywords_. 
+O `navigation.json` tem uma série de funcionalidades que podem melhorar a relevância e navegação da sua aplicação, neste passo aprenderemos como definir uma mensagem de título e criar _keywords_.
 
 ## Atividade
 
-1. No passo anterior usamos o `titleId`: `admin-example.navigation.label`, para atribuir um valor textual a essa chave, precisamos na pasta messages, nos três arquivos de idioma, escrever o valor correspondente: 
+1. No passo anterior usamos o `titleId`: `admin-example.navigation.label`, para atribuir um valor textual a essa chave, precisamos na pasta messages, nos três arquivos de idioma, escrever o valor correspondente:
 
 /messages/pt.json
+
 ```
 {
   "admin-example.navigation.label": "Treinamento de IO"
@@ -16,6 +17,7 @@ O `navigation.json` tem uma série de funcionalidades que podem melhorar a relev
 ```
 
 /messages/en.json
+
 ```
 {
   "admin-example.navigation.label": "IO Training"
@@ -23,19 +25,21 @@ O `navigation.json` tem uma série de funcionalidades que podem melhorar a relev
 ```
 
 /messages/es.json
+
 ```
 {
   "admin-example.navigation.label": "Entrenamiento de IO"
 }
 ```
 
-Feito isso, conseguimos agora ver uma mensagem traduzível para o menu que criamos: 
+Feito isso, conseguimos agora ver uma mensagem traduzível para o menu que criamos:
 
 ![image](https://user-images.githubusercontent.com/18701182/92776306-85d0d380-f375-11ea-84b1-da5321b89538.png)
 
-2. Adicione keywords para tornar mais simples a busca pela sua aplicação: 
+2. Adicione keywords para tornar mais simples a busca pela sua aplicação:
 
 /admin/navigation.json
+
 ```diff
 {
   ...
@@ -43,9 +47,10 @@ Feito isso, conseguimos agora ver uma mensagem traduzível para o menu que criam
 }
 ```
 
-3. Analogamente, crie as mensagens para as _keywords_, separadas por vírgulas: 
+3. Analogamente, crie as mensagens para as _keywords_, separadas por vírgulas:
 
 /messages/pt.json
+
 ```diff
 {
   "admin-example.navigation.label": "Treinamento de IO",
@@ -54,6 +59,7 @@ Feito isso, conseguimos agora ver uma mensagem traduzível para o menu que criam
 ```
 
 /messages/en.json
+
 ```diff
 {
   "admin-example.navigation.label": "IO Training",
@@ -62,6 +68,7 @@ Feito isso, conseguimos agora ver uma mensagem traduzível para o menu que criam
 ```
 
 /messages/es.json
+
 ```diff
 {
   "admin-example.navigation.label": "Entrenamiento de IO",

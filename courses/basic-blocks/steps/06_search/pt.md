@@ -1,19 +1,19 @@
 # Página de pesquisa
 
-## Introdução 
+## Introdução
 
 ![image](https://user-images.githubusercontent.com/18701182/69843114-d6db6500-1244-11ea-82a7-b10880e2ed55.png)
 
-Acabamos de implementar nossa página de produto e estamos avançando para a página de pesquisa. Ambos são semelhantes no sentido de que ambos têm blocos que são únicos neste contexto. Vamos explorar os blocos de forma desordenada, sem pensar no design da página, por enquanto, apenas para ter uma ideia de seu comportamento.   
+Acabamos de implementar nossa página de produto e estamos avançando para a página de pesquisa. Ambos são semelhantes no sentido de que ambos têm blocos que são únicos neste contexto. Vamos explorar os blocos de forma desordenada, sem pensar no design da página, por enquanto, apenas para ter uma ideia de seu comportamento.
 
-## Começando com o  Search Layout  
+## Começando com o Search Layout
 
 Da mesma forma que outros modelos, `store.search` também pode ser flexível. Para construir um layout único, você precisará usar um bloco chamado `search-result-layout`.
 
- ```json
+```json
 {
   "store.search": {
-     "blocks": ["search-result-layout"]
+    "blocks": ["search-result-layout"]
   }
 }
 ```
@@ -26,22 +26,22 @@ O `search-result-layout`, por sua vez, deve conter outros 3 blocos:
 
 Como você já percebeu, os dois primeiros definem qual layout será exibido no **desktop e celular** respectivamente, enquanto o terceiro define o layout da **página de pesquisa sem resultados**.
 
- ```json
+```json
 {
   "store.search": {
-     "blocks": ["search-result-layout"]
+    "blocks": ["search-result-layout"]
   },
   "search-result-layout": {
-     "blocks": [
-        "search-result-layout.desktop",
-        "search-result-layout.mobile",
-        "search-not-found-layout"
-     ]
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
   }
 }
 ```
 
-Nesse curso, vamos **focar** na implementação do **layout para desktop**.  
+Nesse curso, vamos **focar** na implementação do **layout para desktop**.
 
 ## Blocos de Busca
 
@@ -79,7 +79,7 @@ Para isso, escreva um código similar a este:
     ...
       },
       "search-result-layout.desktop": {
-        "children": [ 
+        "children": [
           "breadcrumb.search",
           "search-title.v2",
           "total-products.v2",

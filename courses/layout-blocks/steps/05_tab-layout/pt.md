@@ -13,13 +13,9 @@ Primeiro, é necessário declarar o block `tab-layout` no _template_ desejado:
 ```json
 {
   "store.home": {
-    "blocks": [
-      ...
-      "tab-layout"
-    ]
+    "blocks": [..."tab-layout"]
   }
 }
-
 ```
 
 Depois, é necessário declarar um `tab-list` e um `tab-content` como children do `tab-layout`:
@@ -33,7 +29,6 @@ Depois, é necessário declarar um `tab-list` e um `tab-content` como children d
   ]
 }
 ```
-
 
 Com isso, temos esses dois containers como componentes do nosso `tab-layout`. O próximo passo é declarar os `tab-list.item` e `tab-content.item` como children do `tab-list` e do `tab-content`, respectivamente:
 
@@ -60,7 +55,6 @@ Com isso, temos esses dois containers como componentes do nosso `tab-layout`. O 
 Na próxima etapa, temos que declarar as propriedades dos `tab-list.item`. O código abaixo gera uma interface de tabs como a desta imagem:
 
 ![image](https://user-images.githubusercontent.com/18701182/90059099-076f0c00-dcb9-11ea-918d-664761c34f3a.png)
-
 
 A propriedade `tabId` é muito importante, pois ela é a chave que conecta o botão de um `tab-list.item` com um `tab-content.item`.
 
@@ -141,22 +135,22 @@ Nesta atividade, vamos criar a estrutura simples de um _tab layout_, conforme im
 7. Em cada `tab-content.item`, declare apenas um `rich-text` como filho (por exemplo, `rich-text#home1` e `rich-text#home2`);
 8. Depois, inclua uma _prop_ `tabId` em cada `tab-content.item` de maneira que aconteça o _link_ entre o `tab-list` criado anteriormente e `tab-content`;
 9. Por fim, adicione os `rich-text` e declare suas _props_ conforme o código abaixo:
-  
-    ```json
-    "rich-text#home1": {
-      "props": {
-        "text": "Área do conteúdo da tab-list.item com  tabId = majorAppliances",
-        "textPosition": "CENTER",
-        "font": "t-heading-3"
-      }
-    },
-    "rich-text#home2": {
-      "props": {
-        "text": "Área do conteúdo da tab-list.item com  tabId = electronics",
-        "textPosition": "CENTER",
-        "font": "t-heading-3"
-      }
-    }
-    ```
-  
+
+   ```json
+   "rich-text#home1": {
+     "props": {
+       "text": "Área do conteúdo da tab-list.item com  tabId = majorAppliances",
+       "textPosition": "CENTER",
+       "font": "t-heading-3"
+     }
+   },
+   "rich-text#home2": {
+     "props": {
+       "text": "Área do conteúdo da tab-list.item com  tabId = electronics",
+       "textPosition": "CENTER",
+       "font": "t-heading-3"
+     }
+   }
+   ```
+
 Note: Lembre-se de acessar a documentação [Tab Layout](https://vtex.io/docs/components/layout/vtex.tab-layout) e do [Rich Text](https://vtex.io/docs/components/all/vtex.rich-text/) caso tenha alguma dúvida durante a atividade.

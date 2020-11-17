@@ -48,7 +48,7 @@ All directories used over the course are already in this initial project. Most o
   | timeout     | Seconds    | VTEX.IO infra will abort the connection if the request time is longer than timeout                                               |
   | minReplicas | Integer    | When your app is running, how many minimum replicas will be available                                                            |
   | maxReplicas | Integer    | The largest amount of replicas that will be available                                                                            |
-  | routes      | -          | Describes your app's REST routes, inside you will describe the name, (ex: ssr), the path, and if it's public or private            |
+  | routes      | -          | Describes your app's REST routes, inside you will describe the name, (ex: ssr), the path, and if it's public or private          |
 
 ## `/graphql` Directory Overview
 

@@ -2,13 +2,13 @@
   {
     "folder": "01_introducing-layout",
     "title": {
-      "pt": "Apresentando blocos de layout", 
-      "en": "Introducing Layout Blocks", 
+      "pt": "Apresentando blocos de layout",
+      "en": "Introducing Layout Blocks",
       "es": ""
     },
     "description": {
-      "pt": "Vamos criar layouts complexos de forma simples", 
-      "en": "", 
+      "pt": "Vamos criar layouts complexos de forma simples",
+      "en": "",
       "es": ""
     }
   },
@@ -16,12 +16,12 @@
     "folder": "02_flexlayout",
     "title": {
       "pt": "Flex layout",
-      "en": "Flex layout", 
+      "en": "Flex layout",
       "es": ""
     },
     "description": {
       "pt": "Criando layouts de grid com blocos básicos",
-      "en": "", 
+      "en": "",
       "es": ""
     }
   },
@@ -29,12 +29,12 @@
     "folder": "03_slider",
     "title": {
       "pt": "Carrossel de blocos",
-      "en": "Carousel blocks", 
+      "en": "Carousel blocks",
       "es": ""
     },
     "description": {
       "pt": "Insira conteúdo num layout de carrossel",
-      "en": "", 
+      "en": "",
       "es": ""
     }
   },
@@ -42,12 +42,12 @@
     "folder": "04_responsive",
     "title": {
       "pt": "Tornando seu conteúdo responsivo",
-      "en": "Making Responsive Content", 
+      "en": "Making Responsive Content",
       "es": ""
     },
     "description": {
       "pt": "Use o responsive layout para adaptar seu conteúdo para diferentes dispositivos",
-      "en": "", 
+      "en": "",
       "es": ""
     }
   },
@@ -55,12 +55,12 @@
     "folder": "05_tab-layout",
     "title": {
       "pt": "Layout de abas",
-      "en": "Tab Layout", 
+      "en": "Tab Layout",
       "es": ""
     },
     "description": {
       "pt": "Usando layout de abas na página institucional",
-      "en": "", 
+      "en": "",
       "es": ""
     }
   },
@@ -68,12 +68,12 @@
     "folder": "06_modal-layout",
     "title": {
       "pt": "Layout modal",
-      "en": "Modal Layout", 
+      "en": "Modal Layout",
       "es": ""
     },
     "description": {
       "pt": "Usando layout modal na página institucional",
-      "en": "", 
+      "en": "",
       "es": ""
     }
   },
@@ -81,12 +81,12 @@
     "folder": "07_quick-view",
     "title": {
       "pt": "Quick View",
-      "en": "Quick View", 
+      "en": "Quick View",
       "es": ""
     },
     "description": {
       "pt": "Usando o Quick View na página institucional",
-      "en": "", 
+      "en": "",
       "es": ""
     }
   },
@@ -94,12 +94,12 @@
     "folder": "08_stack-layout",
     "title": {
       "pt": "Stack Layout",
-      "en": "Stack Layout", 
+      "en": "Stack Layout",
       "es": ""
     },
     "description": {
       "pt": "Usando layout de pilha na página institucional",
-      "en": "", 
+      "en": "",
       "es": ""
     }
   },
@@ -107,12 +107,12 @@
     "folder": "09_conditional-layout",
     "title": {
       "pt": "Conditional Layout",
-      "en": "Conditional Layout", 
+      "en": "Conditional Layout",
       "es": ""
     },
     "description": {
       "pt": "Usando layout condicional na página institucional",
-      "en": "", 
+      "en": "",
       "es": ""
     }
   }

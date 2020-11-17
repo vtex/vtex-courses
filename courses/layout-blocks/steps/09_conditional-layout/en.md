@@ -33,10 +33,7 @@ To create a conditional product page _layout_ it is necessary, initially, to hav
       "paddingBottom": 7,
       "blockClass": "product-main"
     },
-    "children": [
-      "product-images",
-      "flex-layout.col#right-col"
-    ]
+    "children": ["product-images", "flex-layout.col#right-col"]
   },
   "product-images": {
     "props": {
@@ -122,11 +119,11 @@ By doing this, we will have a product page like the one shown below:
 
 3. Now, we need to define the condition for the mixer.
 
-`Condition.product` requires *prop* `conditions` to define which conditions should be applied (see [documentation](https://developers.vtex.com/docs/vtex-condition-layout)), a condition is divided into three parts:
+`Condition.product` requires _prop_ `conditions` to define which conditions should be applied (see [documentation](https://developers.vtex.com/docs/vtex-condition-layout)), a condition is divided into three parts:
 
 - **subject:** is the data that will be used for comparison purposes, in our case we will use `productId`, in the documentation it is possible to see all the available options;
-- **verb:** is the comparative method, we will use `is` to validate if `productId` is for a specific product, but we could use: `is`, `is-not`,` contains` or `does -not-contain`;
-- **object:** is the value we want to compare, in our case, we will use *productId* `20`.
+- **verb:** is the comparative method, we will use `is` to validate if `productId` is for a specific product, but we could use: `is`, `is-not`,`contains` or `does -not-contain`;
+- **object:** is the value we want to compare, in our case, we will use _productId_ `20`.
 
 Thus, the object formed is:
 
@@ -159,8 +156,8 @@ Thus, the object formed is:
 //product.jsonc
 {
   ...
-+  "image#retro-mixer-banner": { 
-+    "props": { 
++  "image#retro-mixer-banner": {
++    "props": {
 +      "src": "https://appliancetheme.vtexassets.com/assets/app/src/retroimage___92a8271aac7c51d2059193bdbe019016.jpg",
 +      "width": "100%",
 +      "height": "200px",
@@ -176,7 +173,7 @@ Visit the tested product page to see the layout working, if you are using ʻappl
 
 ![image](https://user-images.githubusercontent.com/43679629/93816475-f6a5a480-fc2d-11ea-80e9-45f4b7907007.png)
 
-To ensure that the conditional layout actually works, visit any other product page, and verify that _banner_ is not applied: 
+To ensure that the conditional layout actually works, visit any other product page, and verify that _banner_ is not applied:
 
 ![image](https://user-images.githubusercontent.com/18701182/90412377-68b12980-e083-11ea-86a8-99495acfd997.png)
 

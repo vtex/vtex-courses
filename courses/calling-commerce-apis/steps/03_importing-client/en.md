@@ -6,7 +6,7 @@ In this step, you will learn how to search for ready-made _Clients_ that abstrac
 
 ## Clients
 
-*Clients*, in VTEX IO, are abstractions for external services and are used natively to make external requests in _backend_ services. You can read a little about them [here](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
+_Clients_, in VTEX IO, are abstractions for external services and are used natively to make external requests in _backend_ services. You can read a little about them [here](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
 
 ## VTEX IO Commerce Clients
 
@@ -30,16 +30,16 @@ But, if the service you are trying to access is an external provider (ex: Here M
 
 3. Now that the package has been installed, we need to configure _Client_ to use it in the _resolvers_ and _middlewares_ of our app. For that, we need you to open the file `node/clients/index.ts` in your editor.
 
-4. Import the _Client_ `Catalog` from the` @vtex/clients` library.
+4. Import the _Client_ `Catalog` from the`@vtex/clients` library.
 
 5. Add the _getter_ `catalog`, similar to the method above in the `Clients` class.
 
-  ```diff
+```diff
 +    import { Catalog } from '@vtex/clients'
-  ...
+...
 +    public get catalog() {
 +      return this.getOrSet('catalog', Catalog)
 +    }
-  ```
+```
 
 Done! Now, any of the _resolver_ GraphQL or _middlewares_ service functions can use this Client via `ctx.clients.catalog`. Because of Typescript, it is possible to have _autocomplete_ of the methods and see details of the types needed in the parameters.

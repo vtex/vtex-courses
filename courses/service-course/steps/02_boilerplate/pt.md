@@ -24,31 +24,31 @@ Todas as pastas utilizadas durante este curso já estão no projeto inicial. A m
 
 - `/node/index.ts`: contém as declarações iniciais para as funcionalidades da _app_, como as declarações de serviços e de cache, que serão incrementadas durante o curso. Neste arquivo, também é possível exportar implementações de funções que são _resolvers_;
 
-- `/node/service.json`: Descreve a sua API REST e algumas características que impactam diretamente nos atributos de infrastrutura da sua _app_. Seu 
-  
+- `/node/service.json`: Descreve a sua API REST e algumas características que impactam diretamente nos atributos de infrastrutura da sua _app_. Seu
+
 Seu arquivo `service.json` pode ser encontrado dentro da pasta `/node` e será similar a:
 
-  ```
-  {
-  "memory": 256,
-  "timeout": 2,
-  "minReplicas": 2,
-  "maxReplicas": 4,
-  "routes": {
-    "status": {
-      "path": "/_v/status/:code",
-      "public": true
-    }
+```
+{
+"memory": 256,
+"timeout": 2,
+"minReplicas": 2,
+"maxReplicas": 4,
+"routes": {
+  "status": {
+    "path": "/_v/status/:code",
+    "public": true
   }
-  ```
+}
+```
 
-  | Field       | Type       | Description                                                                                                                      |
-  | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
-  | memory      | MegaBytes. | O quanto de memória sua _app_ terá alocada. Este valor será sobrescrito se o IO detectar que sua _app_ está abusando no uso de memória
-  | timeout     | Seconds    | A infrastrutura do VTEX IO irá abortar a conexão se o _request_ demora mais do que o valor do _timeout
-  | minReplicas | Integer    | Quando sua _app_ estiver rodando, este valor é a quantidade réplicas mínimas estarão disponíveis             |
-  | maxReplicas | Integer    | A máxima quantidade de réplicas a estarem disponíveis                                                                  |
-  | routes      | -          | Descreve as rotas REST da sua _app_, dentro deste objeto, você informará o nome, o caminho e se é pública ou privada |
+| Field       | Type       | Description                                                                                                                            |
+| ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| memory      | MegaBytes. | O quanto de memória sua _app_ terá alocada. Este valor será sobrescrito se o IO detectar que sua _app_ está abusando no uso de memória |
+| timeout     | Seconds    | A infrastrutura do VTEX IO irá abortar a conexão se o _request_ demora mais do que o valor do \_timeout                                |
+| minReplicas | Integer    | Quando sua _app_ estiver rodando, este valor é a quantidade réplicas mínimas estarão disponíveis                                       |
+| maxReplicas | Integer    | A máxima quantidade de réplicas a estarem disponíveis                                                                                  |
+| routes      | -          | Descreve as rotas REST da sua _app_, dentro deste objeto, você informará o nome, o caminho e se é pública ou privada                   |
 
 ## Visão geral do diretório `/graphql`
 

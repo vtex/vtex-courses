@@ -17,6 +17,7 @@ In this course, you will learn some basic concepts about **VTEX Commerce APIs** 
 - How to use these _Clients_ to make requests in a VTEX IO application.
 
 ## Activity
+
 To exercise the concepts learned in this course, it is necessary that you have the `vtex.service-example` app available locally, also used in the Services course.
 
 So, if you don't already have this application on your computer:

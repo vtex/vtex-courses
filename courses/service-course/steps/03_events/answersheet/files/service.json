@@ -9,9 +9,7 @@
   "events": {
     "liveUsersUpdate": {
       "sender": "vtex.events-example",
-      "keys": [
-        "send-event"
-      ]
+      "keys": ["send-event"]
     }
   },
   "routes": {
