@@ -3,34 +3,55 @@ import { BASE_PATH } from '../utils/constants'
 import { getCourseSlug } from '../utils/slugs'
 import messages from './messages'
 
-const applyInactive = (className: string, isActive: boolean) =>
-  isActive ? `active-card ${className}` : 'inactive-card'
+const getActiveCard = (
+  title: string,
+  description: string,
+  image: string,
+  name: string,
+  lang: Language
+) =>
+  `<a class="course-link" href="${BASE_PATH}/docs/${getCourseSlug(
+    name,
+    '',
+    lang
+  )}">
+    <div class="course-card"}>
+      <img class="active-card course-icon" src="${image}" width="90" />
+      <h3 class="active-card">
+        <p class="course-title">${title}<p>
+      </h3>
+      <p class="course-description">
+        ${description}
+      </p>
+    </div>
+  </a>`
+
+const getInactiveCard = (
+  title: string,
+  description: string,
+  image: string,
+  lang: Language
+) =>
+  `<div class="inactive-border"}>
+    <img class="inactive-card" src="${image}" width="90" />
+    <h3 class="inactive-card">
+      <p class="course-title">${title}<p>
+    </h3>
+    <div class="label">${messages.comingSoon[lang]}</div>
+    <p class="course-description">
+      ${description}
+    </p>
+  </div>`
 
 const getCourse = (
   { isActive, metadata: { description, image, title }, name }: Course,
-  lang: Language = 'en'
+  lang: Language
 ) => `
-<div class="${isActive ? 'course-card' : 'course-card inactive-border'}"}>
-  <img class=${applyInactive(
-    'course-icon',
-    isActive
-  )} src="${image}" width="90" />
-  <h3 class=${applyInactive('', isActive)}>
-    ${
-      isActive
-        ? `<a class="course-title" href="${BASE_PATH}/docs/${getCourseSlug(
-            name,
-            '',
-            lang
-          )}">${title[lang]}</a>`
-        : `<p class="course-title">${title[lang]}<p>`
-    }
-  </h3>
-  ${isActive ? '' : `<div class="label">${messages.comingSoon[lang]}</div>`}
-  <p class="course-description">
-    ${description[lang]}
-  </p>
-</div>`
+${
+  isActive
+    ? getActiveCard(description[lang], image, title[lang], name, lang)
+    : getInactiveCard(description[lang], image, title[lang], lang)
+}`
 
 export default (courses: Course[], lang: Language = 'en') => `
 <style>
