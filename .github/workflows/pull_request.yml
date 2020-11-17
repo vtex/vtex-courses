@@ -15,6 +15,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
-      - name: Check lint
-        run: yarn lint
+      - name: Check linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          eslint: true
+          prettier: true
     
