@@ -39,9 +39,7 @@ export const getCourses = () =>
 
 export const getAnswersheets = (course: string, step: string) => {
   try {
-    return fs.readdirSync(
-      `${COURSES_PATH}/${course}/steps/${step}/answersheet/files`
-    )
+    return fs.readdirSync(`${COURSES_PATH}/${course}/steps/${step}/answersheet`)
   } catch {
     return []
   }

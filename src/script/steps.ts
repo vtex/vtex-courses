@@ -1,5 +1,5 @@
 import { getAnswersheets, getCourseFileContents } from '../utils/files'
-import { getCourseSlug } from '../utils/slugs'
+import { getAnswersheetSlug, getCourseSlug } from '../utils/slugs'
 import Readmeio from '../clients/readmeio'
 import { Course, CourseStep, Language } from '../../typings/course'
 import stepTemplate from '../templates/step'
@@ -32,6 +32,7 @@ const referenceNextStepAndSetVisibility = (
   })
 
 const createAnswersheet = async (
+  slug: string,
   course: string,
   stepFolder: string,
   stepTitle: string,
@@ -42,7 +43,7 @@ const createAnswersheet = async (
   if (answersheets.length > 0) {
     await ReadMe.upsertDoc({
       body: answersheetTemplate(course, stepFolder, answersheets),
-      slug: `${getCourseSlug(course, stepFolder)}-answersheet`,
+      slug,
       title: `${messages.answersheetTo[lang]} '${stepTitle}'`,
       category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
     })
@@ -87,6 +88,7 @@ const intlStep = async (
 
   const courseSlug = getCourseSlug(course.name, '', lang)
   const stepSlug = getCourseSlug(course.name, step.folder, lang)
+  const answersheetSlug = getAnswersheetSlug(course.name, step.folder, lang)
 
   const logFinished = logProgress('step', stepSlug, lang)
 
@@ -112,9 +114,10 @@ const intlStep = async (
 
   const template = stepTemplate(
     getCourseFileContents(course.name, { step: step.folder, lang }),
-    stepSlug,
     answersheets.length > 0,
     isLast,
+    lang,
+    answersheetSlug,
     challengeSlug
   )
 
@@ -127,6 +130,7 @@ const intlStep = async (
   })
 
   await createAnswersheet(
+    answersheetSlug,
     course.name,
     step.folder,
     step.title[lang],
