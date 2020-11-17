@@ -10,7 +10,7 @@ const getCodes = (course: string, step: string, answersheetPaths: string[]) =>
     language: getLangFromFile(cheatFile),
     name: cheatFile,
     code: getCourseFileContents(course, {
-      rawPath: `answersheet/files/${cheatFile}`,
+      rawPath: `answersheet/${cheatFile}`,
       step,
     }),
   }))
