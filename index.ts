@@ -16,7 +16,7 @@ const execute = async () => {
 
   if (!isGithubAction) {
     console.error(
-      `❌  Please don't run deploy locally. Instead go through PR proccess on Github so we can keep source of truth.`
+      `❌  Please don't run deploy locally. Instead go through PR process on Github so we can keep source of truth.`
     )
     return
   }
