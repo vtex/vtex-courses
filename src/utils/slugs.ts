@@ -1,7 +1,6 @@
 import slugify from 'slugify'
 
 import { Language } from '../../typings/course'
-import { BASE_PATH } from './constants'
 
 const createSlug = (text: string) =>
   slugify(`${text}`, {
@@ -19,8 +18,14 @@ export const getCourseSlug = (
 ) =>
   `course-${createSlug(course)}${getStep(step)}${languageSlugFormatter(lang)}`
 
-export const getAnswersheetSlug = (stepSlug: string) =>
-  `${BASE_PATH}/docs/${stepSlug}-answersheet`
+export const getAnswersheetSlug = (
+  course: string,
+  step: string,
+  lang: Language = 'en'
+) =>
+  `course-${createSlug(course)}${getStep(
+    step
+  )}-answersheet${languageSlugFormatter(lang)}`
 
 export const getLearningPathSlug = (lang: Language = 'en') =>
   `learning-path${languageSlugFormatter(lang)}`

@@ -2,7 +2,7 @@ import { getStepStyles } from './stepStyles'
 import courseEnding from './course-ending'
 import messages from './messages'
 import { Language } from '../../typings/course'
-import { getAnswersheetSlug } from '../utils/slugs'
+import { BASE_PATH } from '../utils/constants'
 
 const getFinishCourseBtn = (lang: Language = 'en') =>
   `
@@ -15,13 +15,16 @@ ${JSON.stringify({
 [/block]
 `
 
+const formatAnswersheetURL = (answersheetSlug?: string) =>
+  `${BASE_PATH}/docs/${answersheetSlug}`
+
 export default (
   content: string,
-  slug: string,
   hasAnswersheet: boolean,
   isLast: boolean,
-  challengeLink?: string,
-  lang: Language = 'en'
+  lang: Language = 'en',
+  answersheetSlug?: string,
+  challengeLink?: string
 ) => `
   ${getStepStyles()}
   ${content}
@@ -30,7 +33,7 @@ export default (
     hasAnswersheet
       ? `### ${messages.anyQuestion[lang]}
 
-  ${messages.checkAnswersheet[lang]}(${getAnswersheetSlug(slug)})`
+  ${messages.checkAnswersheet[lang]}(${formatAnswersheetURL(answersheetSlug)})`
       : ''
   }
 
