@@ -1,12 +1,14 @@
 export interface CourseStep {
   folder: string
   title: {
-    en: string
     pt: string
+    en: string
+    es: string
   }
   description: {
-    en: string
     pt: string
+    en: string
+    es: string
   }
 }
 
@@ -14,32 +16,45 @@ export interface Course {
   name: string
   isActive: boolean
   metadata: CourseMetadata
-  overview: string
+  overview: {
+    pt: string
+    en: string
+    es: string
+  }
   summary: CourseStep[]
 }
 
 export interface CourseMetadata {
-  title: string
-  description: string
+  title: {
+    pt: string
+    en: string
+    es: string
+  }
+  description: {
+    pt: string
+    en: string
+    es: string
+  }
   image: string
 }
 
 export interface Step {
   link: string
-  description: string
+  description: {
+    pt: string
+    en: string
+    es: string
+  }
 }
 
 export interface CourseOrder {
   course: string
-  steps: string[],
+  steps: string[]
   isReadme: boolean
 }
 export interface CourseInfo {
   folder: string
   isActive: boolean
 }
-export interface CourseOrder {
-  course: string
-  steps: string[],
-  isReadme: boolean
-}
+
+export type Language = 'en' | 'pt' | 'es'

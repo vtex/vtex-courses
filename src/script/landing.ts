@@ -1,18 +1,26 @@
+import { getLearningPathSlug } from '../utils/slugs'
 import Readmeio from '../clients/readmeio'
-import { Course } from '../../typings/course'
+import { Course, Language } from '../../typings/course'
+import { logProgress } from '../utils/log'
 import landing from '../templates/landing'
 
-export const handleLanding = async (courses: Course[]) => {
+const intlLanding = async (courses: Course[], lang: Language) => {
   const ReadMe = new Readmeio()
+  const logFinished = logProgress('landing', '', lang)
 
-  const template = landing(courses)
+  const template = landing(courses, lang)
 
   await ReadMe.upsertCustomPage({
-    slug: 'training-week-learning-path',
-    title: 'Training Week Learning Path',
+    slug: getLearningPathSlug(lang),
+    title: 'Learning Path',
     html: template,
     htmlmode: true,
   })
 
-  console.log('Landing page updated 🚀')
+  logFinished()
 }
+
+export const handleLanding = async (
+  courses: Course[],
+  inLanguages: Language[]
+) => Promise.all(inLanguages.map((lang) => intlLanding(courses, lang)))

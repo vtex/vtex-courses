@@ -1,30 +1,38 @@
 import { getCourseSlug } from '../utils/slugs'
-import { Course } from '../../typings/course'
+import { Course, Language } from '../../typings/course'
 import Readmeio from '../clients/readmeio'
-import courseSteps from '../templates/course-overview'
+import courseOverview from '../templates/course-overview'
+import { logProgress } from '../utils/log'
 
-export const handleCourses = (courses: Course[]) =>
+const intlCourse = async (course: Course, lang: Language) => {
+  const logFinished = logProgress('course', getCourseSlug(course.name), lang)
+
+  const ReadMe = new Readmeio()
+  const template = courseOverview(
+    course.summary.map((step) => ({
+      link: step.folder,
+      description: step.title,
+    })),
+    course.metadata.image,
+    course.overview,
+    course.name,
+    lang
+  )
+
+  await ReadMe.upsertDoc({
+    hidden: !course.isActive,
+    slug: getCourseSlug(course.name, '', lang),
+    title: course.metadata.title[lang],
+    category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
+    body: template,
+  })
+
+  logFinished()
+}
+
+export const handleCourses = (courses: Course[], inLanguages: Language[]) =>
   Promise.all(
-    courses.map(async (course) => {
-      const ReadMe = new Readmeio()
-      const template = courseSteps(
-        course.summary.map((step) => ({
-          link: step.folder,
-          description: step.title.pt,
-        })),
-        course.metadata.image,
-        course.overview,
-        course.name
-      )
-
-      await ReadMe.upsertDoc({
-        hidden: !course.isActive,
-        slug: getCourseSlug(course.name),
-        title: course.metadata.title,
-        category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
-        body: template,
-      })
-
-      console.log(`Course ${getCourseSlug(course.name)} was updated 🏫`)
-    })
+    inLanguages.map((lang) =>
+      courses.map(async (course) => intlCourse(course, lang))
+    )
   )

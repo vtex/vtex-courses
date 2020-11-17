@@ -1,11 +1,14 @@
-const getChallengeText = (challengeLink?: string) => `
-<div class="finish-elems">Ainda tem tempo sobrando?</div>
-<a class="finish-elems" href=${challengeLink}>Tenta nosso desafio para este curso!</a>
+import { Language } from '../../typings/course'
+import messages from './messages'
+
+const getChallengeText = (challengeLink?: string, lang: Language = 'en') => `
+<div class="finish-elems">${messages.timeLeft[lang]}</div>
+<a class="finish-elems" href=${challengeLink}>${messages.tryChallenge[lang]}</a>
 `
 
-const getCourseEnding = (challengeLink?: string) =>
+const getCourseEnding = (challengeLink?: string, lang: Language = 'en') =>
   `<div id="finished-course">
-  <div class="finish-elems"><b class="rebelPink">Parabéns</b>, você terminou o curso!</div>
+  <div class="finish-elems">${messages.congrats[lang]}</div>
   <img class="finish-elems" src="https://media.giphy.com/media/g9582DNuQppxC/giphy.gif"/>
   ${challengeLink ? getChallengeText(challengeLink) : ''}
 </div>

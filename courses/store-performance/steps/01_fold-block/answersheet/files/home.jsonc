@@ -1,0 +1,80 @@
+// store/blocks/home/home.jsonc
+{
+  "store.home": {
+    "blocks": [
+      "flex-layout.row#slider",
+      "shelf#new-arrivals",
+      "shelf#clearance",
+      "__fold__",
+      "flex-layout.row#newsletter",
+      "rich-text#brands",
+      "flex-layout.row#brands",
+      "rich-text#instagram",
+      "flex-layout.row#instagram"
+    ]
+  },
+
+  "carousel#home": {
+    "props": {
+      "autoplay": true,
+      "autoplaySpeed": 4,
+      "banners": [
+        {
+          "image": "assets/chrome1.png"
+        }
+      ],
+      "height": 440,
+      "showArrows": true,
+      "showDots": true
+    }
+  },
+
+  "flex-layout.row#slider": {
+    "children": [
+      // "slider-layout#styles",
+      "carousel#home"
+    ]
+  },
+
+  "flex-layout.row#brands": {
+    "children": ["slider-layout#brands"],
+    "props": {
+      "marginTop": 4,
+      "marginBottom": 8
+    }
+  },
+
+  "shelf#new-arrivals": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "paginationDotsVisibility": "never",
+      "collection": "139",
+      "productList": {
+        "maxItems": 9,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1.5,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "New arrivals"
+      }
+    }
+  },
+
+  "shelf#clearance": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "140",
+      "paginationDotsVisibility": "desktopOnly",
+      "productList": {
+        "maxItems": 9,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1.5,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Clearance"
+      }
+    }
+  }
+}

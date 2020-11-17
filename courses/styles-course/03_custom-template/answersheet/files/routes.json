@@ -1,6 +1,0 @@
-// store/routes.json
-{
-    "store.custom#about-us": {
-        "path": "/about-us"
-    }
-}

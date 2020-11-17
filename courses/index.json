@@ -1,34 +1,38 @@
 [
   {
     "folder": "basic-blocks",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "layout-blocks",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "styles-course",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "content-workflow",
-    "isActive": false
+    "isActive": true
+  },
+  {
+    "folder": "store-performance",
+    "isActive": true
   },
   {
     "folder": "store-block",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "service-course",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "admin",
-    "isActive": false
+    "isActive": true
   },
   {
     "folder": "calling-commerce-apis",
-    "isActive": false
+    "isActive": true
   }
 ]

@@ -1,10 +1,12 @@
 import { getAnswersheets, getCourseFileContents } from '../utils/files'
 import { getCourseSlug } from '../utils/slugs'
 import Readmeio from '../clients/readmeio'
-import { Course } from '../../typings/course'
-import step from '../templates/step'
-import answersheet from '../templates/answersheet'
+import { Course, CourseStep, Language } from '../../typings/course'
+import stepTemplate from '../templates/step'
+import answersheetTemplate from '../templates/answersheet'
 import challenge from '../templates/challenge'
+import messages from '../templates/messages'
+import { logProgress } from '../utils/log'
 
 const referenceNextStepAndSetVisibility = (
   isHidden: boolean,
@@ -34,13 +36,14 @@ const createAnswersheet = async (
   stepFolder: string,
   stepTitle: string,
   answersheets: string[],
+  lang: Language,
   ReadMe: Readmeio
 ) => {
   if (answersheets.length > 0) {
     await ReadMe.upsertDoc({
-      body: answersheet(course, stepFolder, answersheets),
+      body: answersheetTemplate(course, stepFolder, answersheets),
       slug: `${getCourseSlug(course, stepFolder)}-answersheet`,
-      title: `Gabarito do passo '${stepTitle}'`,
+      title: `${messages.answersheetTo[lang]} '${stepTitle}'`,
       category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
     })
   }
@@ -53,6 +56,7 @@ const createChallenge = async (
   parentDoc: string,
   isLast: boolean,
   stepSlug: string,
+  lang: Language,
   ReadMe: Readmeio
 ) => {
   const challengeContent = challenge(course, stepSlug)
@@ -64,90 +68,98 @@ const createChallenge = async (
 
   await ReadMe.upsertDoc({
     slug: challengeSlug,
-    title: `Desafio do curso ${courseTitle}`,
+    title: `${messages.challengeFor[lang]} ${courseTitle}`,
     category,
     body: challengeContent,
     parentDoc,
   })
 
-  console.log(`Challenge for course ${course} upserted 🎁`)
-
   return challengeSlug
 }
 
-export const handleSteps = (courses: Course[]) =>
+const intlStep = async (
+  course: Course,
+  step: CourseStep,
+  stepIndex: number,
+  lang: Language
+) => {
+  const ReadMe = new Readmeio()
+
+  const courseSlug = getCourseSlug(course.name, '', lang)
+  const stepSlug = getCourseSlug(course.name, step.folder, lang)
+
+  const logFinished = logProgress('step', stepSlug, lang)
+
+  const courseCategory = await ReadMe.getCategory('courses').then(
+    ({ _id }) => _id
+  )
+
+  const parentDoc = await ReadMe.getDoc(courseSlug).then(({ _id }) => _id)
+
+  const answersheets = getAnswersheets(course.name, step.folder)
+  const isLast = stepIndex === course.summary.length - 1
+
+  const challengeSlug = await createChallenge(
+    course.name,
+    course.metadata.title[lang],
+    courseCategory,
+    parentDoc,
+    isLast,
+    stepSlug,
+    lang,
+    ReadMe
+  )
+
+  const template = stepTemplate(
+    getCourseFileContents(course.name, { step: step.folder, lang }),
+    stepSlug,
+    answersheets.length > 0,
+    isLast,
+    challengeSlug
+  )
+
+  await ReadMe.upsertDoc({
+    slug: stepSlug,
+    title: step.title[lang],
+    category: courseCategory,
+    body: template,
+    parentDoc,
+  })
+
+  await createAnswersheet(
+    course.name,
+    step.folder,
+    step.title[lang],
+    answersheets,
+    lang,
+    ReadMe
+  )
+
+  const next = !isLast
+    ? {
+        slug: getCourseSlug(course.name, course.summary[stepIndex + 1].folder),
+        title: course.summary[stepIndex + 1].title[lang],
+      }
+    : undefined
+
+  await referenceNextStepAndSetVisibility(
+    !course.isActive,
+    stepSlug,
+    ReadMe,
+    next
+  )
+
+  logFinished()
+}
+
+export const handleSteps = (courses: Course[], inLanguages: Language[]) =>
   Promise.all(
-    courses.map((course) =>
-      course.summary.map(async (stepMeta, index) => {
-        const ReadMe = new Readmeio()
-
-        const courseSlug = getCourseSlug(course.name)
-        const stepSlug = getCourseSlug(course.name, stepMeta.folder)
-
-        const courseCategory = await ReadMe.getCategory('courses').then(
-          ({ _id }) => _id
+    inLanguages.map((lang) =>
+      courses.map((course) =>
+        course.summary.map(async (step, index) =>
+          intlStep(course, step, index, lang)
         )
-
-        const parentDoc = await ReadMe.getDoc(courseSlug).then(({ _id }) => _id)
-
-        const answersheets = getAnswersheets(course.name, stepMeta.folder)
-        const isLast = index === course.summary.length - 1
-
-        const challengeSlug = await createChallenge(
-          course.name,
-          course.metadata.title,
-          courseCategory,
-          parentDoc,
-          isLast,
-          stepSlug,
-          ReadMe
-        )
-
-        const template = step(
-          getCourseFileContents(course.name, 'pt.md', stepMeta.folder),
-          stepSlug,
-          answersheets.length > 0,
-          isLast,
-          challengeSlug
-        )
-
-        await ReadMe.upsertDoc({
-          slug: stepSlug,
-          title: stepMeta.title.pt,
-          category: courseCategory,
-          body: template,
-          parentDoc,
-        })
-
-        await createAnswersheet(
-          course.name,
-          stepMeta.folder,
-          stepMeta.title.pt,
-          answersheets,
-          ReadMe
-        )
-
-        console.log(`Step ${stepSlug} was updated 🥾`)
-
-        const next = !isLast
-          ? {
-              slug: getCourseSlug(
-                course.name,
-                course.summary[index + 1].folder
-              ),
-              title: course.summary[index + 1].title.pt,
-            }
-          : undefined
-
-        await referenceNextStepAndSetVisibility(
-          !course.isActive,
-          stepSlug,
-          ReadMe,
-          next
-        )
-
-        console.log(`Step ${stepSlug} next and visibility were updated 👀`)
-      })
+      )
     )
   )
 

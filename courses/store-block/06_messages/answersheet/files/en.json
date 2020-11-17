@@ -1,6 +1,0 @@
-// store-block/messages/en.json
-{
-    "editor.countdown.title": "Countdown",
-    "editor.countdown.description": "Countdown component",
-    "countdown.title": "Countdown"
-}

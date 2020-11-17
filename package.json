@@ -4,19 +4,12 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "npx ts-node index.ts"
+    "deploy": "npx ts-node index.ts",
+    "lint-fix": "yarn eslint --fix \"src/**/*.*\" && yarn prettier --write \"**/**.*\"",
+    "lint": "yarn eslint \"src/**/*.*\" && yarn prettier -c \"**/**.*\""
   },
   "author": "",
   "license": "ISC",
-  "lint-staged": {
-    "*.{ts,js,tsx,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,graphql,gql}": [
-      "prettier --write"
-    ]
-  },
   "devDependencies": {
     "@vtex/prettier-config": "^0.3.1",
     "eslint": "^7.5.0",
@@ -28,6 +21,7 @@
     "@types/node": "^14.0.26",
     "axios": "^0.19.2",
     "axios-retry": "^3.1.8",
+    "draftlog": "^1.0.12",
     "slugify": "^1.4.5"
   }
 }
