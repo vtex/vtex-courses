@@ -15,9 +15,9 @@ Se você já está familiarizado com o Flexbox utilizado no CSS, o Flex Layout d
 
 Com o Flex Layout é possível criar _layouts_ personalizados, utilizando a estrutura de linhas e colunas do Flexbox.
 
-Analisando a documentação do bloco, vemos que você pode utilizar qualquer *array* de blocos como `children` do Flex Layout. Além disso, você deve sempre usar `flex-layout.row` e `flex-layout.col`, **NUNCA** `flex-layout` de forma isolada.
+Analisando a documentação do bloco, vemos que você pode utilizar qualquer _array_ de blocos como `children` do Flex Layout. Além disso, você deve sempre usar `flex-layout.row` e `flex-layout.col`, **NUNCA** `flex-layout` de forma isolada.
 
-Abaixo, temos um exemplo de flex layout composto de um `flex-layout.row` com dois *children*: um `info-card` e um `rich-text`:
+Abaixo, temos um exemplo de flex layout composto de um `flex-layout.row` com dois _children_: um `info-card` e um `rich-text`:
 
 ```json
   "flex-layout.row":{
@@ -26,7 +26,7 @@ Abaixo, temos um exemplo de flex layout composto de um `flex-layout.row` com doi
       "rich-text#deletar"
     ]
   },
-  
+
  "info-card#rethink": {
     "props": {
       "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/utensilios-cozinha-min.png",
@@ -36,7 +36,7 @@ Abaixo, temos um exemplo de flex layout composto de um `flex-layout.row` com doi
       "textPosition": "center"
     }
   },
-  
+
   "rich-text#deletar": {
     "props": {
       "text": "I'll be deleted soon"
@@ -47,26 +47,26 @@ Abaixo, temos um exemplo de flex layout composto de um `flex-layout.row` com doi
 ## Atividade
 
 1. Declare o `flex-layout.row` dentro dos `blocks` do template de `store.home` e declare os blocos propostos acima no seu arquivo `home.jsonc`
-2. Altere as *children* do `flex-layout.row`, substituindo o bloco `rich-text` por uma coluna `flex-layout.col`.
+2. Altere as _children_ do `flex-layout.row`, substituindo o bloco `rich-text` por uma coluna `flex-layout.col`.
 3. Delete do seu tema o bloco de `rich-text` proposto acima.
-4. Declare o bloco `flex-layout.col` no seu arquivo `home.jsonc` com dois componentes de imagem como children: `image#electronics` e `image#major-appliance`, *nesta ordem*.
+4. Declare o bloco `flex-layout.col` no seu arquivo `home.jsonc` com dois componentes de imagem como children: `image#electronics` e `image#major-appliance`, _nesta ordem_.
 5. Defina os blocos `image` com as seguintes props:
 
-    ```json
-    ...
-    "image#electronics": {
-      "props": {
-        "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/electronics_banner___25d69b49f8224b369375e68513b4d593.png",
-        "maxWidth": "100%"
-      }
-    },
-    "image#major-appliance": {
-      "props": {
-        "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/major_appliance_banner___bb10093866a127345ddfbcca3efa5022.png",
-        "maxWidth": "100%"
-      }
-    }
-    ```
+   ```json
+   ...
+   "image#electronics": {
+     "props": {
+       "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/electronics_banner___25d69b49f8224b369375e68513b4d593.png",
+       "maxWidth": "100%"
+     }
+   },
+   "image#major-appliance": {
+     "props": {
+       "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/major_appliance_banner___bb10093866a127345ddfbcca3efa5022.png",
+       "maxWidth": "100%"
+     }
+   }
+   ```
 
 O resultado obtido deve ser semelhante a este:
 

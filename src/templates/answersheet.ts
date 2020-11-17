@@ -37,7 +37,7 @@ export default (
               course,
               step,
               lang
-            )}">${messages['back'][lang]}</a>
+            )}">${messages.back[lang]}</a>
           </div>`,
   })}
   [/block]

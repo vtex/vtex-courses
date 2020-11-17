@@ -1,46 +1,43 @@
-# Info Card: *call to action* do Store Framework
+# Info Card: _call to action_ do Store Framework
 
 ## Introdução
 
-Uma loja precisa de uma boa *página inicial* para envolver os usuários, aumentando o tempo da sessão e, portanto, as chances de conversão. Para tal, é necessário utilizar vários elementos, como banners promocionais, estantes com destaques, material sobre nós, etc.
+Uma loja precisa de uma boa _página inicial_ para envolver os usuários, aumentando o tempo da sessão e, portanto, as chances de conversão. Para tal, é necessário utilizar vários elementos, como banners promocionais, estantes com destaques, material sobre nós, etc.
 
-Criamos o próximo bloco na *página inicial* usando uma *call to action*. No Store Framework, temos um bloco desenhado para esse fim, denominado [**Info Card**](https://developers.vtex.com/docs/vtex-store-components-infocard).
+Criamos o próximo bloco na _página inicial_ usando uma _call to action_. No Store Framework, temos um bloco desenhado para esse fim, denominado [**Info Card**](https://developers.vtex.com/docs/vtex-store-components-infocard).
 
 ## Começando com o Info Card
 
 ![image](https://user-images.githubusercontent.com/18701182/68480411-7b085800-0213-11ea-9426-31dcb0d0aa7d.png)
 
-Usando o Info Card, você pode criar imagens que possuem links e botões (parte superior ou lateral do bloco) que direcionam o fluxo do usuário (*Call to action*).
+Usando o Info Card, você pode criar imagens que possuem links e botões (parte superior ou lateral do bloco) que direcionam o fluxo do usuário (_Call to action_).
 
 Olhando a [documentação](https://developers.vtex.com/docs/vtex-store-components-infocard#configuration), podemos ver que:
 
-- `isFullModeStyle` define se o *Call to Action (CTA)* é definido acima do banner;
+- `isFullModeStyle` define se o _Call to Action (CTA)_ é definido acima do banner;
 - `textPosition` define a posição do texto;
 - `textAlignment` define o alinhamento do texto;
 - `imageUrl` define qual imagem será usada como banner;
 - `headline` determina qual texto será usado como título;
-- `callToActionMode` permite escolher o modo *CTA* como um link ou um botão;
-- `callToActionText` define o texto *CTA*;
+- `callToActionMode` permite escolher o modo _CTA_ como um link ou um botão;
+- `callToActionText` define o texto _CTA_;
 - `callToActionUrl` determina a URL para a qual ele redireciona;
 
 Portanto, temos as seguintes _props_:
 
 ```json
-  {
-    "store.home": {
-      "blocks": [
-        "rich-text",
-        "info-card"
-      ]
-    },
-    "rich-text": {
-      "props": {
-        "text": "*Hello, World!*",
-        "textPosition": "RIGHT"
-      }
-    },
-    "info-card": {
-      "props": {
+{
+  "store.home": {
+    "blocks": ["rich-text", "info-card"]
+  },
+  "rich-text": {
+    "props": {
+      "text": "*Hello, World!*",
+      "textPosition": "RIGHT"
+    }
+  },
+  "info-card": {
+    "props": {
       "isFullModeStyle": false,
       "textPosition": "right",
       "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
@@ -50,14 +47,15 @@ Portanto, temos as seguintes _props_:
       "callToActionText": "Explore",
       "callToActionUrl": "/sale/d",
       "textAlignment": "center"
-      }
     }
   }
+}
 ```
 
 ## Instâncias de Blocos
 
 Você pode ter se perguntado:
+
 > "E se eu quisesse ter dois _info cards_ diferentes?"
 
 É possível por meio de **instâncias de blocos**.
@@ -95,28 +93,28 @@ Todos os blocos têm nomes pré-estabelecidos, mas você pode criar instâncias 
 
 1. No arquivo `home.jsonc`, com base no código acima, crie o `info-card#button-left` logo abaixo do infocard: `info-card#button-right`. Este novo info card deve implementar os seguintes adereços:
 
-    - O título deve ser `Shining chrome`
-    - Uma frase de *call to action* do tipo link com o seguinte texto em vez de um botão: `Go to Collection` 
-    - A seguinte imagem `https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png`
-    - O seguinte subtítulo `Give your kitchen a cool style adding warm metallic finishes.<br>Available until December 2020.`
-    - Texto à esquerda da imagem (`textPosition`).
+   - O título deve ser `Shining chrome`
+   - Uma frase de _call to action_ do tipo link com o seguinte texto em vez de um botão: `Go to Collection`
+   - A seguinte imagem `https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png`
+   - O seguinte subtítulo `Give your kitchen a cool style adding warm metallic finishes.<br>Available until December 2020.`
+   - Texto à esquerda da imagem (`textPosition`).
 
-    ```json
-    ...
-      "info-card#button-left": {
-        "props": {
-        "isFullModeStyle": false,
-        "textPosition": "left",
-        "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
-        "headline": "Shining chrome",
-        "subhead": "Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2020.",
-        "callToActionMode": "link",
-        "callToActionText": "Go to collection",
-        "textAlignment": "center"
-        }
-      }
-    ...
-    ```
+   ```json
+   ...
+     "info-card#button-left": {
+       "props": {
+       "isFullModeStyle": false,
+       "textPosition": "left",
+       "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
+       "headline": "Shining chrome",
+       "subhead": "Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2020.",
+       "callToActionMode": "link",
+       "callToActionText": "Go to collection",
+       "textAlignment": "center"
+       }
+     }
+   ...
+   ```
 
 O resultado esperado será semelhante a este:
 

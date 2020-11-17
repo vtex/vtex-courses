@@ -32,93 +32,93 @@ The Slider Layout (known in the Complex Layouts course) has been improved so tha
     }
     ```
 
-2. Change the name of the shelves to use` list-context.product-list`:
+2. Change the name of the shelves to use`list-context.product-list`:
 
-    ```diff
-    {
-      ...
-    - "shelf#new-arrivals": {
-    + "list-context.product-list#new-arrivals": {
-      ...
-    - "shelf#clearance": {
-    + "list-context.product-list#clearance": {
-      ...
-    }
-    ```
+   ```diff
+   {
+     ...
+   - "shelf#new-arrivals": {
+   + "list-context.product-list#new-arrivals": {
+     ...
+   - "shelf#clearance": {
+   + "list-context.product-list#clearance": {
+     ...
+   }
+   ```
 
 3. Remove the shelf properties that are no longer needed on **both shelves**:
 
-    ```diff
-    {
-      "list-context.product-list#new-arrivals": {
-        "blocks": ["product-summary.shelf"],
-        "props": {
-          "orderBy": "OrderByTopSaleDESC",
-    -     "paginationDotsVisibility": "never",
-          "collection": "139",
-    -     "productList": {
-    -       "maxItems": 9,
-    -       "itemsPerPage": 3,
-    -       "minItemsPerPage": 1.5,
-    -       "scroll": "BY_PAGE",
-    -       "arrows": true,
-    -       "titleText": "New arrivals"
-    -     }
-        }
-      },
-      ...
-    }
-    ```
+   ```diff
+   {
+     "list-context.product-list#new-arrivals": {
+       "blocks": ["product-summary.shelf"],
+       "props": {
+         "orderBy": "OrderByTopSaleDESC",
+   -     "paginationDotsVisibility": "never",
+         "collection": "139",
+   -     "productList": {
+   -       "maxItems": 9,
+   -       "itemsPerPage": 3,
+   -       "minItemsPerPage": 1.5,
+   -       "scroll": "BY_PAGE",
+   -       "arrows": true,
+   -       "titleText": "New arrivals"
+   -     }
+       }
+     },
+     ...
+   }
+   ```
 
 4. Add a `slider-layout#shelf` to both `product-lists`:
 
-    ```diff
-    {
-      "list-context.product-list#new-arrivals": {
-        "blocks": ["product-summary.shelf"],
-    +   "children": ["slider-layout#shelf"],
-        ...
-      },
-      "list-context.product-list#clearance": {
-        "blocks": ["product-summary.shelf"],
-    +   "children": ["slider-layout#shelf"],
-        ...
-      },
-    }
-    ```
+   ```diff
+   {
+     "list-context.product-list#new-arrivals": {
+       "blocks": ["product-summary.shelf"],
+   +   "children": ["slider-layout#shelf"],
+       ...
+     },
+     "list-context.product-list#clearance": {
+       "blocks": ["product-summary.shelf"],
+   +   "children": ["slider-layout#shelf"],
+       ...
+     },
+   }
+   ```
 
 5. Finally, define the `slider-layout#shelf` so that it has the same behavior as the shelf we removed:
 
-    ```diff
-    {
-      ...
-    + "slider-layout#shelf": {
-    +   "props": {
-    +     "itemsPerPage": {
-    +       "desktop": 3
-    +     }
-    +   }
-    + }
-    }
-    ```
+   ```diff
+   {
+     ...
+   + "slider-layout#shelf": {
+   +   "props": {
+   +     "itemsPerPage": {
+   +       "desktop": 3
+   +     }
+   +   }
+   + }
+   }
+   ```
 
 6. Edit the blocks being used in _template_:
 
-    ```diff
-    {
-    "store.home": {
-        "blocks": [
-    -     "shelf#new-arrivals",     
-    -     "shelf#clearance",
-    +     "rich-text#new-arrivals",
-    +     "list-context.product-list#new-arrivals",
-    +     "rich-text#clearance",
-    +     "list-context.product-list#clearance",
-        ]
-    }
-    }
-        
-    ```
+   ```diff
+   {
+   "store.home": {
+       "blocks": [
+   -     "shelf#new-arrivals",
+   -     "shelf#clearance",
+   +     "rich-text#new-arrivals",
+   +     "list-context.product-list#new-arrivals",
+   +     "rich-text#clearance",
+   +     "list-context.product-list#clearance",
+       ]
+   }
+   }
+
+   ```
 
 The result should be:
 

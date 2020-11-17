@@ -1,26 +1,19 @@
 {
   "store.home": {
-    "blocks": [
-      "modal-trigger#first"
-    ]
+    "blocks": ["modal-trigger#first"]
   },
   "modal-trigger#first": {
-    "children": [
-      "rich-text#trigger",
-      "modal-layout#first"
-    ]
+    "children": ["rich-text#trigger", "modal-layout#first"]
   },
   "modal-layout#first": {
-    "children": [
-      "rich-text#hello"
-    ]
+    "children": ["rich-text#hello"]
   },
   "rich-text#trigger": {
     "props": {
       "text": "CLICK ME"
     }
   },
-  "rich-text#hello": { 
+  "rich-text#hello": {
     "props": {
       "text": "Hello"
     }

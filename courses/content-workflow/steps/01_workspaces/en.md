@@ -20,7 +20,7 @@ In this step, we're going to create a production workspace and it's as simple as
 vtex use {WorkspaceName} --production
 ```
 
->`WorkspaceName` is the name that you want to use to identify your workspace. 
+> `WorkspaceName` is the name that you want to use to identify your workspace.
 
 Once you run the command, if the provided name does not exist, one will be asked if want to create it, as you can see in the following image:
 

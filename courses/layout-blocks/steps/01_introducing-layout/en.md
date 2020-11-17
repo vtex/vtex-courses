@@ -15,13 +15,12 @@ Although each _layout_ block has its functionality, the idea behind them is very
 ```json
 {
   "layout-block": {
-    "children": [
-      "anything"
-    ]
+    "children": ["anything"]
   }
 }
 ```
-*Example of the idea of ​​all layout blocks*
+
+_Example of the idea of ​​all layout blocks_
 
 ## Activity
 

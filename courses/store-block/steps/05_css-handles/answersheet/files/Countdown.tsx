@@ -26,9 +26,7 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
   tick(targetDate, setTime)
 
   return (
-    <div
-      className={`${handles.countdown} c-muted-1 db tc`}
-    >
+    <div className={`${handles.countdown} c-muted-1 db tc`}>
       <h1>{`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}</h1>
     </div>
   )

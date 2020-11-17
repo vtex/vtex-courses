@@ -18,7 +18,7 @@ Neste curso, será necessário criar um cliente que será utilizado para consult
 
 ## Implementando o cliente _analytics_ e fazendo testes
 
-Neste passo, vamos implementar o cliente de _Analytics_. 
+Neste passo, vamos implementar o cliente de _Analytics_.
 
 1. Em primeiro lugar, no diretório `/node/clients`, você encontrará um arquivo chamado `analyticsClient.ts`, que já contém uma simples declaração de classe, como o código mostrado abaixo. É aqui que você implementará seu cliente.
 
@@ -64,7 +64,7 @@ Neste passo, vamos implementar o cliente de _Analytics_.
 
 5. Com o seu cliente de _analytics_ já implementado, é necessário declará-lo como um dos clientes na classe `Clientes`, de forma que ele ficará disponível e acessível através do uso de `Context`, do qual falamos anteriormente.
 
-    Dessa forma, na pasta `/node/clients`, vá ao arquivo chamado `index.ts` e adicione um método referentes ao cliente de _analytics_. Também é necessário importar o cliente que você implementou anteriormente.
+   Dessa forma, na pasta `/node/clients`, vá ao arquivo chamado `index.ts` e adicione um método referentes ao cliente de _analytics_. Também é necessário importar o cliente que você implementou anteriormente.
 
    ```diff
    // node/clients/index.ts
@@ -77,9 +77,9 @@ Neste passo, vamos implementar o cliente de _Analytics_.
    }
    ```
 
-6. De forma que você possa ver suas mudanças funcionando, é possível utilizar o método `getLiveUsers` dentro de um _handler_. Utilizando uma rota que já está definida no projeto, você pode enviar um _request_ para ela e o _handler_ responsável por essa rota irá chamar o método que criamos. 
+6. De forma que você possa ver suas mudanças funcionando, é possível utilizar o método `getLiveUsers` dentro de um _handler_. Utilizando uma rota que já está definida no projeto, você pode enviar um _request_ para ela e o _handler_ responsável por essa rota irá chamar o método que criamos.
 
-    Para fazer isso, há uma pasta dentro do diretório `/node`, chamada `handlers`. Há um arquivo chamado `analytics.ts`, no qual é necessário fazer duas coisas para que seu teste funcione: pegar o cliente de _analytics_ de `ctx` e substituir o conteúdo de `ctx.body` pelo método mencionado anteriormente, como você pode ver no bloco de código abaixo:
+   Para fazer isso, há uma pasta dentro do diretório `/node`, chamada `handlers`. Há um arquivo chamado `analytics.ts`, no qual é necessário fazer duas coisas para que seu teste funcione: pegar o cliente de _analytics_ de `ctx` e substituir o conteúdo de `ctx.body` pelo método mencionado anteriormente, como você pode ver no bloco de código abaixo:
 
    ```diff
    export async function analytics(ctx: Context, next: () => Promise<any>) {
@@ -96,10 +96,10 @@ Neste passo, vamos implementar o cliente de _Analytics_.
 
 Agora, vamos testá-lo! É possível utilizar o Postman para enviar um _request_ GET para a seguinte rota:
 
-   `{your workspace}--{your account}.myvtex.com/_v/app/analytics/realTime`
+`{your workspace}--{your account}.myvtex.com/_v/app/analytics/realTime`
 
-   e é esperado que esta responsa com os dados e com status `200`.
+e é esperado que esta responsa com os dados e com status `200`.
 
-   > Atenção! Geralmente, a conta utilizada para rodar aplicações em cursos é a `appliancetheme`
+> Atenção! Geralmente, a conta utilizada para rodar aplicações em cursos é a `appliancetheme`
 
 ![image](https://user-images.githubusercontent.com/19495917/84827089-53c00780-affa-11ea-857f-fdcba0fef7c2.png)

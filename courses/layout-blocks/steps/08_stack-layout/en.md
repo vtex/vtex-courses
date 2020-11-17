@@ -12,7 +12,7 @@ Thinking better about the problem we want to solve, we managed to divide it into
 
 ![image](https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___1b7592b49667c6a89203a0997e06bc87.jpg)
 
-- A CTA button: 
+- A CTA button:
 
 ![image](https://user-images.githubusercontent.com/18701182/90291114-8a2cce00-de55-11ea-982c-3fef741535fb.png)
 
@@ -39,7 +39,7 @@ So let's build _info card_ using both elements:
      "stack-layout#cta"
     ]
   },
-+ "stack-layout#cta": { 
++ "stack-layout#cta": {
 +   "children": [
 +     "image#cta",
 +     "link#cta"
@@ -54,19 +54,19 @@ So let's build _info card_ using both elements:
 {
   ...
 + "image#cta": {
-+   "props": { 
++   "props": {
 +     "blockClass": "cover",
 +     "width": "100%",
 +     "height": 400,
 +     "src": "https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___1b7592b49667c6a89203a0997e06bc87.jpg"
 +   }
 + },
-+ "link#cta": { 
++ "link#cta": {
 +   "props": {
 +     "displayMode": "button",
 +     "buttonProps": {
 +       "variant": "primary",
-+       "size": "large" 
++       "size": "large"
 +     },
 +     "href": "/washer",
 +     "label": "Check these awesome discounts"

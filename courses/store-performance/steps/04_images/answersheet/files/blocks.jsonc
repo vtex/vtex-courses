@@ -1,5 +1,5 @@
 // /store/blocks.jsonc
- {
+{
   "store.orderplaced": {
     "blocks": ["order-placed"]
   },

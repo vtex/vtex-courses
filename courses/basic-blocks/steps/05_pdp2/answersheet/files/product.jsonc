@@ -1,12 +1,9 @@
 // store/blocks/product.jsonc
 {
   "store.product": {
-     "children": [
-      "breadcrumb",
-       "flex-layout.row#main"
-     ]
-   },
-   ...,
+    "children": ["breadcrumb", "flex-layout.row#main"]
+  },
+  //...,
   "flex-layout.col#right": {
     "props": {
       "verticalAlign": "middle",
@@ -21,12 +18,9 @@
       "buy-button"
     ]
   },
-  ...,
+  //...,
   "flex-layout.row#qty-sku": {
-    "children": [
-      "sku-selector",
-      "product-quantity"
-    ]
+    "children": ["sku-selector", "product-quantity"]
   },
   "product-price": {
     "props": {

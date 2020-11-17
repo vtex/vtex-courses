@@ -1,31 +1,31 @@
 /* styles/css/vtex.store-components.css */
 .infoCardHeadline {
-    font-family: serif;
-    font-size: 2.25rem;
-    font-weight: bold;
-    color: black;
-    border: 2px solid black;
-    padding: 24px;
+  font-family: serif;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: black;
+  border: 2px solid black;
+  padding: 24px;
 }
 
 .infoCardCallActionContainer :global(.vtex-button) {
-    color: white;
-    background-color: gray;
-    border: transparent;
+  color: white;
+  background-color: gray;
+  border: transparent;
 }
 
 .infoCardCallActionContainer :global(.vtex-button):hover {
-    color: gray;
-    background-color: white;
-    border: transparent;
+  color: gray;
+  background-color: white;
+  border: transparent;
 }
 
 .infoCardContainer--vintage {
-    background-color: #edcfd1
+  background-color: #edcfd1;
 }
 
 .infoCardContainer {
-    max-width: 1260px;
-    margin: 0 auto;
-    padding: 0;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0;
 }

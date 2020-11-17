@@ -14,11 +14,13 @@ Como no passo anterior, é necessário apenas um único comando para instalar um
 - Você não tem o projeto da aplicação no seu computador.
 
 No primeiro caso, você pode instalá-la rodando o seguinte comando:
+
 ```
 vtex install {vendor}.{appName}@{version}
 ```
 
 Já no caso de ter projeto da _app_, você precisar ir na pasta do projeto e rodar o seguinte comando:
+
 ```
 vtex install
 ```

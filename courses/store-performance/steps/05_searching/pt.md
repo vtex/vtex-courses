@@ -4,48 +4,48 @@ Uma das operações mais pesadas e pouco performáticas na navegação de uma lo
 
 ## Atividade
 
-1. Para otimizar o contexto da busca, adicione a propriedade `context` ao _template_ de busca no arquivo `store/blocks/search.jsonc`: 
+1. Para otimizar o contexto da busca, adicione a propriedade `context` ao _template_ de busca no arquivo `store/blocks/search.jsonc`:
 
-    ```diff
-    // store/blocks/search.jsonc
-    {
-      "store.search": {
-    +   "props": {
-    +     "context": {}
-    +   },
-        "blocks": ["search-result-layout#search"]
-      },
-      ...
-    }
-    ```
+   ```diff
+   // store/blocks/search.jsonc
+   {
+     "store.search": {
+   +   "props": {
+   +     "context": {}
+   +   },
+       "blocks": ["search-result-layout#search"]
+     },
+     ...
+   }
+   ```
 
-2. Para garantir redução de resultados carregados e, portanto, tornar o volume de resultados menor. É possível controlar para que apenas o primeiro SKU disponível seja retornado, para isso, adicione no `context` o `skusFilter` como sendo `FIRST_AVAILABLE`: 
+2. Para garantir redução de resultados carregados e, portanto, tornar o volume de resultados menor. É possível controlar para que apenas o primeiro SKU disponível seja retornado, para isso, adicione no `context` o `skusFilter` como sendo `FIRST_AVAILABLE`:
 
-    ```diff
-    {
-      "store.search": {
-        "props": {
-          "context": {
-    +       "skusFilter": "FIRST_AVAILABLE"
-          }
-        },
-        "blocks": ["search-result-layout#search"]
-      },
-    }
-    ```
+   ```diff
+   {
+     "store.search": {
+       "props": {
+         "context": {
+   +       "skusFilter": "FIRST_AVAILABLE"
+         }
+       },
+       "blocks": ["search-result-layout#search"]
+     },
+   }
+   ```
 
-3. Para tornar os preços mais _cacheáveis_ e evitar simulá-los para cada resultado de busca obtido, podemos também escolher `skip` como `simulationBehavior`: 
+3. Para tornar os preços mais _cacheáveis_ e evitar simulá-los para cada resultado de busca obtido, podemos também escolher `skip` como `simulationBehavior`:
 
-    ```diff
-    {
-      "store.search": {
-        "props": {
-          "context": {
-            "skusFilter": "FIRST_AVAILABLE"
-    +       "simulationBehavior": "skip"
-          }
-        },
-        "blocks": ["search-result-layout#search"]
-      },
-    }
-    ```
+   ```diff
+   {
+     "store.search": {
+       "props": {
+         "context": {
+           "skusFilter": "FIRST_AVAILABLE"
+   +       "simulationBehavior": "skip"
+         }
+       },
+       "blocks": ["search-result-layout#search"]
+     },
+   }
+   ```
