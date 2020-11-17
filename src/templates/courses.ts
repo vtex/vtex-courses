@@ -15,7 +15,7 @@ const getActiveCard = (
     '',
     lang
   )}">
-    <div class="course-card"}>
+    <div class="course-card">
       <img class="active-card course-icon" src="${image}" width="90" />
       <h3 class="active-card">
         <p class="course-title">${title}<p>
@@ -32,7 +32,7 @@ const getInactiveCard = (
   image: string,
   lang: Language
 ) =>
-  `<div class="inactive-border"}>
+  `<div class="inactive-border course-card">
     <img class="inactive-card" src="${image}" width="90" />
     <h3 class="inactive-card">
       <p class="course-title">${title}<p>
@@ -49,8 +49,8 @@ const getCourse = (
 ) => `
 ${
   isActive
-    ? getActiveCard(description[lang], image, title[lang], name, lang)
-    : getInactiveCard(description[lang], image, title[lang], lang)
+    ? getActiveCard(title[lang], description[lang], image, name, lang)
+    : getInactiveCard(title[lang], description[lang], image, lang)
 }`
 
 export default (courses: Course[], lang: Language = 'en') => `
