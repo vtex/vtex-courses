@@ -26,4 +26,8 @@ export default class DefaultClient {
   protected put<T>(url: string, body: T, config?: AxiosRequestConfig) {
     return this.http.put(url, body, config).then(({ data }) => data)
   }
+
+  protected delete<T>(url: string, config?: AxiosRequestConfig) {
+    return this.http.delete<T>(url, config).then(({ data }) => data)
+  }
 }
