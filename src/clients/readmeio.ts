@@ -11,6 +11,8 @@ const ENCODED_CREDENTIALS = Buffer.from(
 
 const routes = {
   category: (category: string): string => `categories/${category}`,
+  categoryDocs: (category: string): string =>
+    `${routes.category(category)}/docs`,
   customPages: () => `custompages`,
   customPage: (slug: string) => `${routes.customPages()}/${slug}`,
   docs: (): string => 'docs',
@@ -29,6 +31,10 @@ export default class Readmeio extends DefaultClient {
 
   public getCategory(name: string) {
     return this.get(routes.category(name))
+  }
+
+  public getCategoryDocs(name: string) {
+    return this.get(routes.categoryDocs(name))
   }
 
   public createCustomPage({
@@ -111,6 +117,10 @@ export default class Readmeio extends DefaultClient {
       type,
       parentDoc,
     })
+  }
+
+  public deleteDoc(slug: string) {
+    return this.delete(routes.doc(slug))
   }
 
   public getDoc(slug: string) {

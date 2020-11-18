@@ -40,7 +40,7 @@ export default (
   ${
     isLast
       ? `
-      ${courseEnding(challengeLink)}
+      ${courseEnding(challengeLink, lang)}
       ${getFinishCourseBtn(lang)}
       `
       : ``

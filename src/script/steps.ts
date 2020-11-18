@@ -1,5 +1,9 @@
 import { getAnswersheets, getCourseFileContents } from '../utils/files'
-import { getAnswersheetSlug, getCourseSlug } from '../utils/slugs'
+import {
+  getAnswersheetSlug,
+  getChallengeSlug,
+  getCourseSlug,
+} from '../utils/slugs'
 import Readmeio from '../clients/readmeio'
 import { Course, CourseStep, Language } from '../../typings/course'
 import stepTemplate from '../templates/step'
@@ -60,8 +64,8 @@ const createChallenge = async (
   lang: Language,
   ReadMe: Readmeio
 ) => {
-  const challengeContent = challenge(course, stepSlug)
-  const challengeSlug = `${getCourseSlug(course)}-challenge`
+  const challengeContent = challenge(course, stepSlug, lang)
+  const challengeSlug = getChallengeSlug(course, lang)
 
   if (!challengeContent || !isLast) {
     return undefined
