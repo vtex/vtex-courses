@@ -69,7 +69,7 @@ const main = async () => {
   console.log('Following documents are not valid slugs:\n')
   console.log(invalidDocs.join('\n'))
 
-  rl.question('Should I delete them? [y/N]', (answer) => {
+  rl.question('\nShould I delete them? [y/N]', (answer) => {
     const shouldDelete = answer.toLowerCase() === 'y'
 
     if (!shouldDelete) {
@@ -79,7 +79,10 @@ const main = async () => {
 
     Promise.all(
       invalidDocs.map((invalidDoc) => new Readmeio().deleteDoc(invalidDoc))
-    ).then((_) => rl.close())
+    ).then((_) => {
+      console.log('🗑  Clean up executed successfully')
+      rl.close()
+    })
   })
 }
 
