@@ -27,5 +27,8 @@ export const getAnswersheetSlug = (
     step
   )}-answersheet${languageSlugFormatter(lang)}`
 
+export const getChallengeSlug = (course: string, lang: Language = 'en') =>
+  `course-${createSlug(course)}-challenge${languageSlugFormatter(lang)}`
+
 export const getLearningPathSlug = (lang: Language = 'en') =>
   `learning-path${languageSlugFormatter(lang)}`

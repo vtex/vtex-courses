@@ -10,14 +10,14 @@ const getCourseEnding = (challengeLink?: string, lang: Language = 'en') =>
   `<div id="finished-course">
   <div class="finish-elems">${messages.congrats[lang]}</div>
   <img class="finish-elems" src="https://media.giphy.com/media/g9582DNuQppxC/giphy.gif"/>
-  ${challengeLink ? getChallengeText(challengeLink) : ''}
+  ${challengeLink ? getChallengeText(challengeLink, lang) : ''}
 </div>
 `
 
-export default (challengeLink?: string) => `
+export default (challengeLink?: string, lang?: Language) => `
 [block:html]
   ${JSON.stringify({
-    html: `${getCourseEnding(challengeLink)}`,
+    html: `${getCourseEnding(challengeLink, lang)}`,
   })}
 [/block]
 `
