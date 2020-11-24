@@ -13,11 +13,13 @@ const areValidLangs = (inLanguages: string[]) =>
 const execute = async () => {
   let inLanguages = process.argv.slice(2)
   const isGithubAction = process.env.CI?.toLowerCase() === 'true'
+  const gotReadmeToken = process.env.README_TOKEN
 
-  if (!isGithubAction) {
+  if (!isGithubAction || !gotReadmeToken) {
     console.error(
       `❌  Please don't run deploy locally. Instead go through PR process on Github so we can keep source of truth.`
     )
+
     return
   }
 
@@ -25,6 +27,7 @@ const execute = async () => {
     console.error(
       `❌  Language must be one of these: ${LANGUAGES.join(', ')}, ${ALL}`
     )
+
     return
   }
 
