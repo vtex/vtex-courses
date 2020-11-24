@@ -20,5 +20,5 @@ jobs:
       - run: yarn install
       - name: Deploy courses to ReadMe
         run: yarn run deploy all
-        env: 
-          README_TOKEN: ${{secrets.README_TOKEN}}  
+        env:
+          README_TOKEN: ${{secrets.README_TOKEN}}
