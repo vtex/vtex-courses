@@ -1,14 +1,5 @@
 import DefaultClient from './default'
 
-const CREDENTIALS = {
-  username: 'P02YTlEi3Peuxrnhzs6RHiIpmwDlba9o',
-  password: '',
-}
-
-const ENCODED_CREDENTIALS = Buffer.from(
-  `${CREDENTIALS.username}:${CREDENTIALS.password}`
-).toString('base64')
-
 const routes = {
   category: (category: string): string => `categories/${category}`,
   categoryDocs: (category: string): string =>
@@ -24,7 +15,7 @@ export default class Readmeio extends DefaultClient {
     super('https://dash.readme.io/api/v1', {
       headers: {
         'x-readme-version': 'v1.0',
-        Authorization: `Basic ${ENCODED_CREDENTIALS}`,
+        Authorization: `Basic ${process.env.README_TOKEN}`,
       },
     })
   }
