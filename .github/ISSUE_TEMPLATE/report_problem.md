@@ -4,14 +4,18 @@ about: Create a report to help us improve
 labels: content-problem
 ---
 
-**Describe the content problem**
-A clear and concise description of what the bug is.
+**Describe the content problem**  
+  
+A clear and concise description of what the problem is.
 
-**How do you think it should be?**
+**How do you think it should be?**  
+  
 Describe how you think it could be better
 
-**Screenshots**
+**Screenshots**   
+  
 If applicable, add screenshots to help explain your problem.
 
-**Additional context**
+**Additional context**  
+  
 Add any other context about the problem here.
