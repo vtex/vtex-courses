@@ -1,14 +1,21 @@
 import { Language } from '../../typings/course'
-import { getCourseFileContents } from '../utils/files'
+import { getFileContent, getCourseFilePath } from '../utils/files'
 import messages from './messages'
+import contribute from './contribute'
 
 export default (
   course: string,
   lastStepSlug: string,
   lang: Language = 'en'
 ) => {
+  const challengePath = getCourseFilePath({
+    course,
+    rawPath: 'challenge',
+    lang,
+  })
+
   return `
-    ${getCourseFileContents(course, { rawPath: 'challenge', lang })}
+    ${getFileContent(challengePath)}
   
     [block:html]
     ${JSON.stringify({
@@ -18,5 +25,7 @@ export default (
             </div>`,
     })}
     [/block]
+
+    ${contribute(challengePath, lang)}
   `
 }

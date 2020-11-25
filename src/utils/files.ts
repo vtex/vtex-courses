@@ -4,26 +4,32 @@ import { CourseInfo, Language } from '../../typings/course'
 
 const COURSES_PATH = `courses`
 
-export const getCourseFileContents = (
-  course: string,
-  { rawPath, step, lang }: PathParams,
-  toJSON?: boolean
-) => {
+export const getCourseFilePath = ({
+  course,
+  rawPath,
+  step,
+  lang,
+  isMarkdown = true,
+}: PathParams) => {
+  let filePath = `${COURSES_PATH}/${course}`
+
+  if (step) {
+    filePath += `/steps/${step}`
+  }
+
+  if (rawPath) {
+    filePath += `/${rawPath}`
+  }
+
+  if (lang && isMarkdown) {
+    filePath += `/${lang}.md`
+  }
+
+  return filePath
+}
+
+export const getFileContent = (filePath: string, toJSON?: boolean) => {
   try {
-    let filePath = `${COURSES_PATH}/${course}`
-
-    if (step) {
-      filePath += `/steps/${step}`
-    }
-
-    if (rawPath) {
-      filePath += `/${rawPath}`
-    }
-
-    if (lang && !toJSON) {
-      filePath += `/${lang}.md`
-    }
-
     const content = fs.readFileSync(filePath).toString('utf-8')
 
     return toJSON ? JSON.parse(content) : content
@@ -48,6 +54,8 @@ export const getAnswersheets = (course: string, step: string) => {
 export const getFileName = (filePath: string) => filePath.split('.')[0]
 
 interface PathParams {
+  course?: string
+  isMarkdown?: boolean
   rawPath?: string
   step?: string
   lang?: Language

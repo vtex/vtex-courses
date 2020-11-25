@@ -1,27 +1,33 @@
-import { getCourseFileContents, getCourses } from './files'
+import { getCourseFilePath, getCourses, getFileContent } from './files'
 import { Course, Language } from '../../typings/course'
+
+const getConfigContent = (
+  course: string,
+  path: string,
+  { toJSON = false, lang }: Opts
+) =>
+  getFileContent(
+    getCourseFilePath({
+      course,
+      rawPath: path,
+      lang,
+    }),
+    toJSON
+  )
 
 export default (langs: Language[]) =>
   getCourses().map(({ folder, isActive }) => {
-    const metadata = getCourseFileContents(
-      folder,
-      { rawPath: 'metadata.json' },
-      true
-    )
+    const metadata = getConfigContent(folder, 'metadata.json', { toJSON: true })
 
     const overview = langs.reduce(
       (acc, lang) => ({
         ...acc,
-        [lang]: getCourseFileContents(folder, { rawPath: 'overview', lang }),
+        [lang]: getConfigContent(folder, 'overview', { lang }),
       }),
       {} as Course['overview']
     )
 
-    const summary = getCourseFileContents(
-      folder,
-      { rawPath: 'summary.json' },
-      true
-    )
+    const summary = getConfigContent(folder, 'summary.json', { toJSON: true })
 
     return {
       name: folder,
@@ -31,3 +37,8 @@ export default (langs: Language[]) =>
       metadata,
     } as Course
   })
+
+interface Opts {
+  toJSON?: boolean
+  lang?: Language
+}
