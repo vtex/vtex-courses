@@ -37,8 +37,12 @@ const messages: Record<string, LanguageSwitcher> = {
     en: 'Any questions?',
   },
   checkAnswersheet: {
-    pt: 'Confira aqui o [gabarito para esta etapa]',
-    en: 'Check here the [answersheet for this step]',
+    pt: 'Veja o [gabarito para esta etapa]',
+    en: 'See the [answersheet for this step]',
+  },
+  officeHours: {
+    pt: 'participe do nosso [office hours]',
+    en: 'join us on our [office hours]',
   },
   answersheetTo: {
     pt: 'Gabarito para o passo',
@@ -47,6 +51,28 @@ const messages: Record<string, LanguageSwitcher> = {
   challengeFor: {
     pt: 'Desafio do Curso',
     en: 'Challenge for the Course',
+  },
+  contentBetter: {
+    pt: 'Ajude-nos a fazer este conteúdo melhor!',
+    en: 'Help us make this content better!',
+  },
+  problemPR: {
+    pt:
+      'Os cursos do VTEX IO são de código aberto. Se você ver algum problema, pode abrir um pull request!',
+    en:
+      'VTEX IO courses are open source. If you see something wrong, you can open a pull request!',
+  },
+  contribute: {
+    pt: 'Faça uma contribuição',
+    en: 'Make a contribution',
+  },
+  openIssue: {
+    pt: 'abra uma issue',
+    en: 'open an issue',
+  },
+  or: {
+    pt: 'ou',
+    en: 'or',
   },
 }
 

@@ -1,4 +1,8 @@
-import { getAnswersheets, getCourseFileContents } from '../utils/files'
+import {
+  getAnswersheets,
+  getCourseFilePath,
+  getFileContent,
+} from '../utils/files'
 import {
   getAnswersheetSlug,
   getChallengeSlug,
@@ -116,10 +120,17 @@ const intlStep = async (
     ReadMe
   )
 
+  const stepPath = getCourseFilePath({
+    course: course.name,
+    step: step.folder,
+    lang,
+  })
+
   const template = stepTemplate(
-    getCourseFileContents(course.name, { step: step.folder, lang }),
+    getFileContent(stepPath),
     answersheets.length > 0,
     isLast,
+    stepPath,
     lang,
     answersheetSlug,
     challengeSlug

@@ -1,18 +1,22 @@
+import { getCourseFilePath, getFileContent } from '../utils/files'
 import { getStepStyles } from './stepStyles'
-import { getCourseFileContents } from '../utils/files'
 import { getLangFromFile } from '../utils/languageFromFile'
 import { getCourseSlug } from '../utils/slugs'
 import messages from './messages'
 import { Language } from '../../typings/course'
+import contribute from './contribute'
 
 const getCodes = (course: string, step: string, answersheetPaths: string[]) =>
   answersheetPaths.map((cheatFile) => ({
     language: getLangFromFile(cheatFile),
     name: cheatFile,
-    code: getCourseFileContents(course, {
-      rawPath: `answersheet/${cheatFile}`,
-      step,
-    }),
+    code: getFileContent(
+      getCourseFilePath({
+        course,
+        rawPath: `answersheet/${cheatFile}`,
+        step,
+      })
+    ),
   }))
 
 export default (
@@ -41,5 +45,14 @@ export default (
           </div>`,
   })}
   [/block]
+
+  ${contribute(
+    getCourseFilePath({
+      course,
+      rawPath: `answersheet`,
+      step,
+    }),
+    lang
+  )}
 `
 }
