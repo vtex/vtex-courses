@@ -32,7 +32,7 @@ Thus, `store.home` now knows that it needs to render a Rich Text. However, we're
 
 ## Defining blocks
 
-Defining a block must always be performed apart from any other block, at thee source level of the JSON file.
+Defining a block must always be performed apart from any other block, at the source level of the JSON file.
 
 ```json
 {
