@@ -58,7 +58,7 @@ const messages: Record<string, LanguageSwitcher> = {
   },
   problemPR: {
     pt:
-      'Os cursos do VTEX IO são de código aberto. Se você ver algum problema, pode abrir um pull request!',
+      'Os cursos do VTEX IO são de código aberto. Se você perceber algum problema, pode abrir um pull request!',
     en:
       'VTEX IO courses are open source. If you see something wrong, you can open a pull request!',
   },
