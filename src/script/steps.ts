@@ -156,7 +156,11 @@ const intlStep = async (
 
   const next = !isLast
     ? {
-        slug: getCourseSlug(course.name, course.summary[stepIndex + 1].folder),
+        slug: getCourseSlug(
+          course.name,
+          course.summary[stepIndex + 1].folder,
+          lang
+        ),
         title: course.summary[stepIndex + 1].title[lang],
       }
     : undefined
