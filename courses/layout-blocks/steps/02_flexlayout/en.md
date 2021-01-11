@@ -49,7 +49,7 @@ Below is an example of a flex layout composed of a `flex-layout.row` with two ch
 1. Declare `flex-layout.row` within the`blocks` of the `store.home` template and declare the blocks proposed above in your`home.jsonc` file
 2. Change the children of `flex-layout.row`, replacing the `rich-text` block with a `flex-layout.col` column.
 3. Delete the rich-text block proposed above from your theme.
-4. Declare the `flex-layout.col` block in your `home.jsonc` file with two image components like children: `image#electronics` and `image# major-appliance`, _in that order_.
+4. Declare the `flex-layout.col` block in your `home.jsonc` file with two image components like children: `image#electronics` and `image#major-appliance`, _in that order_.
 5. Define the `image` blocks with the following props:
 
    ```json
