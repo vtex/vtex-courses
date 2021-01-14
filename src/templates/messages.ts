@@ -30,7 +30,7 @@ const messages: Record<string, LanguageSwitcher> = {
   },
   finishCourse: {
     pt: 'Finalizar Curso',
-    en: 'Finish Cours',
+    en: 'Finish Course',
   },
   anyQuestion: {
     pt: 'Está com duvidas?',
