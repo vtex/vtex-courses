@@ -19,11 +19,11 @@ export default (
   
     [block:html]
     ${JSON.stringify({
-    html: `<div id="back-button">
+      html: `<div id="back-button">
               <i class="fa fa-angle-left"></i>
               <a id="back-link" href="/docs/${lastStepSlug}">${messages.back[lang]}</a>
             </div>`,
-  })}
+    })}
     [/block]
 
     ${contribute(challengePath, lang)}
