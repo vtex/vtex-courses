@@ -37,7 +37,7 @@ Depois de instalado com sucesso, a próxima etapa é _fazer login_ em uma conta 
 
 2. Depois de _fazer login_, execute `vtex whoami` para confirmar a conta e a área de trabalho em que você se encontra.
 
-Os _workspaces_ nada mais são do que o que o homônimo sugere. No VTEX IO, as contas têm três tipos principais de _workspace_, a saber [master](https://vtex.io/docs/recipes/store/promoting-a-workspace-to-master), [produção](https://vtex.io/docs/recipes/store/creating-a-production-workspace) e desenvolvimento.
+Os _workspaces_ nada mais são do que o que o homônimo sugere. No VTEX IO, as contas têm três tipos principais de _workspace_, a saber [master](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-promoting-a-workspace-to-master), [produção](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace) e desenvolvimento.
 
 O próximo passo é criar um _workspace_ de desenvolvimento, que permitirá que você brinque com as configurações ao longo do curso sem alterar a versão pública final da loja.
 

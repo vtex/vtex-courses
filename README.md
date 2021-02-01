@@ -191,4 +191,4 @@ To run and see the results of a new course, you just have to run `yarn start` on
 
 The course will be available at:
 
-[Learning Path](https://vtex-enterprise-group.readme.io/learning)
+[Learning Path](https://learn.vtex.com/)

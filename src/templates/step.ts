@@ -10,7 +10,7 @@ const getFinishCourseBtn = (lang: Language = 'en') =>
 [block:html]
 ${JSON.stringify({
   html: `<div id="finish-course">
-  <a id="finish-link" href="/learning/page/learning-path">${messages.finishCourse[lang]}</a>
+  <a id="finish-link" href="/page/learning-path">${messages.finishCourse[lang]}</a>
 </div>`,
 })}
 [/block]

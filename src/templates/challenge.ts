@@ -21,7 +21,7 @@ export default (
     ${JSON.stringify({
       html: `<div id="back-button">
               <i class="fa fa-angle-left"></i>
-              <a id="back-link" href="/learning/docs/${lastStepSlug}">${messages.back[lang]}</a>
+              <a id="back-link" href="/docs/${lastStepSlug}">${messages.back[lang]}</a>
             </div>`,
     })}
     [/block]
