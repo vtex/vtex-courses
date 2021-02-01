@@ -133,4 +133,4 @@ After running `vtex link`, your `rich-text` should look like this:
 
 <img src="https://user-images.githubusercontent.com/12139385/70143376-2e7d3480-167a-11ea-8727-2bc6a9422f21.png" width="150" />
 
-Note: Remember to access the Rich Text [documentation](https://vtex.io/docs/components/all/vtex.rich-text/) if you have any questions during the activity.
+Note: Remember to access the Rich Text [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-rich-text) if you have any questions during the activity.

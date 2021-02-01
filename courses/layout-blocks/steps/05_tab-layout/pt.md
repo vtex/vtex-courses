@@ -153,4 +153,4 @@ Nesta atividade, vamos criar a estrutura simples de um _tab layout_, conforme im
    }
    ```
 
-Note: Lembre-se de acessar a documentação [Tab Layout](https://vtex.io/docs/components/layout/vtex.tab-layout) e do [Rich Text](https://vtex.io/docs/components/all/vtex.rich-text/) caso tenha alguma dúvida durante a atividade.
+Note: Lembre-se de acessar a documentação [Tab Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-tab-layout) e do [Rich Text](https://developers.vtex.com/vtex-developer-docs/docs/vtex-rich-text) caso tenha alguma dúvida durante a atividade.

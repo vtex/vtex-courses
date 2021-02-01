@@ -37,11 +37,11 @@ export default (
   ${JSON.stringify({
     html: `<div id="back-button">
             <i class="fa fa-angle-left"></i>
-            <a id="back-link" href="/learning/docs/${getCourseSlug(
-              course,
-              step,
-              lang
-            )}">${messages.back[lang]}</a>
+            <a id="back-link" href="/docs/${getCourseSlug(
+      course,
+      step,
+      lang
+    )}">${messages.back[lang]}</a>
           </div>`,
   })}
   [/block]

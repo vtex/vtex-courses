@@ -56,7 +56,7 @@ Nesta atividade, vamos criar um _slider_ de marcas para o nosso site:
 
 2. Crie um arquivo chamado `slider-layout.jsonc` dentro da pasta `/store/blocks`;
 
-3. Neste arquivo, baseando-se no código acima, substitua os `info-card` declarados como children de `slider-layout#home` e adicione 6 [componentes de imagem](https://vtex.io/docs/components/general/vtex.store-components/image) `image` como children. Utilize o formato `image#brand1`, `image#brand2` (...) `image#brand6` para declarar os componentes;
+3. Neste arquivo, baseando-se no código acima, substitua os `info-card` declarados como children de `slider-layout#home` e adicione 6 [componentes de imagem](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-image) `image` como children. Utilize o formato `image#brand1`, `image#brand2` (...) `image#brand6` para declarar os componentes;
 
 4. Declare uma prop `src` específica para cada `image#brand` definido. Utilize as URLs abaixo para cada uma delas:
 

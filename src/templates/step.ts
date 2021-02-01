@@ -9,10 +9,10 @@ const getFinishCourseBtn = (lang: Language = 'en') =>
   `
 [block:html]
 ${JSON.stringify({
-  html: `<div id="finish-course">
-  <a id="finish-link" href="/learning/page/learning-path">${messages.finishCourse[lang]}</a>
+    html: `<div id="finish-course">
+  <a id="finish-link" href="/page/learning-path">${messages.finishCourse[lang]}</a>
 </div>`,
-})}
+  })}
 [/block]
 `
 
@@ -31,25 +31,22 @@ export default (
   ${getStepStyles()}
   ${content}
 
-  ${
-    hasAnswersheet
-      ? `### ${messages.anyQuestion[lang]}
+  ${hasAnswersheet
+    ? `### ${messages.anyQuestion[lang]}
 
   ${messages.checkAnswersheet[lang]}(${formatAnswersheetURL(
-          answersheetSlug
-        )}) ${messages.or[lang]} ${
-          messages.officeHours[lang]
-        }(${OFFICE_HOURS_LINK})`
-      : ''
+      answersheetSlug
+    )}) ${messages.or[lang]} ${messages.officeHours[lang]
+    }(${OFFICE_HOURS_LINK})`
+    : ''
   }
 
-  ${
-    isLast
-      ? `
+  ${isLast
+    ? `
       ${courseEnding(challengeLink, lang)}
       ${getFinishCourseBtn(lang)}
       `
-      : ``
+    : ``
   }
 
   ${contribute(stepPath, lang)}
