@@ -8,7 +8,7 @@ One of the highlights of a good admin application is to ensure that it is well-p
 
 Navigation is the file that defines the navigation rules in the VTEX admin sidebar. With it, you can build from a simpler link, in which a click takes you to your app, how to build more complex menus with associated submenus.
 
-![image](https://user-images.githubusercontent.com/18701182/92757455-21f1df00-f364-11ea-8798-87f8f73863c8.png)
+![image](https://user-images.githubusercontent.com/60782333/107589617-28bba100-6be5-11eb-83d6-31486d1bafe3.png)
 
 ## routes.json
 
