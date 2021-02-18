@@ -18,7 +18,7 @@ During this course, you will implement some services in VTEX IO and learn a bit 
 
 ## About this course
 
-This course will guide you will guide you through learning how to develop a service app with VTEX IO. There are some prerequisities for you to have an amazing experience when doing this course, which are:
+This course will guide you through learning how to develop a service app with VTEX IO. There are some prerequisities for you to have an amazing experience when doing this course, which are:
 
 - Basic concepts on GraphQL
 - Understand how to develop using Typescript
