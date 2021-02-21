@@ -20,7 +20,7 @@ In this course, it will be necessary to create a client that will be used to get
 
 In this step, we will implement the Analytics client. So,
 
-1. First, in the `/node/clients/` directory, you will find a file called `analyticsClient.ts`, which already has a sketch, just like the code block below. This is where you'll implement your client.
+1. First, in the `/node/clients/` directory, you will find a file called `analytics.ts`, which already has a sketch, just like the code block below. This is where you'll implement your client.
 
    ```ts
    //node/clients/analytics.ts
@@ -34,7 +34,7 @@ In this step, we will implement the Analytics client. So,
 2. The client needs to have a constructor and just a single method, called `getLiveUsers`. This method returns a promise of an array that its elements are of the type `LiveUsersProduct`. Using the code below, add the necessary code lines to the client:
 
    ```diff
-   //node/clients/analyticsClient.ts
+   //node/clients/analytics.ts
    +import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
 
    export default class Analytics extends AppClient {
