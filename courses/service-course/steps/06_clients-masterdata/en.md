@@ -20,6 +20,66 @@ In this step, it will be used to fetch data regarding the top-N most viewed prod
 
 > **NOTE:** It is important to highlight that the Master Data client will be available as long as the correct version of `@vtex/api` is installed in the node folder. It can be used by accessing `ctx.clients.masterdata`.
 
+## Before starting, if you are **not using** the `appliancetheme` account
+
+Before following our activity for this step, you will need to set up your **Master Data** to be able to use it.
+
+So, you'll have to create an entity to save your product list. To do so, using our [**Master Data API**](https://developers.vtex.com/vtex-developer-docs/reference/master-data-api-v2-overview), you'll save a new schema. 
+
+1. Using [Postman](https://www.postman.com/downloads/) or any other API client you prefer, send a `PUT` request to this route: `https://{{your-account-name}}.vtexcommercestable.com.br/api/dataentities/course_backend_product_list/schemas/{{your-schema-name}}` with the following headers and body:
+
+  > Note that you need to fill in some information on the route, such as `your-account-name` and `your-schema-name`. That last one can be anything, but we strongly recommend it to be something like `v0`. 
+
+  Headers: 
+  ```json  
+      Content-Type: application/json
+      VtexIdclientAutCookie: {your-token}
+  ```
+
+  Body: 
+  ```json  
+    {
+      "properties": {
+          "slug": {
+              "type": "string"
+          },
+          "count": {
+              "type": "number"
+          }
+      },
+      "v-indexed": [
+          "slug",
+          "count"
+      ],
+      "v-security": {
+          "allowGetAll": true,
+          "publicRead": [
+              "slug",
+              "count"
+          ],
+          "publicWrite": [
+              "slug",
+              "count"
+          ],
+          "publicFilter": [
+              "slug",
+              "count"
+          ]
+      }
+    }
+  ```
+
+  > To get your VTEX local token for the header, in your terminal run `vtex local token`. 
+
+  Your request should look like this if you are using *Postman*: 
+  ![headers](https://user-images.githubusercontent.com/43679629/108750696-182df380-7520-11eb-8cc3-178158ad8e94.png)
+  ![body](https://user-images.githubusercontent.com/43679629/108750714-1ebc6b00-7520-11eb-9f61-4a21160bceef.png)
+
+
+By doing this, you are not only creating an entity but also creating a new schema to be used during this step. 
+
+Now you are good to go! 
+
 ## Using the Master Data client to store information
 
 1. First, we need to setup the policies in our app, to authorize it to use **Master Data**. To do so, complement the `manifest.json` file:
