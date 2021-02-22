@@ -71,6 +71,11 @@ So, you'll have to create an entity to save your product list. To do so, using o
 
   > To get your VTEX local token for the header, in your terminal run `vtex local token`. 
 
+  Your request should look like this if you are using *Postman*: 
+  ![headers](https://user-images.githubusercontent.com/43679629/108750696-182df380-7520-11eb-8cc3-178158ad8e94.png)
+  ![body](https://user-images.githubusercontent.com/43679629/108750714-1ebc6b00-7520-11eb-9f61-4a21160bceef.png)
+
+
 By doing this, you are not only creating an entity but also creating a new schema to be used during this step. 
 
 Now you are good to go! 

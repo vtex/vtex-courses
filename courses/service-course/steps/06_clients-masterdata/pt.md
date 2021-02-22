@@ -27,7 +27,7 @@ Antes de começar a atividade desse passo, você precisa configurar o seu **Mast
 
 Então, você precisa criar uma entidade para salvar a sua lista de produtos. Para fazer isso, usando a nossa [**API do Master Data**](https://developers.vtex.com/vtex-developer-docs/reference/master-data-api-v2-overview), você  vai salvar um novo *schema*.
 
-1. Usando o [Postman](https://www.postman.com/downloads/) ou qualquer outro cliente para APIs que preferir, faça um request `PUT` para esta rota `https://{{nome-da-sua-conta}}.vtexcommercestable.com.br/api/dataentities/course_backend_product_list/schemas/{{nome-do-seu-schema}}` com os seguintes *headers* e *body*:
+1. Usando o [Postman](https://www.postman.com/downloads/) ou qualquer outro cliente para APIs que preferir, faça um *request* `PUT` para esta rota `https://{{nome-da-sua-conta}}.vtexcommercestable.com.br/api/dataentities/course_backend_product_list/schemas/{{nome-do-seu-schema}}` com os seguintes *headers* e *body*:
 
   > Note que você precisa preencher algumas informações na rota, como o `nome-da-sua-conta` e `nome-do-seu-schema`. Esse último pode ser qualuqer nome, mas recomendamos algo como `v0`. 
 
@@ -71,6 +71,11 @@ Então, você precisa criar uma entidade para salvar a sua lista de produtos. Pa
   ```
 
   > Para pegar um VTEX *local token* para o *header*, basta rodar no seu terminal `vtex local token`. 
+
+   Seu *request* deve ser algo parecido com as imagens abaixo se você estiver usando o *Postman*:
+   ![headers](https://user-images.githubusercontent.com/43679629/108750696-182df380-7520-11eb-8cc3-178158ad8e94.png)
+   ![body](https://user-images.githubusercontent.com/43679629/108750714-1ebc6b00-7520-11eb-9f61-4a21160bceef.png)
+
 
 Fazendo isso, você não só está criando a entidade mas também criando um novo *schema* que será usado nessa atividade.
 
