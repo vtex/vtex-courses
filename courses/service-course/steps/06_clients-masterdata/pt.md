@@ -21,6 +21,60 @@ Neste passo, este cliente será utilizado para pegar informações dos N produto
 > Nota: É importante ressaltar que o cliente do Master Data estará disponível para ser utilizado desde que a versão correta do `@vtex/api` esteja instalada na pasta `node`. Ele poderá ser acessado através de `ctx.clients.masterdata`.
 
 Vamos começar?
+## Antes, se você **não está usando** a conta `appliancetheme`
+
+Antes de começar a atividade desse passo, você precisa configurar o seu **Master Data** para poder usar do jeito que a atividade propõe.
+
+Então, você precisa criar uma entidade para salvar a sua lista de produtos. Para fazer isso, usando a nossa [**API do Master Data**](https://developers.vtex.com/vtex-developer-docs/reference/master-data-api-v2-overview), você  vai salvar um novo *schema*.
+
+1. Usando o [Postman](https://www.postman.com/downloads/) ou qualquer outro cliente para APIs que preferir, faça um request `PUT` para esta rota `https://{{nome-da-sua-conta}}.vtexcommercestable.com.br/api/dataentities/course_backend_product_list/schemas/{{nome-do-seu-schema}}` com os seguintes *headers* e *body*:
+
+  > Note que você precisa preencher algumas informações na rota, como o `nome-da-sua-conta` e `nome-do-seu-schema`. Esse último pode ser qualuqer nome, mas recomendamos algo como `v0`. 
+
+  *Headers*: 
+  ```json  
+      Content-Type: application/json
+      VtexIdclientAutCookie: {seu-token}
+  ```
+
+  *Body*: 
+  ```json  
+    {
+      "properties": {
+          "slug": {
+              "type": "string"
+          },
+          "count": {
+              "type": "number"
+          }
+      },
+      "v-indexed": [
+          "slug",
+          "count"
+      ],
+      "v-security": {
+          "allowGetAll": true,
+          "publicRead": [
+              "slug",
+              "count"
+          ],
+          "publicWrite": [
+              "slug",
+              "count"
+          ],
+          "publicFilter": [
+              "slug",
+              "count"
+          ]
+      }
+    }
+  ```
+
+  > Para pegar um VTEX *local token* para o *header*, basta rodar no seu terminal `vtex local token`. 
+
+Fazendo isso, você não só está criando a entidade mas também criando um novo *schema* que será usado nessa atividade.
+
+Agora você está pronto para começar!
 
 ## Utilizando o cliente do Master Data para armazenar informação
 
