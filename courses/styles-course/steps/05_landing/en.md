@@ -76,7 +76,7 @@ The query schema is one of the [custom query search result props](https://develo
       }
   ```
 
-7. At this point, you're probably not seeing the block on the landing page. This is due to the facr that we have not add a block to the `search-result-layout.customQuery` yet. Here are two possibilities:
+7. At this point, you're probably not seeing the block on the landing page. This is due to the fact that we have not add a block to the `search-result-layout.customQuery` yet. Here are two possibilities:
 
    - In case of having already done the previous courses, you probably have already changed the `search.jsonc` file in this template that we're using, in order to use the flex layout concept. Having it already done, it's only necessary to add the following code lines to the `search-landing.jsonc` file:
 
