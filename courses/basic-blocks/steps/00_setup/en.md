@@ -47,7 +47,7 @@ The next step is to create a development workspace, which will allow you to play
 
 ### Accessing your workspace
 
-After creating the workspace, you'll be able to access it at this link: `https://{workspace}--{account}.myvtex.com`, replacing `{workspace}` and `{account}` with the name of the previously created workspace and account. For example, `https://devworkspace--appliancetheme.myvtex.com`
+After creating the workspace, you'll be able to access it at this link: `https://{workspace}--{account}.myvtex.com`, replacing `{workspace}` and `{account}` with the name of the previously created workspace and account. For example, `https://devworkspace--appliancetheme.myvtex.com` Or you can simply run `vtex browse` which generally opens an endpoint in a browser window based on the current logged in account, workspace and environment data.
 
 ---
 
