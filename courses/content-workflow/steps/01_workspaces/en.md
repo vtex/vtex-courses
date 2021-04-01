@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Workspaces are parallel environments isolated from one another, containing different versions of the same VTEX account. That means that changes performed in your own workspace do not affect your store's live version and other developers' work.
+Workspaces are environments isolated from one another, containing different versions of the same VTEX account. In practice, this means that changes performed in your own workspace do not affect your store's live version and other developers' work.
 
 There are two main types of workspaces:
 
