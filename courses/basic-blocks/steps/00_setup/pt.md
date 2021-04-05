@@ -47,7 +47,7 @@ O próximo passo é criar um _workspace_ de desenvolvimento, que permitirá que 
 
 ### Acessando seu _workspace_
 
-Depois de criar o _workspace_, você poderá acessá-lo neste link: `https://{workspace}-{conta}.myvtex.com`, substituindo`{workspace}`e`{conta}`com o nome do _workspace_ e conta criados anteriormente. Por exemplo, `https://devworkspace-appliancetheme.myvtex.com`
+Depois de criar o _workspace_, você poderá acessá-lo neste link: `https://{workspace}--{conta}.myvtex.com`, substituindo`{workspace}`e`{conta}`com o nome do _workspace_ e conta criados anteriormente. Por exemplo, `https://devworkspace--appliancetheme.myvtex.com`
 
 ---
 
