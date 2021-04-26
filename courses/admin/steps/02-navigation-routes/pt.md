@@ -24,7 +24,7 @@ O routes é quem define as rotas e componentes react associados, da sua aplicaç
 + |_ routes.json
 ```
 
-2. No `navigation.json` crie um _json_ com as propriedades `section`, `titleId` e `path`:
+2. No `navigation.json` crie um objeto JSON com as propriedades `section`, `titleId` e `path`:
 
 ```
 {

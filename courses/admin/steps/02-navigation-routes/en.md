@@ -24,7 +24,7 @@ The routes define the routes and associated react components, from your applicat
 + |_ routes.json
 ```
 
-2. In `navigation.json` create a _json_ with the properties `section`, `titleId` and `path`:
+2. In `navigation.json` create a JSON object with the properties `section`, `titleId` and `path`:
 
 ```
 {
