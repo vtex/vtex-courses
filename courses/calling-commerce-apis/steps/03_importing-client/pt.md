@@ -6,7 +6,7 @@ Neste passo você aprenderá como buscar _Clients_ já prontos que abstraem as A
 
 ## Clients
 
-_Clients_, no VTEX IO, são abstrações para serviços externos e são usados nativamente para fazermos requisições externas em serviços de _backend_. Você pode ler um pouco sobre eles [aqui](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
+_Clients_, no VTEX IO, são abstrações para serviços externos e são usados nativamente para fazermos requisições externas em serviços de _backend_. Você pode ler um pouco sobre eles [aqui](https://developers.vtex.com/vtex-developer-docs/docs/how-to-use-and-create-clients-on-vtex-io).
 
 ## VTEX IO Commerce Clients
 
