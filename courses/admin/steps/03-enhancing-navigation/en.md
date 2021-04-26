@@ -1,4 +1,4 @@
-# Enhancing Navegation
+# Enhancing Navigation
 
 ## Introduction
 
