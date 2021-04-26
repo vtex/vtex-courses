@@ -18,7 +18,7 @@ The [Commerce Clients](https://github.com/vtex/commerce-io-clients/blob/master/s
 
 If you don't find the _Client_ you want for a Core Commerce service from VTEX, we recommend that you **send a Pull Request** to the `commerce-clients` repository. We will be happy to review and eventually dive into your contribution.
 
-But, if the service you are trying to access is an external provider (ex: Here Maps API), we recommend that you create _Client_ in your own app by following [these steps](https://www.notion.so/How -to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
+But, if the service you are trying to access is an external provider (ex: Here Maps API), we recommend that you create _Client_ in your own app by following [these steps](https://developers.vtex.com/vtex-developer-docs/docs/how-to-use-and-create-clients-on-vtex-io).
 
 # Activity
 
