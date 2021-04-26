@@ -6,7 +6,7 @@ In this step, you will learn how to search for ready-made _Clients_ that abstrac
 
 ## Clients
 
-_Clients_, in VTEX IO, are abstractions for external services and are used natively to make external requests in _backend_ services. You can read a little about them [here](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
+_Clients_, in VTEX IO, are abstractions for external services and are used natively to make external requests in _backend_ services. You can read a little about them [here](https://developers.vtex.com/vtex-developer-docs/docs/how-to-use-and-create-clients-on-vtex-io).
 
 ## VTEX IO Commerce Clients
 
