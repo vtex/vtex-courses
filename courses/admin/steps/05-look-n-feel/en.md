@@ -6,7 +6,7 @@ The Admin Framework exists to unify channels and make life easier for the store 
 
 In order to facilitate visual integration for the developer, [Styleguide](https://styleguide.vtex.com) is available and with several components that can be used to quickly create administrative screens.
 
-## Atividade
+## Activity
 
 1. In step 1, we add `vtex.styleguide` as a dependency, import the styleguide's`Layout` and `PageBlock` so that we can use them:
 
