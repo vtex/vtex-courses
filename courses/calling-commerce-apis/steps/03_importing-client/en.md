@@ -22,7 +22,7 @@ But, if the service you are trying to access is an external provider (ex: Here M
 
 # Activity
 
-1. We will now import a _Client_ from the **Catalog** module into our app. After you have cloned the boilerplate app, open the app code that was downloaded in the `service-example` folder in your editor.
+1. We will now import a _Client_ from the **Catalog** module into our app. After you have cloned the [boilerplate app](https://github.com/vtex-apps/service-example), open the app code that was downloaded in the `service-example` folder in your editor.
 
 2. As the _Client_ that we will use is offered in the Commerce Clients package, we will perform the installation. **Inside the `node` folder, run the following command:**
 
