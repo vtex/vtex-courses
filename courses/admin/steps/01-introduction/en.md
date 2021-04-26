@@ -68,7 +68,7 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
 
 **NOTE:** If you are taking the course at your own store and developing your own app, remember that you will have to go through the [form of whitelist](https://forms.gle/ovi4h7mnwgUKS2hu5).
 
-5. Add `vtex.styleguide` as a dependency, we will use it later in the course:
+4. Add `vtex.styleguide` as a dependency, we will use it later in the course:
 
 ```diff
 //manifest.json
@@ -95,7 +95,7 @@ git clone https://github.com/vtex-apps/react-app-template admin-course
 }
 ```
 
-6. In the project's root directory, create an `/admin` directory, its structure should be:
+5. In the project's root directory, create an `/admin` directory, its structure should be:
 
 ```diff
 |
