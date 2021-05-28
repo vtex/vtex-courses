@@ -93,6 +93,68 @@ Neste passo, vamos implementar o cliente de _Analytics_.
       await next()
    }
    ```
+   
+7. Agora, é necessário fazer que a aplicação conheça implemente o Client do analytics recém criado e tenhamos uma rota para acessá-lo. Para fazer isso, há um arquivo dentro do diretório `/node` chamado `index.ts` que precisamos modificá-lo:
+   ```diff
+   // node/index.ts
+   import {
+   ...
+   +  method,
+   ...
+   
+   ...
+   +import { Clients } from './clients'
+   +import { analytics } from './handler/analytics'
+   ...
+   
+   ...
+   -type Context = ServiceContext<IOClients, State>
+   -type Context = ServiceContext<Clients, State>
+   ...
+   
+   ...
+   -export default new Service<IOClients, State, ParamsContext>({
+   +export default new Service<Clients, State, ParamsContext>({
+   ...
+   
+   clients: {
+   ...
+    +implementation: Clients,
+   ...
+    options: {
+    ...
+    +  default: {
+    +    retries: 2,
+    +    timeout: 10000,
+    +  },
+    ...
+      
+   ...
+   routes: {
+    hcheck: (ctx: any) => {
+      setCacheContext(ctx)
+      ctx.set('Cache-Control', 'no-cache')
+      ctx.status = 200
+      ctx.body = 'ok'
+    },
+    +analytics: method({
+    +  GET: [analytics]
+    +}),
+    ...
+   ```
+ 
+4. Também é necessário modificar o arquivo `service.json` para incluirmos a rota ao serviço.
+
+   ```diff
+   //node/service.json
+   },
+   ...
+   +"routes": {
+   + "analytics": {
+   +   "path": "/_v/app/events-example/analytics",
+   +   "public": true
+   + }
+   ```
 
 Agora, vamos testá-lo! É possível utilizar o Postman para enviar um _request_ GET para a seguinte rota:
 
