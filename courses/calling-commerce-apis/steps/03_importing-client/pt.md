@@ -6,7 +6,7 @@ Neste passo você aprenderá como buscar _Clients_ já prontos que abstraem as A
 
 ## Clients
 
-_Clients_, no VTEX IO, são abstrações para serviços externos e são usados nativamente para fazermos requisições externas em serviços de _backend_. Você pode ler um pouco sobre eles [aqui](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
+_Clients_, no VTEX IO, são abstrações para serviços externos e são usados nativamente para fazermos requisições externas em serviços de _backend_. Você pode ler um pouco sobre eles [aqui](https://developers.vtex.com/vtex-developer-docs/docs/how-to-use-and-create-clients-on-vtex-io).
 
 ## VTEX IO Commerce Clients
 
@@ -18,11 +18,11 @@ O pacote [Commerce Clients](https://github.com/vtex/commerce-io-clients/blob/mas
 
 Caso você não encontre o _Client_ que você deseja para um serviço de Core Commerce da VTEX, recomendamos que você **envie um Pull Request** para o repositório `commerce-clients`. Ficaremos felizes em revisar e, eventualmente, mergear sua contribuição.
 
-Mas, caso o serviço que você esteja tentando acessar seja um provedor externo (ex: API do Here Maps), recomendamos que você crie o _Client_ na sua própria app seguindo [estes passos](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-1dbd20c928c642d0ba059d5efbe7874b).
+Mas, caso o serviço que você esteja tentando acessar seja um provedor externo (ex: API do Here Maps), recomendamos que você crie o _Client_ na sua própria app seguindo [estes passos](https://developers.vtex.com/vtex-developer-docs/docs/how-to-use-and-create-clients-on-vtex-io).
 
 # Atividade
 
-1. Vamos agora importar um _Client_ do módulo **Catalog** em nossa app. Após ter clonado a app de boilerplate, abra no seu editor o código da app que foi baixado na pasta `service-example`.
+1. Vamos agora importar um _Client_ do módulo **Catalog** em nossa app. Após ter clonado a [app de boilerplate](https://github.com/vtex-apps/service-example), abra no seu editor o código da app que foi baixado na pasta `service-example`.
 
 2. Como o _Client_ que usaremos é oferecido no pacote de Commerce Clients, vamos realizar a instalação. **Dentro da pasta `node`, rode o seguinte comando:**
 
