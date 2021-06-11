@@ -61,7 +61,7 @@ On VTEX IO apps, events can be fired and used to trigger actions. For example, a
 3. For now, we are only going to create a log when receiving an event. To create this event handler, in the `/node/event` directory, go to the `liveUsersUpdate.ts` file and do the following:
 
    ```ts
-   //node/event/liveUsersUpdate.ts
+   //node/events/liveUsersUpdate.ts
    export async function updateLiveUsers() {
      console.log('EVENT HANDLER: received event')
    }
@@ -71,7 +71,7 @@ On VTEX IO apps, events can be fired and used to trigger actions. For example, a
 
    ```diff
    ...
-   + import { updateLiveUsers } from './event/liveUsersUpdate'
+   + import { updateLiveUsers } from './events/liveUsersUpdate'
    ...
 
    export default new Service<Clients, State, ParamsContext>({
