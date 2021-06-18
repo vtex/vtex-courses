@@ -11,7 +11,7 @@ Porém, para instalar uma _app_ pela primeira vez ou uma nova versão _major_, �
 Como no passo anterior, é necessário apenas um único comando para instalar uma _app_ em uma conta específica. Há duas possíveis situações para isso:
 
 - Você não tem o repositório raiz do projeto da _app_, mas você sabe o _vendor_, o nome da _app_ e também a versão que você gostaria de instalar;
-- Você não tem o projeto da aplicação no seu computador.
+- Você tem o projeto da aplicação no seu computador.
 
 No primeiro caso, você pode instalá-la rodando o seguinte comando:
 
