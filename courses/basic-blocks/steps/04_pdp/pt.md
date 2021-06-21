@@ -87,7 +87,7 @@ Ainda queremos:
      },
    ```
 
-2. O [`product-price`](https://developers.vtex.com/docs/vtex-product-price#configuration) mostrar economias totais e lista de preçoes (`showSavings` e `showListPrice`):
+2. O [`product-price`](https://developers.vtex.com/docs/vtex-product-price#configuration) mostrando economias totais e lista de preços (`showSavings` e `showListPrice`):
 
    ```json
      "product-price": {
@@ -106,7 +106,7 @@ Se você estiver na conta `appliancetheme`, tente buscar por uma máquina de caf
 
 <img src="https://user-images.githubusercontent.com/19495917/90903699-b049f500-e3a4-11ea-9e3e-6ad5f6a41333.png" height=300px>
 
-Ao clicar na segunda, a `Red Retro Coffee Machine`, você i'ra para a sua página de produto, ou `pdp`, e verá os blocos que a compõe.
+Ao clicar na segunda, a `Red Retro Coffee Machine`, você irá para a sua página de produto, ou `pdp`, e verá os blocos que a compõe.
 
 ![image](https://user-images.githubusercontent.com/19495917/90905481-9f9a7e80-e3a6-11ea-99c4-6a546e0000a3.png)
 
