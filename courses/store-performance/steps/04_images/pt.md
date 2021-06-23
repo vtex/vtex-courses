@@ -59,7 +59,7 @@ Se estiver responsável por cuidar do cadastramento de imagens de uma loja, tenh
    }
    ```
 
-   > Para saber um pouco mais sobre a definicação de _Content Delivery Network_ (CDN), veja [esse artigo](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) da Cloudflare.
+   > Para saber um pouco mais sobre a definição de _Content Delivery Network_ (CDN), veja [esse artigo](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) da Cloudflare.
 
 4) Defina, por último, o `image#depbanner`:
 
