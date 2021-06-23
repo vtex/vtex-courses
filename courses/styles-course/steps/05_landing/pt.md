@@ -73,7 +73,7 @@ A _query schema_ é uma das [props do _search result custom query_](https://deve
      ```
 
 
-    - Caso você ainda não fez os cursos anteriores e seu arquivo `search.jsonc` encontra-se vazio, é preciso adicionar blocos a ele. Para isso, utilize o bloco de código abaixo. Depois de fazer isso, você precisará apenas adicionar o bloco `search-result-layout.desktop` ao _array_ de blocos do `search-result-layout.customQuery`, como mencionado anteriormente.
+    - Caso você ainda não tenha feito os cursos anteriores e seu arquivo `search.jsonc` encontra-se vazio, é preciso adicionar blocos a ele. Para isso, utilize o bloco de código abaixo. Depois de fazer isso, você precisará apenas adicionar o bloco `search-result-layout.desktop` ao _array_ de blocos do `search-result-layout.customQuery`, como mencionado anteriormente.
 
       ```json
       // store/blocks/search.jsonc

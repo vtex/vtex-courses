@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Até agora, você aprendeu como utilizar CSS, _Tachyons_ e _Markdown_ para customizar seus blocos no Store Framework. Porém, também é importante aprende como criar _templates_ customizados, de forma que a sua loja possa ter _landing pages_ customizadas, com uma URL bem definida e conteúdos específicos.
+Até agora, você aprendeu como utilizar CSS, _Tachyons_ e _Markdown_ para customizar seus blocos no Store Framework. Porém, também é importante aprender como criar _templates_ customizados, de forma que a sua loja possa ter _landing pages_ customizadas, com uma URL bem definida e conteúdos específicos.
 
 Lojas são compostas por várias páginas diferentes, cada uma com _layout_ e conteúdo específicos. Ao criar uma loja do zero no VTEX IO, algumas páginas padrão com URLs predefinidas já são disponibilizadas para você. Abaixo, vemos uma lista com algumas dessas páginas padrão:
 
