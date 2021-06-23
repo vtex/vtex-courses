@@ -2,7 +2,7 @@
 
 ## Introduction
 
-It is also possible, with the Store Framework, to create a modals experience in the store. Whether to subscribe to a _newsletter_ or create a _quick view_, Modal Layout works like all other _layout_ blocks, in which any block can be used as its content.
+It is also possible, with the Store Framework, to create a modals experience in the store. Whether to subscribe to a _newsletter_ or create a _quick view_, [Modal Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-modal-layout) works like all other _layout_ blocks, in which any block can be used as its content.
 
 In this step, we will then build a simpler modal, and then build a functional _Quick View_.
 

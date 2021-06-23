@@ -2,7 +2,7 @@
 
 ## Introdução
 
-O Stack Layout é mais um tipo possível de construir _layouts_ complexos se alavancando dos blocos nativos, com ele é possível facilmente empilhar bloco. Para este passo, vamos criar um _call-to-action_ (CTA) na página principal com um _banner_ e um botão de redirecionamento.
+O [Stack Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-stack-layout) é mais um tipo possível de construir _layouts_ complexos se alavancando dos blocos nativos, com ele é possível facilmente empilhar bloco. Para este passo, vamos criar um _call-to-action_ (CTA) na página principal com um _banner_ e um botão de redirecionamento.
 
 ## Atividade
 
