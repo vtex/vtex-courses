@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Workspaces são geralmente definidos como ambientes que são diferentes versões da mesma conta, de forma que quaisquer mudanças feitas em um _workspace_ não intereferem no trabalho de outros desenvolvedores.
+Workspaces são geralmente definidos como ambientes que são diferentes versões da mesma conta, de forma que quaisquer mudanças feitas em um _workspace_ não interferem no trabalho de outros desenvolvedores.
 
 > _Workspaces_ são isolados uns dos outros.
 
