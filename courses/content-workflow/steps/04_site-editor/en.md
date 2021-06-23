@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Site Editor is a panel inside the admin's page and it allows you to change block properties regarding the storefront. Changes that are made in here are immediately reflected in the store and every block of the storefront can have its own properties changed in there. For instance, it's possible to change the content of a rich text block, shelf properties, such as which collection is being shown, among other changes.
+Site Editor is a panel inside the admin's page and it allows you to change block properties regarding the storefront. Your store's admin page can be accessed by adding `/admin` to the url. Changes that are made in here are immediately reflected in the store and every block of the storefront can have its own properties changed in there. For instance, it's possible to change the content of a rich text block, shelf properties, such as which collection is being shown, among other changes.
+
+> Site Editor can be accessed from _Store Setup_ section of the admin menu and within _CMS_ subsection. It can also be accessed by adding `/admin/cms/site-editor` to the url.
 
 ![site-editor](https://user-images.githubusercontent.com/19495917/90414123-c181c180-e085-11ea-91f0-cd5a70a3b803.png)
 
