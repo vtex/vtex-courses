@@ -31,7 +31,7 @@ Você pode encontrar abaixo um resumo da especificação:
 
 - _Patches_: É utilizado para _bug fixes_ que são retrocompatíveis;
 - _Minors_: Deve ser utilizado para _features_ retrocompatíveis;
-- _Majors_: Utilizado quando mudanças imcompatíveis de API são feitas (_breaking changes_).
+- _Majors_: Utilizado quando mudanças incompatíveis de API são feitas (_breaking changes_).
 
 Por exemplo: se uma API está na versão `2.3.2` e uma _feature_ que não é _breaking change_ é adicionada, então a versão pode ser atualizada para `2.4.0`.
 
@@ -39,7 +39,7 @@ No momento em que o _deployment_ é feito, há um _worker_ que chamamos de _hous
 
 ### _dependencies_
 
-Uma _app_ pode depender de outras aplicações. Este campo listas todas as dependências necessárias para o correto funcionamento da aplicação.
+Uma _app_ pode depender de outras aplicações. Este campo lista todas as dependências necessárias para o correto funcionamento da aplicação.
 
 ## Exemplo
 

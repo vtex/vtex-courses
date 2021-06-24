@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Agora aprenderemos como recuperar dados do _backend_ e exibí-los na interface. O VTEX IO utiliza [GraphQL](https://graphql.org/) como linguagem/tecnologia para transferência de dados, o que torna a programação dos nossos componentes bastante simples. Iremos modificar o nosso componente Countdown para buscar o _targetDate_ do **campo `releaseDate` de um produto da VTEX**. Para realizar queries GraphQL em React, é utilizado o **Apollo Client**, uma biblioteca de gerenciamento de estado que facilita a integração de uma API GraphQL com a aplicação _front-end_.
+Agora aprenderemos como recuperar dados do _backend_ e exibi-los na interface. O VTEX IO utiliza [GraphQL](https://graphql.org/) como linguagem/tecnologia para transferência de dados, o que torna a programação dos nossos componentes bastante simples. Iremos modificar o nosso componente Countdown para buscar o _targetDate_ do **campo `releaseDate` de um produto da VTEX**. Para realizar queries GraphQL em React, é utilizado o **Apollo Client**, uma biblioteca de gerenciamento de estado que facilita a integração de uma API GraphQL com a aplicação _front-end_.
 
 A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, por meio de _hooks_. Dessa forma, realizar uma _query_ significa usar um _hook_ que não só realizará as _queries_ e fará o _fetch_ dos dados, mas também proverá cache e atualização do estado da UI. Essa integração, chamada `react-apollo` já está declarada no `package.json`.
 
@@ -10,7 +10,7 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
 
 - Para implementar esta funcionalidade, precisamos **adicionar o nosso bloco `countdown` na página de produto**, e também faremos nossos testes nessa página também. Para isso, faça o seguinte:
 
-1. Primeiramente, em seu tema clonado (`store-theme`) acesse o arquivo `store/blocks/product.jsonc` e, no bloco `flex-layout.col#right-col` adicione o bloco `countdown`, logo antes do `buy-button`:
+1. Primeiramente, em seu tema clonado (`store-theme`) acesse o arquivo `store/blocks/pdp/product.jsonc` e, no bloco `flex-layout.col#right-col` adicione o bloco `countdown`, logo antes do `buy-button`:
 
    ```diff
        "product-gifts",
@@ -42,7 +42,7 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
    "vtex.product-context": "0.x"
    ```
 
-3. Agora, é necessário importar os hook `useQuery`, para fazer a _query_ que retornará o dado que descrevemos, e `useProduct`, para nos dar a informação sobre o slug do produto atual. Além disso, também é preciso importar a _query_, definida anteriormente, que se encontra no arquivo `productReleaseDate.graphql`.
+3. Agora, é necessário importar os hooks `useQuery`, para fazer a _query_ que retornará o dado que descrevemos, e `useProduct`, para nos dar a informação sobre o slug do produto atual. Além disso, também é preciso importar a _query_, definida anteriormente, que se encontra no arquivo `productReleaseDate.graphql`.
 
    ```diff
    // react/Countdown.tsx
@@ -57,7 +57,7 @@ A biblioteca **Apollo Client** disponibiliza uma integração nativa com React, 
 
    > É importante notar que há a possibilidade da sua IDE mostrar um erro ao fazer o _import_ do `product-context`.
 
-   > Vale ressaltar também que tanto a _prop_ `targetDate` como a constante `DEFAULT_TARGET_DATE` não serão mais necessárias, então pode pode removê-las e ajustar os _imports_, no caso de não utilizar mais algumas funções.
+   > Vale ressaltar também que a _prop_ `targetDate` não será mais necessária, então pode removê-la.
 
 4. Feito isso, defina a query usando o `productReleaseDate` importado e o `useQuery`. Os dados de produto podem ser encontrados em `useProduct`. Ambos são [hooks](https://reactjs.org/docs/hooks-intro.html), e portanto, devem ser adicionados dentro de um componente funcional React.
 

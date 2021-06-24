@@ -10,7 +10,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
 - To implement this functionality, **add our countdown block on the product page** and also do our tests on this page as well. To do this, do the following:
 
-1. On your cloned theme (`store-theme`) access the `store/blocks/product.jsonc` file and, on the `flex-layout.col#right-col` block add the `countdown` block, right before the `buy-button`:
+1. On your cloned theme (`store-theme`) access the `store/blocks/pdp/product.jsonc` file and, on the `flex-layout.col#right-col` block add the `countdown` block, right before the `buy-button`:
 
    ```diff
        "product-gifts",
@@ -57,7 +57,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
    > It is important to higlight that there is the possibility of your IDE showing an error while importing `product-context`.
 
-   > The prop `targetDate` and the definition of `DEFAULT_TARGET_DATE` will no longer be necessary, so you can remove them and adjust the imports, in case of not using some functions anymore.
+   > The prop `targetDate` will no longer be necessary, so you can remove it.
 
 4. After that, define the query using the `productReleaseDate` imported and the `useQuery` hook, you can find the product data in `useProduct` hook. Since they are [hooks](https://reactjs.org/docs/hooks-intro.html), they only work inside react functional components.
 
