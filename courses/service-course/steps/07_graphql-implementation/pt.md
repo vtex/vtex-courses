@@ -38,7 +38,7 @@ Vamos lá?
 
    Além disso, na declaração do _schema_, você pode incluir diretivas. Em alguns casos, é necessário, como casos em que precisamos pegar _tokens_ de usuário ou usar _cookies_ (exemplo: `OrderForm`). Para ler um pouco mais sobre isso, veja [este _link_](https://github.com/vtex-apps/graphql-example).
 
-3. Com o _schena_, os tipos e a _query_ definida, precisamos criar o _resolver_ da _query_. O _resolver_ é o código a ser executado quando uma _query_ acontece. No nosso caso, queremos executar um _scroll_ no **Master Data**, ordenando pela contagem (já que queremos pegar os N produtos mais vistos) e limitando o tamanho da página (_top N_). Para definir este _resolver_, crie a pasta `/node/resolvers` e nela, crie o arquivo `products.ts` e faça o seguinte:
+3. Com o _schema_, os tipos e a _query_ definida, precisamos criar o _resolver_ da _query_. O _resolver_ é o código a ser executado quando uma _query_ acontece. No nosso caso, queremos executar um _scroll_ no **Master Data**, ordenando pela contagem (já que queremos pegar os N produtos mais vistos) e limitando o tamanho da página (_top N_). Para definir este _resolver_, crie a pasta `/node/resolvers` e nela, crie o arquivo `products.ts` e faça o seguinte:
 
    ```ts
    // node/resolvers/products.ts

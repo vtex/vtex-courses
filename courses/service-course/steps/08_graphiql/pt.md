@@ -2,13 +2,13 @@
 
 ## Introdução
 
-Agora, como a _query_ e o _resolver_ implementados, precisamos utilizá-los para pegar as informações dos N produtos mais vistos. Utilizando a **IDE de GraphQL**, podemos testar a _query_ que implementamos anteriormente.
+Agora, com a _query_ e o _resolver_ implementados, precisamos utilizá-los para pegar as informações dos N produtos mais vistos. Utilizando a **IDE de GraphQL**, podemos testar a _query_ que implementamos anteriormente.
 
 ## GraphiQL
 
 [GraphiQL](https://github.com/graphql/graphiql) é uma ID interativa acessada através de um navegador. Antes de utilizar a _query_ na sua _app_, é interessante testar sua funcionalidade. Para fazer isso, vamos reproduzir o uso da _query_ na IDE do GraphQL.
 
-Explorando um pouco a interface da IDE, há três áreas principais: área de código, área das variáveis da _query_ e a área de _debug_. É possível checar onde cada área está na interfacr através da imagem abaixo:
+Explorando um pouco a interface da IDE, há três áreas principais: área de código, área das variáveis da _query_ e a área de _debug_. É possível checar onde cada área está na interface através da imagem abaixo:
 
 ![image](https://user-images.githubusercontent.com/43679629/83764107-e900ea80-a64f-11ea-969f-116ea896fe2d.png)
 

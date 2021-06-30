@@ -29,7 +29,7 @@ Então, você precisa criar uma entidade para salvar a sua lista de produtos. Pa
 
 1. Usando o [Postman](https://www.postman.com/downloads/) ou qualquer outro cliente para APIs que preferir, faça um *request* `PUT` para esta rota `https://{{nome-da-sua-conta}}.vtexcommercestable.com.br/api/dataentities/course_backend_product_list/schemas/{{nome-do-seu-schema}}` com os seguintes *headers* e *body*:
 
-  > Note que você precisa preencher algumas informações na rota, como o `nome-da-sua-conta` e `nome-do-seu-schema`. Esse último pode ser qualuqer nome, mas recomendamos algo como `v0`. 
+  > Note que você precisa preencher algumas informações na rota, como o `nome-da-sua-conta` e `nome-do-seu-schema`. Esse último pode ser qualquer nome, mas recomendamos algo como `v0`. 
 
   *Headers*: 
   ```json  
