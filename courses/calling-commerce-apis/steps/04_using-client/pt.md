@@ -36,7 +36,7 @@ export async function status(ctx: Context, next: () => Promise<any>) {
 
 - Extraindo `catalog` do contexto que é recebido nas funções de middleware. Isso é um atalho para não precisarmos chamar `ctx.clients.catalog`. Saiba mais sobre Destructuring [aqui](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 - Extraindo a variável `code`, que virá como parâmetro da URL da nossa rota (`/_v/status/:code`). Usaremos este dado para representar o ID do SKU que iremos testar na chamada ao Catálogo.
-- Chamando o método `getSkuById` do _Client_ Catalog. Este método irá, internamente, chamar o endpoint relativo no módulo do catálogo, repassando o parâmetro que estamos passando (`code`) como o ID do SKU a ser buscado. Lembrando que esta é uma chamado assíncrona, então precisamos adicionar o `await` logo antes para esperá-la.
+- Chamando o método `getSkuById` do _Client_ Catalog. Este método irá, internamente, chamar o endpoint relativo no módulo do catálogo, repassando o parâmetro que estamos passando (`code`) como o ID do SKU a ser buscado. Lembrando que esta é uma chamada assíncrona, então precisamos adicionar o `await` logo antes para esperá-la.
 
 Porém, ainda precisamos configurar um último passo para testar!
 

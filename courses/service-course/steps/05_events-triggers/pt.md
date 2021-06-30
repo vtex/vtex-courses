@@ -6,11 +6,11 @@ Com o cliente de _analytics_ implementado, nós queremos utilizar os eventos com
 
 ## Eventos
 
-No VTEX IO, eventos são usualmente utilizados como gatilhos para outras ações, como enviar emails para o cliente final. Para implementar isto, é necessário configurar nossa a _app_ do cliente e o _handler_ de eventos.
+No VTEX IO, eventos são usualmente utilizados como gatilhos para outras ações, como enviar emails para o cliente final. Para implementar isto, é necessário configurar nossa _app_ do cliente e o _handler_ de eventos.
 
 ## Usando eventos como gatilhos para fazer um _request_
 
-1. Com o cliente de _analytics_ implementado, precisamos apenas utilizá-lo no _handler_ de eventos. Primeiro, no arquivo `node/event/liveusersUpdate.ts`, importe o cliente que implementados no passo anterior:
+1. Com o cliente de _analytics_ implementado, precisamos apenas utilizá-lo no _handler_ de eventos. Primeiro, no arquivo `node/event/liveUsersUpdate.ts`, importe o cliente que implementamos no passo anterior:
 
    ```ts
    import { Clients } from '../clients/index'

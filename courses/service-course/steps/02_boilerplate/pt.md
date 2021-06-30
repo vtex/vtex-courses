@@ -8,9 +8,9 @@ Fazendo uma breve apresentação do _boilerplate_, há duas pastas (`/node` e `/
 
 No arquivo `manifest.json`, você encontrará o nome da _app_, _vendor_, versão e outras informações que você deve prestar atenção: _builders_, _policies_ e _dependencies_. Neste passo inicial, temos as seguintes configurações:
 
-- builders: quais _builders_ sua _app_ precisará. Neste caso, temos até o momento os builders `docs` e `node`, com suas respectivas versões;
+- builders: quais _builders_ sua _app_ precisará. Neste caso, temos até o momento apenas o builder `node`, com sua respectiva versão;
 - policies: se a _app_ que está sendo implementada necessita acessar serviços externos ou pegar dados de um local específico, é necessário declará-las. Até o momento, não há nenhuma _policy_ declarada.
-- dependencies: outras _apps_ do VTEX IO que a sua _app_ depende. Como mostrado abaixo, será necessário também linkar a _app_ `events-example`, e esta é uma depenência que está declarada na aplicação deste curso.
+- dependencies: outras _apps_ do VTEX IO que a sua _app_ depende. Como mostrado abaixo, será necessário também linkar a _app_ `events-example`, e esta é uma dependência que está declarada na aplicação deste curso.
 
 ## Visão geral do diretório `/node`
 
@@ -20,11 +20,11 @@ Todas as pastas utilizadas durante este curso já estão no projeto inicial. A m
 
 - `/node/handlers`: contém um _handler_ que será utilizado nos próximos passos;
 
-- `/node/utils`: você encontrará um aquivo que contém declarações de constantes globais (`/node/constants.ts`);
+- `/node/utils`: você encontrará um arquivo que contém declarações de constantes globais (`/node/constants.ts`);
 
 - `/node/index.ts`: contém as declarações iniciais para as funcionalidades da _app_, como as declarações de serviços e de cache, que serão incrementadas durante o curso. Neste arquivo, também é possível exportar implementações de funções que são _resolvers_;
 
-- `/node/service.json`: Descreve a sua API REST e algumas características que impactam diretamente nos atributos de infrastrutura da sua _app_. Seu
+- `/node/service.json`: Descreve a sua API REST e algumas características que impactam diretamente nos atributos de infraestrutura da sua _app_.
 
 Seu arquivo `service.json` pode ser encontrado dentro da pasta `/node` e será similar a:
 
@@ -42,11 +42,11 @@ Seu arquivo `service.json` pode ser encontrado dentro da pasta `/node` e será s
 }
 ```
 
-| Field       | Type       | Description                                                                                                                            |
+| Campo       | Tipo       | Descrição                                                                                                                            |
 | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | memory      | MegaBytes. | O quanto de memória sua _app_ terá alocada. Este valor será sobrescrito se o IO detectar que sua _app_ está abusando no uso de memória |
-| timeout     | Seconds    | A infrastrutura do VTEX IO irá abortar a conexão se o _request_ demora mais do que o valor do \_timeout                                |
-| minReplicas | Integer    | Quando sua _app_ estiver rodando, este valor é a quantidade réplicas mínimas estarão disponíveis                                       |
+| timeout     | Seconds    | A infraestrutura do VTEX IO irá abortar a conexão se o _request_ demorar mais do que o valor do _timeout_                                |
+| minReplicas | Integer    | Quando sua _app_ estiver rodando, este valor é a quantidade de réplicas mínimas que estarão disponíveis                                       |
 | maxReplicas | Integer    | A máxima quantidade de réplicas a estarem disponíveis                                                                                  |
 | routes      | -          | Descreve as rotas REST da sua _app_, dentro deste objeto, você informará o nome, o caminho e se é pública ou privada                   |
 

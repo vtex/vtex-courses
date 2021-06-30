@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Stack Layout is yet another possible type of building complex _layouts_ by leveraging native blocks, with which you can easily stack blocks. For this step, we are going to create a _call-to-action_ (CTA) on the main page with a _banner_ and a redirect button.
+[Stack Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-stack-layout) is yet another possible type of building complex _layouts_ by leveraging native blocks, with which you can easily stack blocks. For this step, we are going to create a _call-to-action_ (CTA) on the main page with a _banner_ and a redirect button.
 
 ## Activity
 

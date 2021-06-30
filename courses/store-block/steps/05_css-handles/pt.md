@@ -8,7 +8,7 @@ Agora que já implementamos o `countdown`, que tal adicionar um pouco de customi
 
 Os _handles_ de CSS são utilizados para customizar os componentes da sua loja através de classes de CSS no código do tema. Todas essas configurações são definidas através da _app_ `vtex.css-handles`, responsável por declarar todos os pontos de customização do seu bloco.
 
-Definindo os nomes dos seus _handles_ e adicionando aos seus respectivos elementos HTML, é possível entregar ao usuário do tema pontos de customização que que permitam criar _layouts_ flexíveis.
+Definindo os nomes dos seus _handles_ e adicionando aos seus respectivos elementos HTML, é possível entregar ao usuário do tema pontos de customização que permitam criar _layouts_ flexíveis.
 
 ### Tachyons
 

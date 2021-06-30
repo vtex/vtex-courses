@@ -2,7 +2,7 @@
 
 ## Introduction
 
-At times, when developing a store, we need to create conditional _layouts_ that would apply only to a specific context. We have already seen that when using different devices, it is possible to condition _layout_ using Responsive Layout, but what if we wanted, for example, to have a different product page for specific products? This is what the Conditional Layout is for.
+At times, when developing a store, we need to create conditional _layouts_ that would apply only to a specific context. We have already seen that when using different devices, it is possible to condition _layout_ using Responsive Layout, but what if we wanted, for example, to have a different product page for specific products? This is what the [Conditional Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-condition-layout) is for.
 
 ## Optional setup
 

@@ -17,7 +17,7 @@ Há alguns pré-requisitos para que você tenha uma experiência gratificante ao
 Se você não está familiarizado com alguma destas ferramentas, nós o encorajamos a dar uma olhada nas seguintes documentações:
 
 - [**React.js**](https://reactjs.org/)
-- [**React Hook API**](https:/**/reactjs.org/docs/hooks-intro.html)
+- [**React Hook API**](https://reactjs.org/docs/hooks-intro.html)
 - [**Documentação de Typescript**](https://www.typescriptlang.org/)
 
 Para começar o curso, você deve utilizar o repositório _template_ que disponibilizamos com todos os arquivos iniciais que você precisa ter para começar. Você encontrará este repositório neste [link](https://github.com/vtex-trainings/store-block-template).

@@ -10,7 +10,7 @@ Não se preocupe, você não precisará adicionar traduções de todos os textos
 
 ### As _Messages_
 
-O conceito de _messages_ facilita a adição de novos idiomas ao tema. As _messages_ centralizam todos os serviços de tradução na plataforma. Dada um texto a ser traduzido, _Messages_ irá primeiramente checar o contexto definido pelo usuário para, em seguida, checar as traduções das _apps_ e, por fim, passa pelo sistema de tradução automática.
+O conceito de _messages_ facilita a adição de novos idiomas ao tema. As _messages_ centralizam todos os serviços de tradução na plataforma. Dado um texto a ser traduzido, _Messages_ irá primeiramente checar o contexto definido pelo usuário para, em seguida, checar as traduções das _apps_ e, por fim, passa pelo sistema de tradução automática.
 
 Na estrutura do diretório, é possível observar que há uma pasta chamada `messages`, que apresenta três arquivos principais: `pt.json`, `en.json` e `es.json`, cada um responsável pelas traduções: português, inglês e espanhol, respectivamente. Além disso, a fim de fornecer traduções automáticas melhores, é utilizado o arquivo `context.json`, responsável por evitar ambiguidades.
 

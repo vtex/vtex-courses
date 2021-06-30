@@ -90,7 +90,7 @@ Agora, no mesmo arquivo, vamos definir os blocos logo abaixo da definição de `
 
 ## Customizando o Info Card
 
-Para descobrir os CSS _Handles_ de um componente, como o _Info Card_, basta acessar a [seção **Customization**](<(https://developers.vtex.com/docs/vtex-store-components-infocard#customization)>) da sua documentação.
+Para descobrir os CSS _Handles_ de um componente, como o _Info Card_, basta acessar a [seção **Customization**](https://developers.vtex.com/docs/vtex-store-components-infocard#customization) da sua documentação.
 
 De acordo com a descrição dos CSS _Handles_ e com a recipe customizações de loja por CSS, conseguimos implementar um exemplo de _Info Card_ customizado.
 
@@ -153,7 +153,7 @@ De acordo com a descrição dos CSS _Handles_ e com a recipe customizações de 
 
    ![image](https://user-images.githubusercontent.com/19495917/90165339-e4069880-dd6e-11ea-89bf-80e63a25ffb4.png)
 
-4. Agora, vamos finalizar adicionando mais estilos customizados para o nosso _Info Card_. No mesmo arquivo CSS que foi utilizado anterioemente, defina a largura máxima (`max-width`) de de todos os infocards para `1260px`, a margem (`margin`) para `0 auto` e o espaçamento (`padding`) para `0`.
+4. Agora, vamos finalizar adicionando mais estilos customizados para o nosso _Info Card_. No mesmo arquivo CSS que foi utilizado anteriormente, defina a largura máxima (`max-width`) de todos os infocards para `1260px`, a margem (`margin`) para `0 auto` e o espaçamento (`padding`) para `0`.
 
    > Você pode se basear nos _Handles_ do [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard#customization).
 

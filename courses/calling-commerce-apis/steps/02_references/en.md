@@ -56,7 +56,7 @@ It is worth mentioning that the apps that are developed on VTEX IO **must work r
   ...
 ```
 
-2. Now, **link your app** and access the public URL provided in the process. The URL will be something like `https://{workspace}-{account}.myvtex.com/_v/status/:code`. Replace `code` with`200` and, after accessing the URL, check the content that was logged in `console.log` through the`vtex link` process.
+2. Now, **link your app** and access the public URL provided in the process. The URL will be something like `https://{workspace}-{account}.myvtex.com/_v/status/:code`. Replace `:code` with`200` and, after accessing the URL, check the content that was logged in `console.log` through the`vtex link` process.
    ![console.log Token example](https://user-images.githubusercontent.com/18706156/93616134-b4206580-f9aa-11ea-8331-0fbecc7cf586.png)
 
 > You can check the contents of this token on the website https://jwt.io/. It is a token similar to your personal token (run the command `vtex local token`), but it represents the application you are developing and will contain the permissions that were requested by this app in`manifest.json`.
