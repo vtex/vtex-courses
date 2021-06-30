@@ -17,7 +17,7 @@ Nossa [documentação](https://vtex.io/docs/components/product-related) contém 
 
 É importante que ao final do curso você reserve um tempo para explorar totalmente nossos componentes, além das possibilidades de customização que acompanham cada um.
 
-## Activity
+## Atividade
 
 Desenvolva a página do produto adicionando os 4 blocos listados acima ao`product.jsonc` da seguinte forma:
 
