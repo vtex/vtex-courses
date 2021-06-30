@@ -29,7 +29,7 @@ Na prática, isso significa duas coisas:
 
 Você aprenderá como realizar essas configurações logo mais!
 
-> O _role_, falando sobre autorização dentro da VTEX, representa um "papel" no _License Manager_, gerenciador de usuários e autorizações na plataforma. Alguns módulos da VTEX não requerem nenhum _role_ específico, mas outros podem requerer e são necessários ao "caller" para conseguir acessar aquele recuros.
+> O _role_, falando sobre autorização dentro da VTEX, representa um "papel" no _License Manager_, gerenciador de usuários e autorizações na plataforma. Alguns módulos da VTEX não requerem nenhum _role_ específico, mas outros podem requerer e são necessários ao "caller" para conseguir acessar aquele recurso.
 
 ## Token da app e Token do usuário
 
@@ -38,7 +38,7 @@ Você aprenderá como realizar essas configurações logo mais!
 
 ## `accountName`
 
-Como dito, todas as chamadas para módulos do Commerce da VTEX são relativas à alguma `account` na VTEX, e tradicionalmente essa informação é passada através da _query string_ `?an`. Porém, ao longo do curso, iremos apresentar abstrações criadas no VTEX IO que **dispensam essa configuração manual**.
+Como dito, todas as chamadas para módulos do Commerce da VTEX são relativas a alguma `account` na VTEX, e tradicionalmente essa informação é passada através da _query string_ `?an`. Porém, ao longo do curso, iremos apresentar abstrações criadas no VTEX IO que **dispensam essa configuração manual**.
 
 Vale ressaltar que as apps que são desenvolvidas no VTEX IO **devem funcionar independente da conta onde estão instaladas**, por isso é importante que nenhuma destas informações críticas seja _"hard-coded"_.
 
@@ -56,7 +56,7 @@ Vale ressaltar que as apps que são desenvolvidas no VTEX IO **devem funcionar i
   ...
 ```
 
-2. Agora, **linke sua app** e acesse a URL pública fornecida no processo. A URL será algo como `https://{workspace}--{account}.myvtex.com/_v/status/:code`. Substitua `code` por `200` e, após acessar a URL, verifique o conteúdo que foi loggado no `console.log` através do processo do `vtex link`.
+2. Agora, **linke sua app** e acesse a URL pública fornecida no processo. A URL será algo como `https://{workspace}--{account}.myvtex.com/_v/status/:code`. Substitua `:code` por `200` e, após acessar a URL, verifique o conteúdo que foi loggado no `console.log` através do processo do `vtex link`.
    ![Exemplo do console.log do Token](https://user-images.githubusercontent.com/18706156/93616134-b4206580-f9aa-11ea-8331-0fbecc7cf586.png)
 
 > Você pode verificar o conteúdo desse token no site https://jwt.io/. Ele é um token parecido com o seu token pessoal (rode o comando `vtex local token`), porém representa a aplicação que você está desenvolvendo e conterá as permissões que foram solicitadas por esta app no `manifest.json`.
