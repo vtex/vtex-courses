@@ -55,7 +55,7 @@ export default new Service({
 
 Nosso serviço vai então, na query `helloworld` retornar um número aleatório.
 
-4. Na pasta `/node` para que você consiga desenvolver bem localmente, será necessário um `package.json`, voce pode adicionar um simples:
+4. Na pasta `/node` para que você consiga desenvolver bem localmente, será necessário um `package.json`, você pode adicionar um simples:
 
 /node/package.json
 
@@ -84,7 +84,7 @@ Nosso serviço vai então, na query `helloworld` retornar um número aleatório.
 
 ```
 
-5. Na pasta `react/` nós vamos precisar definir uma _query_ para conseguir usar o resolver que definimos no serviço, para fazer isso, crie uma pasta `graphql/` dentro da pasta `react/` e nesta pasta, crie um `helloworld.gql` com:
+5. Na pasta `react/` nós vamos precisar definir uma _query_ para conseguir usar o resolver que definimos no serviço. Para fazer isso, crie uma pasta `graphql/` dentro da pasta `react/` e nesta pasta, crie um `helloworld.gql` com:
 
 /react/graphql/helloworld.gql:
 

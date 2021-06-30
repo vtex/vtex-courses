@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Em alguns casos a sua aplicação é mais complexa e precisa de vários seções navegáveis (e.g. uma tela para insights e outra para gestão). O Admin Framework oferece a possibilidade de criar itens de navegação de seção que funcionam de forma análoga.
+Em alguns casos a sua aplicação é mais complexa e precisa de várias seções navegáveis (e.g. uma tela para insights e outra para gestão). O Admin Framework oferece a possibilidade de criar itens de navegação de seção que funcionam de forma análoga.
 
 ## Atividade
 
