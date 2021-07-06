@@ -1,6 +1,6 @@
 # Submenu optimization
 
-In the previous step, we learned how to optimize menu items, making them menu properties instead of child blocks. Some menus, however, have other submenus, such as that of [Store Theme](storetheme.vtex.com):
+In the previous step, we learned how to optimize menu items, making them menu properties instead of child blocks. Some menus, however, have other submenus, such as that of [Store Theme](https://storetheme.vtex.com/):
 
 ![image](https://user-images.githubusercontent.com/18701182/93831521-5d848700-fc49-11ea-9773-c2d727013f95.png)
 
