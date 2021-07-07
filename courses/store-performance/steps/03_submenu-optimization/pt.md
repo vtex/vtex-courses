@@ -1,6 +1,6 @@
 # Otimização de submenus
 
-No passo anterior aprendemos como otimizar itens de menu, tornando-os propriedades do menu ao invés de blocos filhos. Alguns menus, no entanto, possuem outros submenus, como o da [Store Theme](storetheme.vtex.com):
+No passo anterior aprendemos como otimizar itens de menu, tornando-os propriedades do menu ao invés de blocos filhos. Alguns menus, no entanto, possuem outros submenus, como o da [Store Theme](https://storetheme.vtex.com/):
 
 ![image](https://user-images.githubusercontent.com/18701182/93831521-5d848700-fc49-11ea-9773-c2d727013f95.png)
 
