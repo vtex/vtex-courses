@@ -8,7 +8,7 @@ In order to facilitate visual integration for the developer, [Styleguide](https:
 
 ## Activity
 
-1. In step 1, we add `vtex.styleguide` as a dependency, import the styleguide's`Layout` and `PageBlock` so that we can use them:
+1. In step 1, in the `/react/adminExample.tsx` file we add `vtex.styleguide` as a dependency, import the styleguide's`Layout` and `PageBlock` so that we can use them:
 
 ```
 import { Layout, PageBlock } from 'vtex.styleguide'
