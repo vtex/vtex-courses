@@ -41,7 +41,7 @@ Uma das operações mais pesadas e pouco performáticas na navegação de uma lo
      "store.search": {
        "props": {
          "context": {
-           "skusFilter": "FIRST_AVAILABLE"
+           "skusFilter": "FIRST_AVAILABLE",
    +       "simulationBehavior": "skip"
          }
        },
