@@ -42,7 +42,7 @@ Em um cabeçalho nível 1, por exemplo, ao inspecionar descobrimos que seu taman
 
 1. No arquivo `style.json`, substitua todas as ocorrências das cores que encontramos, trocando:
 
-- **#3f3f40** with **#e68e94**
+- **#3f3f40** por **#e68e94**
 
 2. Mude o tamanho da fonte do cabeçalho de nível 1 (`heading level 1`) para que agora tenha `2.5 rem` de altura:
 
