@@ -148,6 +148,6 @@ Você já deve ter aprendido a usar o nosso **builder _messages_**, e será atra
    }
    ```
 
-Pronto! Agora, para testar sua loja em outros idiomas basta adicionar a _query string_ `/?cultureInfo=pt-br` ou `/?cultureInfo=en-ar` na URL, por exemplo. Ao utilizar tal URL, o resultado esperado é esse aqui:
+Pronto! Agora, para testar sua loja em outros idiomas basta adicionar a _query string_ `/?cultureInfo=pt-br` ou `/?cultureInfo=es-ar` na URL, por exemplo. Ao utilizar tal URL, o resultado esperado é esse aqui:
 
 ![image](https://user-images.githubusercontent.com/19495917/75484759-23d7f000-5988-11ea-8b0a-63a5fce4ea7e.png)
