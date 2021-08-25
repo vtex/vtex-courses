@@ -1,0 +1,72 @@
+[
+  {
+    "folder": "00_setup",
+    "title": {
+      "en": "Set Up",
+      "pt": "Configurando"
+    },
+    "description": {
+      "pt": "Configurações iniciais para o funcionamento do curso."
+    }
+  },
+  {
+    "folder": "01_intro",
+    "title": {
+      "en": "Introduction and Boilerplate",
+      "pt": "Introdução e Boilerplate"
+    },
+    "description": {
+      "pt": "Introdução ao curso e ao boilerplate."
+    }
+  },
+  {
+    "folder": "02_richtext",
+    "title": {
+      "en": "Getting started with Rich Text",
+      "pt": "Começando com o Rich Text"
+    },
+    "description": {
+      "pt": "Aprendendo a usar o Rich Text."
+    }
+  },
+  {
+    "folder": "03_infocard",
+    "title": {
+      "en": "Info Card: Store Framework's call to action",
+      "pt": "Info Card: o call to action do Store Framework"
+    },
+    "description": {
+      "pt": "Adicionando e configurando um Info Card."
+    }
+  },
+  {
+    "folder": "04_pdp",
+    "title": {
+      "en": "Product page",
+      "pt": "Página de Produto"
+    },
+    "description": {
+      "pt": "Introdução à páginas de produto."
+    }
+  },
+  {
+    "folder": "05_pdp2",
+    "title": {
+      "en": "Evolving your product page",
+      "pt": "Evoluindo sua página de produto"
+    },
+    "description": {
+      "pt": "Complementando a página de produto e possibilidades de evolução."
+    }
+  },
+  {
+    "folder": "06_search",
+    "title": {
+      "en": "Search page",
+      "pt": "Página de busca"
+    },
+    "description": {
+      "pt": "Introduzindo a página de busca."
+    }
+  }
+]
