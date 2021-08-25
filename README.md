@@ -187,8 +187,8 @@ It is divided in:
 
 ## Running
 
-To run and see the results of a new course, you just have to run `yarn start` on the root folder, it'll trigger the `index.ts` file and run the script steps.
+To run and see the results of a new course, you just have to run `yarn deploy` on the root folder, it'll trigger the `index.ts` file and run the script steps.
 
 The course will be available at:
 
-[Learning Path](https://learn.vtex.com/)
+[Learning Center](https://learn.vtex.com/)
