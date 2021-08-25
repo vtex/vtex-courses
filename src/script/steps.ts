@@ -53,7 +53,7 @@ const createAnswersheet = async (
       body: answersheetTemplate(course, stepFolder, answersheets),
       slug,
       title: `${messages.answersheetTo[lang]} '${stepTitle}'`,
-      category: await ReadMe.getCategory('courses').then(({ _id }) => _id),
+      category: await ReadMe.getCategory('courses').then(({ _id } : { _id:any }) => _id),
     })
   }
 }
@@ -101,10 +101,10 @@ const intlStep = async (
   const logFinished = logProgress('step', stepSlug, lang)
 
   const courseCategory = await ReadMe.getCategory('courses').then(
-    ({ _id }) => _id
+    ({ _id } : { _id:any }) => _id
   )
 
-  const parentDoc = await ReadMe.getDoc(courseSlug).then(({ _id }) => _id)
+  const parentDoc = await ReadMe.getDoc(courseSlug).then(({ _id } : { _id:any }) => _id)
 
   const answersheets = getAnswersheets(course.name, step.folder)
   const isLast = stepIndex === course.summary.length - 1
