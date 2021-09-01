@@ -1,8 +1,8 @@
 [
   {
-    "folder": "day1_step01_quickstart",
+    "folder": "01_01_quickstart",
     "title": {
-      "en": "Quickstart"
+      "en": "SFJ Quickstart"
     },
     "description": {
       "pt": "Start exploring by getting a sandbox environment up and running to make simple changes."
