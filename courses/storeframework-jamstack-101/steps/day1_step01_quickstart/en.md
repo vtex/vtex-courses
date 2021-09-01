@@ -1,54 +1,77 @@
-# Set Up
+Welcome to Store Framework Jamstack 101! This is a crash course to help you learn how to develop really fast stores using our latest technology. 
 
-## Introduction
+We expect your machine to be fully set up with basic tools for web development. If you're unsure, check out our recommended development tools before you start.
 
-Before getting your hands dirty and learning more about VTEX IO's Store Framework, you'll need to set up a few basic configurations, such as:
+Let's start exploring by getting a sandbox environment up and running to make simple changes.
 
-- Installing **Git**;
-- Installing **Toolbelt**;
-- **Logging into** a VTEX account;
-- Creating a development **workspace**;
-- **Linking** your local files to the platform.
+## Set up your sandbox environment
 
-Have a look at the step-by-step below for each of these configurations:
+To make a copy of our demo boilerplate, we recommend using [degit](https://github.com/Rich-Harris/degit):
 
-## Installing Git
+```zsh
+npx degit vtex-sites/storecomponents.store my-awesome-store
+```
 
-Install Git on your computer by clicking on the link below and selecting your operating system (Windows, MAC or Linux):
+You should then install the dependencies with [yarn](https://yarnpkg.com/):
 
-[https://git-scm.com/downloads](https://git-scm.com/downloads)
+```zsh
+cd my-awesome-store/
+yarn
+```
 
-## Installing Toolbelt
+## Run a local development build
 
-**Toolbelt** is a VTEX **command line** tool. It allows you to perform any activity on the platform, such as creating a new development workspace, logging into a VTEX account, developing new apps, or managing already existing ones, etc.
+To build our demo boilerplate locally, run:
 
-Since it's Toolbelt that establishes the communication between the developer and the platform, you'll need it in order to perform all the activities put forward during this and the other courses.
+```zsh
+yarn develop
+```
 
-1. Install [**Node.js**](https://nodejs.org/). If you are using a MAC, also install [**Yarn**](https://yarnpkg.com/);
-2. Run `npm i -g vtex` in your terminal if you're using Windows or `yarn global add vtex` if you're using MAC;
+When the build is done, you should be able to interact with your store at `localhost:8000`.
 
-Your can run `vtex-v` (Windows) or `vtex` (MAC) to confirm whether the Toolbelt installation was as expected.
+![sfj-day1-step01-storetheme](https://drive.google.com/uc?id=1BApMkQ1DcjxhifAE_xUd5zzXHIVjr4RG)
 
-Once successfully installed, your next step is to _log into_ a VTEX account.
+## Make a simple change in your sandbox store
 
-## Logging in
+Now that your store is up and running locally, let's see if we can change something.
 
-1. Run `vtex login appliancetheme` in your terminal. During this training, we will work on this account.
+Open the source code for the demo boilerplate:
 
-2. After _logging in_, run `vtex whoami` to confirm the account and workspace in which you find currently are.
+```zsh
+code .
+```
 
-Workspaces are nothing other than what the namesake suggests. On VTEX IO, accounts have three main workspace types, namely [master](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-promoting-a-workspace-to-master), [production](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace), and development.
+The home page for our store is defined in `src/views/home`. We'll go through the folder structure later – for now let's just focus on the `BelowTheFold.tsx` file.
 
-The next step is to create a development workspace, which will allow you to play with the configurations throughout the course without altering the store's final public version.
+![sfj-day1-step01-code](https://drive.google.com/uc?id=1m-l0e38CR9g3YNw46dZfS-pQIlRJkzbr)
 
-## Creating a development workspace
+Let's try changing the text seen in the `<InfoCard>` component:
 
-1. Run `vtex use workspace-name`, replacing `workspace-name` with the desired name. Use an unique name for your workspace. It is important that you choose wisely this name, in order to avoid conflicts of more than one developer working on the same workspace.
+```diff
+// src/views/home/BelowTheFold.tsx (lines 25-36)
+      <InfoCard>
+-       <InfoCardInfo title="New promotion!">
+-         <InfoCardInfoAction href="/vintage-phone/p" label="BUY NOW" />
++       <InfoCardInfo title="Feeling lost in the woods?">
++         <InfoCardInfoAction href="/vintage-phone/p" label="BUY A PHONE" />
+        </InfoCardInfo>
+        <InfoCardImage
+          height="300px"
+          width="840px"
+          href="/vintage-phone/p"
+          src="https://storecomponents.vtexassets.com/assets/faststore/images/banner-infocard2___3f284742ba9ede3826bc0721f0789694.png?height=300&aspect=true"
+          alt="infocard-banner"
+        />
+      </InfoCard>
+```
 
-### Accessing your workspace
+To see the changes in your store, save `BelowTheFold.tsx` and reload the page. This is what you should see now when scrolling down to the info card component.
 
-After creating the workspace, you'll be able to access it at this link: `https://{workspace}--{account}.myvtex.com`, replacing `{workspace}` and `{account}` with the name of the previously created workspace and account. For example, `https://devworkspace--appliancetheme.myvtex.com` Or you can simply run `vtex browse` which opens an endpoint in a browser window based on the current logged in account, workspace and environment data.
+![sfj-day1-step01-infocard](https://drive.google.com/uc?id=1zmFnmNsm-s57ktUwzMAPgF_D42jsWq4T)
 
----
+## Activity: Take a look around!
 
-After setting up the basic configurations, you're ready to start the course!
+Navigate around the store
+Try to identify where specific pages and components are defined in the code
+No answers right now – just exploring and getting familiar with the code
+We'll explain everything in due time!
