@@ -4,7 +4,7 @@ We expect your machine to be fully set up with basic tools for web development. 
 
 Let's start exploring by getting a sandbox environment up and running to make simple changes.
 
-## Set up your sandbox environment
+# Set up your sandbox environment
 
 To make a copy of our demo boilerplate, we recommend using [degit](https://github.com/Rich-Harris/degit):
 
@@ -19,7 +19,7 @@ cd my-awesome-store/
 yarn
 ```
 
-## Run a local development build
+# Run a local development build
 
 To build our demo boilerplate locally, run:
 
@@ -31,7 +31,7 @@ When the build is done, you should be able to interact with your store at `local
 
 ![sfj-day1-step01-storetheme](https://drive.google.com/uc?id=1BApMkQ1DcjxhifAE_xUd5zzXHIVjr4RG)
 
-## Make a simple change in your sandbox store
+# Make a simple change in your sandbox store
 
 Now that your store is up and running locally, let's see if we can change something.
 
@@ -69,9 +69,6 @@ To see the changes in your store, save `BelowTheFold.tsx` and reload the page. T
 
 ![sfj-day1-step01-infocard](https://drive.google.com/uc?id=1zmFnmNsm-s57ktUwzMAPgF_D42jsWq4T)
 
-## Activity: Take a look around!
+# Take a look around!
 
-Navigate around the store
-Try to identify where specific pages and components are defined in the code
-No answers right now – just exploring and getting familiar with the code
-We'll explain everything in due time!
+For the next few minutes, **simply navigate around the store you have running locally**. Try to identify where specific pages and components are defined in the source code. Make some more changes and see what happens! This is your moment to explore and play around with the code, before we dive into the core concepts you need to know and the structure of our implementation.
