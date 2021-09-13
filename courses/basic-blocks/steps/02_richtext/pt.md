@@ -129,7 +129,7 @@ Defina um [Rich Text](https://developers.vtex.com/docs/vtex-rich-text#rich-text)
     }
     ```
 
-Depois de executar o `vtex link`, seu`rich-text` deve ficar assim:
+Depois de executar o `vtex link`, seu `rich-text` deve ficar assim:
 
 <img src="https://user-images.githubusercontent.com/12139385/70143376-2e7d3480-167a-11ea-8727-2bc6a9422f21.png" width="150" />
 
