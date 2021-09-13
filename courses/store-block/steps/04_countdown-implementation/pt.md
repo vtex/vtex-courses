@@ -12,7 +12,7 @@ Agora que o básico do nosso componente está funcional, é hora de implementar 
 
 Voltando ao exemplo apresentado na etapa anterior, podemos mostrar na prática os conceitos abordados anteriormente. Para lembrar do exemplo, veja o código abaixo:
 
-```tsx
+```ts
 const [count, setCount] = useState(0)
 ```
 
@@ -22,7 +22,7 @@ No trecho acima é importante observar três coisas:
 - `setCount` é uma função para atualizá-lo;
 - `0` é o valor do estado inicial
 
-```tsx
+```ts
 const [timeRemaining, setTime] = useState<TimeSplit>({
   hours: '00',
   minutes: '00',
@@ -34,7 +34,7 @@ const [timeRemaining, setTime] = useState<TimeSplit>({
 
 1. Precisamos importar algumas funções e tipos para continuar:
 
-   ```tsx
+   ```ts
    //react/Countdown.tsx
    import React, { useState } from 'react'
    import { TimeSplit } from './typings/global'
