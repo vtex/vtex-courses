@@ -27,7 +27,7 @@ Since it's Toolbelt that establishes the communication between the developer and
 1. Install [**Node.js**](https://nodejs.org/). If you are using a MAC, also install [**Yarn**](https://yarnpkg.com/);
 2. Run `npm i -g vtex` in your terminal if you're using Windows or `yarn global add vtex` if you're using MAC;
 
-Your can run `vtex` to confirm whether the Toolbelt installation was as expected.
+You can run `vtex` to confirm whether the Toolbelt installation was as expected.
 
 Once successfully installed, your next step is to _log into_ a VTEX account.
 
