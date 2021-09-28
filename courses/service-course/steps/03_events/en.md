@@ -19,7 +19,7 @@ On VTEX IO apps, events can be fired and used to trigger actions. For example, a
 2. We need to add the event handler on the `Service` declaration to refer to what the app is supposed to do when listening to the event. To do so, on the `/node/index.ts` file, complement `Service` declaration:
 
    ```diff
-   //node/index/ts
+   //node/index.ts
 
    + const THREE_SECONDS_MS = 3 * 1000
    + const CONCURRENCY = 10
