@@ -60,7 +60,7 @@ Take a minute to browse through these components and see what they look like.
 
 Let's get back to the sandbox store you set up in [SFJ Quickstart](/docs/course-storeframework-jamstack-101-step01-01-quickstart-lang-en). We will test out Store UI components in the About page, defined in `src/pages/about.tsx`. To start of with a clean slate, substitute the contents of that file for the code snippet below:
 
-```
+```jsx
 // src/pages/about.tsx
 import React from 'react'
 import type { FC } from 'react'
@@ -83,7 +83,7 @@ Which should give you this result, when browsing to [https://localhost:8000/abou
 
 To add a Store UI component, you will need to add the appropriate import and the JSX tag for it. For example, if you want to substitute the [HTTP Cats](https://http.cat/) image for a [Spinner](https://storeui.netlify.app/?path=/docs/atoms-spinner--spinner) atom, you would edit your code like so:
 
-```
+```diff
 // src/pages/about.tsx
 import React from 'react'
 import type { FC } from 'react'
