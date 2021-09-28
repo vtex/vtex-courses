@@ -103,7 +103,7 @@ const Page: FC = () => (
 export default Page
 ```
 
-![Sandbox with Spinner component](https://files.readme.io/4c57831-image7.png)
+![Sandbox with Spinner component](https://files.readme.io/c533ff0-image8.gif)
 
 Go ahead and play around with Store UI components! Try adding a different one to your page, for example. Make sure to take a look at the documentation, there you will find sample code and be able to see if there are any required props.
 
