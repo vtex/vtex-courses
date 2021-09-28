@@ -23,7 +23,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
 ## Release Date Query
 
-1. First, create a folder `react/queries` and add a `productReleaseDate.graphql` file to it that will contain the _query_ to be made. In particular, this _query_ will receive a term, which will be **the product slug to be retrieved at the launch date**. It will call the _resolver_ `product`, already available through the`vtex.search-graphql` app, and we will retrieve only the field we need.
+1. First, create a folder in your Countdown app, `react/queries` and add a `productReleaseDate.graphql` file to it that will contain the _query_ to be made. In particular, this _query_ will receive a term, which will be **the product slug to be retrieved at the launch date**. It will call the _resolver_ `product`, already available through the`vtex.search-graphql` app, and we will retrieve only the field we need.
 
    ```graphql
    query productReleaseDate($slug: String) {
