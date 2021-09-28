@@ -14,7 +14,7 @@ By defining the names of your _handles_ and adding them to their respective HTML
 
 Tachyons is a _framework_ for functional CSS. Unlike other known _frameworks_, like Bootstrap, it does not have "pre-built" UI components. In fact, its purpose is, precisely, separate the CSS rules into small, reusable parts. This type of strategy is commonly known as _Subatomic Design System_ and, if you are interested, you can find a reference [in this link](https://daneden.me/2018/01/05/subatomic-design-systems/). This strategy makes _frameworks_ like Tachyons very flexible, scalable and fast.
 
-A lot of the Tachyons' definitions can be changed, so that your store will have a more customized style. To do this, just define a JSON file in the `styles/configs` folder; this information can be found in more detail at: [Customizing styles on VTEX IO](https://developers.vtex.com/docs/vtex-io-documentation-5-customizingstyles).
+A lot of the Tachyons' definitions can be changed, so that your store will have a more customized style. To do this, just define a JSON file in the `styles/configs` folder; this information can be found in more detail at: [Customizing styles on VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-5-definingstyles).
 
 ## Customizing your block
 
