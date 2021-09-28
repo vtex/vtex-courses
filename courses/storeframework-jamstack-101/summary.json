@@ -1,11 +1,20 @@
 [
   {
-    "folder": "01_01_quickstart",
+    "folder": "01-01-quickstart",
     "title": {
       "en": "SFJ Quickstart"
     },
     "description": {
       "pt": "Start exploring by getting a sandbox environment up and running to make simple changes."
+    }
+  },
+  {
+    "folder": "01-02-exploring-store-ui",
+    "title": {
+      "en": "Exploring Store UI"
+    },
+    "description": {
+      "pt": "Check out our framework-agnostic component library to build the best performing stores on the web."
     }
   }
 ]
