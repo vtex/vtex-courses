@@ -5,7 +5,7 @@
       "en": "SFJ Quickstart"
     },
     "description": {
-      "pt": "Start exploring by getting a sandbox environment up and running to make simple changes."
+      "en": "Start exploring by getting a sandbox environment up and running to make simple changes."
     }
   },
   {
@@ -14,7 +14,16 @@
       "en": "Exploring Store UI"
     },
     "description": {
-      "pt": "Check out our framework-agnostic component library to build the best performing stores on the web."
+      "en": "Check out our framework-agnostic component library to build the best performing stores on the web."
+    }
+  },
+  {
+    "folder": "01-03-setting-up-tailwind-css",
+    "title": {
+      "en": "Setting up Tailwind CSS"
+    },
+    "description": {
+      "en": "Learn how to set up a modern CSS framework to style your store components."
     }
   }
 ]
