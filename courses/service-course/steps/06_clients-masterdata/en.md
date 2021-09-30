@@ -20,7 +20,9 @@ In this step, it will be used to fetch data regarding the top-N most viewed prod
 
 > **NOTE:** It is important to highlight that the Master Data client will be available as long as the correct version of `@vtex/api` is installed in the node folder. It can be used by accessing `ctx.clients.masterdata`.
 
-## Before starting, if you are **not using** the `appliancetheme` account
+## Initial setup
+
+> This step is optional if you are already using the `appliancetheme` account.
 
 Before following our activity for this step, you will need to set up your **Master Data** to be able to use it.
 
