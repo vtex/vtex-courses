@@ -2,11 +2,11 @@
 
 ## Introdução
 
-Após ser apresentado ao conceitos dos diferentes tipos de _workspaces_, vamos então ensinar como publicar uma aplicação no VTEX IO. Para realizar operações como esta, são utilizados comandos no [VTEX Toolbelt](https://developers.vtex.com/docs/vtex-io-documentation-toolbelt), nossa CLI que dá acesso aos recursos da plataforma.
+Após ser apresentado ao conceitos dos diferentes tipos de _workspaces_, vamos então ensinar como publicar uma aplicação no VTEX IO. Para realizar operações como esta, são utilizados comandos na [CLI da VTEX](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference), nossa CLI que dá acesso aos recursos da plataforma.
 
-## Usando o VTEX Toolbelt para publicar uma _app_
+## Usando a CLI da VTEX para publicar uma _app_
 
-Para publicar uma _app_ no VTEX IO, é necessário utilizar o seguinte comando do VTEX Toolbelt, dentro da pasta da aplicação:
+Para publicar uma _app_ no VTEX IO, é necessário utilizar o seguinte comando da CLI da VTEX, dentro da pasta da aplicação:
 
 ```
 vtex publish
