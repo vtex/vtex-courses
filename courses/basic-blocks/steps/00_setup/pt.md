@@ -5,7 +5,7 @@
 Antes de colocar as mãos na massa e aprender mais sobre o Store Framework no VTEX IO, você precisará definir algumas configurações básicas, como:
 
 - Instalação do **Git**;
-- Instalação da **CLI da VTEX**;
+- Instalação da **CLI do VTEX IO**;
 - **Login em** uma conta VTEX;
 - Criação de um **workspace** de desenvolvimento;
 - **Vinculando** seus arquivos locais à plataforma.
