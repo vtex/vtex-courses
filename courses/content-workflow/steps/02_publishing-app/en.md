@@ -2,7 +2,7 @@
 
 ## Introduction
 
-After being presented to the concepts regarding the types of workspaces, we're going to teach how to publish an app on VTEX IO. In order to realize operations like these, we use commands on [VTEX IO's CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference), our CLI that gives you access to the platform features.
+After being presented to the concepts regarding the types of workspaces, we're going to teach how to publish an app on VTEX IO. In order to realize operations like these and have access to the platform features, we use [VTEX IO's CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference).
 
 ## Using VTEX IO's CLI to publish an app
 
