@@ -18,7 +18,7 @@ Instale o Git em seu computador clicando no link abaixo e selecionando seu siste
 
 [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
-## Instalando a CLI da VTEX
+## Instalando a CLI do VTEX IO
 
 **A CLI da VTEX** é uma ferramenta VTEX **de linha de comando**. Ele permite que você execute qualquer atividade na plataforma, como criar um novo _workspace_ de desenvolvimento, fazer login em uma conta VTEX, desenvolver novas aplicações ou gerenciar os já existentes, etc.
 
