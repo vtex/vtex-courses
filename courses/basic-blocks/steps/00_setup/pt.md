@@ -5,7 +5,7 @@
 Antes de colocar as mãos na massa e aprender mais sobre o Store Framework no VTEX IO, você precisará definir algumas configurações básicas, como:
 
 - Instalação do **Git**;
-- Instalação do **Toolbelt**;
+- Instalação da **CLI do VTEX IO**;
 - **Login em** uma conta VTEX;
 - Criação de um **workspace** de desenvolvimento;
 - **Vinculando** seus arquivos locais à plataforma.
@@ -18,16 +18,16 @@ Instale o Git em seu computador clicando no link abaixo e selecionando seu siste
 
 [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
-## Instalando o Toolbelt
+## Instalando a CLI do VTEX IO
 
-**Toolbelt** é uma ferramenta VTEX **de linha de comando**. Ele permite que você execute qualquer atividade na plataforma, como criar um novo _workspace_ de desenvolvimento, fazer login em uma conta VTEX, desenvolver novas aplicações ou gerenciar os já existentes, etc.
+**A CLI do VTEX IO** é uma ferramenta VTEX **de linha de comando**. Ele permite que você execute qualquer atividade na plataforma, como criar um novo _workspace_ de desenvolvimento, fazer login em uma conta VTEX, desenvolver novas aplicações ou gerenciar os já existentes, etc.
 
-Uma vez que é o Toolbelt que estabelece a comunicação entre o desenvolvedor e a plataforma, você precisará dele para realizar todas as atividades propostas durante esse e os outros cursos.
+Uma vez que é a CLI do VTEX IO que estabelece a comunicação entre o desenvolvedor e a plataforma, você precisará dele para realizar todas as atividades propostas durante esse e os outros cursos.
 
 1. Instale o [**Node.js**](https://nodejs.org/). Se você estiver usando um MAC, instale também [**Yarn**](https://yarnpkg.com/);
 2. Execute `npm i -g vtex` em seu terminal se estiver usando Windows ou `yarn global add vtex` se estiver usando MAC;
 
-Você pode executar `vtex` para confirmar se a instalação do Toolbelt foi conforme o esperado.
+Você pode executar `vtex` para confirmar se a instalação da CLI do VTEX IO ocorreu conforme o esperado.
 
 Depois de instalado com sucesso, a próxima etapa é _fazer login_ em uma conta VTEX.
 

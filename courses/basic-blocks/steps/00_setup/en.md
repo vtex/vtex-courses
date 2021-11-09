@@ -5,7 +5,7 @@
 Before getting your hands dirty and learning more about VTEX IO's Store Framework, you'll need to set up a few basic configurations, such as:
 
 - Installing **Git**;
-- Installing **Toolbelt**;
+- Installing **VTEX IO's CLI**;
 - **Logging into** a VTEX account;
 - Creating a development **workspace**;
 - **Linking** your local files to the platform.
@@ -18,16 +18,16 @@ Install Git on your computer by clicking on the link below and selecting your op
 
 [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
-## Installing Toolbelt
+## Installing VTEX IO's CLI
 
-**Toolbelt** is a VTEX **command line** tool. It allows you to perform any activity on the platform, such as creating a new development workspace, logging into a VTEX account, developing new apps, or managing already existing ones, etc.
+**VTEX IO CLI** is a **command line** tool. It allows you to perform any activity on the platform, such as creating a new development workspace, logging into a VTEX account, developing new apps, or managing already existing ones, etc.
 
-Since it's Toolbelt that establishes the communication between the developer and the platform, you'll need it in order to perform all the activities put forward during this and the other courses.
+Since it's the VTEX IO's CLI that establishes the communication between the developer and the platform, you'll need it in order to perform all the activities put forward during this and the other courses.
 
 1. Install [**Node.js**](https://nodejs.org/). If you are using a MAC, also install [**Yarn**](https://yarnpkg.com/);
 2. Run `npm i -g vtex` in your terminal if you're using Windows or `yarn global add vtex` if you're using MAC;
 
-You can run `vtex` to confirm whether the Toolbelt installation was as expected.
+You can run `vtex` to confirm whether the VTEX IO CLI installation was as expected.
 
 Once successfully installed, your next step is to _log into_ a VTEX account.
 
