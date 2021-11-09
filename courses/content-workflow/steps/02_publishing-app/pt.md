@@ -4,7 +4,7 @@
 
 Após ser apresentado ao conceitos dos diferentes tipos de _workspaces_, vamos então ensinar como publicar uma aplicação no VTEX IO. Para realizar operações como esta, são utilizados comandos na [CLI da VTEX](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference), nossa CLI que dá acesso aos recursos da plataforma.
 
-## Usando a CLI da VTEX para publicar uma _app_
+## Usando a CLI do VTEX IO para publicar uma _app_
 
 Para publicar uma _app_ no VTEX IO, é necessário utilizar o seguinte comando da CLI da VTEX, dentro da pasta da aplicação:
 
