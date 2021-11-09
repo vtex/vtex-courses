@@ -22,7 +22,7 @@ Instale o Git em seu computador clicando no link abaixo e selecionando seu siste
 
 **A CLI da VTEX** é uma ferramenta VTEX **de linha de comando**. Ele permite que você execute qualquer atividade na plataforma, como criar um novo _workspace_ de desenvolvimento, fazer login em uma conta VTEX, desenvolver novas aplicações ou gerenciar os já existentes, etc.
 
-Uma vez que é a CLI da VTEX que estabelece a comunicação entre o desenvolvedor e a plataforma, você precisará dele para realizar todas as atividades propostas durante esse e os outros cursos.
+Uma vez que é a CLI do VTEX IO que estabelece a comunicação entre o desenvolvedor e a plataforma, você precisará dele para realizar todas as atividades propostas durante esse e os outros cursos.
 
 1. Instale o [**Node.js**](https://nodejs.org/). Se você estiver usando um MAC, instale também [**Yarn**](https://yarnpkg.com/);
 2. Execute `npm i -g vtex` em seu terminal se estiver usando Windows ou `yarn global add vtex` se estiver usando MAC;
