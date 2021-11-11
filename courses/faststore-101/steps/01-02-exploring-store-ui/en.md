@@ -1,4 +1,4 @@
-In Store Framework Jamstack, you are free to use the component framework that best suits your needs. Popular options include [Material UI](https://mui.com/) and [Theme UI](https://theme-ui.com/). If you are looking for a lightweight, performant and ecommerce-ready component library, you might want to consider using [Store UI](https://github.com/vtex/faststore/tree/master/packages/store-ui).
+In FastStore, you are free to use the component framework that best suits your needs. Popular options include [Material UI](https://mui.com/) and [Theme UI](https://theme-ui.com/). If you are looking for a lightweight, performant and ecommerce-ready component library, you might want to consider using [Store UI](https://github.com/vtex/faststore/tree/master/packages/store-ui).
 
 **Store UI** is the component library that is native to the [FastStore](https://github.com/vtex/faststore) open ecommerce framework, crafted with these core principles in mind:
 
@@ -58,7 +58,7 @@ Take a minute to browse through these components and see what they look like.
 
 # Testing components on your sandbox store
 
-Let's get back to the sandbox store you set up in [SFJ Quickstart](/docs/course-storeframework-jamstack-101-step01-01-quickstart-lang-en). We will test out Store UI components in the About page, defined in `src/pages/about.tsx`. To start of with a clean slate, substitute the contents of that file for the code snippet below:
+Let's get back to the sandbox store you set up in [FastStore Quickstart](/docs/course-faststore-101-step01-01-quickstart-lang-en). We will test out Store UI components in the About page, defined in `src/pages/about.tsx`. To start of with a clean slate, substitute the contents of that file for the code snippet below:
 
 ```jsx
 // src/pages/about.tsx
