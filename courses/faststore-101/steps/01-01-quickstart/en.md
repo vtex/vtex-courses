@@ -1,6 +1,6 @@
-Welcome to Store Framework Jamstack 101! This is a crash course to help you learn how to develop really fast stores using our latest technology. 
+Welcome to FastStore 101! This is a crash course to help you learn how to develop really fast stores using our latest technology. 
 
-We expect your machine to be fully set up with basic tools for web development. If you're unsure, check out our recommended development tools before you start.
+We expect your machine to be fully set up with basic tools for web development. If you're unsure, check out our [recommended development tools](https://learn.vtex.com/page/setting-up-your-environment) before you start.
 
 Let's start exploring by getting a sandbox environment up and running to make simple changes.
 

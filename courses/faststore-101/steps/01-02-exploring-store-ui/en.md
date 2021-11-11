@@ -1,4 +1,4 @@
-In Store Framework Jamstack, you are free to use the component framework that best suits your needs. Popular options include [Material UI](https://mui.com/) and [Theme UI](https://theme-ui.com/). If you are looking for a lightweight, performant and ecommerce-ready component library, you might want to consider using [Store UI](https://github.com/vtex/faststore/tree/master/packages/store-ui).
+In FastStore, you are free to use the component framework that best suits your needs. Popular options include [Material UI](https://mui.com/) and [Theme UI](https://theme-ui.com/). If you are looking for a lightweight, performant and ecommerce-ready component library, you might want to consider using [Store UI](https://github.com/vtex/faststore/tree/master/packages/store-ui).
 
 **Store UI** is the component library that is native to the [FastStore](https://github.com/vtex/faststore) open ecommerce framework, crafted with these core principles in mind:
 
@@ -14,7 +14,7 @@ Let's take a look at the [documentation](https://storeui.netlify.app/) to see wh
 > 
 > Other components that are currently under development can be found on the [Store UI source code available on Github](https://github.com/vtex/faststore/tree/d30c59807b7f6e67b182ceeaacf9f3b777d77d4a/packages/store-ui/src), but should be considered experimental until they are documented.
 
-## Atoms: basic building blocks
+# Atoms: basic building blocks
 
 Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.
 
@@ -40,7 +40,7 @@ Currently, these are the Atoms available in the Store UI documentation:
 
 Take a minute to browse through these components and see what they look like. 
 
-## Molecules: smallest functional elements
+# Molecules: smallest functional elements
 
 Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. 
 
@@ -56,11 +56,11 @@ Currently, these are the Molecules available in the Store UI documentation:
 
 Take a minute to browse through these components and see what they look like.
 
-## Testing components on your sandbox store
+# Testing components on your sandbox store
 
-Let's get back to the sandbox store you set up in [SFJ Quickstart](/docs/course-storeframework-jamstack-101-step01-01-quickstart-lang-en). We will test out Store UI components in the About page, defined in `src/pages/about.tsx`. To start of with a clean slate, substitute the contents of that file for the code snippet below:
+Let's get back to the sandbox store you set up in [FastStore Quickstart](/docs/course-faststore-101-step01-01-quickstart-lang-en). We will test out Store UI components in the About page, defined in `src/pages/about.tsx`. To start of with a clean slate, substitute the contents of that file for the code snippet below:
 
-```
+```jsx
 // src/pages/about.tsx
 import React from 'react'
 import type { FC } from 'react'
@@ -83,7 +83,7 @@ Which should give you this result, when browsing to [https://localhost:8000/abou
 
 To add a Store UI component, you will need to add the appropriate import and the JSX tag for it. For example, if you want to substitute the [HTTP Cats](https://http.cat/) image for a [Spinner](https://storeui.netlify.app/?path=/docs/atoms-spinner--spinner) atom, you would edit your code like so:
 
-```
+```diff
 // src/pages/about.tsx
 import React from 'react'
 import type { FC } from 'react'
@@ -103,7 +103,7 @@ const Page: FC = () => (
 export default Page
 ```
 
-![Sandbox with Spinner component](https://files.readme.io/4c57831-image7.png)
+![Sandbox with Spinner component](https://files.readme.io/c533ff0-image8.gif)
 
 Go ahead and play around with Store UI components! Try adding a different one to your page, for example. Make sure to take a look at the documentation, there you will find sample code and be able to see if there are any required props.
 
