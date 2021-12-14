@@ -21,7 +21,10 @@ Neste passo, este cliente será utilizado para pegar informações dos N produto
 > Nota: É importante ressaltar que o cliente do Master Data estará disponível para ser utilizado desde que a versão correta do `@vtex/api` esteja instalada na pasta `node`. Ele poderá ser acessado através de `ctx.clients.masterdata`.
 
 Vamos começar?
-## Antes, se você **não está usando** a conta `appliancetheme`
+
+## Configuração inicial
+
+> Esse passo é opcional se você já estiver usando a conta `appliancetheme`.
 
 Antes de começar a atividade desse passo, você precisa configurar o seu **Master Data** para poder usar do jeito que a atividade propõe.
 
