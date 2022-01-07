@@ -113,21 +113,21 @@ To center align the text, we can add the `textPosition` prop and give it the `CE
 
 Define a [Rich Text](https://developers.vtex.com/docs/vtex-rich-text#rich-text) on your home page and create a **bold** "Hello, World!" that's **right-aligned**. Do so by adding a code block like this in the `store/blocks/home.jsonc` file:
 
-    ```diff
-    {
-      "store.home": {
-        "blocks": [
-    +      "rich-text"
-        ]
-      },
-    +  "rich-text": {
-    +    "props": {
-    +      "text": "**Hello, World!**",
-    +      "textPosition": "RIGHT"
-    +    }
-    +  }
-    }
-    ```
+```diff
+{
+  "store.home": {
+    "blocks": [
++      "rich-text"
+    ]
+  },
++  "rich-text": {
++    "props": {
++      "text": "**Hello, World!**",
++      "textPosition": "RIGHT"
++    }
++  }
+}
+```
 
 After running `vtex link`, your `rich-text` should look like this:
 

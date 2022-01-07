@@ -113,21 +113,21 @@ Para centralizar o alinhamento do texto, podemos adicionar a prop `textPosition`
 
 Defina um [Rich Text](https://developers.vtex.com/docs/vtex-rich-text#rich-text) em sua página inicial e crie um **negrito** "Hello, World!" que está **alinhado à direita**. Faça isso trocando o código já presente no arquivo `store/blocks/home.jsonc` por este:
 
-    ```diff
-    {
-      "store.home": {
-        "blocks": [
-    +      "rich-text"
-        ]
-      },
-    +  "rich-text": {
-    +    "props": {
-    +      "text": "**Hello, World!**",
-    +      "textPosition": "RIGHT"
-    +    }
-    +  }
-    }
-    ```
+```diff
+{
+  "store.home": {
+    "blocks": [
++      "rich-text"
+    ]
+  },
++  "rich-text": {
++    "props": {
++      "text": "**Hello, World!**",
++      "textPosition": "RIGHT"
++    }
++  }
+}
+```
 
 Depois de executar o `vtex link`, seu `rich-text` deve ficar assim:
 
