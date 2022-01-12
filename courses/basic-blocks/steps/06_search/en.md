@@ -75,22 +75,22 @@ Copy the code above in `search.jsonc` and define a `search-result-layout.desktop
 
 To do so, write a code similar to:
 
-    ```json
-    ...
-      },
-      "search-result-layout.desktop": {
-        "children": [
-          "breadcrumb.search",
-          "search-title.v2",
-          "total-products.v2",
-          "order-by.v2",
-          "search-fetch-previous",
-          "search-content",
-          "filter-navigator.v3",
-          "search-fetch-more"
-        ]
-      }
-    ...
-    ```
+```json
+...
+  },
+  "search-result-layout.desktop": {
+    "children": [
+      "breadcrumb.search",
+      "search-title.v2",
+      "total-products.v2",
+      "order-by.v2",
+      "search-fetch-previous",
+      "search-content",
+      "filter-navigator.v3",
+      "search-fetch-more"
+    ]
+  }
+...
+```
 
 Note: Remember to go through the Search Result [documentation](https://developers.vtex.com/docs/vtex-search-result) if you have any questions during the activity.
