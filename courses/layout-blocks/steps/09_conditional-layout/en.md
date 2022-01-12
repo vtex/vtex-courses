@@ -122,7 +122,7 @@ By doing this, we will have a product page like the one shown below:
 `Condition.product` requires _prop_ `conditions` to define which conditions should be applied (see [documentation](https://developers.vtex.com/docs/vtex-condition-layout)), a condition is divided into three parts:
 
 - **subject:** is the data that will be used for comparison purposes, in our case we will use `productId`, in the documentation it is possible to see all the available options;
-- **verb:** is the comparative method, we will use `is` to validate if `productId` is for a specific product, but we could use: `is`, `is-not`,`contains` or `does -not-contain`;
+- **verb:** is the comparative method, we will use `is` to validate if `productId` is for a specific product, but we could use: `is`, `is-not`,`contains` or `does-not-contain`;
 - **object:** is the value we want to compare, in our case, we will use _productId_ `20`.
 
 Thus, the object formed is:
@@ -146,7 +146,7 @@ Thus, the object formed is:
 }
 ```
 
-**NOTE:** If you are taking the course in your own store, identify the `productId` of the product you want to customize and enter the value in the `object` field. You find out the value by refreshing the page, opening your browser's _console_ and typing `__RUNTIME __. Route.params.id`:
+**NOTE:** If you are taking the course in your own store, identify the `productId` of the product you want to customize and enter the value in the `object` field. You find out the value by refreshing the page, opening your browser's _console_ and typing `__RUNTIME __.route.params.id`:
 
 ![image](https://user-images.githubusercontent.com/18701182/90410392-aeb8be00-e080-11ea-8880-f5470c4e5d00.png)
 
@@ -167,7 +167,7 @@ Thus, the object formed is:
 }
 ```
 
-Visit the tested product page to see the layout working, if you are using ʻappliancetheme` and the product is a retro mixer, the url will be:
+Visit the tested product page to see the layout working, if you are using `appliancetheme` and the product is a retro mixer, the url will be:
 
 `https://{{seuworkspace}}--appliancetheme.myvtex.com/3-colors-retro-stand-mixer/p`:
 
