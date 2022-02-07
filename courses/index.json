@@ -34,9 +34,5 @@
   {
     "folder": "calling-commerce-apis",
     "isActive": true
-  },
-  {
-    "folder": "faststore-101",
-    "isActive": false
   }
 ]
