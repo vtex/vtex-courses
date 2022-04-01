@@ -66,6 +66,6 @@ In the example of the `manifest.json` structure below, it's possible to see char
     "vtex.styleguide": "9.x",
     "vtex.css-handles": "0.x"
   },
-  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-a pi/master/gen/manifest.schema"
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
 ```
