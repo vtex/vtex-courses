@@ -30,7 +30,7 @@ So, you'll have to create an entity to save your product list. To do so, using o
 
 1. Using [Postman](https://www.postman.com/downloads/) or any other API client you prefer, send a `PUT` request to this route: `https://{{your-account-name}}.vtexcommercestable.com.br/api/dataentities/course_backend_product_list/schemas/{{your-schema-name}}` with the following headers and body:
 
-  > Note that you need to fill in some information on the route, such as `your-account-name` and `your-schema-name`. That last one can be anything, but we strongly recommend it to be something like `v0`. 
+  > Note that you need to fill in some information on the route, such as `your-account-name` and `your-schema-name`. That last one can be anything, but for this tutorial we are going to use `v1` (identical to the one used in `node/event/updateLiveUsers.ts`). 
 
   Headers: 
   ```json  
