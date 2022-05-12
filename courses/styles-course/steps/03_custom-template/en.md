@@ -85,7 +85,7 @@ Let's create a page containing information about your store, as in the example b
      },
    ```
 
-5. Now, let's define its childen blocks in order to create the complete _layout_:
+5. Now, let's define its children blocks in order to create the complete _layout_:
 
    ```json
    "flex-layout.col#text-about-us": {
