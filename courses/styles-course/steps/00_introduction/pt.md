@@ -2,7 +2,7 @@
 
 ## Introdução
 
-De forma a torna a experiência de compra da loja única, é possível aplicar camadas de customização aos componentes já existentes, criar páginas customizadas, entre outras coisas.
+De forma a tornar a experiência de compra da loja única, é possível aplicar camadas de customização aos componentes já existentes, criar páginas customizadas, entre outras coisas.
 
 ## Sobre este curso
 
