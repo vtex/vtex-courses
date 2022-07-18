@@ -94,7 +94,7 @@ Neste passo, vamos implementar o cliente de _Analytics_.
    }
    ```
    
-7. Agora, é necessário fazer que a aplicação conheça implemente o Client do analytics recém criado e tenhamos uma rota para acessá-lo. Para fazer isso, há um arquivo dentro do diretório `/node` chamado `index.ts` que precisamos modificá-lo:
+7. Agora é necessário fazer que a aplicação importe e registre o Client do analytics recém criado. Dessa forma, teremos uma rota para acessá-lo. É comum que façamos isso no arquivo `index.ts` da pasta `/node` :
    ```diff
    // node/index.ts
    import {
@@ -143,7 +143,7 @@ Neste passo, vamos implementar o cliente de _Analytics_.
     ...
    ```
  
-4. Também é necessário modificar o arquivo `service.json` para incluirmos a rota ao serviço.
+4. Também é necessário modificar o arquivo `service.json` e incluir a rota ao serviço.
 
    ```diff
    //node/service.json
