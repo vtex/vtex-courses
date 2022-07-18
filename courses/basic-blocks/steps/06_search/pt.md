@@ -75,22 +75,22 @@ Copie os códigos acima no arquivo `search.jsonc` e defina a `search-result-layo
 
 Para isso, escreva um código similar a este:
 
-    ```json
-    ...
-      },
-      "search-result-layout.desktop": {
-        "children": [
-          "breadcrumb.search",
-          "search-title.v2",
-          "total-products.v2",
-          "order-by.v2",
-          "search-fetch-previous",
-          "search-content",
-          "filter-navigator.v3",
-          "search-fetch-more"
-        ]
-      }
-    ...
-    ```
+```json
+...
+  },
+  "search-result-layout.desktop": {
+    "children": [
+      "breadcrumb.search",
+      "search-title.v2",
+      "total-products.v2",
+      "order-by.v2",
+      "search-fetch-previous",
+      "search-content",
+      "filter-navigator.v3",
+      "search-fetch-more"
+    ]
+  }
+...
+```
 
 Note: Lembre-se de olhar a [documentação](https://developers.vtex.com/docs/vtex-search-result) caso tenha dúvidas ao longo da atividade.
