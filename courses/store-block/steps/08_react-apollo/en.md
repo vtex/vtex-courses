@@ -52,7 +52,7 @@ The **Apollo Client** lib offers native integration with React, through _hooks_.
 
    +import useProduct from 'vtex.product-context/useProduct'
 
-   +import productReleaseDate from './queries/productReleaseDate.graphql'
+   +import productReleaseDate from './graphql/productReleaseDate.graphql'
    ```
 
    > It is important to higlight that there is the possibility of your IDE showing an error while importing `product-context`.
