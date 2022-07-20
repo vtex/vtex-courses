@@ -28,7 +28,7 @@ Let's use Rich Text in its body:
 }
 ```
 
-Thus, `store.home` now knows that it needs to render a Rich Text. However, we're haven't yet specified which visual this Rich Text should adopt. For that, we'll need to **define the block**.
+Thus, `store.home` now knows that it needs to render a Rich Text. However, we haven't yet specified which visual this Rich Text should adopt. For that, we'll need to **define the block**.
 
 ## Defining blocks
 
