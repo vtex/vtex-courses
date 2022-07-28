@@ -4,7 +4,7 @@
 
 Em cursos anteriores vimos como usar blocos básicos do Store Framework que trazem funcionalidade, mas que em geral são muito simples para serem usados em um layout real de loja.
 
-O mínimo que precisamos quando construímos um _template_ é definir um _grid_, ou seja, conseguir dispor blocos um ao lado do outro, mas há ainda muitas outros _layouts_ mais complexos que em geral precisam ser atingidos: abas, modais, empilhados, etc.
+O mínimo que precisamos quando construímos um _template_ é definir um _grid_, ou seja, conseguir dispor blocos um ao lado do outro, mas há ainda muitos outros _layouts_ mais complexos que em geral precisam ser atingidos: abas, modais, empilhados, etc.
 
 Neste curso aprenderemos como é possível usar alguns dos blocos de _layout_ e entender melhor cada uma das peculiaridades.
 
