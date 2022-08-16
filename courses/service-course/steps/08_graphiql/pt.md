@@ -6,7 +6,7 @@ Agora, com a _query_ e o _resolver_ implementados, precisamos utilizá-los para 
 
 ## GraphiQL
 
-[GraphiQL](https://github.com/graphql/graphiql) é uma ID interativa acessada através de um navegador. Antes de utilizar a _query_ na sua _app_, é interessante testar sua funcionalidade. Para fazer isso, vamos reproduzir o uso da _query_ na IDE do GraphQL.
+[GraphiQL](https://github.com/graphql/graphiql) é uma IDE interativa acessada através de um navegador. Antes de utilizar a _query_ na sua _app_, é interessante testar sua funcionalidade. Para fazer isso, vamos reproduzir o uso da _query_ na IDE do GraphQL.
 
 Explorando um pouco a interface da IDE, há três áreas principais: área de código, área das variáveis da _query_ e a área de _debug_. É possível checar onde cada área está na interface através da imagem abaixo:
 
