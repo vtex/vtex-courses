@@ -60,7 +60,7 @@ Neste passo, vamos implementar o cliente de _Analytics_.
 
    > O método que você acabou de criar irá pegar os dados necessários para esta aplicação: um _array_ de objetos que contêm dois campos: `slug`, uma _string_ que representa o ID do produto e `liveUsers`, um número que é a quantidade de usuários visualizando o produto - que são os campos que estão na interface.
 
-4. O _endpoint_ `_v/live-products` que chamamos precisa da _app_ `mocked-analytics` para funcionar, ou seu método `getLiveUsers` não verá nenhum dado. **No caso de não estar rodando essa aplicação na conta `appliancetheme`**, você precisará instalar a aplicação `mocked-analytics` no seu _workspace_. Para fazer isso, você pode rodar o seguinte comando: `vtex install vtex.mocked-analytics`.
+4. O _endpoint_ `_v/live-products` que chamamos precisa da _app_ `mocked-analytics` para funcionar, ou seu método `getLiveUsers` não verá nenhum dado. Para checar se a aplicação já está instalada, rode o comando `vtex list`. Caso não esteja, utilize o seguinte comando: `vtex install vtex.mocked-analytics`.
 
 5. Com o seu cliente de _analytics_ já implementado, é necessário declará-lo como um dos clientes na classe `Clients`, de forma que ele ficará disponível e acessível através do uso de `Context`, do qual falamos anteriormente.
 
