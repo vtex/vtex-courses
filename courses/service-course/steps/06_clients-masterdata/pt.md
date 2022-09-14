@@ -208,7 +208,9 @@ Agora você está pronto para começar!
    --header 'Content-Type: application/json'
    ```
 
-   > **Atenção**: Para rodar o comando _cURL_ no **Windows**, é necessário substituir as aspas simples (`'`) por aspas duplas (`"`).
+    > **Atenção**: Se você tem uma versão do Windows anterior ao Windows 10, versão 1803, é necessário [baixar e instalar _cURL_](https://curl.se/windows/). Caso contrário, ele já é instalado por default.
+    >
+    > Para rodar o comando _cURL_ no **Windows**, é necessário substituir as aspas simples (`'`) por aspas duplas (`"`).
 
    O resultado deve ser algo similar a imagem abaixo:
 

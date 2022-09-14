@@ -204,6 +204,10 @@ Now you are good to go!
    --header 'Content-Type: application/json'
    ```
 
+    > **Attention**: If you have a version of Windows earlier than Windows 10, version 1803, it’s necessary to [download and install _cURL_](https://curl.se/windows/). Otherwise, it is installed by default.
+    >
+    > To run the command _cURL_ on **Windows**, it's necessary to substitute single quotes (`'`) for double quotes (`"`).
+
    The result should be like this:
 
    ![image](https://user-images.githubusercontent.com/43679629/85172472-8579de00-b247-11ea-9758-f34a66df29c7.png)
