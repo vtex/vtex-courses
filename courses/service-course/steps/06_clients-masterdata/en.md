@@ -204,9 +204,9 @@ Now you are good to go!
    --header 'Content-Type: application/json'
    ```
 
-    > **Attention**: If you have a version of Windows earlier than Windows 10, version 1803, it’s necessary to [download and install _cURL_](https://curl.se/windows/). Otherwise, it is installed by default.
+    > **Attention**: If you have a version of Windows earlier than Windows 10, version 1803, it’s necessary to [download and install **cURL**](https://curl.se/windows/). Otherwise, it is installed by default.
     >
-    > To run the command _cURL_ on **Windows**, it's necessary to substitute single quotes (`'`) for double quotes (`"`).
+    > To run the command `cURL` on **Windows**, it's necessary to substitute single quotes (`'`) for double quotes (`"`).
 
    The result should be like this:
 
