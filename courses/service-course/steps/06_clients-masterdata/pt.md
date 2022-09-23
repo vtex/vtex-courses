@@ -201,14 +201,16 @@ Agora você está pronto para começar!
 
    > Nota: se um erro é gerado dentro do _handler_ de eventos, o VTEX IO tentará novamente fazer o envio do evento.
 
-5) Finalmente, rode `vtex link` e espere que um evento seja disparado. Uma vez que isso acontece, cheque o terminal por _logs_ no código. Quebre o `vtex link` através de `ctrl + C` e utilize o seguinte _cURL_ no terminal para checar as atualizações no **Master Data**:
+5) Finalmente, rode `vtex link` e espere que um evento seja disparado. Uma vez que isso acontece, cheque o terminal por _logs_ no código. Quebre o `vtex link` através de `ctrl + C` e utilize o seguinte `cURL` no terminal para checar as atualizações no **Master Data**:
 
    ```
    curl --location --request GET 'https://api.vtex.com/api/dataentities/course_backend_product_list/search?_fields=slug,count&_schema=v1&an=appliancetheme' \
    --header 'Content-Type: application/json'
    ```
 
-   > **Atenção**: Para rodar o comando _cURL_ no **Windows**, é necessário substituir as aspas simples (`'`) por aspas duplas (`"`).
+    > **Atenção**: Se você tem uma versão do Windows anterior ao Windows 10, versão 1803, é necessário [baixar e instalar **cURL**](https://curl.se/windows/). Caso contrário, ele já é instalado por default.
+    >
+    > Para rodar o comando `cURL` no **Windows**, é necessário substituir as aspas simples (`'`) por aspas duplas (`"`).
 
    O resultado deve ser algo similar a imagem abaixo:
 
