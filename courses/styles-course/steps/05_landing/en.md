@@ -148,7 +148,7 @@ The query schema is one of the [custom query search result props](https://develo
      }
      ```
 
-     > Neste caso, aproveite para observar com calma o código adicionado, de forma que você se assegure de que entendeu as relações entre os blocos e a função de cada um.
+     > In this case, please look at the added code to ensure you understand the relation between the blocks and their functions. 
 
 The expected result is:
 
