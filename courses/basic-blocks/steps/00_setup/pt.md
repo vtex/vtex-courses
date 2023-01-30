@@ -24,8 +24,7 @@ Instale o Git em seu computador clicando no link abaixo e selecionando seu siste
 
 Uma vez que é a CLI do VTEX IO que estabelece a comunicação entre o desenvolvedor e a plataforma, você precisará dele para realizar todas as atividades propostas durante esse e os outros cursos.
 
-1. Instale o [**Node.js**](https://nodejs.org/). Se você estiver usando um MAC, instale também [**Yarn**](https://yarnpkg.com/);
-2. Execute `npm i -g vtex` em seu terminal se estiver usando Windows ou `yarn global add vtex` se estiver usando MAC;
+Para instalar a CLI do VTEX IO, você deve seguir o tutorial [Installing the VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install). 
 
 Você pode executar `vtex` para confirmar se a instalação da CLI do VTEX IO ocorreu conforme o esperado.
 
