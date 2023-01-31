@@ -41,8 +41,8 @@ const messages: Record<string, LanguageSwitcher> = {
     en: 'See the [answersheet for this step]',
   },
   officeHours: {
-    pt: 'participe do nosso [office hours]',
-    en: 'join us on our [office hours]',
+    pt: 'acompanhe nosso [office hours] no canal VTEX Developers',
+    en: 'check our [office hours] on the VTEX Developers channel',
   },
   answersheetTo: {
     pt: 'Gabarito para o passo',
