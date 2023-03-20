@@ -4,7 +4,7 @@
 
 Dando uma rápida olhada na sua loja atual, você conseguirá perceber que todos os componentes possuem estilos parecidos, mesmo que nenhuma customização tenha sido feita por você.
 
-Todos eles compartilham **valores pré-estabelecidos** para fonte, cor de fundo, cor principal, formato dos botões, etc. Por exemplo, o [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard).
+Todos eles compartilham **valores pré-estabelecidos** para fonte, cor de fundo, cor principal, formato dos botões, etc. Por exemplo, o [Info Card](https://developers.vtex.com/docs/guides/vtex-store-components-infocard).
 
 Isso se deve ao `style.json`, arquivo responsável por declarar valores genéricos de customização para toda loja do Store Framework.
 
@@ -12,7 +12,7 @@ Isso se deve ao `style.json`, arquivo responsável por declarar valores genéric
 
 Para criar uma identidade própria para os componentes da sua loja, você pode sobrescrever esses valores por meio de **customizações de CSS**.
 
-Analisando a [recipe](https://developers.vtex.com/docs/vtex-io-documentation-using-css-handles-for-store-customization) para customizações de loja por CSS, percebemos que alguns passos serão necessários para aplicar o estilo próprio desejado por você, como:
+Analisando a [recipe](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) para customizações de loja por CSS, percebemos que alguns passos serão necessários para aplicar o estilo próprio desejado por você, como:
 
 1. Criar um novo arquivo dentro da pasta `CSS` com o nome `vtex.{AppName}.css`
 2. Usar o CSS _Handle_ do componente que será customizado dentro deste arquivo seguindo o formato abaixo:
@@ -90,7 +90,7 @@ Agora, no mesmo arquivo, vamos definir os blocos logo abaixo da definição de `
 
 ## Customizando o Info Card
 
-Para descobrir os CSS _Handles_ de um componente, como o _Info Card_, basta acessar a [seção **Customization**](https://developers.vtex.com/docs/vtex-store-components-infocard#customization) da sua documentação.
+Para descobrir os CSS _Handles_ de um componente, como o _Info Card_, basta acessar a [seção **Customization**](https://developers.vtex.com/docs/guides/vtex-store-components-infocard#customization) da sua documentação.
 
 De acordo com a descrição dos CSS _Handles_ e com a recipe customizações de loja por CSS, conseguimos implementar um exemplo de _Info Card_ customizado.
 
@@ -155,7 +155,7 @@ De acordo com a descrição dos CSS _Handles_ e com a recipe customizações de 
 
 4. Agora, vamos finalizar adicionando mais estilos customizados para o nosso _Info Card_. No mesmo arquivo CSS que foi utilizado anteriormente, defina a largura máxima (`max-width`) de todos os infocards para `1260px`, a margem (`margin`) para `0 auto` e o espaçamento (`padding`) para `0`.
 
-   > Você pode se basear nos _Handles_ do [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard#customization).
+   > Você pode se basear nos _Handles_ do [Info Card](https://developers.vtex.com/docs/guides/vtex-store-components-infocard#customization).
 
    ```css
    /* /styles/css/vtex.store-components.css */

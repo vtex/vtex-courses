@@ -10,7 +10,7 @@ Vimos que a busca infere o que precisa pelo contexto que está inclusa. Numa pá
 
 ## Query schema
 
-A _query schema_ é uma das [props do _search result custom query_](https://developers.vtex.com/docs/vtex-search-result) com ela é possível controlar a busca que a nossa _landing page_ deverá fazer. Para saber todas as possibilidades da _query schema_, veja sua [documentação aqui](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched).
+A _query schema_ é uma das [props do _search result custom query_](https://developers.vtex.com/docs/guides/vtex-search-result) com ela é possível controlar a busca que a nossa _landing page_ deverá fazer. Para saber todas as possibilidades da _query schema_, veja sua [documentação aqui](https://developers.vtex.com/docs/guides/vtex-search-result#defining-how-the-search-query-data-should-be-fetched).
 
 ## Criando uma nova _landing page_
 
@@ -25,7 +25,7 @@ A _query schema_ é uma das [props do _search result custom query_](https://deve
 
 2. Crie um novo arquivo na pasta de blocos chamado `search-landing.jsonc`;
 3. Crie um novo _template custom_ `store.custom#landing`;
-4. Defina o bloco [`image`](https://developers.vtex.com/docs/vtex-store-components-image) como um dos blocos desse template. Este bloco deve possuir _props_ `minWidth` de 100% e uma imagem a sua escolha.
+4. Defina o bloco [`image`](https://developers.vtex.com/docs/guides/vtex-store-components-image) como um dos blocos desse template. Este bloco deve possuir _props_ `minWidth` de 100% e uma imagem a sua escolha.
 5. Adicione o bloco `search-result-layout.customQuery`:
 
    ```diff
@@ -40,7 +40,7 @@ A _query schema_ é uma das [props do _search result custom query_](https://deve
    }
    ```
 
-6. Defina o bloco `search-result-layout.customQuery` com [prop de _querySchema_](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched) que:
+6. Defina o bloco `search-result-layout.customQuery` com [prop de _querySchema_](https://developers.vtex.com/docs/guides/vtex-search-result#defining-how-the-search-query-data-should-be-fetched) que:
 
 - Ordena por data de lançamento de forma descrescente;
 - Esconda itens indisponíveis;

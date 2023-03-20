@@ -2,7 +2,7 @@
 
 ## Introdução
 
-[Markdown](https://www.markdownguide.org/) é uma linguagem de marcação amigável que pode ser convertida de maneira simples para HTML. Nesta lição, veremos como é possível utilizar esta linguagem em nosso bloco [**Rich Text**](https://developers.vtex.com/docs/vtex-rich-text) para customizá-los e criar textos interessantes.
+[Markdown](https://www.markdownguide.org/) é uma linguagem de marcação amigável que pode ser convertida de maneira simples para HTML. Nesta lição, veremos como é possível utilizar esta linguagem em nosso bloco [**Rich Text**](https://developers.vtex.com/docs/guides/vtex-rich-text) para customizá-los e criar textos interessantes.
 
 ## Rich Text com Markdown
 
@@ -32,7 +32,7 @@ A prop `text` aceita o formato de markdown. Portanto, se você deseja escrever s
 
 > **Dica**: Sempre utilize o comando `\n` para pular linhas ao utilizar markdown na prop `text`.
 
-Outras propriedades do componente `rich-text` podem ser encontrados na [documentação oficial do Store Framework](https://developers.vtex.com/docs/vtex-rich-text).
+Outras propriedades do componente `rich-text` podem ser encontrados na [documentação oficial do Store Framework](https://developers.vtex.com/docs/guides/vtex-rich-text).
 
 ## Alterando o estilo e o conteúdo do _rich text_ através de Markdown
 
@@ -44,4 +44,4 @@ Este é o resultado esperado:
 
 ![image](https://user-images.githubusercontent.com/19495917/90180384-410d4900-dd85-11ea-88b9-3af68e8f3a08.png)
 
-Note: Lembre-se de acessar a [documentação](https://developers.vtex.com/docs/vtex-rich-text) do Rich Text caso tenha alguma dúvida durante a atividade.
+Note: Lembre-se de acessar a [documentação](https://developers.vtex.com/docs/guides/vtex-rich-text) do Rich Text caso tenha alguma dúvida durante a atividade.

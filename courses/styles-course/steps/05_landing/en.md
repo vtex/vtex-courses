@@ -10,7 +10,7 @@ We saw that the search deduces what is needed from the given context. On a custo
 
 ## Query schema
 
-The query schema is one of the [custom query search result props](https://developers.vtex.com/docs/vtex-search-result) that allows you to control the search that the _landing page_ should run. To know more the query schema's possibilities, read through its [documentation](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched).
+The query schema is one of the [custom query _search result props_](https://developers.vtex.com/docs/guides/vtex-search-result) that allows you to control the search that the _landing page_ should run. To know more the query schema's possibilities, read through its [documentation](https://developers.vtex.com/docs/guides/vtex-search-result#defining-how-the-search-query-data-should-be-fetched).
 
 ## Creating a new landing page
 
@@ -25,7 +25,7 @@ The query schema is one of the [custom query search result props](https://develo
 
 2. Create a new file called `search-landing.jsonc` in the blocks folder;
 3. Create a new custom template entitled `store.custom#landing`;
-4. Define the [`image`](https://developers.vtex.com/docs/vtex-store-components-image) block as one of this template's blocks. This block must have `minWidth` props of 100% and an image of your choosing:
+4. Define the [`image`](https://developers.vtex.com/docs/guides/vtex-store-components-image) block as one of this template's blocks. This block must have `minWidth` props of 100% and an image of your choosing:
 
    ```json
        "store.custom#landing": {
@@ -55,7 +55,7 @@ The query schema is one of the [custom query search result props](https://develo
    }
    ```
 
-6. Define the `search-result-layout.customQuery` block as the [_querySchema_ prop](https://developers.vtex.com/docs/vtex-search-result#step-3---defining-how-the-search-query-data-should-be-fetched) that:
+6. Define the `search-result-layout.customQuery` block as the [_querySchema_ prop](https://developers.vtex.com/docs/guides/vtex-search-result#defining-how-the-search-query-data-should-be-fetched) that:
 
 - Sorts by latest release date;
 - Hides unavailable items;

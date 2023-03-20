@@ -4,7 +4,7 @@
 
 Taking a quick look at your online store, you'll notice that components have similar styles, even without applying any customization.
 
-All of them share **pre-established values** for font, background color, main color, button format, etc. For instance, the [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard).
+All of them share **pre-established values** for font, background color, main color, button format, etc. For instance, the [Info Card](https://developers.vtex.com/docs/guides/vtex-store-components-infocard).
 
 This is due to the `style.json`, the file responsible for declaring generic customization values for every Store Framework store.
 
@@ -12,7 +12,7 @@ This is due to the `style.json`, the file responsible for declaring generic cust
 
 To create a unique identity for your store's components, you can overwrite these values using **CSS customizations**.
 
-Analyzing the [recipe](https://developers.vtex.com/docs/vtex-io-documentation-using-css-handles-for-store-customization) employed to customize stores using CSS, we can notice that several steps will be needed in order to apply your own style, such as:
+Analyzing the [recipe](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) employed to customize stores using CSS, we can notice that several steps will be needed in order to apply your own style, such as:
 
 1. Create a new file in the `CSS` folder, naming it `vtex.{AppName}.css`.
 2. Use the CSS Handle of the component that will be customized in this file in the following format:
@@ -94,7 +94,7 @@ By doing that, you're expected to see the home page similar to the following ima
 
 ## Customizing the Info Card you've just added
 
-To uncover a component's CSS Handles, such as the Info Card, simply access your documentation's [**Customization** section](https://developers.vtex.com/docs/vtex-store-components-infocard#customization).
+To uncover a component's CSS Handles, such as the Info Card, simply access your documentation's [**Customization** section](https://developers.vtex.com/docs/guides/vtex-store-components-infocard#customization).
 
 According to the description of CSS Handles and to the store customization recipe using CSS, we can implement a customized Info Card example.
 
@@ -161,7 +161,7 @@ According to the description of CSS Handles and to the store customization recip
 
 4. Now let's finish by adding some more style to our Info Card. On the same CSS file that was used before, define a maximum width (`max-width`) of `1260px` for all info cards, a margin of `0 auto` and a padding of `0`.
 
-   > You can do it based on the [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard#customization) Handles.
+   > You can do it based on the [Info Card](https://developers.vtex.com/docs/guides/vtex-store-components-infocard#customization) Handles.
 
    ```css
    /* /styles/css/vtex.store-components.css */
