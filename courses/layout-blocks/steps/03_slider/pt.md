@@ -8,7 +8,7 @@ Com o Slider Layout é possível criar um carrossel não só de imagens, como de
 
 ## Slider Layout
 
-Analisando a [documentação](https://developers.vtex.com/docs/vtex-slider-layout), vemos que você pode utilizar qualquer _array_ de blocos como `children`, assim como no Flex Layout.
+Analisando a [documentação](https://developers.vtex.com/docs/guides/vtex-slider-layout), vemos que você pode utilizar qualquer _array_ de blocos como `children`, assim como no Flex Layout.
 
 Abaixo, segue um exemplo de implementação de um slider-layout com dois `info-card`:
 
@@ -69,4 +69,4 @@ Nesta atividade, vamos criar um _slider_ de marcas para o nosso site:
 
 5. Por fim, você deve utilizar a propriedade de `autoplay` no bloco `slider-layout#home`. Faça com que o _slide_ aconteça automaticamente a cada **7 segundos e que ele pare quando o usuário passar o mouse em cima do _slide_**.
 
-Note: Lembre-se de acessar a documentação do [Slider Layout](https://developers.vtex.com/docs/vtex-slider-layout) e [Image](https://developers.vtex.com/docs/vtex-store-components-image) caso tenha alguma dúvida durante a atividade.
+Note: Lembre-se de acessar a documentação do [Slider Layout](https://developers.vtex.com/docs/guides/vtex-slider-layout) e [Image](https://developers.vtex.com/docs/guides/vtex-store-components-image) caso tenha alguma dúvida durante a atividade.

@@ -109,4 +109,4 @@ O resultado deve ser então:
 
 - Não se preocupe se não entender bem como funcionou a estilização feita nos passos opcionais, temos um curso exclusivo para estilização que será visto mais a frente.
 
-- Se você clicar no botão e não estiver vendo uma página de resultado de busca, garanta que você tem um layout de busca definido (vimos isso no curso de blocos básicos) seguindo a documentação de [Search Result](https://developers.vtex.com/docs/vtex-search-result#search-result)
+- Se você clicar no botão e não estiver vendo uma página de resultado de busca, garanta que você tem um layout de busca definido (vimos isso no curso de blocos básicos) seguindo a documentação de [Search Result](https://developers.vtex.com/docs/guides/vtex-search-result).

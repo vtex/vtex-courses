@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The [Tab Layout](https://developers.vtex.com/docs/vtex-tab-layout#tab-layout) is a _layouts_ structuring paradigm created in the Store Framework to allow the construction of _layouts_ with tabs or guides.
+The [Tab Layout](https://developers.vtex.com/docs/guides/tab-layout) is a _layouts_ structuring paradigm created in the Store Framework to allow the construction of _layouts_ with tabs or guides.
 
 In this paradigm, we have two containers: the `tab-list` and the `tab-content`. In each of these containers, we have the items that compose them. Within the tab-list, we have the tab-list.item. In the `tab-content`, we have the`tab-content.item`.
 
@@ -153,4 +153,4 @@ In this activity, we will create the simple structure of a _tab layout_, as show
    }
    ```
 
-> Note: Remember to access the [Tab Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-tab-layout) and[Rich Text](https://developers.vtex.com/vtex-developer-docs/docs/vtex-rich-text) documentations if you have any questions during the activity.
+> Note: Remember to access the [Tab Layout](https://developers.vtex.com/docs/guides/tab-layout) and [Rich Text](https://developers.vtex.com/docs/guides/vtex-rich-text) documentations if you have any questions during the activity.

@@ -4,7 +4,7 @@
 
 The homepage of e-commerce is always the customer's first contact with the brand. For this reason, it is common for the shopkeeper to want to establish **direct communication** with his users at this strategic moment of navigation.
 
-In the Store Framework, there are some components that address this scenario, such as [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard) and [Rich Text](https://developers.vtex.com/docs/vtex-rich-text#rich-text).
+In the Store Framework, there are some components that address this scenario, such as [Info Card](https://developers.vtex.com/docs/guides/vtex-store-components-infocard) and [Rich Text](https://developers.vtex.com/docs/guides/vtex-rich-text).
 
 ## Configuring Rich Text
 
@@ -24,7 +24,7 @@ As mentioned earlier, the use of Markdown allows flexibility to the component. B
 
 For example, the phrase above (`#Your Coffee, Your Way\n###New Coffee Makers Collection`) can use a _markdown_ suitable for _desktop_, but not necessarily for _mobile_ (whose screen size is smaller).
 
-To solve this scenario and make the component more adaptable to other devices, we must use the [**Responsive Layout**](https://developers.vtex.com/docs/vtex-responsive-layout).
+To solve this scenario and make the component more adaptable to other devices, we must use the [**Responsive Layout**](https://developers.vtex.com/docs/guides/vtex-responsive-layout).
 
 First, we must declare the blocks within the `store.home` template:
 
@@ -65,7 +65,7 @@ When interpreting the code above, notice how two Rich Text configurations are bu
 
 ## Activity
 
-In this activity, let's play around with the [Rich Text](https://developers.vtex.com/docs/vtex-rich-text#rich-text) markdown and learn how to use it with the [Image](https://developers.vtex.com/docs/vtex-store-components-image) component. All of this using Responsive Layout, of course!
+In this activity, let's play around with the [Rich Text](https://developers.vtex.com/docs/guides/vtex-rich-text) markdown and learn how to use it with the [Image](https://developers.vtex.com/docs/guides/vtex-store-components-image) component. All of this using Responsive Layout, of course!
 
 ### Desktop:
 
@@ -105,6 +105,6 @@ In this activity, let's play around with the [Rich Text](https://developers.vtex
    },
    ```
 
-5. Analyzing the [Image component](https://developers.vtex.com/docs/vtex-store-components-image#configuration) props, set the maximum width of the two images to `100%`.
+5. Analyzing the [Image component](https://developers.vtex.com/docs/guides/vtex-store-components-image#configuration) props, set the maximum width of the two images to `100%`.
 
-Note: Remember to access the Responsive Layout [documentation](https://developers.vtex.com/docs/vtex-responsive-layout) if you have any questions during the activity.
+Note: Remember to access the Responsive Layout [documentation](https://developers.vtex.com/docs/guides/vtex-responsive-layout) if you have any questions during the activity.

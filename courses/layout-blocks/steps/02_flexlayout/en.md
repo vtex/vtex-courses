@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[Flex Layout](https://developers.vtex.com/docs/vtex-flex-layout#flex-layout) is a _layout_ structuring paradigm created in the Store Framework to allow the construction of complex _layouts_. This paradigm uses the concept of ** rows ** and ** columns ** to define the desired structure and positioning of the blocks on a given page.
+[Flex Layout](https://developers.vtex.com/docs/guides/vtex-flex-layout) is a _layout_ structuring paradigm created in the Store Framework to allow the construction of complex _layouts_. This paradigm uses the concept of ** rows ** and ** columns ** to define the desired structure and positioning of the blocks on a given page.
 
 There are two basic building blocks of each Flex Layout:
 
@@ -72,4 +72,4 @@ The result should look like this:
 
 ![image](https://user-images.githubusercontent.com/12139385/70185681-0c5ed300-16c9-11ea-9260-b88179b508f2.png)
 
-> Note: Remember to access the Flex Layout [documentation](https://developers.vtex.com/docs/vtex-flex-layout#flex-layout) if you have any questions during the activity.
+> Note: Remember to access the Flex Layout [documentation](https://developers.vtex.com/docs/guides/vtex-flex-layout) if you have any questions during the activity.
