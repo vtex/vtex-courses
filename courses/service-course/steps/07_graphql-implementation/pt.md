@@ -60,7 +60,7 @@ Vamos lá?
        .then(({ data }) => data)
    ```
 
-   > Nota: você pode checar a documentação a respeito do uso de _scroll_ no Master Data neste [link](https://help.vtex.com/tutorial/querying-the-master-data-via-scroll-path--tutorials_4631)
+   > Nota: você pode checar a documentação a respeito do uso de _scroll_ no Master Data neste [link](https://developers.vtex.com/docs/guides/search-and-scroll-api-queries).
 
 4. Importe o _resolver_ no arquivo `index.ts`:
 
