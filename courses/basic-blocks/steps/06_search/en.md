@@ -45,7 +45,7 @@ In the course, we'll **focus** on **desktop layout** implementation.
 
 ## Search blocks
 
-The [search results documentation](https://developers.vtex.com/docs/vtex-search-result) offers a good reference for blocks that can be used in a **search context**. This step will focus on highlighting the main ones:
+The [search results documentation](https://developers.vtex.com/docs/guides/vtex-search-result) offers a good reference for blocks that can be used in a **search context**. This step will focus on highlighting the main ones:
 
 - Search breadcrumb (`breadcrumb.search`);
 - Search title (`search-title.v2`);
@@ -93,4 +93,4 @@ To do so, write a code similar to:
 ...
 ```
 
-Note: Remember to go through the Search Result [documentation](https://developers.vtex.com/docs/vtex-search-result) if you have any questions during the activity.
+Note: Remember to go through the Search Result [documentation](https://developers.vtex.com/docs/guides/vtex-search-result) if you have any questions during the activity.
