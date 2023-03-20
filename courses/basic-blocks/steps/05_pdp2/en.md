@@ -8,12 +8,12 @@ During the last step we learned how to create a simple product page with a minim
 
 ## Over 30 product blocks
 
-Our [documentation](https://vtex.io/docs/components/product-related) contains more than 30 product-related blocks. We'll explore 4 more in this step:
+Our [documentation](https://developers.vtex.com/docs/guides/store-framework-apps) contains more than 30 product-related blocks. We'll explore 4 more in this step:
 
-- [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb)
-- [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier)
-- [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity)
-- [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector)
+- [Breadcrumb](https://developers.vtex.com/docs/guides/vtex-breadcrumb)
+- [Product Identifier](https://developers.vtex.com/docs/guides/vtex-product-identifier)
+- [Product Quantity](https://developers.vtex.com/docs/guides/vtex-product-quantity)
+- [SKU Selector](https://developers.vtex.com/docs/guides/vtex-store-components-skuselector)
 
 It's important that by the end of the course you take some time to fully explore our components, in addition to the customization possibilities that accompany each component.
 
@@ -74,4 +74,4 @@ Develop the product page by adding the 4 blocks listed above to`product.jsonc` a
     ]
 ```
 
-Note: Remember to access the [Breadcrumb](https://developers.vtex.com/docs/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/vtex-product-quantity) and [SKU Selector](https://developers.vtex.com/docs/vtex-store-components-skuselector) documentation if you have any questions during the activity.
+Note: Remember to access the [Breadcrumb](https://developers.vtex.com/docs/guides/vtex-breadcrumb), [Product Identifier](https://developers.vtex.com/docs/guides/vtex-product-identifier), [Product Quantity](https://developers.vtex.com/docs/guides/vtex-product-quantity) and [SKU Selector](https://developers.vtex.com/docs/guides/vtex-store-components-skuselector) documentation if you have any questions during the activity.

@@ -4,7 +4,7 @@
 
 Uma loja precisa de uma boa _página inicial_ para envolver os usuários, aumentando o tempo da sessão e, portanto, as chances de conversão. Para tal, é necessário utilizar vários elementos, como banners promocionais, estantes com destaques, material sobre nós, etc.
 
-Criamos o próximo bloco na _página inicial_ usando uma _call to action_. No Store Framework, temos um bloco desenhado para esse fim, denominado [**Info Card**](https://developers.vtex.com/docs/vtex-store-components-infocard).
+Criamos o próximo bloco na _página inicial_ usando uma _call to action_. No Store Framework, temos um bloco desenhado para esse fim, denominado [**Info Card**](https://developers.vtex.com/docs/guides/vtex-store-components-infocard).
 
 ## Começando com o Info Card
 
@@ -12,7 +12,7 @@ Criamos o próximo bloco na _página inicial_ usando uma _call to action_. No St
 
 Usando o Info Card, você pode criar imagens que possuem links e botões (parte superior ou lateral do bloco) que direcionam o fluxo do usuário (_Call to action_).
 
-Olhando a [documentação](https://developers.vtex.com/docs/vtex-store-components-infocard#configuration), podemos ver que:
+Olhando a [documentação](https://developers.vtex.com/docs/guides/vtex-store-components-infocard#configuration), podemos ver que:
 
 - `isFullModeStyle` define se o _Call to Action (CTA)_ é definido acima do banner;
 - `textPosition` define a posição do texto;
@@ -120,4 +120,4 @@ O resultado esperado será semelhante a este:
 
 ![imagem](https://appliancetheme.vteximg.com.br/arquivos/info-card-activity.png)
 
-Note: Lembre-se de acessar a documentação do [Info Card](https://developers.vtex.com/docs/vtex-store-components-infocard) se você tiver alguma dúvida sobre a atividade.
+Note: Lembre-se de acessar a documentação do [Info Card](https://developers.vtex.com/docs/guides/vtex-store-components-infocard) se você tiver alguma dúvida sobre a atividade.

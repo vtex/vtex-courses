@@ -45,7 +45,7 @@ Nesse curso, vamos **focar** na implementação do **layout para desktop**.
 
 ## Blocos de Busca
 
-A [documentação dos resultados da pesquisa](https://developers.vtex.com/docs/vtex-search-result) oferece uma boa referência para blocos que podem ser usados ​​em um **contexto de pesquisa**. Esta etapa se concentrará em destacar os principais:
+A [documentação dos resultados da pesquisa](https://developers.vtex.com/docs/guides/vtex-search-result) oferece uma boa referência para blocos que podem ser usados ​​em um **contexto de pesquisa**. Esta etapa se concentrará em destacar os principais:
 
 - Breadcrumb de pesquisa (`breadcrumb.search`);
 - Título de pesquisa (`search-title.v2`);
@@ -93,4 +93,4 @@ Para isso, escreva um código similar a este:
 ...
 ```
 
-Note: Lembre-se de olhar a [documentação](https://developers.vtex.com/docs/vtex-search-result) caso tenha dúvidas ao longo da atividade.
+Note: Lembre-se de olhar a [documentação](https://developers.vtex.com/docs/guides/vtex-search-result) caso tenha dúvidas ao longo da atividade.

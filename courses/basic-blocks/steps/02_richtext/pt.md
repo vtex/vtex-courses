@@ -59,9 +59,9 @@ Na definição do bloco, você pode definir seu comportamento e visual. **Pontos
 }
 ```
 
-Leia o Rich Text [documentação](https://developers.vtex.com/docs/vtex-rich-text#rich-text) mais uma vez e vamos definir os adereços que usaremos para personalizar o bloco.
+Leia o Rich Text [documentação](https://developers.vtex.com/docs/guides/vtex-rich-text) mais uma vez e vamos definir os adereços que usaremos para personalizar o bloco.
 
-Queremos obter um simples "Olá, Mundo!", E olhando para as props, notamos um chamado: `text` [(Texto escrito em linguagem de marcação a ser exibido)](https://developers.vtex.com/docs/vtex-rich-text#rich-text). Esta é a prop que determina qual texto será exibido.
+Queremos obter um simples "Olá, Mundo!", E olhando para as props, notamos um chamado: `text` [(Texto escrito em linguagem de marcação a ser exibido)](https://developers.vtex.com/docs/guides/vtex-rich-text). Esta é a prop que determina qual texto será exibido.
 
 Incluindo esta prop, agora temos o seguinte:
 
@@ -111,7 +111,7 @@ Para centralizar o alinhamento do texto, podemos adicionar a prop `textPosition`
 
 ## Atividade
 
-Defina um [Rich Text](https://developers.vtex.com/docs/vtex-rich-text#rich-text) em sua página inicial e crie um **negrito** "Hello, World!" que está **alinhado à direita**. Faça isso trocando o código já presente no arquivo `store/blocks/home.jsonc` por este:
+Defina um [Rich Text](https://developers.vtex.com/docs/guides/vtex-rich-text) em sua página inicial e crie um **negrito** "Hello, World!" que está **alinhado à direita**. Faça isso trocando o código já presente no arquivo `store/blocks/home.jsonc` por este:
 
 ```diff
 {
@@ -133,4 +133,4 @@ Depois de executar o `vtex link`, seu `rich-text` deve ficar assim:
 
 <img src="https://user-images.githubusercontent.com/12139385/70143376-2e7d3480-167a-11ea-8727-2bc6a9422f21.png" width="150" />
 
-Note: Lembre-se de acessar a [documentação](https://developers.vtex.com/vtex-developer-docs/docs/vtex-rich-text) do Rich Text se você tiver alguma dúvida durante a atividade.
+Note: Lembre-se de acessar a [documentação](https://developers.vtex.com/docs/guides/vtex-rich-text) do Rich Text se você tiver alguma dúvida durante a atividade.
