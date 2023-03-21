@@ -6,7 +6,7 @@ Neste passo, você aprenderá como encontrar a documentação das APIs da VTEX, 
 
 ## Portal do Desenvolvedor
 
-Antes de começar a desenvolver sua integração com as APIs de Commerce da VTEX, é fundamental que você possa **descobrí-las** e entender seu funcionamento. O [Portal de Desenvolvedor](https://developers.vtex.com/reference/get-to-know-vtex-apis) da VTEX lista todas as APIs disponíveis, além de conter explicações sobre como usar cada um dos _endpoints_ oferecidos.
+Antes de começar a desenvolver sua integração com as APIs de Commerce da VTEX, é fundamental que você possa **descobrí-las** e entender seu funcionamento. O [Portal de Desenvolvedor](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis) da VTEX lista todas as APIs disponíveis, além de conter explicações sobre como usar cada um dos _endpoints_ oferecidos.
 
 ![Portal de Desenvolvedor da VTEX](https://user-images.githubusercontent.com/18706156/92934603-0f3be080-f41e-11ea-95f7-34f0238a8d96.png)
 
