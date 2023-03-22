@@ -10,7 +10,7 @@ Clientes, no VTEX IO, são abstrações para outros serviços. Nós transpassamo
 
 Caso você já saiba um pouco mais sobre serviços no IO, você provavelmente já sabe que sua implementação exporta funções que recebem um objeto de contexto. Estas funções podem ser um _resolver_ para um campo de GraphQL, um _middleware_ para um servidor HTTP ou um _handler_ de eventos. Em todos os casos, você recebe um `ctx` (ou como você preferir chamá-lo), que é um objeto do tipo `Context` e dentro de `ctx.clients`, você encontrará diversos clientes, dentre os quais estão os que você implementou.
 
-É possível ler mais sobre os conceitos que envolvem a definição de clientes [neste documento](https://www.notion.so/How-to-use-and-create-Clients-on-VTEX-IO-3598e97a761645e0befdac84a32f339d).
+É possível ler mais sobre os conceitos que envolvem a definição de clientes [neste artigo](https://developers.vtex.com/docs/guides/how-to-use-and-create-clients-on-vtex-io).
 
 ## O cliente de _analytics_
 
