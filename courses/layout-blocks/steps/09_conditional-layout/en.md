@@ -2,7 +2,7 @@
 
 ## Introduction
 
-At times, when developing a store, we need to create conditional _layouts_ that would apply only to a specific context. We have already seen that when using different devices, it is possible to condition _layout_ using Responsive Layout, but what if we wanted, for example, to have a different product page for specific products? This is what the [Conditional Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-condition-layout) is for.
+At times, when developing a store, we need to create conditional _layouts_ that would apply only to a specific context. We have already seen that when using different devices, it is possible to condition _layout_ using Responsive Layout, but what if we wanted, for example, to have a different product page for specific products? This is what the [Conditional Layout](https://developers.vtex.com/docs/guides/vtex-condition-layout) is for.
 
 ## Optional setup
 
@@ -119,7 +119,7 @@ By doing this, we will have a product page like the one shown below:
 
 3. Now, we need to define the condition for the mixer.
 
-`Condition.product` requires _prop_ `conditions` to define which conditions should be applied (see [documentation](https://developers.vtex.com/docs/vtex-condition-layout)), a condition is divided into three parts:
+`Condition.product` requires _prop_ `conditions` to define which conditions should be applied (see [documentation](https://developers.vtex.com/docs/guides/vtex-condition-layout)), a condition is divided into three parts:
 
 - **subject:** is the data that will be used for comparison purposes, in our case we will use `productId`, in the documentation it is possible to see all the available options;
 - **verb:** is the comparative method, we will use `is` to validate if `productId` is for a specific product, but we could use: `is`, `is-not`,`contains` or `does -not-contain`;
@@ -179,4 +179,4 @@ To ensure that the conditional layout actually works, visit any other product pa
 
 ## End
 
-We reached the last step of the course and learned how to create complex layouts by leveraging simpler blocks, we did not explore all possible layouts, but the idea of ​​all of them is very similar, to learn more visit the section of [`VTEX STORE FRAMEWORK - LAYOUT APPS`](https://developers.vtex.com/docs/vtex-condition-layout) on the Developer Portal.
+We reached the last step of the course and learned how to create complex layouts by leveraging simpler blocks, we did not explore all possible layouts, but the idea of ​​all of them is very similar, to learn more visit the section of [`LAYOUT APPS`](https://developers.vtex.com/docs/guides/vtex-condition-layout) on the Developer Portal.

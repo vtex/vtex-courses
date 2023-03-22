@@ -8,7 +8,7 @@ With the Slider Layout, it is possible to create a carousel not only with images
 
 ## Slider Layout
 
-Looking at the [documentation](https://developers.vtex.com/docs/vtex-slider-layout), we see that you can use an array of blocks like `children`, just like in Flex Layout.
+Looking at the [documentation](https://developers.vtex.com/docs/guides/vtex-slider-layout), we see that you can use an array of blocks like `children`, just like in Flex Layout.
 
 Below is an example of implementing a slider-layout with two `info-cards`:
 
@@ -69,4 +69,4 @@ In this activity, we will create a brand _slider_ for our website:
 
 5. Finally, you must use the `autoplay` property in the `slider-layout# home` block. Make _slide_ happen automatically every **7 seconds and stop when the user hovers over _slide _**.
 
-> Note: Remember to access the [Slider Layout](https://developers.vtex.com/docs/vtex-slider-layout) and [Image](https://developers.vtex.com/docs/vtex-store-components-image) documentations if you have any questions during the activity.
+> Note: Remember to access the [Slider Layout](https://developers.vtex.com/docs/guides/vtex-slider-layout) and [Image](https://developers.vtex.com/docs/guides/vtex-store-components-image) documentations if you have any questions during the activity.

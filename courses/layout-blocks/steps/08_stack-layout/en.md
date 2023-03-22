@@ -109,4 +109,4 @@ The result should then be:
 
 - Don't worry if you don't really understand how the styling done in the optional steps worked, we have an exclusive styling course that will be seen later on.
 
-- If you clicked the button and you are not seeing a search result page, make sure you have a defined search layout (we saw this in the basic blocks' course) following the [Search Result](https://developers.vtex.com/docs/vtex-search-result#search-result) documentation.
+- If you clicked the button and you are not seeing a search result page, make sure you have a defined search layout (we saw this in the basic blocks' course) following the [Search Result](https://developers.vtex.com/docs/guides/vtex-search-result) documentation.
