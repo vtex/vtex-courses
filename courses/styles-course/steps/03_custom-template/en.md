@@ -6,7 +6,7 @@ Until now, you've learned how to use CSS, Tachyons, and Markdown in order to cus
 
 Stores are made up of several different pages, each with a specific content and layout. When creating a store from scratch in VTEX IO, some default pages with preset URLs are already available. Below, we have a list of some of these default pages:
 
-- `store.home` (Home page)
+- `store.home` (Home page)
 - `store.product` (Product page)
 - `store.search` (Search Results page)
 - `store.account` (Client Account page)

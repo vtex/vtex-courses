@@ -6,7 +6,7 @@ Até agora, você aprendeu como utilizar CSS, _Tachyons_ e _Markdown_ para custo
 
 Lojas são compostas por várias páginas diferentes, cada uma com _layout_ e conteúdo específicos. Ao criar uma loja do zero no VTEX IO, algumas páginas padrão com URLs predefinidas já são disponibilizadas para você. Abaixo, vemos uma lista com algumas dessas páginas padrão:
 
-- `store.home` (Home page)
+- `store.home` (Home page)
 - `store.product` (Product page)
 - `store.search` (Search Results page)
 - `store.account` (Client Account page)
