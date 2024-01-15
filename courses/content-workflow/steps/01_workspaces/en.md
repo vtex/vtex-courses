@@ -2,14 +2,15 @@
 
 ## Introduction
 
-Workspaces are environments isolated from one another, containing different versions of the same VTEX account. In practice, this means that changes performed in your own workspace do not affect your store's live version and other developers' work.
+Workspaces are environments isolated from each other in terms of app development. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your store's live version or other developers' work.
 
 There are two main types of workspaces:
 
 - Development workspace: allows linking, developing, installing, and publishing apps. It provides more configuration freedom. But it can't handle production traffic, be promoted to master, or be used for A/B testing.
 - Production workspace: supports production traffic and A/B testing. It can be promoted to master, but linking apps is forbidden.
+- Master workspace: a **unique production workspace** that reflects the content served to the store's end-user.
 
-> A **Master** workspace is a **unique production workspace** that reflects the content served to the store's end-user.
+>⚠️ While each workspace operates independently when it comes to app development, they share the same VTEX platform modules accessible via Admin. Then, any changes made in a specific workspace will be reflected in all others. 
 
 ## Creating a production workspace
 
