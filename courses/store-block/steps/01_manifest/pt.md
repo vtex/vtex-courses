@@ -66,6 +66,6 @@ Neste exemplo de um arquivo `manifest.json`, é possível observar algumas das c
     "vtex.styleguide": "9.x",
     "vtex.css-handles": "0.x"
   },
-  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-a pi/master/gen/manifest.schema"
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
 ```
