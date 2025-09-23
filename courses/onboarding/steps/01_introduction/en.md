@@ -1,4 +1,4 @@
-# Preparing your environment for VTEX IO
+# Setting up your development environment for VTEX IO
 
 > 🚧 **Are you a VTEX client or partner?**  
 > To complete this training, you’ll need access to a VTEX account. We’re working on ways to provide test accounts for unaffiliated developers, but for now, you must belong to a company that’s already part of our ecosystem.  
