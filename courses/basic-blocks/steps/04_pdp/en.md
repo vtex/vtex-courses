@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Once the store's homepage is done, we can start working on a new store template: the product page. Product pages are probably the templates with the most blocks, which makes them extremely flexible and customizable.
+Once the store's homepage is done, we can start working on a new store template: the product page. Product pages are the templates with the most blocks, which makes them highly flexible and customizable.
 
 ## Product Page
 
@@ -17,13 +17,13 @@ Let's build a minimal product page, with only the bare essentials:
 
 ## Product blocks
 
-Most product blocks, unlike content blocks, are inserted into a certain context, making them a little bit "plug-n-play": placing `product-images` on the product page will automatically lead to images being rendered on that page, the same being valid for price and name.
+Unlike content blocks, most product blocks are inserted into a specific context, making them a bit "plug-n-play": placing `product images` on the product page automatically renders images on that page, the same being true for price and name.
 
-This doesn't mean that these blocks are less customizable, quite the opposite actually, as we'll soon see.
+This doesn't mean that these blocks are less customizable, quite the opposite, actually, as we'll soon see.
 
 ## Activity
 
-Build a product page using the following blocks in `product.jsonc` and declare it in the `store/blocks` folder: [`product-images`](https://developers.vtex.com/docs/guides/vtex-store-components-productimages), [`product-price`](https://developers.vtex.com/docs/guides/vtex-store-components-productprice), [`product-name`](https://developers.vtex.com/docs/guides/vtex-store-components-productname) and [`buy-button`](https://developers.vtex.com/docs/guides/vtex-store-components-buybutton). We expect the structure to contain the following:
+Build a product page using the following blocks in `product.jsonc` and declare it in the `store/blocks` folder: [`product-images`](https://developers.vtex.com/docs/guides/vtex-store-components-productimages), [`product-price`](https://developers.vtex.com/docs/guides/vtex-store-components-productprice), [`product-name`](https://developers.vtex.com/docs/guides/vtex-store-components-productname), and [`buy-button`](https://developers.vtex.com/docs/guides/vtex-store-components-buybutton). We expect the structure to contain the following:
 
 1. A **row** in `store.product`;
 
@@ -59,7 +59,7 @@ Build a product page using the following blocks in `product.jsonc` and declare i
    }
    ```
 
-4. The right column must contain the [`product-name`](https://developers.vtex.com/docs/guides/vtex-store-components-productname), [`product-price`](https://developers.vtex.com/docs/guides/vtex-store-components-productprice) and [`buy-button`](https://developers.vtex.com/docs/guides/vtex-store-components-buybutton):
+4. The right column must contain the [`product-name`](https://developers.vtex.com/docs/guides/vtex-store-components-productname), [`product-price`](https://developers.vtex.com/docs/guides/vtex-store-components-productprice), and [`buy-button`](https://developers.vtex.com/docs/guides/vtex-store-components-buybutton):
 
    ```json
      "flex-layout.col#right": {
@@ -102,9 +102,9 @@ After finishing the previous steps, you can search for a product in the search b
 
 ![image](https://user-images.githubusercontent.com/19495917/90903507-682ad280-e3a4-11ea-9781-77a9b111218b.png)
 
-If you are on `appliancetheme` account, try searching for a coffee machine, for example:
+If you are on the `appliancetheme` account, try searching for a coffee machine, for example:
 
-<img src="https://user-images.githubusercontent.com/19495917/90903699-b049f500-e3a4-11ea-9e3e-6ad5f6a41333.png" height=300px>
+![](https://user-images.githubusercontent.com/19495917/90903699-b049f500-e3a4-11ea-9e3e-6ad5f6a41333.png)
 
 When clicking on the second one, the `Red Retro Coffee Maker`, you'll go to its product page, and you can see the blocks on it.
 
@@ -112,4 +112,4 @@ When clicking on the second one, the `Red Retro Coffee Maker`, you'll go to its 
 
 > Note: Some of the products will not have the savings, since there are no discounts based on the list price.
 
-Note: Remember to access the [Product Images](https://developers.vtex.com/docs/guides/vtex-store-components-productimages), [Product Price](https://developers.vtex.com/docs/guides/vtex-store-components-productprice), [Product Name](https://developers.vtex.com/docs/guides/vtex-store-components-productname) and [Buy Button](https://developers.vtex.com/docs/guides/vtex-store-components-buybutton) documentation in case you have any questions during your activity.
+Note: Remember to access the [Product Images](https://developers.vtex.com/docs/guides/vtex-store-components-productimages), [Product Price](https://developers.vtex.com/docs/guides/vtex-store-components-productprice), [Product Name](https://developers.vtex.com/docs/guides/vtex-store-components-productname), and [Buy Button](https://developers.vtex.com/docs/guides/vtex-store-components-buybutton) documentation in case you have any questions during your activity.
