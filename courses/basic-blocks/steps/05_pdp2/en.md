@@ -2,7 +2,7 @@
 
 ## Introduction
 
-During the last step we learned how to create a simple product page with a minimum amount of products, but we know that the result is far from an ideal product page, so we'll add other elements that frequently appear on product pages from various stores.
+In the last step, we learned how to create a simple product page with a minimum number of products. However, we know that the result is far from ideal, so we'll add other elements that frequently appear on product pages from various stores.
 
 ![image](https://user-images.githubusercontent.com/18701182/69391258-002e4b00-0cb1-11ea-901f-f69d9c0b3062.png)
 
@@ -15,11 +15,11 @@ Our [documentation](https://developers.vtex.com/docs/guides/store-framework-apps
 - [Product Quantity](https://developers.vtex.com/docs/guides/vtex-product-quantity)
 - [SKU Selector](https://developers.vtex.com/docs/guides/vtex-store-components-skuselector)
 
-It's important that by the end of the course you take some time to fully explore our components, in addition to the customization possibilities that accompany each component.
+It's important that you take some time to fully explore our components and the customization possibilities that accompany each component by the end of the course.
 
 ## Activity
 
-Develop the product page by adding the 4 blocks listed above to`product.jsonc` as follows:
+Develop the product page by adding the 4 blocks listed above to `product.jsonc` as follows:
 
 1. Define a `breadcrumb` right before the product's **main line**;
 
