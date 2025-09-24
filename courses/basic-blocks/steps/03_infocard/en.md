@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A store needs a good _home page_ to engage users, increasing session time and therefore conversion chances. To achieve this, several elements need to be used, such as promotional banners, shelves with highlights, material about the store, etc.
+A store needs a good home page to engage users, increasing session time and, therefore, conversion chances. Several elements need to be used to achieve this, such as promotional banners, shelves with highlights, material about the store, etc.
 
 We have created the next block on the _home page_ using a _call to action_. In Store Framework, we have a block designed for this purpose, called [**Info Card**](https://developers.vtex.com/docs/guides/vtex-store-components-infocard).
 
@@ -10,18 +10,18 @@ We have created the next block on the _home page_ using a _call to action_. In S
 
 ![image](https://user-images.githubusercontent.com/18701182/68480411-7b085800-0213-11ea-9426-31dcb0d0aa7d.png)
 
-Using the Info Card, you can create images which have links and buttons (top or side of the block) that direct the user's flow (_Call to action_).
+Using the Info Card, you can create images with links and buttons (at the top or side of the block) that direct the user's flow (Call to action).
 
 Looking at the [documentation](https://developers.vtex.com/docs/guides/vtex-store-components-infocard#configuration), we can see that:
 
-- `isFullModeStyle` defines whether the _Call to Action (CTA)_ is set above the banner;
-- `textPosition` defines the position of the text;
-- `textAlignment` defines the text's alignment;
-- `imageUrl` defines which image will be used as banner;
-- `headline` determines which text will be used as headline;
-- `callToActionMode` allows to choose the _CTA_ mode as either a link or a button;
-- `callToActionText` defines the _CTA_ text;
-- `callToActionUrl` determines the URL to which it redirects;
+- `isFullModeStyle` defines whether the _Call to Action (CTA)_ is set above the banner.
+- `textPosition` defines the position of the text.
+- `textAlignment` defines the text's alignment.
+- `imageUrl` defines which image will be used as a banner.
+- `headline` determines which text will be used as the headline.
+- `callToActionMode` allows choosing the _CTA_ mode as either a link or a button.
+- `callToActionText` defines the _CTA_ text.
+- `callToActionUrl` determines the URL to which it redirects.
 
 We therefore have the following props:
 
@@ -60,7 +60,7 @@ You may have asked yourself:
 
 It's possible through **block instancing**.
 
-All block have pre-established names, but you can create block instances and define different ways in which the block types appear. After each block has been defined, simply place an '#' with an **arbitrary** name that makes, for example:
+All blocks have pre-established names, but you can create block instances and define different ways in which the block types appear. After each block has been defined, place an `#` with an **arbitrary** name that makes, for example:
 
 ```json
   {

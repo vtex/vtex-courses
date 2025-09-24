@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Now we covered the component's basics, it's time to implement the countdown effectively. For that, we need to use a React hook called `useState`.
+Now that we have covered the component's basics, it's time to implement the countdown effectively. For that, we need to use a React hook called `useState`.
 
 > It is called within the functional component to update and consume the component _state_. The _state_ represents the component's current state. The `useState` returns a pair: the current state value and a function to update it.
 
@@ -17,7 +17,7 @@ Now we covered the component's basics, it's time to implement the countdown effe
    import { tick, getTwoDaysFromNow } from './utils/time'
    ```
 
-   > The `getTwoDaysFromNow` function will be used to deal with edge cases. It'll be explained later on in this step.
+   > The `getTwoDaysFromNow` function will be used to handle edge cases. This step will explain it later.
 
 2. Next step is to add the state update _hook_ (`useState`):
 
@@ -38,7 +38,7 @@ Now we covered the component's basics, it's time to implement the countdown effe
    }
    ```
 
-3. After doing that, we'll add a default constant `targetDate` for the edge case where the prop is not defined. We'll use as fallback a date that is defined as two days from the current date, this date is calculated on an util function that was previously imported from the `/utils` folder.
+3. After doing that, we'll add a default constant `targetDate` for the edge case where the prop is not defined. We'll use as a fallback a date defined as two days from the current date. This date is calculated using a util function that was previously imported from the `/utils` folder.
 
    ```typescript
    //react/Countdown.tsx
@@ -66,7 +66,7 @@ Now we covered the component's basics, it's time to implement the countdown effe
    }
    ```
 
-5. At last but not least, change the `h1` so that it shows the countdown that we've created. For that, we need to use the `timeRemaining` current state:
+5. Last but not least, change the `h1` so that it shows the countdown that we've created. For that, we need to use the `timeRemaining` current state:
 
    ```diff
    //react/Countdown.tsx
@@ -88,10 +88,10 @@ Now we covered the component's basics, it's time to implement the countdown effe
    }
    ```
 
-> The countdown _string_ formatting is in a `HH:MM:SS` format, made through an `hours`, `minutes` and `seconds` splitting.
+> The countdown _string_ formatting is in a `HH:MM:SS` format, made through an `hours`, `minutes`, and `seconds` splitting.
 
 Therefore, with these changes, we'll see a real-time update of the countdown! The result on the homepage is this:
 
 ![image](https://user-images.githubusercontent.com/19495917/75474406-b3c06e80-5975-11ea-82ec-89ab27504873.png)
 
-<img src="https://user-images.githubusercontent.com/19495917/75474511-e0748600-5975-11ea-825d-7e9a20f95362.gif" width="500" height="320"/>
+![](https://user-images.githubusercontent.com/19495917/75474511-e0748600-5975-11ea-825d-7e9a20f95362.gif)

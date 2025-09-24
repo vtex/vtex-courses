@@ -104,9 +104,9 @@ Após terminados os passos anteriores, você pode procurar por um produto na bar
 
 Se você estiver na conta `appliancetheme`, tente buscar por uma máquina de café, por exemplo:
 
-<img src="https://user-images.githubusercontent.com/19495917/90903699-b049f500-e3a4-11ea-9e3e-6ad5f6a41333.png" height=300px>
+![](https://user-images.githubusercontent.com/19495917/90903699-b049f500-e3a4-11ea-9e3e-6ad5f6a41333.png)
 
-Ao clicar na segunda, a `Red Retro Coffee Machine`, você irá para a sua página de produto, ou `pdp`, e verá os blocos que a compõe.
+Ao clicar na segunda, a `Red Retro Coffee Machine`, você irá para a sua página de produto, ou `pdp`, e verá os blocos que a compõem.
 
 ![image](https://user-images.githubusercontent.com/19495917/90905481-9f9a7e80-e3a6-11ea-99c4-6a546e0000a3.png)
 
