@@ -43,7 +43,7 @@ Se estiver responsável por cuidar do cadastramento de imagens de uma loja, tenh
 
    Inspecionando novamente, vemos que todas as imagens de prateleira e resultado de busca estão com o tamanho correto:
 
-   <img src="https://user-images.githubusercontent.com/18701182/93838221-481a5780-fc5f-11ea-8d6f-139fac6a2592.png" height=400px></img>
+   ![](https://user-images.githubusercontent.com/18701182/93838221-481a5780-fc5f-11ea-8d6f-139fac6a2592.png)
 
 3) Para melhorar o _caching_ de CDN e garantir que nenhuma imagem externa está sendo carregada, no arquivo `store/blocks/search.jsonc`, edite o `info-card` existente para atualizar sua implementação e fazê-lo usando um `image`:
 
@@ -76,20 +76,20 @@ Se estiver responsável por cuidar do cadastramento de imagens de uma loja, tenh
 
 ![image](https://user-images.githubusercontent.com/18701182/93905955-f52db800-fcd1-11ea-9129-065bea80145b.png)
 
-5. Usamos o exemplo `electronics.png` que já estava disponível no repositório, mas qualquer imagem pode ser adicionada se inserida dentro da pasta `/assets`. Experimente acessar algum portal de stock photo gratuito (como o [Pexels](https://www.pexels.com/)), baixar uma imagem e comprimí-la no [Squoosh](https://squoosh.app/). Baixe a imagem, adicione-a a pasta de `/assets` e depois referencie com o nome que voce adicionou:
+5. Usamos o exemplo `electronics.png` que já estava disponível no repositório, mas qualquer imagem pode ser adicionada se inserida dentro da pasta `/assets`. Experimente acessar algum portal de stock photo gratuito (como o [Pexels](https://www.pexels.com/)), baixar uma imagem e comprimi-la no [Squoosh](https://squoosh.app/). Baixe a imagem, adicione-a a pasta de `/assets` e depois referencie com o nome que voce adicionou:
 
-```diff
-{
-  ...
-  "image#depbanner": {
-    "props": {
--     "src": "assets/electronics.png"
-+     "src": "assets/{{sua_imagem}}"
-    }
-  },
-}
-```
-
-![image](https://user-images.githubusercontent.com/18701182/93907719-168fa380-fcd4-11ea-8b03-6d864d4aeadd.png)
-
-> Exemplo de redução de 60% na compressão com Squoosh
+   ```diff
+   {
+     ...
+     "image#depbanner": {
+       "props": {
+   -     "src": "assets/electronics.png"
+   +     "src": "assets/{{sua_imagem}}"
+       }
+     },
+   }
+   ```
+   
+   ![image](https://user-images.githubusercontent.com/18701182/93907719-168fa380-fcd4-11ea-8b03-6d864d4aeadd.png)
+   
+   > Exemplo de redução de 60% na compressão com Squoosh
