@@ -6,15 +6,15 @@ Now that we have implemented the `countdown`, how about adding a little customiz
 
 ### CSS Handles
 
-CSS _handles_ are used to customize your store's components through CSS classes in the theme code. All settings are defined through the _app_ `vtex.css-handles`, responsible for declaring all the customization points of your block.
+CSS _handles_ are used to customize your store's components through CSS classes in the theme code. All settings are defined through the _app_ `vtex.css-handles`, which is responsible for declaring all the customization points of your block.
 
-By defining the names of your _handles_ and adding them to their respective HTML elements, it is possible to give the theme's user customization points that allow them to create flexible _layouts_.
+By defining the names of your _handles_ and adding them to their respective HTML elements, you can give the theme's users customization points that allow them to create flexible _layouts_.
 
 ### Tachyons
 
-Tachyons is a _framework_ for functional CSS. Unlike other known _frameworks_, like Bootstrap, it does not have "pre-built" UI components. In fact, its purpose is, precisely, separate the CSS rules into small, reusable parts. This type of strategy is commonly known as _Subatomic Design System_ and, if you are interested, you can find a reference [in this link](https://daneden.me/2018/01/05/subatomic-design-systems/). This strategy makes _frameworks_ like Tachyons very flexible, scalable and fast.
+Tachyons is a _framework_ for functional CSS. Unlike other known _frameworks_, like Bootstrap, it does not have "pre-built" UI components. In fact, its purpose is, precisely, to separate the CSS rules into small, reusable parts. This type of strategy is commonly known as _Subatomic Design System_, and if you are interested, you can find a reference for it [in this link](https://daneden.me/2018/01/05/subatomic-design-systems/). This strategy makes _frameworks_ like Tachyons very flexible, scalable, and fast.
 
-A lot of the Tachyons' definitions can be changed, so that your store will have a more customized style. To do this, just define a JSON file in the `styles/configs` folder; this information can be found in more detail at: [Customizing styles on VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-5-definingstyles).
+Many of the Tachyons' definitions can be changed so that your store has a more customized style. To do this, just define a JSON file in the `styles/configs` folder; this information can be found in more detail at [Customizing styles on VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-5-definingstyles).
 
 ## Customizing your block
 
@@ -57,7 +57,7 @@ A lot of the Tachyons' definitions can be changed, so that your store will have 
    }
    ```
 
-4. At last, it is needed to use the _handle_ in the component to see the customization. For this, use the prop `className` with the classes to be used and the Tachyons classes, for global styles.
+4. Finally, the _handle_ in the component needs to be used to see the customization. For this, use the prop `className` with the classes to be used and the Tachyons classes, for global styles.
 
    ```diff
    // react/Countdown.tsx
@@ -87,4 +87,4 @@ Let's see the result?
 
 ![image](https://user-images.githubusercontent.com/19495917/75475280-457cab80-5977-11ea-938e-d3c2b532e891.png)
 
-<img src="https://user-images.githubusercontent.com/19495917/75475388-7a88fe00-5977-11ea-9d35-c13482f1e61c.gif" width="500" height="400"/>
+![](https://user-images.githubusercontent.com/19495917/75475388-7a88fe00-5977-11ea-9d35-c13482f1e61c.gif)
