@@ -12,7 +12,7 @@ Definindo os nomes dos seus _handles_ e adicionando aos seus respectivos element
 
 ### Tachyons
 
-O Tachyons é um _framework_ para CSS funcional. Diferentemente de outros _frameworks_ conhecidos, como o Bootstrap, ele não apresenta componentes UI "pré-buildados". Na verdade, seu objetivo é justamente separar as regras de CSS em partes pequenas e reutilizáveis. Esse tipo de estratégia é comumente conhecida como _Subatomic Design System_ e, caso você tenha interesse, pode encontrar uma referência [neste link](https://daneden.me/2018/01/05/subatomic-design-systems/). Essa estratégia torna _frameworks_ como o Tachyons muito flexíveis, escaláveis e rápidos.
+O Tachyons é um _framework_ para CSS funcional. Diferentemente de outros _frameworks_ conhecidos, como o Bootstrap, ele não apresenta componentes UI "pré-buildados". Na verdade, seu objetivo é justamente separar as regras de CSS em partes pequenas e reutilizáveis. Esse tipo de estratégia é comumente conhecido como _Subatomic Design System_ e, caso você tenha interesse, pode encontrar uma referência [neste link](https://daneden.me/2018/01/05/subatomic-design-systems/). Essa estratégia torna _frameworks_ como o Tachyons muito flexíveis, escaláveis e rápidos.
 
 Grande parte das definições de Tachyons podem ser alteradas, de forma que sua loja passe a ter um estilo mais customizado. Para isso, basta definir um arquivo JSON na pasta `styles/configs`; essas informações podem ser encontradas de forma mais detalhada em: [Customizing styles on VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-5-definingstyles).
 
@@ -87,4 +87,4 @@ Vamos ver o resultado?
 
 ![image](https://user-images.githubusercontent.com/19495917/75475280-457cab80-5977-11ea-938e-d3c2b532e891.png)
 
-<img src="https://user-images.githubusercontent.com/19495917/75475388-7a88fe00-5977-11ea-9d35-c13482f1e61c.gif" width="500" height="400"/>
+![](https://user-images.githubusercontent.com/19495917/75475388-7a88fe00-5977-11ea-9d35-c13482f1e61c.gif)
