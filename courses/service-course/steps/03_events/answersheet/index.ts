@@ -16,7 +16,7 @@ import { updateLiveUsers } from './events/liveUsersUpdate'
 const memoryCache = new LRUCache<string, any>({ max: 5000 })
 metrics.trackCache('status', memoryCache)
 
-const TREE_SECONDS_MS = 3 * 1000
+const THREE_SECONDS_MS = 3 * 1000
 const CONCURRENCY = 10
 
 declare global {
@@ -40,7 +40,7 @@ export default new Service<Clients, State, ParamsContext>({
         exponentialBackoffCoefficient: 2,
         initialBackoffDelay: 50,
         retries: 1,
-        timeout: TREE_SECONDS_MS,
+        timeout: THREE_SECONDS_MS,
         concurrency: CONCURRENCY,
       },
     },
